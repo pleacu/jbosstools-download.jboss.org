@@ -1,5 +1,9 @@
 # The jbosstools-download.jboss.org project
 
+## Summary
+
+JBoss Tools download.jboss.org is a temporary repository containing backup/source of content of download.jboss.org/tools.
+
 ## Install
 
 _jbosstools-download.jboss.org_ is part of [JBoss Tools](http://jboss.org/tools) from
