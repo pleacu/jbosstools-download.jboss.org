@@ -3,9 +3,9 @@
 <repository name='SOA Tools Requirements - Composite Juno SR0a Mirror' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1350450737000'/>
+<property name='p2.timestamp' value='1351112912000'/>
 </properties>
-<children size='11'>
+<children size='12'>
 <!-- TODO: pull new versions of these (see below) -->
 <child location='../../../requirements/bpel/1.0.0.v20120518-1552-H175-CI/'/>
 <child location='../../../requirements/bpmn2-modeler/201202231559/'/>
@@ -21,5 +21,6 @@
 <child location='http://download.eclipse.org/bpel/site/'/>
 <child location='http://download.eclipse.org/modeling/emf/updates/releases/'/>
 <child location='http://download.eclipse.org/modeling/mdt/ocl/updates/'/>
+<child location='http://download.jboss.org/drools/release/5.4.0.Final/org.drools.updatesite/'/>
 </children>
 </repository>
