@@ -88,6 +88,31 @@
 		<td>--</td>
 		<td>--</td>
 	</tr>
+	<tr bgcolor="#DDDDDD">
+		<th>Project</th>
+		<th>Bootstrapped By</th>
+		<th>Depends On</th>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>SOA Runtime<br/>Detection</td>
+		<td>Central</td>
+		<td>Central, Portlet, JavaEE, VPE, XulRunner, JST, Server, Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>BPEL</td>
+		<td>Server</td>
+		<td>Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>ESB</td>
+		<td>Base</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>JBPM</td>
+		<td>Base</td>
+		<td>Base</td>
+	</tr>
 	<tr><td colspan="3">
 <p><i><small>JST does not actually depend on Server, but in order to prevent the same dependency chain from appearing more than once (JavaEE -> Base, JST -> Base) and causing duplicate GAVs in the Tycho/Maven reactor, bootstrap profiles are as noted above.</small></i></p>
 	</td></tr>
