@@ -64,12 +64,12 @@ This project is setup to allow you to create a compliant Java EE 6 application u
         <tags>wizard</tags>
         <icon path="icons/newwebprj_wiz.gif" />
 	</project>
-    <!-- Java EE Project -->
+    <!-- Java EE EAR Project -->
 	<project>
 		<category>JBoss Maven Archetypes</category>
 		<name>multi-javaee6-archetype</name>
 		<included-projects>multi-javaee6-archetype</included-projects>
-		<shortDescription>Java EE Project</shortDescription>
+		<shortDescription>Java EE EAR Project</shortDescription>
         <priority>2</priority>
 		<description>An archetype that generates a starter Java EE 6 webapp project for JBoss Enterprise Application Platform 6 or JBoss Application Server. The project is an EAR, with an EJB-JAR and WAR.</description>
 		<size>13806</size>
