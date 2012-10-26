@@ -249,7 +249,7 @@
         </fixes>
 		<importType>maven</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
-		<welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>
+		<!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
 		<tags>central</tags>
         <icon path="icons/jboss.png" />           
     </project>	
