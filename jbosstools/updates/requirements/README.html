@@ -30,6 +30,7 @@ This directory contains a number of child folders, each containing update sites 
 While you can certainly install these plugins from the individual URLs of the folders nested below here, it is <b>by far easier</b> to simply add the composite sites for your version of Eclipse / Web Tools / JBoss Tools / JBoss Developer Studio, and install from that single URL. The big reason for this - aside from the fact that 1 URL is easier than several, is that the composite site also includes all the third party projects' upstream dependencies (eg., Eclipse, WTP, Orbit), making it a <u>one-stop shopping destination</u>. 
 
 <ul>
+<li><a class=link href=../juno>All JBoss Tools 4.0 dependencies in one update site</a> (for installing or developing with Eclipse 4.2 / Web Tools 3.4 / Juno)</li>
 <li><a class=link href=../indigo>All JBoss Tools 3.3 dependencies in one update site</a> (for installing or developing with Eclipse 3.7 / Web Tools 3.3 / Indigo)</li>
 <li><a class=link href=../helios>All JBoss Tools 3.2 dependencies in one update site</a> (for installing or developing with Eclipse 3.6 / Web Tools 3.2 / Helios)</li>
 </ul>
@@ -58,23 +59,89 @@ http://download.jboss.org/jbosstools/updates/requirements/
 -->
 				<br/>
 				<ul>
-<h2>JBoss Tools 3.3 / Eclipse 3.7 Indigo / Web Tools 3.3</h2>
-<li><a class=link href=indigo>indigo</a></li>
-<li><a class=link href=birt>birt</a></li>
-<li><a class=link href=ecf/3.5>ecf/3.5</a></li>
-<li><a class=link href=eclipse>eclipse</a></li>
-<li><a class=link href=emf>emf</a></li>
-<li><a class=link href=m2eclipse>m2eclipse</a></li>
-<li><a class=link href=orbit>orbit</a></li>
-<li><a class=link href=swtbot>swtbot</a></li>
-<li><a class=link href=testng>testng</a></li>
-<li><a class=link href=webtools>webtools</a></li>
-<li><a class=link href=xulrunner-1.9.2>xulrunner-1.9.2</a></li>
+<h2>JBoss Tools 4.0 / Eclipse 4.2 Juno / Web Tools 3.4</h2>
+<li>
+	<a class=link href=juno/201206270900-R>juno/201206270900-R</a> - 
+	<a class=link href=juno/201209280900-R>juno/201209280900-R</a>
+</li>
+<li>
+	<a class=link href=atlassian/3.0.6.v20120628>atlassian/3.0.6.v20120628</a>
+</li>
+<li>
+	<a class=link href=birt/4.2.0.v20120613>birt/4.2.0.v20120613</a> -
+	<a class=link href=birt/4.2.1.v20120912>birt/4.2.1.v20120912</a>
+</li>
+<li>
+	<a class=link href=eclipse/R-4.2-201206081400>eclipse/R-4.2-201206081400</a> -
+	<a class=link href=eclipse/R-4.2.1-201209141800>eclipse/R-4.2.1-201209141800</a>
+</li>
+<li>
+	<a class=link href=gwt/3.1.0.v201208080121-rel-r42>gwt/3.1.0.v201208080121-rel-r42</a>
+</li>
+<li>
+	<a class=link href=m2eclipse/20120926-1337>m2eclipse/20120926-1337</a>
+</li>
+<li>
+	<a class=link href=orbit/R20120526062928>orbit/R20120526062928</a>
+</li>
+<li>
+	<a class=link href=swtbot/2.0.5>swtbot/2.0.5</a>
+</li>
+<li>
+	<a class=link href=webtools/R-3.4.0-20120612174739>webtools/R-3.4.0-20120612174739</a> -
+	<a class=link href=webtools/R-3.4.1-20120917174803>webtools/R-3.4.1-20120917174803</a>
+</li>
+<li>
+	<a class=link href=xulrunner-1.9.2>xulrunner-1.9.2</a>
+</li>
+<i>Ranges define upper and lower limits used by 
+	<a href=https://github.com/jbosstools/jbosstools-build/blob/master/target-platforms/jbdevstudio-JunoSR0c/multiple/multiple.target>minimum</a> and 
+	<a href=https://github.com/jbosstools/jbosstools-build/blob/master/target-platforms/jbdevstudio-JunoSR1a/multiple/multiple.target>maximum</a> target platforms.</i>
+
 </ul>
 				</td>
 			</tr>
 
 			<tr class="light-row">
+				<td class="bodyText">
+				<!-- <p class="bodyText"></p> -->
+
+<!-- to convert raw fish listing to links do this in vi
+
+:%s#^sftp://tools@filemgmt.jboss.org/downloads_htdocs/tools/updates/requirements/\(.\+\)$#<li><a class=link href=\1>\1<\/a></li>#g
+
+Then sftp file into 
+
+tools@filemgmt.jboss.org/downloads_htdocs/tools/updates/requirements/
+
+which becomes 
+
+http://download.jboss.org/jbosstools/updates/requirements/
+
+-->
+				<br/>
+				<ul>
+<h2>JBoss Tools 3.3 / Eclipse 3.7 Indigo / Web Tools 3.3</h2>
+<li><a class=link href=indigo/201202240900-SR2/>indigo/201202240900-SR2</a></li>
+<li><a class=link href=birt/3.7.2.v20120214/>birt.3.7.2.v20120214</a></li>
+<li><a class=link href=bpmn2-modeler/201202231559>bpmn2-modeler/201202231559</a></li>
+<li><a class=link href=ecf/3.5.4>ecf/3.5.4</a></li>
+<li><a class=link href=eclipse/3.7.2-201202080800>eclipse/3.7.2-201202080800</a></li>
+<li><a class=link href=egit/1.2.0.201112131611/>egit/1.2.0.201112131611</a></li>
+<li><a class=link href=emf/2.7.2.v20120130-0943/>emf/2.7.2.v20120130-0943</a></li>
+<li><a class=link href=gwt/2.5.0.v201201120043-rel-r37>gwt/2.5.0.v201201120043-rel-r37</a></li>
+<li><a class=link href=m2eclipse/20120531-1100>m2eclipse/20120531-1100</a></li>
+<li><a class=link href=m2eclipse/m2e-apt-1.0.0-2012-06-05_16-15-59-H16>m2eclipse/m2e-apt-1.0.0-2012-06-05_16-15-59-H16</a></li>
+<li><a class=link href=mylyn/3.6.5.v20120215-0100>mylyn/3.6.5.v20120215-0100</a></li>
+<li><a class=link href=orbit/R20120119162704>orbit/R20120119162704</a></li>
+<li><a class=link href=swtbot/2.0.5>swtbot/2.0.5</a></li>
+<li><a class=link href=webtools/3.3.2-20120210195245>webtools/3.3.2-20120210195245</a></li>
+<li><a class=link href=xulrunner-1.9.2>xulrunner-1.9.2</a></li>
+</ul>
+				</td>
+			</tr>
+
+			<tr class="dark-row">
 				<td class="bodyText">
 <br/><ul>
 <h2>JBoss Tools 3.2 / Eclipse 3.6 Helios / Web Tools 3.2</h2>
