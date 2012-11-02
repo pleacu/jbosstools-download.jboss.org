@@ -7,7 +7,7 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1351138867000'/>
+<property name='p2.timestamp' value='1351876820000'/>
 </properties>
 <children size='32'>
 
@@ -21,7 +21,7 @@
 
 <child location='../../../../staging/jbosstools-4.0_trunk.component--javaee/all/repo/'/>
 <child location='../../../../staging/jbosstools-4.0_trunk.component--central-maven-examples/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.0_trunk.component--hibernatetools/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.0_trunk.component--hibernate/all/repo/'/>
 <child location='../../../../staging/jbosstools-4.0_trunk.component--jst/all/repo/'/>
 <child location='../../../../staging/jbosstools-4.0_trunk.component--openshift/all/repo/'/>
 <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
@@ -40,7 +40,7 @@
 
 <child location='../../../../staging.previous/jbosstools-4.0_trunk.component--javaee/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-4.0_trunk.component--central-maven-examples/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.0_trunk.component--hibernatetools/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-4.0_trunk.component--hibernate/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-4.0_trunk.component--jst/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-4.0_trunk.component--openshift/all/repo/'/>
 <child location='../../../../staging.previous/openshift-java-client-master/all/repo/'/>
