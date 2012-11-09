@@ -7,23 +7,28 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1346507073000'/>
+<property name='p2.timestamp' value='1352494222000'/>
 </properties>
-<children size='10'>
-
+<children size='9'>
 <child location='../../../../staging/jbosstools-4.0_stable_branch.component--bpel/all/repo/'/>
-<child location='../../../../staging/jbosstools-drools-5.3_stable_branch/all/repo/'/>
 <child location='../../../../staging/jbosstools-4.0_stable_branch.component--esb/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.0_stable_branch.component--flow/all/repo/'/>
 <child location='../../../../staging/jbosstools-4.0_stable_branch.component--jbpm/all/repo/'/>
-
-<child location='../../../../staging/jbosstools-4.0_stable_branch.component--modeshape/all/repo/'/>
 <child location='../../../../staging/jbosstools-4.0_stable_branch.component--runtime-soa/all/repo/'/>
+
+<!-- <child location='../../../../staging/soatools-3.3.1_Beta1.component - - droolsjbpm//all/repo/'/> -->
+<!-- <child location='../../../../staging/jbosstools-drools-5.3_stable_branch/all/repo/'/> -->
+<child location='http://download.jboss.org/jbosstools/updates/stable/indigo/soa-tooling/droolsjbpm/5.4.0.Final/'/>
+
+<!--<child location='../../../../staging/modeshape-tools-continuous/all/repo/'/> -->
+<child location='http://download.jboss.org/jbosstools/updates/development/juno/soa-tooling/modeshape/3.0.0.Final/'/>
+
+<!-- <child location='../../../../staging/savara-tools-eclipse-master/all/repo/'/> -->
 <child location='http://download.jboss.org/savara/releases/updates/2.0.x/' />
-<child location='../../../../staging/SwitchYard-Tools/eclipse/'/>
-<child location='../../../../staging/jbosstools-teiid-designer-7.7_stable_branch/all/repo/'/>
-
-<!-- <child location='../../savara-tools-eclipse-master/all/repo/'/> -->
-
+<child location='http://download.jboss.org/jbosstools/updates/stable/indigo/soa-tooling/switchyard/0.6.0.Final/'/>
+<!-- <child location='../../../../staging/SwitchYard-Tools/eclipse/'/> -->
+<!-- <child location='../../../../staging/jbosstools-teiid-designer-7.7_stable_branch/all/repo/'/> -->
+<child location='../../../../staging/jbosstools-teiid-designer_trunk/all/repo/'/>
+<!-- TODO: when this temporary fork's site is merged into the main _trunk job, use that instead (unless a new _stable_branch job exists by then) -->
+<!-- <child location='../../../../staging/jbosstools-teiid-designer_teiid-8.x-upgrade/all/repo/'/> -->
 </children>
 </repository>
