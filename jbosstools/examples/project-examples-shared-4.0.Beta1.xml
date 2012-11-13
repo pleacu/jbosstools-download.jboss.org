@@ -158,7 +158,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		</fixes>
 		<importType>mavenArchetype</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
-        <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
+        <!--defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles-->
 		<mavenArchetype>
 			<archetypeGroupId>org.jboss.aerogear.archetypes</archetypeGroupId>
 			<archetypeArtifactId>jboss-html5-mobile-archetype</archetypeArtifactId>
