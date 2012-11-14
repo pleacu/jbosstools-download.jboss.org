@@ -334,12 +334,12 @@ Make sure you read the deployment instructions in README.md.</description>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
 				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.gwt.feature</property>
 			</fix>
-			<fix type="plugin">
-				<property name="id">com.google.gwt.eclipse.core</property>
-				<property name="versions">[2.4,)</property>
-				<property name="description">This project example requires Google Plugin for Eclipse</property>
-				<property name="connectorIds">com.google.gwt.eclipse.sdkbundle.e37.feature,com.google.gdt.eclipse.suite.e37.feature</property>
-			</fix>            
+            <fix type="plugin">
+                <property name="id">com.google.gwt.eclipse.core</property>
+                <property name="versions">[2.4,)</property>
+                <property name="description">This project example requires Google Plugin for Eclipse</property>
+                <property name="connectorIds">com.google.gwt.eclipse.sdkbundle.e42.feature</property>
+            </fix>         
 		</fixes>
 		<importType>mavenArchetype</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp, JBoss Maven GWT Integration and Google Plugin for Eclipse features.</importTypeDescription>

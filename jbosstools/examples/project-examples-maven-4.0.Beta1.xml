@@ -162,7 +162,7 @@
                 <property name="id">com.google.gwt.eclipse.core</property>
                 <property name="versions">[2.4,)</property>
                 <property name="description">This project example requires Google Plugin for Eclipse</property>
-                <property name="connectorIds">com.google.gwt.eclipse.sdkbundle.e37.feature,com.google.gdt.eclipse.suite.e37.feature</property>
+                <property name="connectorIds">com.google.gwt.eclipse.sdkbundle.e42.feature</property>
             </fix>         
         </fixes>
     </project>  	
