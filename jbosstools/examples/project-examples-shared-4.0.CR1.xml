@@ -156,7 +156,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		</fixes>
 		<importType>mavenArchetype</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
-        <!--defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles-->
+        <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
 		<mavenArchetype>
 			<archetypeGroupId>org.jboss.aerogear.archetypes</archetypeGroupId>
 			<archetypeArtifactId>jboss-html5-mobile-archetype</archetypeArtifactId>
@@ -339,7 +339,10 @@ Make sure you read the deployment instructions in README.md.</description>
 		</fixes>
 		<importType>mavenArchetype</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp, JBoss Maven GWT Integration and Google Plugin for Eclipse features.</importTypeDescription>
+        <!-- Activating the profile causes a build error :
+        'dependencies.dependency.version' for org.jboss.as:jboss-as-arquillian-container-remote:jar is missing.
         <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
+        -->
         <mavenArchetype>
 			<archetypeGroupId>org.jboss.errai.archetypes</archetypeGroupId>
 			<archetypeArtifactId>jboss-errai-kitchensink-archetype</archetypeArtifactId>
