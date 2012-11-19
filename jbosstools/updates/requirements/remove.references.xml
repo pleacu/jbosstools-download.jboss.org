@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="remove.references">
-	<!-- this script is used to remove the <references> node from a content.xml file (within a content.jar file) -->
-	<!-- run: ant -f /path/to/folder/with/remove.references.xml -DworkDir=/path/to/folder/with/content.jar -->
-	<!-- eg., to work on local dir: 
-	     	ant -f `wget https://github.com/jbosstools/jbosstools-download.jboss.org/blob/master/jbosstools/updates/requirements/remove.references.xml` -DworkDir=`pwd` 
-	-->
+<!-- this script is used to remove the <references> node from a content.xml file (within a content.jar file) -->
+<!-- run: ant -f /path/to/folder/with/remove.references.xml -DworkDir=/path/to/folder/with/content.jar -->
+<!-- eg., to work in current dir: 
+	wget https://raw.github.com/jbosstools/jbosstools-download.jboss.org/master/jbosstools/updates/requirements/remove.references.xml;  ant -f remove.references.xml -DworkDir=`pwd` 
+-->
 	<target name="remove.references">
 		<antcall target="unpack.content.jar"/>
 
