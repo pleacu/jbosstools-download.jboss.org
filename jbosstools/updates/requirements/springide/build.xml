@@ -94,6 +94,7 @@ Bundle-SymbolicName: org.springframework.ide.eclipse
 
 	<target name="regenerate.metadata">
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/${siteVersion}/" artifactRepository="file:${destination}/${siteVersion}/" publishartifacts="true" source="${destination}/${siteVersion}/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 
 </project>

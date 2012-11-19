@@ -70,5 +70,6 @@ Therefore there is no need to produce this mirror any more. See ../atlassian/bui
 		</p2.mirror>
 
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/3.8.1.v20120725-0100/" artifactRepository="file:${destination}/3.8.1.v20120725-0100/" publishartifacts="true" source="${destination}/3.8.1.v20120725-0100/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

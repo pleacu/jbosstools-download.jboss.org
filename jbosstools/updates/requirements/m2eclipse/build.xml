@@ -49,5 +49,6 @@
 
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/20120926-1337/" artifactRepository="file:${destination}/20120926-1337/" 
 			publishartifacts="true" source="${destination}/20120926-1337/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

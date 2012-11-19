@@ -31,6 +31,7 @@
 		</p2.mirror>
 
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/2.0.2.20121005/" artifactRepository="file:${destination}/2.0.2.20121005/" publishartifacts="true" source="${destination}/2.0.2.20121005/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 
 		<echo>--
 NOTE: you will need to rebuild this site using PDE in order to get all the correct site metadata into the site. See ./*/README.html for details

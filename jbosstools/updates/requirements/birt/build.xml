@@ -46,7 +46,7 @@
 		<delete>
 			<fileset dir="${destination}/4.2.1.v20120912/" includes="**/artifacts.jar, **/contents.jar"/>
 		</delete>
-
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/4.2.1.v20120912/" artifactRepository="file:${destination}/4.2.1.v20120912/" publishartifacts="true" source="${destination}/4.2.1.v20120912/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

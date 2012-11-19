@@ -35,9 +35,9 @@
 			<iu id="com.android.ide.eclipse.hierarchyviewer.feature.group" />
 			<iu id="com.android.ide.eclipse.traceview.feature.group" />
 			<iu id="com.android.ide.eclipse.gldebugger.feature.group" />
-
 		</p2.mirror>
 
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/20.0.3.v201208082019-427395/" artifactRepository="file:${destination}/20.0.3.v201208082019-427395/" publishartifacts="true" source="${destination}/20.0.3.v201208082019-427395/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

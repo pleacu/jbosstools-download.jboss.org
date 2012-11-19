@@ -41,5 +41,6 @@
 			<fileset dir="${destination}/20120925-1520-M/" includes="**/*.pack.gz, **/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
 		</delete>
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/20120925-1520-M/" artifactRepository="file:${destination}/20120925-1520-M/" publishartifacts="true" source="${destination}/20120925-1520-M/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

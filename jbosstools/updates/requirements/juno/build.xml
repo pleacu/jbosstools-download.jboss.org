@@ -16,6 +16,7 @@
 			-f ~/RHDS/updates/requirements/juno/build.xml -Ddestination=/tmp/juno-repo
 	-->
 	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/juno/" />
+	<property name="workDir" value="${destination}/201209280900-R/"/>
 	<property name="compress" value="true" />
 	<!-- <property name="URL1" value="http://download.eclipse.org/releases/maintenance/" /> -->
 	<property name="URL1" value="http://download.eclipse.org/releases/juno/201209280900/" />
@@ -32,11 +33,11 @@
 		</p2.mirror>
 	</target>
 	<target name="regen">
-
 		<!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
 		<delete>
 			<fileset dir="${destination}/201209280900-R/" includes="**/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
 		</delete>
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/201209280900-R/" artifactRepository="file:${destination}/201209280900-R/" publishartifacts="true" source="${destination}/201209280900-R/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

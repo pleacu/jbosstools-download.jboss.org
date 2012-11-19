@@ -40,5 +40,6 @@
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/3.1.0.v201208080121-rel-r42" artifactRepository="file:${destination}/3.1.0.v201208080121-rel-r42" publishartifacts="true" source="${destination}/3.1.0.v201208080121-rel-r42" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
