@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1353289466000'/>
+<property name='p2.timestamp' value='1353351761000'/>
 </properties>
 <children size='9'>
 <child location='../../../../staging/jbosstools-4.0_stable_branch.component--bpel/all/repo/'/>
@@ -30,6 +30,6 @@
 <!-- <child location='../../../../staging/jbosstools-teiid-designer-7.7_stable_branch/all/repo/'/> -->
 <child location='../../../../staging/jbosstools-teiid-designer_trunk/all/repo/'/>
 <!-- TODO: when this temporary fork's site is merged into the main _trunk job, use that instead (unless a new _stable_branch job exists by then) -->
-<!-- <child location='../../../../staging/jbosstools-teiid-designer_teiid-8.x-upgrade/all/repo/'/> -->
+<!-- <child location='../../../../staging/jbosstools-teiid-designer_trunk/all/repo/'/> -->
 </children>
 </repository>
