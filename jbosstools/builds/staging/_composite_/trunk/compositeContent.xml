@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='JBoss Tools Staging Repository' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
-<properties size='2'>
+<properties size='3'>
 <property name='p2.compressed' value='true'/>
 <!-- 
      get new time w/ 
@@ -10,7 +10,8 @@
      JBIDE-10671: This file is deprecated. See ../core/trunk/ and ../soa-tooling/trunk/
 
 -->
-<property name='p2.timestamp' value='1346507039000'/>
+<property name='p2.atomic.composite.loading' value='false'/>
+<property name='p2.timestamp' value='1353289461000'/>
 </properties>
 <children size='2'>
 <child location='../core/trunk/'/>
