@@ -30,5 +30,6 @@
 		</p2.mirror>
 
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/6.7.0.20120825_1316/" artifactRepository="file:${destination}/6.7.0.20120825_1316/" publishartifacts="true" source="${destination}/6.7.0.20120825_1316/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
