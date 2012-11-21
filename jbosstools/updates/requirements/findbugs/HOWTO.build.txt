@@ -1,0 +1,16 @@
+1. Run build.xml script to mirror locally
+
+	cd findbugs
+	java -cp /home/nboldt/eclipse/42clean/eclipse/plugins/org.eclipse.equinox.launcher_1.3.0.v20120522-1813.jar org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner 
+
+2. Import folder into Eclipse as an Update Site project. 
+
+3. Double-click the generated site.xml file, and add the feature to it.
+
+4. Build the project from the 'Build' button of the site.xml editor.
+
+5. Then remove all 3rd party site refs from the metadata with this:
+
+	ant -f ../../remove.references.xml -DworkDir=`pwd`
+
+6. Mirror the site to download.jboss.org and devstudio.jboss.com
