@@ -42,6 +42,7 @@
 		<tags>central</tags>
         <icon path="icons/jboss.png" />           
     </project>
+    <!-- jboss-as-helloworld-jsf No longer available in the JDF repo
     <project>
         <id>jdf-jboss-as-helloworld-jsf</id>
         <name>jboss-as-helloworld-jsf</name>
@@ -80,7 +81,8 @@
                 <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
             </fix>
         </fixes>
-    </project>  
+    </project>
+    -->  
     <project>
         <id>jdf-jboss-as-helloworld-jms</id>
         <name>jboss-as-helloworld-jms</name>
