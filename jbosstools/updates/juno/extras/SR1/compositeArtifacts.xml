@@ -3,7 +3,7 @@
 <repository name='JBoss Tools Requirements - Composite Indigo Mirror - Extras' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1353093986000'/>
+<property name='p2.timestamp' value='1353542521000'/>
 </properties>
 <children size='9'>
 
@@ -17,7 +17,7 @@
 <child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
 
 <!-- JBDS-2284, JBDS-2347 -->
-<child location='../../../requirements/findbugs/2.0.2.20121005/'/>
+<child location='../../../requirements/findbugs/2.0.2.20121121/'/>
 
 <!-- JBIDE-12497, JBDS-2235 partially in TP (gwt/gpe) but need to add it here to include GWT Designer + WindowBuilder -->
 <child location='../../../requirements/gwt/3.1.0.v201208080121-rel-r42/'/>
