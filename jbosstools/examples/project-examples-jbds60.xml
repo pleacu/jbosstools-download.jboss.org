@@ -1,14 +1,15 @@
 <projects>
 	<project>
+	    <id>jboss-as-helloworld</id>
+	    <name>jboss-as-helloworld</name>
+	    <included-projects>jboss-as-helloworld</included-projects>
 		<category>JBoss Developer Framework Quickstarts</category>
-		<name>helloworld</name>
-		<included-projects>jboss-as-helloworld</included-projects>
 		<shortDescription>Hello World</shortDescription>
 		<description>
             This example demonstrates the use of CDI 1.0 and Servlet 3 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
             The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
         </description>
-        <url>http://download.jboss.org/jbosstools/examples/4.0.0.CR1/jboss-as-kitchensink.zip</url>
+        <url>http://download.jboss.org/jbosstools/examples/4.0.0.CR1/jboss-as-helloworld.zip</url>
         <size>108318</size>
 		<fixes>
 			<fix type="wtpruntime">
@@ -212,10 +213,10 @@
         </fixes>
     </project>
 	<project>
+	    <id>jboss-as-kitchensink</id>
+	    <name>jboss-as-kitchensink</name>
+	    <included-projects>jboss-as-kitchensink</included-projects>
 		<category>JBoss Developer Framework Quickstarts </category>
-		<name>kitchensink</name>
-        
-		<included-projects>jboss-as-kitchensink</included-projects>
 		<shortDescription>Kitchensink</shortDescription>
 		<description>
             This is your project! It's a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
@@ -251,20 +252,21 @@
         </fixes>
 		<importType>maven</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
-		<welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>
+		<!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
 		<tags>central</tags>
         <icon path="icons/jboss.png" />           
     </project>	
 	<project>
+	    <id>jboss-as-numberguess</id>
+	    <name>jboss-as-numberguess</name>
+	    <included-projects>jboss-as-numberguess</included-projects>
 		<category>JBoss Developer Framework Quickstarts</category>
-		<name>numberguess</name>
-		<included-projects>jboss-as-numberguess</included-projects>
 		<shortDescription>Number Guess</shortDescription>
 		<description>
             This example demonstrates the use of CDI 1.0 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
             The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
         </description>
-        <url>http://download.jboss.org/jbosstools/examples/4.0.0.CR1/jboss-as-tasks.zip</url>
+        <url>http://download.jboss.org/jbosstools/examples/4.0.0.CR1/jboss-as-numberguess.zip</url>
         <size>21669</size>
 		<fixes>
 			<fix type="wtpruntime">
