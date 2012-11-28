@@ -16,12 +16,12 @@
 			-f ~/RHDS/updates/requirements/testng/build.xml -Ddestination=/tmp/pmd-repo
 	-->
 	<target name="mirror">
-		<property name="URL" value="http://beust.com/eclipse/" />
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/testng/6.7.0.20120825_1316/" />
+		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/testng/6.8.0.20121120_1820/" />
+		<property name="workDir" value="${destination}/6.8.0.20121120_1820/"/>
 		<property name="compress" value="true" />
-
+		<property name="URL" value="http://beust.com/eclipse/" />
 		<p2.mirror>
-			<repository location="file:${destination}/6.7.0.20120825_1316/" name="testng plugins for Eclipse" />
+			<repository location="file:${destination}/6.8.0.20121120_1820/" name="testng plugins for Eclipse" />
 			<source>
 				<repository location="${URL}" />
 			</source>
@@ -29,7 +29,7 @@
 			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="true" />
 		</p2.mirror>
 
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/6.7.0.20120825_1316/" artifactRepository="file:${destination}/6.7.0.20120825_1316/" publishartifacts="true" source="${destination}/6.7.0.20120825_1316/" compress="${compress}" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/6.8.0.20121120_1820/" artifactRepository="file:${destination}/6.8.0.20121120_1820/" publishartifacts="true" source="${destination}/6.8.0.20121120_1820/" compress="${compress}" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
