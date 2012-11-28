@@ -165,7 +165,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 			<archetypeVersion>1.0.0.M6c</archetypeVersion>
             -->
             <groupId>org.jboss.tools.example</groupId>
-			<artifactId>jboss-html5-webapp</artifactId>
+			<artifactId>jboss-as-kitchensink-html5-mobile</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<javaPackage>org.jboss.tools.example.html5</javaPackage>
 		</mavenArchetype>
@@ -219,7 +219,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 			<archetypeVersion>4.2.2.Final-2</archetypeVersion>
 			-->
             <groupId>org.jboss.tools.example</groupId>
-			<artifactId>jboss-richfaces-webapp</artifactId>
+			<artifactId>jboss-as-kitchensink-rf</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<javaPackage>org.jboss.tools.example.richfaces</javaPackage>
 		</mavenArchetype>
@@ -345,7 +345,7 @@ IMPORTANT : Make sure you read the deployment instructions in README.md.</descri
 			<archetypeVersion>2.1.1.Final</archetypeVersion>
             -->
             <groupId>org.jboss.tools.example</groupId>
-			<artifactId>jboss-gwt-webapp</artifactId>
+			<artifactId>jboss-as-kitchensink-errai</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<javaPackage>org.jboss.tools.gwt.kitchensink</javaPackage>
 		</mavenArchetype>
