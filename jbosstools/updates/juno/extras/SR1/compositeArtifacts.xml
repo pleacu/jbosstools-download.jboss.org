@@ -7,18 +7,18 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1354296088000'/>
+<property name='p2.timestamp' value='1354329899000'/>
 </properties>
 <children size='10'>
 <!-- 3rd party sites we mirror, used by Central -->
-<child location='https://devstudio.jboss.com/updates/requirements/atlassian/3.0.6.v20120628/'/> 
-<child location='https://devstudio.jboss.com/updates/requirements/eclipsecs/5.6.0.201209221626/'/>
-<child location='https://devstudio.jboss.com/updates/requirements/findbugs/2.0.2.20121121/'/>
-<child location='https://devstudio.jboss.com/updates/requirements/gwt/3.1.0.v201208080121-rel-r42/'/>
-<child location='https://devstudio.jboss.com/updates/requirements/pmd/3.2.6/'/>
-<child location='https://devstudio.jboss.com/updates/requirements/springide/2.7.2.201109122348/'/>
-<child location='https://devstudio.jboss.com/updates/requirements/subclipse/1.8.16_1.7.5.v1/'/>
-<child location='https://devstudio.jboss.com/updates/requirements/testng/6.7.0.20120825_1316/'/>
+<child location='../../../requirements/atlassian/3.0.6.v20120628/'/> 
+<child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
+<child location='../../../requirements/findbugs/2.0.2.20121121/'/>
+<child location='../../../requirements/gwt/3.1.0.v201208080121-rel-r42/'/>
+<child location='../../../requirements/pmd/3.2.6/'/>
+<child location='../../../requirements/springide/2.7.2.201109122348/'/>
+<child location='../../../requirements/subclipse/1.8.16_1.7.5.v1/'/>
+<child location='../../../requirements/testng/6.7.0.20120825_1316/'/>
 
 <!-- 3rd party sites we reference, used by Central -->
 <child location='http://www.zeroturnaround.com/update-site/'/>
