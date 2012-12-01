@@ -7,9 +7,9 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1354329902000'/>
+<property name='p2.timestamp' value='1354330779000'/>
 </properties>
-<children size='10'>
+<children size='8'>
 <!-- 3rd party sites we mirror, used by Central -->
 <child location='../../../requirements/atlassian/3.0.6.v20120628/'/> 
 <child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
@@ -20,9 +20,9 @@
 <child location='../../../requirements/subclipse/1.8.16_1.7.5.v1/'/>
 <child location='../../../requirements/testng/6.7.0.20120825_1316/'/>
 
-<!-- 3rd party sites we reference, used by Central -->
-<child location='http://www.zeroturnaround.com/update-site/'/>
-<child location='https://dl-ssl.google.com/android/eclipse/'/>
+<!-- 3rd party sites we reference, used by Central; Tycho doesn't like these when building JBDS against this site, so omit -->
+<!-- <child location='http://www.zeroturnaround.com/update-site/'/> -->
+<!-- <child location='https://dl-ssl.google.com/android/eclipse/'/> -->
 </children>
 </repository>
 
