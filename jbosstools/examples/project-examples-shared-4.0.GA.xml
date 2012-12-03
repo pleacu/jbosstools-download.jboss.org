@@ -269,11 +269,9 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		<importType>mavenArchetype</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
 		<mavenArchetype>
-			<!-- unnecessary when a stacksId is used 
 			<archetypeGroupId>org.jboss.spring.archetypes</archetypeGroupId>
 			<archetypeArtifactId>spring-mvc-webapp</archetypeArtifactId>
 			<archetypeVersion>1.0.0.CR6</archetypeVersion>
-			-->
             <groupId>org.jboss.tools.example</groupId>
 			<artifactId>jboss-springmvc-webapp</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
