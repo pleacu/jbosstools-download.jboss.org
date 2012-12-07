@@ -7,9 +7,9 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1339171183000'/>
+<property name='p2.timestamp' value='1354899250000'/>
 </properties>
 <children size='1'>
-<child location='indigo/'/>
+<child location='http://download.jboss.org/jbosstools/updates/stable/juno/'/>
 </children>
 </repository>
