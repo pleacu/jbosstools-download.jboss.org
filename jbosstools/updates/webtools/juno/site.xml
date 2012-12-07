@@ -1,9 +1,9 @@
 <site>
 	<category-def label="JBoss Application Server Adapters" name="org.eclipse.wst.server.core.serverAdapter">
 	</category-def>
-	<feature url="features/org.jboss.ide.eclipse.as.feature_2.4.0.Beta2-v20121114-1949-B18.jar" id="org.jboss.ide.eclipse.as.feature" version="2.4.0.Beta2-v20121114-1949-B18"><category name="org.eclipse.wst.server.core.serverAdapter"></category></feature>
-	<feature url="features/org.jboss.ide.eclipse.archives.feature_3.4.0.Beta2-v20121114-1949-B18.jar" id="org.jboss.ide.eclipse.archives.feature" version="3.4.0.Beta2-v20121114-1949-B18"></feature>
-	<feature url="features/org.jboss.tools.jmx.feature_1.4.0.Beta2-v20121114-1949-B18.jar" id="org.jboss.tools.jmx.feature" version="1.4.0.Beta2-v20121114-1949-B18"></feature>
-	<feature url="features/org.jboss.tools.runtime.core.feature_2.0.0.Beta2-v20121114-2253-B23.jar" id="org.jboss.tools.runtime.core.feature" version="2.0.0.Beta2-v20121114-2253-B23"></feature>
-	<feature url="features/org.jboss.tools.common.core.feature_3.4.0.Beta2-v20121114-2253-B23.jar" id="org.jboss.tools.common.core.feature" version="3.4.0.Beta2-v20121114-2253-B23"></feature>
+	<feature url="features/org.jboss.ide.eclipse.as.feature_2.4.0.Final-v20121205-2029-B41.jar" id="org.jboss.ide.eclipse.as.feature" version="2.4.0.Final-v20121205-2029-B41"><category name="org.eclipse.wst.server.core.serverAdapter"></category></feature>
+	<feature url="features/org.jboss.ide.eclipse.archives.feature_3.4.0.Final-v20121205-2029-B41.jar" id="org.jboss.ide.eclipse.archives.feature" version="3.4.0.Final-v20121205-2029-B41"></feature>
+	<feature url="features/org.jboss.tools.jmx.feature_1.4.0.Final-v20121205-2029-B41.jar" id="org.jboss.tools.jmx.feature" version="1.4.0.Final-v20121205-2029-B41"></feature>
+	<feature url="features/org.jboss.tools.runtime.core.feature_2.0.0.Final-v20121206-1757-B38.jar" id="org.jboss.tools.runtime.core.feature" version="2.0.0.Final-v20121206-1757-B38"></feature>
+	<feature url="features/org.jboss.tools.common.core.feature_3.4.0.Final-v20121206-1757-B38.jar" id="org.jboss.tools.common.core.feature" version="3.4.0.Final-v20121206-1757-B38"></feature>
 </site>
