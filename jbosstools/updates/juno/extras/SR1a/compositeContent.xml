@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='JBoss Tools 4.0 - Extras' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<properties size='2'>
+<property name='p2.compressed' value='true'/>
+<!-- 
+     get new time w/ 
+      date +%s000
+-->
+<property name='p2.timestamp' value='1355843185000'/>
+</properties>
+<children size='8'>
+<!-- 3rd party sites we mirror, used by Central -->
+<child location='../../../requirements/atlassian/3.0.6.v20120628/'/> 
+<child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
+<child location='../../../requirements/findbugs/2.0.2.20121210/'/>
+<child location='../../../requirements/gwt/3.1.0.v201208080121-rel-r42/'/>
+<child location='../../../requirements/pmd/3.2.6/'/>
+<child location='../../../requirements/springide/2.7.2.201109122348/'/>
+<child location='../../../requirements/subclipse/1.8.16_1.7.5.v1/'/>
+<child location='../../../requirements/testng/6.7.0.20120825_1316/'/>
+
+<!-- 3rd party sites we reference, used by Central; Tycho doesn't like these when building JBDS against this site, so omit -->
+<!-- <child location='http://www.zeroturnaround.com/update-site/'/> -->
+<!-- <child location='https://dl-ssl.google.com/android/eclipse/'/> -->
+</children>
+</repository>
+
