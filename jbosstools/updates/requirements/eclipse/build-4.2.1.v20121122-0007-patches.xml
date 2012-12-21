@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="mirror">
+	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+	
+		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
+		-consoleLog -nosplash -data /tmp
+		-application org.eclipse.ant.core.antRunner
+		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/eclipse/build.xml"
+		
+		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+		
+		export JAVA_HOME=/opt/jdk1.6.0; \
+		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+			-application org.eclipse.ant.core.antRunner \
+			-f ~/RHDS/updates/requirements/eclipse/build.xml -Ddestination=/tmp/eclipse-repo
+	-->
+	<target name="mirror">
+		<!-- <property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2-M-builds/4.2.1.v20121122-0007-patches/"/>
+		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8-M-builds/M20120829-1000/"/> -->
+		<!-- <property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2/4.2.1.v20121122-0007-patches/"/>
+		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8/R-3.8.1-201209141540/"/> -->
+		<property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2"/>
+		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8"/>
+
+		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/eclipse/" />
+		<property name="workDir" value="${destination}/4.2.1.v20121122-0007-patches"/>
+		<property name="compress" value="true" />
+
+		<p2.mirror>
+			<repository location="file:${destination}/4.2.1.v20121122-0007-patches/" name="Eclipse UI Juno SR1 Optimizations 4.2.1.v20121122-0007-patches" />
+			<source>
+				<repository location="${URL1}" />
+				<repository location="${URL2}" />
+			</source>
+
+			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="false"/>
+			<iu id="org.eclipse.ui.juno.feature.feature.group"/>
+		</p2.mirror>
+
+		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/4.2.1.v20121122-0007-patches/" artifactRepository="file:${destination}/4.2.1.v20121122-0007-patches/" publishartifacts="true" source="${destination}/4.2.1.v20121122-0007-patches/" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+	</target>
+</project>
