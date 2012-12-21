@@ -562,7 +562,7 @@
         <id>jdf-jboss-as-greeter</id>
         <name>jboss-as-greeter</name>
         <category>JBoss Quickstarts</category>
-        <shortDescription>Greeter</shortDescription>
+        <shortDescription>greeter</shortDescription>
         <description>greeter</description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-greeter.zip</url>
         <size>19046</size>
