@@ -3,9 +3,9 @@
 	    <id>jboss-as-helloworld</id>
 	    <name>jboss-as-helloworld</name>
 	    <included-projects>jboss-as-helloworld</included-projects>
-		<category>JBoss Developer Framework Quickstarts</category>
+		<category>JBoss Quickstarts</category>
 		<included-projects>jboss-as-helloworld</included-projects>
-		<shortDescription>Hello World</shortDescription>
+		<shortDescription>helloworld</shortDescription>
 		<description>
             This example demonstrates the use of CDI 1.0 and Servlet 3 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
             The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
@@ -48,7 +48,7 @@
     <project>
         <id>jdf-jboss-as-helloworld-jsf</id>
         <name>jboss-as-helloworld-jsf</name>
-        <category>JBoss Developer Framework Quickstarts</category>
+        <category>JBoss Quickstarts</category>
         <shortDescription>Hello World JSF</shortDescription>
         <description>This example demonstrates the use of CDI 1.0 and JSF in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
         The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.</description>
@@ -88,8 +88,8 @@
     <project>
         <id>jdf-jboss-as-helloworld-jms</id>
         <name>jboss-as-helloworld-jms</name>
-        <category>JBoss Developer Framework Quickstarts</category>
-        <shortDescription>Hello World JMS</shortDescription>
+        <category>JBoss Quickstarts</category>
+        <shortDescription>helloworld-jms</shortDescription>
         <description>This example demonstrates the use of CDI 1.0 and JMS external producer/consumer client in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
         The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.</description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-jms.zip</url>
@@ -128,8 +128,8 @@
     <project>
         <id>jdf-jboss-as-helloworld-errai</id>
         <name>jboss-as-helloworld-errai</name>
-        <category>JBoss Developer Framework Quickstarts</category>
-        <shortDescription>Hello World Errai</shortDescription>
+        <category>JBoss Quickstarts</category>
+        <shortDescription>hello-world-errai</shortDescription>
         <description>This example demonstrates the use of CDI 1.0 and Errai in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
         The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.</description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-errai.zip</url>
@@ -169,11 +169,12 @@
                 <property name="connectorIds">com.google.gpe.gwt</property>
             </fix>         
         </fixes>
-    </project>  	
+    </project>  
+    <!-- 	
     <project>
         <id>jdf-jboss-as-helloworld-osgi</id>
         <name>jboss-as-helloworld-osgi</name>
-        <category>JBoss Developer Framework Quickstarts</category>
+        <category>JBoss Quickstarts</category>
         <shortDescription>Hello World OSGi</shortDescription>
         <description>This example demonstrates the use of OSGi in JBoss Application Server 7.1.
             The example can be deployed using Maven from the command line, by using the AS 7 web console or by dropping the OSGi bundle in the deployments folder.
@@ -213,12 +214,13 @@
             </fix>
         </fixes>
     </project>
+     -->
 	<project>
 		<id>jboss-as-kitchensink</id>
 		<name>jboss-as-kitchensink</name>
 		<included-projects>jboss-as-kitchensink</included-projects>
-		<category>JBoss Developer Framework Quickstarts </category>
-		<shortDescription>Kitchensink</shortDescription>
+		<category>JBoss Quickstarts </category>
+		<shortDescription>kitchensink</shortDescription>
 		<description>
             This is your project! It's a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
             This project is setup to allow you to create a compliant Java EE 6 application using JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0.
@@ -261,8 +263,8 @@
 	    <id>jboss-as-numberguess</id>
 	    <name>jboss-as-numberguess</name>
 	    <included-projects>jboss-as-numberguess</included-projects>
-		<category>JBoss Developer Framework Quickstarts</category>
-		<shortDescription>Number Guess</shortDescription>
+		<category>JBoss Quickstarts</category>
+		<shortDescription>numberguess</shortDescription>
 		<description>
             This example demonstrates the use of CDI 1.0 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
             The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
@@ -303,8 +305,8 @@
   <project>
     <id>jdf-jboss-as-kitchensink-html5-mobile</id>
     <name>jboss-as-kitchensink-html5-mobile</name>
-    <category>JBoss Developer Framework Quickstarts</category>
-    <shortDescription>AeroGear HTML5/Mobile</shortDescription>
+    <category>JBoss Quickstarts</category>
+    <shortDescription>kitchensink-html5-mobile</shortDescription>
     <description>An AeroGear and Java EE 6 HTML5 mobile web application for use with JBoss.</description>
     <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-kitchensink-html5-mobile.zip</url>
     <size>251016</size>
@@ -559,9 +561,9 @@
     <project>
         <id>jdf-jboss-as-greeter</id>
         <name>jboss-as-greeter</name>
-        <category>JBoss Developer Framework Quickstarts</category>
+        <category>JBoss Quickstarts</category>
         <shortDescription>Greeter</shortDescription>
-        <description>Greeter</description>
+        <description>greeter</description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-greeter.zip</url>
         <size>19046</size>
         <importType>maven</importType>

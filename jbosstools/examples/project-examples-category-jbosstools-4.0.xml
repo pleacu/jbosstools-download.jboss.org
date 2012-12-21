@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <categories>
-      <category name="JBoss Developer Framework Quickstarts"
+      <category name="JBoss Quickstarts"
   	description="These quickstarts are aimed to get you up to writing applications with minimal fuss."
   	priority="1" />
 
