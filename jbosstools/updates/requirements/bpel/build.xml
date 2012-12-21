@@ -5,7 +5,7 @@
 		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
 		-consoleLog -nosplash -data /tmp
 		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/bpel/build-indigo.xml"
+		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/req/build.xml"
 		
 		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
 		
@@ -13,36 +13,33 @@
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
 			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/bpel/build-indigo.xml -Ddestination=/tmp/bpel-repo
+			-f ~/RHDS/updates/requirements/req/build.xml -Ddestination=/tmp/req
 
 		or, headless on local:
 	
-		java -cp /home/nboldt/eclipse/eclipse361/plugins/org.eclipse.equinox.launcher_*.jar \
+		java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner -f build-indigo.xml
+			-application org.eclipse.ant.core.antRunner -f build.xml
 
 	-->
 	<target name="mirror">
 		<property name="URL1" value="http://download.eclipse.org/bpel/site/" />
-		<!--property name="URL2" value="https://hudson.eclipse.org/hudson/job/bpel-helios/lastSuccessfulBuild/artifact/site/target/" /-->
+                <property name="version" value="1.0.2.v20121121-1634-CI"/>
 		<property name="destination" value="${basedir}" />
 		<property name="compress" value="true" />
-                <property name="version" value="1.0.1.v20120619-1916-H189-CI"/>
+		<property name="workDir" value="${destination}/${version}/"/>
 
 		<p2.mirror>
-			<repository location="file:${destination}/${version}/" name="Eclipse BPEL for Eclipse 3.7 (Not in Indigo)" />
+			<repository location="file:${workDir}" name="Eclipse BPEL ${version}" />
 			<source>
 				<repository location="${URL1}" />
-				<!--repository location="${URL2}" /-->
 			</source>
-
 			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
 		</p2.mirror>
-
 		<delete>
-			<fileset dir="${destination}/${version}/" includes="**/artifacts.jar, **/contents.jar"/>
+			<fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
 		</delete>
-
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/${version}/" artifactRepository="file:${destination}/${version}/" publishartifacts="true" source="${destination}/${version}/" compress="${compress}" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="${compress}" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
