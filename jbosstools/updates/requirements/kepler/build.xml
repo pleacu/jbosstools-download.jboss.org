@@ -16,6 +16,7 @@
 			-f ~/RHDS/updates/requirements/kepler/build.xml -Ddestination=/tmp/kepler-repo
 	-->
 	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/kepler/" />
+	<property name="workDir" value="${destination}/20121221-1430-M/"/>
 	<property name="compress" value="true" />
 	<property name="URL1" value="http://download.eclipse.org/releases/staging/" />
 	<!-- <property name="URL1" value="http://download.eclipse.org/releases/kepler/201206270900/" /> -->
@@ -24,7 +25,7 @@
 	<target name="mirror">
 		<p2.mirror>
 			<!-- this did nothing to reduce the size of .blobstore <comparator><exclude><artifact><property name="format" value="packed" /></artifact></exclude></comparator> -->
-			<repository location="file:${destination}/20120925-1520-M/" name="Kepler Staging Site (last modified / retrieved 20120925-1520-M)" />
+			<repository location="file:${destination}/20121221-1430-M/" name="Kepler Staging Site (last modified / retrieved 20121221-1430-M)" />
 			<source>
 				<repository location="${URL1}"/>
 					<!-- despite the wiki, this is not allowed <properties size="1"><property name="publishPackFilesAsSiblings" value="true"/></properties>
@@ -38,9 +39,9 @@
 
 		<!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins; remove pack.gz files too -->
 		<delete>
-			<fileset dir="${destination}/20120925-1520-M/" includes="**/*.pack.gz, **/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
+			<fileset dir="${destination}/20121221-1430-M/" includes="**/*.pack.gz, **/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
 		</delete>
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/20120925-1520-M/" artifactRepository="file:${destination}/20120925-1520-M/" publishartifacts="true" source="${destination}/20120925-1520-M/" compress="${compress}" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/20121221-1430-M/" artifactRepository="file:${destination}/20121221-1430-M/" publishartifacts="true" source="${destination}/20121221-1430-M/" compress="${compress}" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
