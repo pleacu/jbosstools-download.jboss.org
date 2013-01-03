@@ -3,7 +3,7 @@
 <repository name='SOA Tools Requirements - Composite Juno SR1 Mirror' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1356135209000'/>
+<property name='p2.timestamp' value='1357194349000'/>
 </properties>
 <children size='9'>
 <child location='../../../requirements/bpel/1.0.2.v20121121-1634-CI/'/>
@@ -17,7 +17,7 @@
 
 <!-- switchyard dependencies -->
 <child location='../../../requirements/m2eclipse/20120627-1400'/>
-<child location='../../../requirements/m2eclipse-wtp-0.14.0-release/'/>
+<child location='../../../requirements/m2eclipse/m2eclipse-wtp-0.14.0-release/'/>
 
 <!-- TODO: pull mirrors of these -->
 <child location='http://download.eclipse.org/modeling/emf/compare/updates/releases/1.2'/>
