@@ -358,7 +358,7 @@ This project is based on the org.jboss.errai.archetypes:jboss-errai-kitchensink-
         <mavenArchetype>
 			<archetypeGroupId>org.jboss.errai.archetypes</archetypeGroupId>
 			<archetypeArtifactId>jboss-errai-kitchensink-archetype</archetypeArtifactId>
-			<archetypeVersion>2.0.0.Final</archetypeVersion>
+			<archetypeVersion>2.1.1.Final</archetypeVersion>
             <!--
             <archetypeRepository>http://anonsvn.jboss.org/repos/jbosstools/workspace/fred/repositories/snapshot/</archetypeRepository>
 			<archetypeRepository>https://repository.jboss.org/nexus/content/groups/public/</archetypeRepository>
