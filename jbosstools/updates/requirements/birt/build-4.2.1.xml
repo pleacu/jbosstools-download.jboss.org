@@ -23,16 +23,13 @@
 
 	-->
 	<target name="mirror">
-		<property name="version" value="4.2.2.v20121219-1209"/>
 		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
-		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
-		<property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
-
+		<property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" />
 		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/birt/" />
-		<property name="workDir" value="${destination}/${version}"/>
+		<property name="compress" value="true" />
 
 		<p2.mirror>
-			<repository location="file:${workDir}" name="BIRT ${version} (Chart + WTP support only)" />
+			<repository location="file:${destination}/4.2.1.v20120912/" name="BIRT 4.2.1.v20120912 (Chart + WTP support only)" />
 			<source>
 				<repository location="${URL}" />
 			</source>
@@ -47,9 +44,9 @@
 		</p2.mirror>
 
 		<delete>
-			<fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
+			<fileset dir="${destination}/4.2.1.v20120912/" includes="**/artifacts.jar, **/contents.jar"/>
 		</delete>
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/4.2.1.v20120912/" artifactRepository="file:${destination}/4.2.1.v20120912/" publishartifacts="true" source="${destination}/4.2.1.v20120912/" compress="${compress}" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
