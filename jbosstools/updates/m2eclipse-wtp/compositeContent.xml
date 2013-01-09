@@ -3,11 +3,11 @@
 <repository name='m2eclipse-wtp updates' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1357762929000'/>
+<property name='p2.timestamp' value='1357767208000'/>
 </properties>
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2eclipse-wtp/'/>
-<child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2eclipse-mavenarchiver/'/>
+<child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-mavenarchiver/'/>
 <child location='http://download.eclipse.org/technology/m2e/releases/'/>
 </children>
 </repository>
