@@ -16,17 +16,18 @@
 			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
 	-->
 	<target name="mirror">
+		<property name="version" value="3.0.7.v20121218"/>
 		<!-- JIRA connector; note that Subclipse connector is on Subclipse req site, ../subclipse/ -->
 		<!-- <property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/weekly/e3.6/" /> -->
 		
 		<!-- <property name="URL1" value="http://download.eclipse.org/mylyn/releases/latest" /> -->
 		<!-- TODO: make sure that the version of Mylyn in Juno (or on the URL above?) is the same as the version used on the Atlassian site! -->
 		<property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/e3.8" />
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/atlassian/3.0.6.v20120628/" />
-		<property name="compress" value="true" />
+		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/atlassian/" />
+		<property name="workDir" value="${destination}/${version}"/>
 
 		<p2.mirror>
-			<repository location="file:${destination}/3.0.6.v20120628" name="atlassian 3.0.6.v20120628" />
+			<repository location="file:${workDir}" name="Atlassian Connectors ${version}" />
 			<source>
 				<repository location="${URL1}" />
 			</source>
@@ -40,7 +41,11 @@
 			<iu id="com.atlassian.connector.eclipse.subclipse.feature.group" />
 			<iu id="com.atlassian.connector.eclipse.subversive.feature.group" />
 		</p2.mirror>
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/3.0.6.v20120628/" artifactRepository="file:${destination}/3.0.6.v20120628/" publishartifacts="true" source="${destination}/3.0.6.v20120628/" compress="${compress}" />
+
+		<delete>
+			<fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
+		</delete>
+		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
