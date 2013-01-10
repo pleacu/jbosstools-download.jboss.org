@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="mirror">
+	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+	
+		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
+		-consoleLog -nosplash -data /tmp
+		-application org.eclipse.ant.core.antRunner
+		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/m2eclipse/build.xml"
+		
+		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+		
+		export JAVA_HOME=/opt/jdk1.6.0; \
+		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+			-application org.eclipse.ant.core.antRunner \
+			-f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
+	-->
+	<target name="mirror">
+		<property name="version" value="0.15.0.201212120353"/>
+		<!-- Kepler version is 0.15.0.201212120353 -->
+		<!-- <property name="URL" value="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/${version}/"/> -->
+		<property name="URL" value="http://repository.tesla.io:8081/nexus/content/sites/m2e.extras/m2eclipse-buildhelper/0.15.0/N/${version}/"/>
+		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/m2e-extensions/m2e-buildhelper/" />
+		<property name="workDir" value="${destination}/${version}"/>
+
+		<p2.mirror>
+			<repository location="file:${workDir}" name="m2e-buildhelper ${version}" />
+			<source>
+				<repository location="${URL}" />
+			</source>
+
+			<slicingOptions includeFeatures="true" followStrict="true" />
+		</p2.mirror>
+
+		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+		<ant antfile="${destination}/../../requirements/remove.references.xml" target="remove.references"/>
+	</target>
+</project>
