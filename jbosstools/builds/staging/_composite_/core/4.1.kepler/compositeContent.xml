@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='JBoss Tools - Core - Staging Repository' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<properties size='3'>
+<property name='p2.compressed' value='true'/>
+<!-- 
+     get new time w/ 
+      date +%s000
+-->
+<property name='p2.atomic.composite.loading' value='false'/>
+<property name='p2.timestamp' value='1357957695000'/>
+</properties>
+<children size='16'>
+
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--base/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--birt/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--forge/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--freemarker/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--gwt/all/repo/'/>
+
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--javaee/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--central-maven-examples/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--hibernate/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--jst/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--openshift/all/repo/'/>
+<child location='../../../../staging/openshift-java-client-master/all/repo/'/>
+
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--portlet/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--server/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--vpe/all/repo/'/>
+<child location='../../../../staging/jbosstools-4.1_stable_branch.component--webservices/all/repo/'/>
+<child location='../../../../staging/xulrunner-1.9.2/all/repo/'/>
+
+</children>
+</repository>
