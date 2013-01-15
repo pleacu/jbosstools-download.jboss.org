@@ -315,7 +315,7 @@ This project is based on the org.jboss.spring.archetypes:spring-mvc-webapp:1.0.0
 		<description>An archetype that generates a starter GWT application with Java EE 6 and Errai. 
 Make sure you read the deployment instructions in README.md.
 
-This project is based on the org.jboss.errai.archetypes:jboss-errai-kitchensink-archetype:2.0.0.Final Maven archetype.</description>
+This project is based on the org.jboss.errai.archetypes:jboss-errai-kitchensink-archetype:2.1.1.Final Maven archetype.</description>
 		<size>165567</size>
 		<url/>
 		<fixes>
