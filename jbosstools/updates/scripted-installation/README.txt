@@ -13,6 +13,9 @@ OpenJDK 6) and JBoss Tools 3.2.0.CR1 on Jan 11, 2011. First attempt was incomple
 due to timeout, but on second attempt install succeeded in 9 mins. Script used 
 is below for reference. Resulting footprint on disk (including Eclipse): 784M
 
+For a simpler script that does not require ant-contrib and can be used w/ a URL instead of only a zip as input, see director.xml. 
+Note that this script will not throw helpful error messages if commandline params are invalid or missing.
+
 -- Nick Boldt (nboldt@redhat.com)
 
 --- --- --- --- --- --- --- --- 
