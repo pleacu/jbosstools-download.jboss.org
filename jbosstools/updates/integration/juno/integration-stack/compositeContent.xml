@@ -7,9 +7,9 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1359395082000'/>
+<property name='p2.timestamp' value='1359400365000'/>
 </properties>
-<children size='8'>
+<children size='9'>
 <child location='bpel/'/>
 <child location='esb/'/>
 <child location='jbpm3/'/>
@@ -19,5 +19,6 @@
 <child location='savara/'/>
 <child location='switchyard/'/>
 <child location='teiddesigner/'/>
+<child location='http://download.jboss.org/drools/release/latest/org.drools.updatesite/'/>
 </children>
 </repository>
