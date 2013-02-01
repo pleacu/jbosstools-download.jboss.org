@@ -7,9 +7,9 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1356107727000'/>
+<property name='p2.timestamp' value='1359753669000'/>
 </properties>
-<children size='8'>
+<children size='9'>
 <!-- 3rd party sites we mirror, used by Central -->
 <child location='../../../requirements/atlassian/3.0.6.v20120628/'/> 
 <child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
@@ -19,6 +19,9 @@
 <child location='../../../requirements/springide/2.7.2.201109122348/'/>
 <child location='../../../requirements/subclipse/1.8.16_1.7.5.v1/'/>
 <child location='../../../requirements/testng/6.7.0.20120825_1316/'/>
+
+<!-- JBIDE-13428 temporarily link to latest m2e-wtp kepler snapshot -->
+<child location='http://download.eclipse.org/m2e-wtp/snapshots/kepler/'/>
 </children>
 </repository>
 
