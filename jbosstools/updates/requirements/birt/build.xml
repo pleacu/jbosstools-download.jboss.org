@@ -23,8 +23,8 @@
 
 	-->
 	<target name="mirror">
-		<property name="version" value="4.2.2.v20121219-1209"/>
-		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
+		<property name="version" value="4.2.2.v20130205-1336"/>
+		<property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" />
 		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
 		<property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
 
@@ -37,7 +37,7 @@
 				<repository location="${URL}" />
 			</source>
 
-			<slicingOptions includeFeatures="true" followStrict="true" />
+			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
 
 			<iu id="org.eclipse.birt.osgi.runtime.sdk.feature.group" />
 			<iu id="org.eclipse.birt.feature.group" />

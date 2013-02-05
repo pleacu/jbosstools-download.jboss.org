@@ -15,15 +15,15 @@
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/eclipse/build.xml -Ddestination=/tmp/eclipse-repo
 	-->
+	<property name="version" value="S-4.3M5-201301302000"/>
+	<property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.3milestones/${version}"/>
+
+	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/eclipse/" />
+	<property name="workDir" value="${destination}/${version}/"/>
+
 	<target name="mirror">
-		<property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.3milestones/"/>
-
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/eclipse/" />
-		<property name="workDir" value="${destination}/S-4.3M4-201212140730"/>
-		<property name="compress" value="true" />
-
 		<p2.mirror>
-			<repository location="file:${destination}/S-4.3M4-201212140730/" name="Eclipse S-4.3M4-201212140730" />
+			<repository location="file:${workDir}" name="Eclipse ${version}" />
 			<source>
 				<repository location="${URL1}" />
 			</source>
@@ -31,7 +31,7 @@
 			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="false"/>
 		</p2.mirror>
 
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/S-4.3M4-201212140730/" artifactRepository="file:${destination}/S-4.3M4-201212140730/" publishartifacts="true" source="${destination}/S-4.3M4-201212140730/" compress="${compress}" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

@@ -16,7 +16,7 @@
 			-f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
 	-->
 	<target name="mirror">
-		<property name="version" value="20130110-1140_1.3_0.17"/>
+		<property name="version" value="20130205-1150_1.3_0.17"/>
 
 		<!-- <property name="URL1" value="http://download.eclipse.org/technology/m2e/releases/"/> -->
 		<property name="URL1" value="http://download.eclipse.org/technology/m2e/milestones/1.3/"/>
