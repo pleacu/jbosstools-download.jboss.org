@@ -8,48 +8,48 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1357957691000'/>
+<property name='p2.timestamp' value='1360264141000'/>
 </properties>
 <children size='32'>
 
 <!-- JBT Core: 16 x 2 = 32 -->
 
-<child location='../../../../staging/jbosstools-4.1_trunk.component--base/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--birt/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--forge/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--freemarker/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--gwt/all/repo/'/>
+<child location='../../../../staging/jbosstools-base_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-birt_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-forge_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-freemarker_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-gwt_master/all/repo/'/>
 
-<child location='../../../../staging/jbosstools-4.1_trunk.component--javaee/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--central-maven-examples/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--hibernate/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--jst/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--openshift/all/repo/'/>
+<child location='../../../../staging/jbosstools-javaee_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-central_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-hibernate_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-jst_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-openshift_master/all/repo/'/>
 <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
 
-<child location='../../../../staging/jbosstools-4.1_trunk.component--portlet/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--server/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--vpe/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_trunk.component--webservices/all/repo/'/>
+<child location='../../../../staging/jbosstools-portlet_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-server_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-vpe_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-webservices_master/all/repo/'/>
 <child location='../../../../staging/xulrunner-1.9.2/all/repo/'/>
 
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--base/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--birt/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--forge/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--freemarker/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--gwt/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-base_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-birt_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-forge_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-freemarker_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-gwt_master/all/repo/'/>
 
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--javaee/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--central-maven-examples/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--hibernate/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--jst/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--openshift/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-javaee_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-central_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-hibernate_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-jst_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-openshift_master/all/repo/'/>
 <child location='../../../../staging.previous/openshift-java-client-master/all/repo/'/>
 
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--portlet/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--server/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--vpe/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-4.1_trunk.component--webservices/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-portlet_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-server_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
 <child location='../../../../staging.previous/xulrunner-1.9.2/all/repo/'/>
 
 </children>

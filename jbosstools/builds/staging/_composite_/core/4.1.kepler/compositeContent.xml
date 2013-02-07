@@ -8,27 +8,27 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1357957695000'/>
+<property name='p2.timestamp' value='1360264141000'/>
 </properties>
 <children size='16'>
 
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--base/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--birt/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--forge/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--freemarker/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--gwt/all/repo/'/>
+<child location='../../../../staging/jbosstools-base_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-birt_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-forge_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-gwt_41/all/repo/'/>
 
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--javaee/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--central-maven-examples/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--hibernate/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--jst/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--openshift/all/repo/'/>
+<child location='../../../../staging/jbosstools-javaee_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-central_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-hibernate_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-jst_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-openshift_41/all/repo/'/>
 <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
 
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--portlet/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--server/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--vpe/all/repo/'/>
-<child location='../../../../staging/jbosstools-4.1_stable_branch.component--webservices/all/repo/'/>
+<child location='../../../../staging/jbosstools-portlet_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-server_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-vpe_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-webservices_41/all/repo/'/>
 <child location='../../../../staging/xulrunner-1.9.2/all/repo/'/>
 
 </children>
