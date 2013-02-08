@@ -22,7 +22,7 @@
 			-application org.eclipse.ant.core.antRunner -f build.xml
 
 	-->
-	<property name="version" value="I-3.5.0-20130131044200"/>
+	<property name="version" value="S-3.5.0M5-20130206143825"/>
 	<property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.5.0/${version}/repository/"/>
 
 	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/webtools/" />

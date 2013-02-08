@@ -23,7 +23,7 @@
 
 	-->
 	<target name="mirror">
-		<property name="version" value="4.2.2.v20130205-1336"/>
+		<property name="version" value="4.2.2.v20130206-1509"/>
 		<property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" />
 		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
 		<property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
