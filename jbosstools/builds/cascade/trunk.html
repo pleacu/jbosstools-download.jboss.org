@@ -59,88 +59,53 @@ function toggle()
 		<td class="bodyText">&#160;&#160;</td>
 		<td class="bodyText">
 
-<p align="center"><h2><i>MANY LINKS BELOW ARE BROKEN AND SUBJECT TO CHANGE.</i></h2></p>
-
 		<p class="bodyText"><i>Note: <b style="color: red">red
 		links</b> require VPN access.</i>
 		
 		<h2 class="title">Build Job Cascade:</h2>
 		<ul>
 			<li><a style="color: red"
-				href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.target-platform_master">Local
-			Target Platform build</a> (build + publish)
+				href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstoolstargetplatforms-matrix">Local
+			JBT &amp; JBDS Target Platforms</a> (update sites)</li>
 			<ul>
 				<li><a style="color: red"
-					href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.continuous_master">Continuous
-				build</a> (build only, no tests, no publish)</li>
+					href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow.1_master">Build Flow</a> (once a week, all the projects' jobs are 
+					<a style="color: red" href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/view/DevStudio/view/DevStudio_Trunk_Pipeline/">built in order</a>) 
+					- <a href=swimlanes.html>Interdependencies between jobs &amp; job order, aka "swimlanes"</a></li>
 				<li><a style="color: red"
-					href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.tests_master">Tests
-				build</a> (build + tests, no publish)</li>
-				<li><a style="color: red"
-					href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/view/DevStudio/view/DevStudio_Trunk/">All
-				components' jobs, including JBT - Core, JBT - SOA Tooling, Drools, Teiid, pi4soa, Savara</a>
-				(build, test, publish) :: <b><a style="color: red"
-					href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/view/DevStudio/view/DevStudio_Trunk/portlet/dashboard_portlet_81/">list
-				of unstable jobs</a></b> - <a href=swimlanes.html>Interdependencies between jobs, aka "swimlanes"</a></li>
+					href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/view/DevStudio/view/DevStudio_Trunk/">All projects' jobs, overall test results, unstable jobs</a></li>
 				<ul>
 					<li><a style="color: red"
-						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.webtools.aggregate_master">JBT - Web Tools 
+						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-build-sites.aggregate.webtools-site_master">JBT - Web Tools 
 					build</a> (collect components into a single update site for use as WTP Server Adapter)
 					</li>
 					<ul>
 						<li><a style="color: red"
-						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.aggregate_master">JBT - Core
+						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-build-sites.aggregate.site_master">JBT - Core
 					build</a> (collect components into a single update site for downstream use and publishing to sf.net)
-					</li>
-					<ul>
-						<li><a style="color: red"
-						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.soa-tooling.aggregate_master">JBT - SOA Tooling
-					build</a> (collect components into a single update site for downstream use and publishing to sf.net)
-					</li></ul>
+						</li>
+					<hr />
+						<ul>
+							<li><a style="color: red"
+								href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/devstudio.product_master">JBDS
+							Product build</a> (update site + installer)
+							</li>
+						</ul>
 					</ul>
-					<li><a style="color: red"
-						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.coretests.aggregate_master">JBT - Core Tests
-					build</a> (collect all tests into a single update site)
-					</li>
-					<ul><li><a style="color: red"
-						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-.soatests.aggregate_master">JBT - SOA Tests
-					build</a> (collect all tests into a single update site)
-					</li></ul>
 				</ul>
 			</ul>
-					<hr />
-			<li><a style="color: red"
-				href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/devstudio-6.0_trunk.target-platform">Local
-			JBDS Target Platform build</a> (build + publish)
-			<ul>
-				<ul>
-					<li><a style="color: red"
-						href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/devstudio.product_master">JBDS
-					Aggregate site build</a> (build Core [JBT + JBDS], Extras, Tech Preview
-					sites, installers, then publish)
-					<ul>
-						<li><a style="color: red"
-							href="https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/devstudio-6.0_trunk.soa-tooling.updatesite">JBDS
-						SOA Tooling site build</a> (build site, then publish)
-					</ul>
-					</li>
-				</ul>
-			</li>
 		</ul>
-		</li>
-		</ul>
-		</li>
-		</ul>
+
 		<h2 class="title">Results:</h2>
 		<ul>
 			<li><a
-				href="http://download.jboss.org/jbosstools/updates/target-platform_4.0.juno.SR0/latest/">JBT Target Platform</a>
+				href="http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/">JBT Target Platforms</a> &amp; <a style="color: red"
+				href="http://www.qa.jboss.com/binaries/RHDS/targetplatforms/jbdevstudiotarget/">JBDS Target Platforms</a>
 			<ul>
 				<li><a
-					href="http://download.jboss.org/jbosstools/builds/staging/">JBT Component builds</a> (staging)
+					href="http://download.jboss.org/jbosstools/builds/staging/">JBT Project builds</a> (staging)
 				:: <a
-					href="http://download.jboss.org/jbosstools/builds/staging/_composite_/trunk/">composite
-				update site</a>
+					href="http://download.jboss.org/jbosstools/builds/staging/_composite_/core/trunk/">composite update site</a></li>
 				<ul>
 					<li><a href="http://download.jboss.org/jbosstools/builds/nightly/webtools/">JBT - Web Tools</a> (nightly)
 					:: <a href="http://download.jboss.org/jbosstools/builds/nightly/webtools/trunk/latestBuild.html">latest builds</a>
@@ -149,47 +114,22 @@ function toggle()
 						<li><a href="http://download.jboss.org/jbosstools/builds/nightly/core/">JBT - Core Tools</a> (nightly)
 					:: <a href="http://download.jboss.org/jbosstools/builds/nightly/core/trunk/latestBuild.html">latest builds</a> 
 					:: <b><a href="http://download.jboss.org/jbosstools/updates/nightly/core/trunk/">latest updates</a></b>
+						<hr />
 						<ul>
-							<li><a href="http://download.jboss.org/jbosstools/builds/nightly/soa-tooling/">JBT - SOA Tooling</a> (nightly)
-							:: <a href="http://download.jboss.org/jbosstools/builds/nightly/soa-tooling/trunk/latestBuild.html">latest builds</a>
-							:: <b><a href="http://download.jboss.org/jbosstools/updates/nightly/soa-tooling/trunk/">latest updates</a></b>
+							<li><b><a style="color: red"
+								href="http://www.qa.jboss.com/binaries/RHDS/builds/staging/devstudio.product_trunk/installer/">JBDS Installer</a></b> :: 
+								<b><a style="color: red"
+								href="http://www.qa.jboss.com/binaries/RHDS/builds/staging/devstudio.product_trunk/all/">Update Site</a></b>
+							</li>
 						</ul>
 					</ul>
-					<li><a href="http://download.jboss.org/jbosstools/builds/nightly/coretests/">JBT - Core Tests</a> (nightly)
-					:: <a href="http://download.jboss.org/jbosstools/builds/nightly/coretests/trunk/latestBuild.html">latest builds</a>
-					:: <b><a href="http://download.jboss.org/jbosstools/updates/nightly/coretests/trunk/">latest updates</a></b>
-					<ul>
-						<li><a href="http://download.jboss.org/jbosstools/builds/nightly/soatests/">JBT - SOA Tests</a> (nightly)
-						:: <a href="http://download.jboss.org/jbosstools/builds/nightly/soatests/trunk/latestBuild.html">latest builds</a>
-						:: <b><a href="http://download.jboss.org/jbosstools/updates/nightly/soatests/trunk/">latest updates</a></b>
-					</ul>
 				</ul>
 			</ul>
-					<hr />
-			<li><a style="color: red"
-				href="http://www.qa.jboss.com/binaries/RHDS/updates/jbds-target-platform_4.0.juno.SR0/">JBDS Target Platform</a>
-			<ul>
-				<ul>
-					<li><b><a style="color: red"
-						href="http://www.qa.jboss.com/binaries/RHDS/builds/staging/devstudio-6.0_trunk.updatesite/product/">JBDS - Core Updates</a></b> ::
-<b><a style="color: red"
-						href="http://www.qa.jboss.com/binaries/RHDS/builds/staging/devstudio-6.0_trunk.updatesite/extras/">Extras</a></b> ::
-						<b><a style="color: red"
-						href="http://www.qa.jboss.com/binaries/RHDS/builds/staging/devstudio-6.0_trunk.updatesite/installer/">JBDS Installers</a></b></li>
-					<ul>
-						<li><b><a style="color: red"
-							href="http://www.qa.jboss.com/binaries/RHDS/builds/staging/devstudio-6.0_trunk.soa-tooling.updatesite/product-soa/">JBDS - SOA Tooling updates</a></b>
-						</li>
-					</ul>
-					</li>
-				</ul>
-			</ul>
-			</li>
 		</ul>
 		</td>
 	</tr>
 </table>
-<p align="right"><i><small>Last updated 2013-02-07</small></i>
+<p align="right"><i><small>Last updated 2013-02-10</small></i>
 <br/><small><a href=trunk.html>trunk</a> :: <a href=4.1.kepler.html>4.1.x / 7.x (Kepler)</a> :: <a href=4.0.juno.html>4.0.x / 6.x (Juno)</a> :: <a href=3.3.indigo.html>3.3.x / 5.x (Indigo)</a> :: <a href=3.2.helios.html>3.2.x / 4.x (Helios)</a></small>
 </p>
 
