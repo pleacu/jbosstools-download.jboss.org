@@ -19,6 +19,6 @@
 <child location='../../../requirements/springide/2.7.2.201109122348/'/>
 <child location='../../../requirements/subclipse/1.8.16_1.7.5.v1/'/>
 <child location='../../../requirements/testng/6.7.0.20120825_1316/'/>
-</chidren>
+</children>
 </repository>
 
