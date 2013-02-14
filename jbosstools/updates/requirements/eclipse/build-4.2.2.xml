@@ -16,17 +16,18 @@
 			-f ~/RHDS/updates/requirements/eclipse/build.xml -Ddestination=/tmp/eclipse-repo
 	-->
 	<target name="mirror">
-		<!-- <property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2-M-builds/R-4.2.1-201209141800/"/>
-		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8-M-builds/M20120829-1000/"/> -->
-		<property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2/R-4.2.1-201209141800/"/>
-		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8/R-3.8.1-201209141540/"/>
+		<property name="version" value="M20130204-1200"/>
+		<property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2-M-builds/M20130204-1200/"/>
+		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8-M-builds/M20130131-0800/"/>
+		<!-- <property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.2/R-4.2.1-201209141800/"/>
+		<property name="URL2" value="http://download.eclipse.org/eclipse/updates/3.8/R-3.8.1-201209141540/"/> -->
 
 		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/eclipse/" />
-		<property name="workDir" value="${destination}/R-4.2.1-201209141800"/>
+		<property name="workDir" value="${destination}/${version}"/>
 		<property name="compress" value="true" />
 
 		<p2.mirror>
-			<repository location="file:${destination}/R-4.2.1-201209141800/" name="Eclipse R-4.2.1-201209141800" />
+			<repository location="file:${destination}/${version}/" name="Eclipse ${version}" />
 			<source>
 				<repository location="${URL1}" />
 				<repository location="${URL2}" />
@@ -35,7 +36,7 @@
 			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="false"/>
 		</p2.mirror>
 
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/R-4.2.1-201209141800/" artifactRepository="file:${destination}/R-4.2.1-201209141800/" publishartifacts="true" source="${destination}/R-4.2.1-201209141800/" compress="${compress}" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/${version}/" artifactRepository="file:${destination}/${version}/" publishartifacts="true" source="${destination}/${version}/" compress="${compress}" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

@@ -23,14 +23,15 @@
 
 	-->
 	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/webtools/" />
-	<property name="workDir" value="${destination}/R-3.4.1-20120917174803/"/>
+	<property name="version" value="R-3.4.2-20130208151217"/>
+	<property name="workDir" value="${destination}/${version}/"/>
 	<property name="compress" value="true" />
-	<property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.4.1/R-3.4.1-20120917174803/repository/"/>
+	<property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.4.2/R-3.4.2-20130208151217/repository/"/>
 
 	<target name="run" depends="mirror,regen"/>
 	<target name="mirror">
 		<p2.mirror>
-			<repository location="file:${destination}/R-3.4.1-20120917174803/" name="Web Tools R-3.4.1-20120917174803" />
+			<repository location="file:${destination}/${version}/" name="Web Tools ${version}" />
 			<source>
 				<repository location="${URL}" />
 			</source>
@@ -39,7 +40,7 @@
 		</p2.mirror>
 	</target>
 	<target name="regen">
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/R-3.4.1-20120917174803/" artifactRepository="file:${destination}/R-3.4.1-20120917174803/" publishartifacts="true" source="${destination}/R-3.4.1-20120917174803/" compress="${compress}" />
+		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/${version}/" artifactRepository="file:${destination}/${version}/" publishartifacts="true" source="${destination}/${version}/" compress="${compress}" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
