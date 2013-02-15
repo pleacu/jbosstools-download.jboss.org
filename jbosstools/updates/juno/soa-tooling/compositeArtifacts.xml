@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
-<repository name='SOA Tools Requirements - Composite Juno Mirror' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<repository name='JBoss Tools Integration Stack Target Platform - Juno' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
 <!-- 
@@ -12,9 +12,9 @@ fun! ReplaceTimestamp()
 endfun
 nnoremap <Leader>ts :call ReplaceTimestamp()<CR>
 -->
-<property name='p2.timestamp' value='1357486736000'/>
+<property name='p2.timestamp' value='1360900476000'/>
 </properties>
 <children size='1'>
 <child location='SR1a/'/>
-</children>     
+</children>
 </repository>
