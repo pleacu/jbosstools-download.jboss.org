@@ -7,18 +7,20 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1359400349000'/>
+<property name='p2.timestamp' value='1360958747000'/>
 </properties>
 <children size='9'>
 <child location='bpel/'/>
+<child location='droolsjbpm/'/>
 <child location='esb/'/>
 <child location='jbpm3/'/>
 <child location='modeshape/'/>
 
+<!-- TODO: JBIDE-11098 remove this once contents have moved to esb, jbpm3, and droolsjbpm -->
 <child location='runtime-detection/'/>
+
 <child location='savara/'/>
 <child location='switchyard/'/>
 <child location='teiddesigner/'/>
-<child location='http://download.jboss.org/drools/release/latest/org.drools.updatesite/'/>
 </children>
 </repository>
