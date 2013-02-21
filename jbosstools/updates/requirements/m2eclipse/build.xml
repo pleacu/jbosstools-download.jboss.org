@@ -16,13 +16,20 @@
 			-f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
 	-->
 	<target name="mirror">
-		<property name="version" value="20130205-1543_1.3_0.17"/>
+		<property name="version" value="20130220-2020_1.3_0.17"/>
 
-		<!-- <property name="URL1" value="http://download.eclipse.org/technology/m2e/releases/"/> -->
-		<property name="URL1" value="http://download.eclipse.org/technology/m2e/milestones/1.3/"/>
-		<property name="URL2a" value="http://download.eclipse.org/m2e-wtp/milestones/0.17.0/"/>
-		<property name="URL2b" value="http://download.eclipse.org/m2e-wtp/milestones/kepler/0.17.0/"/>
-		<!-- <property name="URL2" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2eclipse-wtp/0.16.0/"/> -->
+		<!-- due to failure to resolve http://download.eclipse.org/m2e-wtp/milestones/kepler/0.17.0/0.17.0.20130205-1819/m2e-wtp-jpa/, I'm going to use the previous version of this site to bootstrap this new version -->
+		<property name="URL0a" value="http://www.qa.jboss.com/binaries/RHDS/updates/requirements/m2eclipse/20130205-1543_1.3_0.17/"/>
+		<property name="URL0b" value="http://download.jboss.org/jbosstools/updates/requirements/m2eclipse/20130205-1543_1.3_0.17/"/>
+
+		<property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/>
+		<property name="URL1b" value="http://download.eclipse.org/technology/m2e/milestones/1.3/"/>
+		<property name="URL1c" value="http://download.eclipse.org/technology/m2e/releases/1.3/"/>
+
+		<property name="URL2a" value="http://download.eclipse.org/m2e-wtp/releases/kepler/"/>
+		<property name="URL2b" value="http://download.eclipse.org/m2e-wtp/milestones/0.17.0/"/>
+		<property name="URL2c" value="http://download.eclipse.org/m2e-wtp/milestones/kepler/0.17.0/"/>
+		<property name="URL2d" value="http://download.eclipse.org/m2e-wtp/snapshots/kepler"/>
 
 		<property name="URL3" value="https://repository.sonatype.org/content/repositories/forge-sites/m2e-extras/0.15.0/N/0.15.0.201206251206/"/>
 
@@ -36,11 +43,17 @@
 		<property name="workDir" value="${destination}/${version}"/>
 
 		<p2.mirror>
-			<repository location="file:${workDir}" name="m2e/1.3, m2e-wtp/0.17, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" />
+			<repository location="file:${workDir}" name="m2e/1.3.1, m2e-wtp/0.17, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" />
 			<source>
-				<repository location="${URL1}" />
+				<repository location="${URL0a}" />
+				<repository location="${URL0b}" />
+				<repository location="${URL1a}" />
+				<repository location="${URL1b}" />
+				<repository location="${URL1c}" />
 				<repository location="${URL2a}" />
 				<repository location="${URL2b}" />
+				<repository location="${URL2c}" />
+				<repository location="${URL2d}" />
 				<repository location="${URL3}" />
 				<repository location="${URL4a}" />
 				<repository location="${URL4b}" />
@@ -48,6 +61,24 @@
 				<repository location="${URL4d}" />
 				<repository location="${URL4e}" />
 			</source>
+
+			<!--<iu id="org.eclipse.m2e.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.logback.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.sdk.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.wtp.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.wtp.jaxrs.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.wtp.jpa.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.wtp.jsf.feature.feature.group"/>
+			<iu id="org.eclipse.m2e.wtp.sdk.feature.feature.group"/>
+			<iu id="org.jboss.tools.m2e.jdt.feature.feature.group"/>
+			<iu id="org.jboss.tools.m2e.wro4j.feature.feature.group"/>
+			<iu id="org.jboss.tools.maven.apt.feature.feature.group"/>
+			<iu id="org.sonatype.m2e.antlr.feature.feature.group"/>
+			<iu id="org.sonatype.m2e.buildhelper.feature.feature.group"/>
+			<iu id="org.sonatype.m2e.mavenarchiver.feature.feature.group"/>
+			<iu id="org.sonatype.m2e.modello.feature.feature.group"/>
+			<iu id="org.sonatype.m2e.plexus.annotations.feature.feature.group"/>
+			<iu id="org.sonatype.m2e.sisuindex.feature.feature.group"/>-->
 
 			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
 		</p2.mirror>
