@@ -20,7 +20,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
         <stacksId>jboss-javaee6-webapp-archetype</stacksId>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
 			</fix>
@@ -77,7 +77,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		<stacksId>jboss-javaee6-webapp-ear-archetype</stacksId>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
 			</fix>
@@ -132,7 +132,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
         <stacksId>jboss-html5-mobile-archetype</stacksId>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
 			</fix>
@@ -186,7 +186,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
         <stacksId>richfaces-archetype-kitchensink</stacksId>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires  JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
 			</fix>
@@ -243,7 +243,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		<url/>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
 			</fix>
@@ -301,7 +301,7 @@ IMPORTANT : Make sure you read the deployment instructions in README.md.</descri
         <stacksId>jboss-errai-kitchensink-archetype</stacksId>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.70, org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.70, org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.710</property>
 			</fix>
