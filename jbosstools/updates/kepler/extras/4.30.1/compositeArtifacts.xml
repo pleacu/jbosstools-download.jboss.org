@@ -10,14 +10,14 @@
 <property name='p2.timestamp' value='1362113783000'/>
 </properties>
 <children size='8'>
-<!-- new to JBDS 7.0.0 -->
+<!-- new to JBT 4.1.0 / JBDS 7 -->
 <child location='../../../requirements/atlassian/3.0.7.v20121218/'/> 
 <child location='../../../requirements/gwt/3.2.0.v201302131858-rel-r42/'/>
 <child location='../../../requirements/springide/3.2.0.201301251408-M2/'/>
 <child location='../../../requirements/subclipse/1.8.18_1.7.8.1/'/>
 <child location='../../../requirements/testng/6.8.0.20121120_1820/'/>
 
-<!-- unchanged since JBDS 6.0.0 -->
+<!-- unchanged since JBT 4.0.0 / JBDS 6-->
 <child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
 <child location='../../../requirements/findbugs/2.0.2.20121210/'/>
 <child location='../../../requirements/pmd/3.2.6/'/>
