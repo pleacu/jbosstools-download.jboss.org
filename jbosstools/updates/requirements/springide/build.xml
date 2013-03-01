@@ -29,11 +29,13 @@
 				<repository location="${URL1}" />
 			</source>
 
+			<iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, includes mylyn -->
 			<iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
 			<iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
 			<iu id="org.springframework.ide.eclipse.batch.feature.feature.group" />
 			<iu id="org.springframework.ide.eclipse.feature.feature.group" />
 			<iu id="org.springframework.ide.eclipse.integration.feature.feature.group" />
+			<iu id="org.springframework.ide.eclipse.maven.feature.feature.group"/> <!-- new -->
 			<iu id="org.springframework.ide.eclipse.mylyn.feature.feature.group" />
 			<iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
 			<iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
