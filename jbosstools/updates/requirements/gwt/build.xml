@@ -39,6 +39,7 @@
 			<iu id="org.eclipse.wb.core.feature.feature.group"/>
 			<iu id="org.eclipse.wb.css.feature.feature.group"/>
 			<iu id="org.eclipse.wb.core.xml.feature.feature.group"/>
+			<iu id="org.eclipse.wb.core.java.feature.feature.group"/>
 			
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>
