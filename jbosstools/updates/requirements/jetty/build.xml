@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="mirror" basedir=".">
+	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+	
+		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
+		-consoleLog -nosplash -data /tmp
+		-application org.eclipse.ant.core.antRunner
+		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/atlassian/build.xml"
+		
+		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+		
+		export JAVA_HOME=/opt/jdk1.6.0; \
+		${JAVA_HOME}/bin/java jar ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+			-consoleLog -nosplash -data /tmp \
+			-application org.eclipse.ant.core.antRunner \
+			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
+	-->
+	<target name="mirror">
+		<property name="version" value="8.1.9.v20130131"/>
+		<!-- JIRA connector; note that Subclipse connector is on Subclipse req site, ../subclipse/ -->
+		<!-- <property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/weekly/e3.6/" /> -->
+		
+		<!-- <property name="URL1" value="http://download.eclipse.org/mylyn/releases/latest" /> -->
+		<!-- TODO: make sure that the version of Mylyn in Juno (or on the URL above?) is the same as the version used on the Atlassian site! -->
+		<property name="URL1" value="http://download.eclipse.org/jetty/updates/jetty-bundles-8.x/8.1.9.v20130131/" />
+		<property name="destination" value="${basedir}" />
+		<property name="workDir" value="${destination}/${version}"/>
+
+		<p2.mirror>
+			<repository location="file:${workDir}" name="Atlassian Connectors ${version}" />
+			<source>
+				<repository location="${URL1}" />
+			</source>
+
+			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="true" />
+
+                        <iu id="org.eclipse.jetty.http"/>
+                        <iu id="org.eclipse.jetty.continuation"/>
+                        <iu id="org.eclipse.jetty.io"/>
+                        <iu id="org.eclipse.jetty.security"/>
+                        <iu id="org.eclipse.jetty.server"/>
+                        <iu id="org.eclipse.jetty.servlet"/>
+                        <iu id="org.eclipse.jetty.util"/>
+			<iu id="org.eclipse.jetty.websocket"/>
+			<iu id="org.eclipse.jetty.servlets"/>
+			<iu id="org.eclipse.jetty.client"/>
+
+		</p2.mirror>
+
+		<delete>
+			<fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
+		</delete>
+		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+	</target>
+</project>
