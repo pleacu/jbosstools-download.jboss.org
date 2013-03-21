@@ -14,17 +14,10 @@
 			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/birt/build.xml -Ddestination=/tmp/birt-repo
-
-		or, headless on local:
-	
-		java -cp /home/nboldt/eclipse/eclipse361/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner -f build.xml
-
 	-->
 	<target name="mirror">
-		<property name="version" value="4.2.2.v20130206-1509"/>
-		<property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" />
+		<property name="version" value="4.3.0.v201303181854"/>
+		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
 		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
 		<property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
 
