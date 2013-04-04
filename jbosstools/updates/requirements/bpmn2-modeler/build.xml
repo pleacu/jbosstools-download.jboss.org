@@ -27,9 +27,9 @@
 		<property name="URL2" value="http://download.eclipse.org/bpmn2-modeler/site/" />
 		<!-- LAST CHECKED BUILD IDs: 
 		BPMN2 Project Feature	0.7.0.201106271450
-		BPMN2 Editor	0.2.0.201212102207
+		BPMN2 Editor	0.2.4.201303231813
 		-->
-                <property name="version" value="201212102207"/>
+                <property name="version" value="201303231813"/>
 		<property name="destination" value="${basedir}" />
 		<property name="compress" value="true" />
 		<property name="workDir" value="${destination}/${version}/"/>
