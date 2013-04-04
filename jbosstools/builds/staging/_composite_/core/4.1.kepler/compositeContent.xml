@@ -10,7 +10,7 @@
 <property name='p2.atomic.composite.loading' value='false'/>
 <property name='p2.timestamp' value='1360607213000'/>
 </properties>
-<children size='16'>
+<children size='17'>
 
 <child location='../../../../staging/jbosstools-base_41/all/repo/'/>
 <child location='../../../../staging/jbosstools-birt_41/all/repo/'/>
@@ -26,6 +26,7 @@
 <child location='../../../../staging/jbosstools-server_41/all/repo/'/>
 <child location='../../../../staging/jbosstools-vpe_41/all/repo/'/>
 <child location='../../../../staging/jbosstools-webservices_41/all/repo/'/>
+<child location='../../../../staging/jbosstools-livereload_41/all/repo/'/>
 
 <!-- Freemarker is unchanged in 4.1.x since 4.0.x, so use those bits and disable the 4.1.x jobs until needed
 <child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/> -->

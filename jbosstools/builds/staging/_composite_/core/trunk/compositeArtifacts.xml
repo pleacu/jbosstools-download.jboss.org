@@ -10,9 +10,9 @@
 <property name='p2.atomic.composite.loading' value='false'/>
 <property name='p2.timestamp' value='1360607215000'/>
 </properties>
-<children size='29'>
+<children size='31'>
 
-<!-- JBT Core: 13 x 2 + 3 = 29 -->
+<!-- JBT Core: 14 x 2 + 3 = 31 -->
 
 <child location='../../../../staging/jbosstools-base_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-birt_master/all/repo/'/>
@@ -28,6 +28,7 @@
 <child location='../../../../staging/jbosstools-server_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-vpe_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-webservices_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-livereload_master/all/repo/'/>
 
 <child location='../../../../staging.previous/jbosstools-base_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-birt_master/all/repo/'/>
@@ -43,6 +44,7 @@
 <child location='../../../../staging.previous/jbosstools-server_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-livereload_master/all/repo/'/>
 
 <!-- Freemarker is unchanged in 4.1.x since 4.0.x, so use those bits and disable the 4.1.x jobs until needed
 <child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/> -->
