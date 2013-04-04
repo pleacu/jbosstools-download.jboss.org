@@ -17,5 +17,8 @@
   <category name="GateIn Portal Quickstarts"
   	description="GateIn Portal Quickstarts"
   	priority="10" />
+  <category name="Portal Quickstarts"
+    description="Portal Quickstarts"
+    priority="11" />
     
 </categories>
