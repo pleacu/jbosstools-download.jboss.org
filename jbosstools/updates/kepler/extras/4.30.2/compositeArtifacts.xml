@@ -7,12 +7,12 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1363959481000'/>
+<property name='p2.timestamp' value='1365438942000'/>
 </properties>
 <children size='8'>
 <!-- new to JBT 4.1.0 / JBDS 7 -->
 <child location='../../../requirements/atlassian/3.2.0.v20130212/'/> 
-<child location='../../../requirements/gwt/3.2.1.v201303211244-rel-r42/'/>
+<child location='../../../requirements/gwt/3.2.2.v201303261859-rel-r42/'/>
 <child location='../../../requirements/springide/3.2.0.201303060654-RELEASE/'/>
 <child location='../../../requirements/subclipse/1.8.18_1.7.8.1/'/>
 <child location='../../../requirements/testng/6.8.0.20121120_1820/'/>
