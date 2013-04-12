@@ -44,7 +44,7 @@
 <child location='../../../../staging.previous/jbosstools-server_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-liverelead_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-livereload_master/all/repo/'/>
 
 <!-- Freemarker is unchanged in 4.1.x since 4.0.x, so use those bits and disable the 4.1.x jobs until needed
 <child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/> -->
