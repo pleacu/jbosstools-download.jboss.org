@@ -1,46 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-	
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/build.xml"
-		
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-		
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/vjet/build.xml -Ddestination=/tmp/vjet-repo
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+  
+    -os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
+    -consoleLog -nosplash -data /tmp
+    -application org.eclipse.ant.core.antRunner
+    -f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/build.xml"
+    
+    or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+    
+    export JAVA_HOME=/opt/jdk1.6.0; \
+    ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner \
+      -f ~/RHDS/updates/requirements/vjet/build.xml -Ddestination=/tmp/vjet-repo
 
-		or, on local:
-	
-		java -cp /home/nboldt/eclipse/eclipse361/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner -f build.xml
+    or, on local:
+  
+    java -cp /home/nboldt/eclipse/eclipse361/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
 
-	-->
-	<property name="version" value="0.10.0.201303191704"/>
-	<property name="URL" value="http://download.eclipse.org/vjet/updates-0.10/"/>
+  -->
+  <property name="version" value="0.10.0.201303191704"/>
+  <property name="URL1" value="http://download.eclipse.org/vjet/updates-0.10/"/>
+  <property name="URL2" value="http://download.jboss.org/jbosstools/updates/requirements/orbit/I20130321031113/"/>
 
-	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/" />
-	<property name="workDir" value="${destination}/${version}/"/>
-	
-	<target name="run" depends="mirror,regen"/>
-	<target name="mirror">
-		<p2.mirror>
-			<repository location="file:${workDir}" name="VJET ${version}" />
-			<source>
-				<repository location="${URL}" />
-			</source>
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/" />
+  <property name="workDir" value="${destination}/${version}/"/>
+  
+  <target name="run" depends="mirror,regen"/>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="VJET ${version}" />
+      <source>
+        <repository location="${URL1}" />
+        <repository location="${URL2}" />
+      </source>
 
-			<slicingOptions includeFeatures="true" followStrict="true" />
-		</p2.mirror>
-	</target>
-	<target name="regen">
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
-	</target>
+      <iu id="org.w3c.dom.events"/>
+      <iu id="org.eclipse.equinox.server.jetty.feature.group"/>
+      <iu id="org.eclipse.vjet.codegen.feature.group"/>
+      <iu id="org.eclipse.vjet.core.feature.group"/>
+      <iu id="org.eclipse.vjet.eclipse.feature.group"/>
+      <iu id="org.eclipse.vjet.extmod.dltk.core.feature.group"/>
+      <iu id="org.eclipse.vjet.extmod.jsdt.feature.group"/>
+      <iu id="org.eclipse.vjet.extmod.rhino.feature.group"/>
+      <iu id="org.eclipse.vjet.js.ide.feature.group"/>
+      <iu id="org.eclipse.vjet.resource.feature.group"/>
+      <iu id="org.eclipse.vjet.rt.feature.group"/>
+      <iu id="org.eclipse.vjet.vsf.domkit.feature.group"/>
+      <iu id="org.eclipse.vjet.web.feature.group"/>
+
+      <slicingOptions includeFeatures="true" followStrict="true" />
+    </p2.mirror>
+  </target>
+  <target name="regen">
+    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
 </project>
