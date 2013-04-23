@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools 4.1 - Extras' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<properties size='2'>
+<property name='p2.compressed' value='true'/>
+<!-- 
+     get new time w/ 
+      date +%s000
+-->
+<property name='p2.timestamp' value='1366732102000'/>
+</properties>
+<children size='9'>
+<!-- new to JBT 4.1.0 / JBDS 7 -->
+<child location='../../../requirements/atlassian/3.2.0.v20130212/'/> 
+<child location='../../../requirements/gwt/3.2.2.v201303261859-rel-r42/'/>
+<child location='../../../requirements/springide/3.2.0.201303060654-RELEASE/'/>
+<child location='../../../requirements/subclipse/1.8.18_1.7.8.1/'/>
+<child location='../../../requirements/testng/6.8.0.20121120_1820/'/>
+<child location='../../../requirements/vjet/0.10.0.201303191704/'/>
+
+<!-- unchanged since JBT 4.0.0 / JBDS 6-->
+<child location='../../../requirements/eclipsecs/5.6.0.201209221626/'/>
+<child location='../../../requirements/findbugs/2.0.2.20121210/'/>
+<child location='../../../requirements/pmd/3.2.6/'/>
+</children>
+</repository>
