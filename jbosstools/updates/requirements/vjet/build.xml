@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-  
-    -os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
+
+    -os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
     -consoleLog -nosplash -data /tmp
     -application org.eclipse.ant.core.antRunner
     -f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/build.xml"
-    
+
     or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-    
+
     export JAVA_HOME=/opt/jdk1.6.0; \
     ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
@@ -16,7 +16,7 @@
       -f ~/RHDS/updates/requirements/vjet/build.xml -Ddestination=/tmp/vjet-repo
 
     or, on local:
-  
+
     java -cp /home/nboldt/eclipse/eclipse361/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
@@ -29,7 +29,7 @@
 
   <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/" />
   <property name="workDir" value="${destination}/${version}/"/>
-  
+
   <target name="run" depends="mirror,regen"/>
   <target name="mirror">
     <p2.mirror>
@@ -56,12 +56,13 @@
 
       <iu id="org.eclipse.vjet.vsf.domkit.feature.group"/>
         <iu id="org.junit4"/>
-  
+
       <slicingOptions includeFeatures="true" followStrict="true" />
     </p2.mirror>
   </target>
   <target name="regen">
     <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+    <p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-	
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
+
+		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
 		-consoleLog -nosplash -data /tmp
 		-application org.eclipse.ant.core.antRunner
 		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/juno/build.xml"
-		
+
 		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-		
+
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
@@ -39,6 +39,7 @@
 			<fileset dir="${destination}/${version}/" includes="**/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
 		</delete>
 		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/${version}/" artifactRepository="file:${destination}/${version}/" publishartifacts="true" source="${destination}/${version}/" compress="${compress}" />
+		<p2.process.artifacts pack="true" repositoryPath="file:${destination}/${version}" />
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
