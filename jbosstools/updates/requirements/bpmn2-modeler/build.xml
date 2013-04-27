@@ -23,10 +23,11 @@
 
   -->
   <target name="mirror">
-    <property name="URL1" value="http://download.eclipse.org/bpmn2-modeler/bpmn2/site/" />
+    <!-- <property name="URL1" value="http://download.eclipse.org/bpmn2-modeler/bpmn2/site/" /> -->
+    <property name="URL1" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/milestones/S20130423/" />
     <property name="URL2" value="http://download.eclipse.org/bpmn2-modeler/site/0.2.5/" />
     <!-- LAST CHECKED BUILD IDs: 
-    BPMN2 Project Feature 0.7.0.201106271450
+    BPMN2 Project Feature	0.7.0.201304230617
     BPMN2 Editor  0.2.5.201304262142
     -->
     <property name="version" value="201304262142"/>
