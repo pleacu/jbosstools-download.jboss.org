@@ -33,18 +33,6 @@
 			</source>
 
 			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="true" />
-
-                        <iu id="org.eclipse.jetty.http"/>
-                        <iu id="org.eclipse.jetty.continuation"/>
-                        <iu id="org.eclipse.jetty.io"/>
-                        <iu id="org.eclipse.jetty.security"/>
-                        <iu id="org.eclipse.jetty.server"/>
-                        <iu id="org.eclipse.jetty.servlet"/>
-                        <iu id="org.eclipse.jetty.util"/>
-			<iu id="org.eclipse.jetty.websocket"/>
-			<iu id="org.eclipse.jetty.servlets"/>
-			<iu id="org.eclipse.jetty.client"/>
-
 		</p2.mirror>
 
 		<delete>
