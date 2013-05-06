@@ -1,84 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="mirror">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
 
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/m2eclipse/build.xml"
+    -os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
+    -consoleLog -nosplash -data /tmp
+    -application org.eclipse.ant.core.antRunner
+    -f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/m2eclipse/build.xml"
 
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+    or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
 
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
-	-->
-	<target name="mirror">
-		<property name="version" value="20130321-1800_1.4_0.18"/>
+    export JAVA_HOME=/opt/jdk1.6.0; \
+    ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner \
+      -f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
+  -->
+  <target name="mirror">
+    <property name="version" value="20130321-1800_1.4_0.18"/>
 
-		<property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/>
-		<property name="URL1b" value="http://download.eclipse.org/technology/m2e/milestones/1.4/"/>
+    <property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/>
+    <property name="URL1b" value="http://download.eclipse.org/technology/m2e/milestones/1.4/"/>
 
-		<!-- <property name="URL2a" value="http://download.eclipse.org/m2e-wtp/releases/kepler/"/> -->
+    <!-- <property name="URL2a" value="http://download.eclipse.org/m2e-wtp/releases/kepler/"/> -->
     <property name="URL2a" value="http://download.eclipse.org/m2e-wtp/milestones/kepler/0.18.0/0.18.0.20130315-1346/m2e-wtp/"/>
     <property name="URL2b" value="http://download.eclipse.org/m2e-wtp/milestones/kepler/0.18.0/0.18.0.20130315-1346/m2e-wtp-jpa/"/>
     <!-- <property name="URL2a" value="http://download.eclipse.org/m2e-wtp/snapshots/kepler/0.18.0/m2e-wtp/"/>
     <property name="URL2b" value="http://download.eclipse.org/m2e-wtp/snapshots/kepler/0.18.0/m2e-wtp-jpa/"/> -->
 
-		<property name="URL3" value="https://repository.sonatype.org/content/repositories/forge-sites/m2e-extras/0.15.0/N/0.15.0.201206251206/"/>
+    <!-- newer content in 4b and 4d so probably don't need this anymore
+    <property name="URL3" value="https://repository.sonatype.org/content/repositories/forge-sites/m2e-extras/0.15.0/N/0.15.0.201206251206/"/> 
+    -->
 
-		<property name="URL4a" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/"/>
-		<property name="URL4b" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-buildhelper/"/>
-		<property name="URL4c" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/"/>
-		<property name="URL4d" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-mavenarchiver/"/>
-		<property name="URL4e" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/"/>
+    <property name="URL4a" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/"/>
+    <!-- These are the same content:
+          http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-buildhelper/0.15.0.201212120353/
+          http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201212120353/
+    -->
+    <property name="URL4b" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-buildhelper/"/>
+    <property name="URL4c" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-jdt-compiler/"/>
+    <!-- These are the same content:
+          http://http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-mavenarchiver/0.15.0.201212080009/
+          http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-mavenarchiver/0.15.0/N/0.15.0.201212080009/
+    -->
+    <property name="URL4d" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-mavenarchiver/"/>
+    <property name="URL4e" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/"/>
 
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/m2eclipse/" />
-		<property name="workDir" value="${destination}/${version}"/>
+    <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/m2eclipse/" />
+    <property name="workDir" value="${destination}/${version}"/>
 
-		<p2.mirror>
-			<repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" />
-			<source>
-				<repository location="${URL1a}" />
-				<repository location="${URL1b}" />
+    <p2.mirror>
+      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" />
+      <source>
+        <repository location="${URL1a}" />
+        <repository location="${URL1b}" />
 
-				<repository location="${URL2a}" />
-				<repository location="${URL2b}" />
+        <repository location="${URL2a}" />
+        <repository location="${URL2b}" />
 
-				<repository location="${URL3}" />
+        <!--  newer content in 4b and 4d so probably don't need this anymore <repository location="${URL3}" /> -->
 
-				<repository location="${URL4a}" />
-				<repository location="${URL4b}" />
-				<repository location="${URL4c}" />
-				<repository location="${URL4d}" />
-				<repository location="${URL4e}" />
-			</source>
+        <repository location="${URL4a}" />
+        <repository location="${URL4b}" />
+        <repository location="${URL4c}" />
+        <repository location="${URL4d}" />
+        <repository location="${URL4e}" />
+      </source>
 
-			<!--<iu id="org.eclipse.m2e.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.logback.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.sdk.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.wtp.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.wtp.jaxrs.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.wtp.jpa.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.wtp.jsf.feature.feature.group"/>
-			<iu id="org.eclipse.m2e.wtp.sdk.feature.feature.group"/>
-			<iu id="org.jboss.tools.m2e.jdt.feature.feature.group"/>
-			<iu id="org.jboss.tools.m2e.wro4j.feature.feature.group"/>
-			<iu id="org.jboss.tools.maven.apt.feature.feature.group"/>
-			<iu id="org.sonatype.m2e.antlr.feature.feature.group"/>
-			<iu id="org.sonatype.m2e.buildhelper.feature.feature.group"/>
-			<iu id="org.sonatype.m2e.mavenarchiver.feature.feature.group"/>
-			<iu id="org.sonatype.m2e.modello.feature.feature.group"/>
-			<iu id="org.sonatype.m2e.plexus.annotations.feature.feature.group"/>
-			<iu id="org.sonatype.m2e.sisuindex.feature.feature.group"/>-->
+      <!--<iu id="org.eclipse.m2e.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.logback.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.sdk.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.wtp.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.wtp.jaxrs.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.wtp.jpa.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.wtp.jsf.feature.feature.group"/>
+      <iu id="org.eclipse.m2e.wtp.sdk.feature.feature.group"/>
+      <iu id="org.jboss.tools.m2e.jdt.feature.feature.group"/>
+      <iu id="org.jboss.tools.m2e.wro4j.feature.feature.group"/>
+      <iu id="org.jboss.tools.maven.apt.feature.feature.group"/>
+      <iu id="org.sonatype.m2e.antlr.feature.feature.group"/>
+      <iu id="org.sonatype.m2e.buildhelper.feature.feature.group"/>
+      <iu id="org.sonatype.m2e.mavenarchiver.feature.feature.group"/>
+      <iu id="org.sonatype.m2e.modello.feature.feature.group"/>
+      <iu id="org.sonatype.m2e.plexus.annotations.feature.feature.group"/>
+      <iu id="org.sonatype.m2e.sisuindex.feature.feature.group"/>-->
 
-			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
-		</p2.mirror>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+    </p2.mirror>
 
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
-	</target>
+    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+    <p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
 </project>
