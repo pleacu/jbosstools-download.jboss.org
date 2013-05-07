@@ -16,7 +16,7 @@
 			-f ~/RHDS/updates/requirements/orbit/build.xml -Ddestination=/tmp/orbit-repo
 	-->
 	<target name="mirror">
-    <property name="version" value="I20130321031113"/>
+    <property name="version" value="S20130427215344"/>
     <property name="URL" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version}/repository/" />
 
     <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/orbit/" />

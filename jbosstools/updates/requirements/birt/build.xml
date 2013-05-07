@@ -16,7 +16,7 @@
 			-f ~/RHDS/updates/requirements/birt/build.xml -Ddestination=/tmp/birt-repo
 	-->
 	<target name="mirror">
-		<property name="version" value="4.3.0.v201303181854"/>
+		<property name="version" value="4.3.0.v201304271046"/>
 		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
 		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
 		<property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />

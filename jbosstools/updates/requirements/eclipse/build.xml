@@ -15,7 +15,7 @@
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/eclipse/build.xml -Ddestination=/tmp/eclipse-repo
 	-->
-	<property name="version" value="S-4.3M6-201303141330"/>
+	<property name="version" value="S-4.3M7-201305020800"/>
 	<property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.3milestones/${version}"/>
 
 	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/eclipse/" />
