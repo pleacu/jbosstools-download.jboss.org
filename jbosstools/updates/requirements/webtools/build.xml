@@ -5,11 +5,12 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="version" value="S-3.5.0M7-20130507050119"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="run">
       <property name="SHORTNAME" value="webtools"/>
       <property name="LONGNAME" value="Web Tools"/>
-      <property name="version" value="S-3.5.0M7-20130507050119"/>
+      <property name="version" value="${version}"/>
       <property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.5.0/${version}/repository/" />
     </ant>
   </target>
