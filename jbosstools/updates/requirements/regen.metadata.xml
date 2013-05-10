@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="regen.metadata">
+<!-- this script is used to regenerate metadata -->
+<!-- run: ant -f /path/to/folder/with/regen.metadata.xml -DworkDir=/path/to/folder/with/content.jar -->
+<!-- eg., to work in current dir: 
+  wget https://raw.github.com/jbosstools/jbosstools-download.jboss.org/master/jbosstools/updates/requirements/regen.metadata.xml; \
+  wget https://raw.github.com/jbosstools/jbosstools-download.jboss.org/master/jbosstools/updates/requirements/remove.references.xml; \
+  ant -f regen.metadata.xml -DworkDir=`pwd` 
+-->
+	<target name="regen.metadata">
+    <p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
+    <!-- JBIDE-13977: If we regenerate previously existing pack200'd jars, we must also regen metadata, or else get 'MD5 hash is not as expected.' -->
+    <delete quiet="true" failonerror="false"><fileset dir="${workDir}" includes="artifacts.*, content.*"/></delete> 
+    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
+    <ant antfile="${workDir}/../../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
