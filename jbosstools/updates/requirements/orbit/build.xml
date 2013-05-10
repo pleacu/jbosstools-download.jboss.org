@@ -5,11 +5,12 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="version" value="S20130427215344"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="run">
       <property name="SHORTNAME" value="orbit"/>
       <property name="LONGNAME" value="Eclipse Orbit"/>
-      <property name="version" value="S20130427215344"/>
+      <property name="version" value="${version}"/>
       <property name="URL" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version}/repository/" />
    </ant>
   </target>
