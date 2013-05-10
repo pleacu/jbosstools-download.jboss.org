@@ -10,7 +10,7 @@
   <property name="SHORTNAME" value="atlassian"/>
   <property name="LONGNAME" value="Atlassian Connectors"/>
   <property name="version" value="3.2.1.v20130402"/>
-  <property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.6" />
+  <property name="URL" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.6" />
 
   <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
   <property name="workDir" value="${destination}/${version}"/>

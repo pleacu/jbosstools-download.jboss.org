@@ -14,7 +14,8 @@
   <property name="workDir" value="${destination}/${version}/"/>
 
   <target name="run" depends="mirror,regen"/>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <!-- packing FindBugs throws NPE, so skip that step -->
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata.only"/></target>
 	<target name="mirror">
 		<property name="compress" value="true" />
 		<!-- SPECIAL CASE BECAUSE FindBugs update site is not built w/ p2-friendly process (just ugly ant)
