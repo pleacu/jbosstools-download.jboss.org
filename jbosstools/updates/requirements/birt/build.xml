@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="mirror">
+<project default="run">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/birt/build.xml"
-
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/birt/build.xml -Ddestination=/tmp/birt-repo
 	-->
-	<target name="mirror">
-		<property name="version" value="4.3.0.v201304271046"/>
-		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
-		<!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
-		<property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
+  <property name="SHORTNAME" value="birt"/>
+  <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
+  <property name="version" value="4.3.0.v201304271046"/>
+  <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
+  <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
+  <property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
 
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/birt/" />
-		<property name="workDir" value="${destination}/${version}"/>
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="workDir" value="${destination}/${version}"/>
 
+  <target name="run" depends="mirror,regen"/>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
 		<p2.mirror>
-			<repository location="file:${workDir}" name="BIRT ${version} (Chart + WTP support only)" />
+			<repository location="file:${workDir}" name="${LONGNAME} ${version}" />
 			<source>
 				<repository location="${URL}" />
 			</source>
@@ -38,12 +34,5 @@
 			<iu id="org.eclipse.birt.chart.feature.group" />
 			<iu id="org.eclipse.birt.chart.integration.wtp.feature.group" />
 		</p2.mirror>
-
-		<delete>
-			<fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
-		</delete>
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
-	</target>
+  </target>
 </project>

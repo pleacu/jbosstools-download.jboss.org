@@ -1,41 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="mirror">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/orbit/build.xml"
-
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/orbit/build.xml -Ddestination=/tmp/orbit-repo
-	-->
-	<target name="mirror">
-    <property name="version" value="S20130427215344"/>
-    <property name="URL" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version}/repository/" />
-
-    <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/orbit/" />
-    <property name="workDir" value="${destination}/${version}"/>
-
-		<p2.mirror>
-			<repository location="file:${workDir}" name="Eclipse Orbit ${version}" />
-			<source>
-				<repository location="${URL}" />
-			</source>
-
-			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="false" />
-		</p2.mirror>
-
-    <!-- <delete>
-      <fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
-    </delete>
-    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
-    <p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/> -->
-	</target>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <target name="run">
+    <ant antfile="../generic/build.xml" target="run">
+      <property name="SHORTNAME" value="orbit"/>
+      <property name="LONGNAME" value="Eclipse Orbit"/>
+      <property name="version" value="S20130427215344"/>
+      <property name="URL" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version}/repository/" />
+   </ant>
+  </target>
 </project>

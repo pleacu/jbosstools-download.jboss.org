@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="mirror" basedir=".">
+<project default="run">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/atlassian/build.xml"
-
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java jar ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			-consoleLog -nosplash -data /tmp \
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
 	-->
-	<target name="mirror">
-		<property name="version" value="3.2.1.v20130402"/>
-		<!-- JIRA connector; note that Subclipse connector is on Subclipse req site, ../subclipse/ -->
-		<!-- <property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/weekly/e3.6/" /> -->
+  <property name="SHORTNAME" value="atlassian"/>
+  <property name="LONGNAME" value="Atlassian Connectors"/>
+  <property name="version" value="3.2.1.v20130402"/>
+  <property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.6" />
 
-		<!-- <property name="URL1" value="http://download.eclipse.org/mylyn/releases/latest" /> -->
-		<!-- TODO: make sure that the version of Mylyn in Juno (or on the URL above?) is the same as the version used on the Atlassian site! -->
-		<property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.6" />
-		<property name="destination" value="${basedir}" />
-		<property name="workDir" value="${destination}/${version}"/>
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="workDir" value="${destination}/${version}"/>
 
+  <target name="run" depends="mirror,regen"/>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
 		<p2.mirror>
-			<repository location="file:${workDir}" name="Atlassian Connectors ${version}" />
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" />
 			<source>
-				<repository location="${URL1}" />
+				<repository location="${URL}" />
 			</source>
 
 			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="true" />
@@ -37,12 +29,5 @@
 			<iu id="com.atlassian.connector.eclipse.feature.group" />
 			<iu id="com.atlassian.connector.eclipse.jira.feature.group" />
 		</p2.mirror>
-
-		<delete>
-			<fileset dir="${workDir}" includes="**/artifacts.jar, **/contents.jar"/>
-		</delete>
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>

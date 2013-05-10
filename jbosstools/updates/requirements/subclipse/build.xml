@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    export JAVA_HOME=/opt/jdk1.6.0; \
+    ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner \
+      -f ~/RHDS/updates/requirements/birt/build.xml -Ddestination=/tmp/birt-repo
+  -->
+  <property name="SHORTNAME" value="subclipse"/>
+  <property name="LONGNAME" value="Subclipse 1.8 + SVNKit 1.7 plugins for Subversion 1.7 and Eclipse"/>
+  <property name="version" value="1.8.20_1.7.9.1"/>
+  <property name="URL1" value="http://subclipse.tigris.org/update_1.8.x" />
+  <property name="URL2" value="http://eclipse.svnkit.com/1.7.x/" />
 
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/subclipse/build.xml"
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="workDir" value="${destination}/${version}"/>
 
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+  <target name="run" depends="mirror,regen"/>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" />
+      <source>
+        <repository location="${URL1}" />
+        <repository location="${URL2}" />
+      </source>
 
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/subclipse/build.xml -Ddestination=/tmp/subclipse-repo
-	-->
-	<property name="version" value="1.8.18_1.7.8.1"/>
-	<property name="URL1" value="http://subclipse.tigris.org/update_1.8.x" />
-	<property name="URL2" value="http://eclipse.svnkit.com/1.7.x/" />
-	<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/subclipse/" />
-	<property name="workDir" value="${destination}/${version}/"/>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
 
-	<target name="run" depends="mirror,regen"/>
-	<target name="mirror">
-		<p2.mirror>
-			<repository location="file:${workDir}" name="Subclipse 1.8 + SVNKit 1.7 plugins for Subversion 1.7 and Eclipse ${version}" />
-			<source>
-				<repository location="${URL1}" />
-				<repository location="${URL2}" />
-			</source>
-
-			<slicingOptions includeFeatures="true" followStrict="true" />
-		</p2.mirror>
-	</target>
-	<target name="regen">
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
-	</target>
+      <iu id="com.collabnet.subversion.merge.feature.feature.group" />
+      <iu id="net.java.dev.jna.feature.group" />
+      <iu id="org.tigris.subversion.subclipse.feature.group" />
+      <iu id="org.tigris.subversion.subclipse.mylyn.feature.group" />
+      <iu id="org.tigris.subversion.clientadapter.feature.feature.group" />
+      <iu id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" />
+      <iu id="org.tigris.subversion.subclipse.graph.feature.feature.group" />
+      <iu id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" />
+      <iu id="org.tmatesoft.svnkit.feature.group" />
+    </p2.mirror>
+  </target>
 </project>

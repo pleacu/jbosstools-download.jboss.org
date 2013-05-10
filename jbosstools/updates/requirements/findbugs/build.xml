@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="mirror">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/findbugs/build.xml"
-
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/findbugs/build.xml -Ddestination=/tmp/findbugs-repo
 	-->
+  <property name="version" value="2.0.2.20121210"/>
+  <property name="URL" value="http://findbugs.cs.umd.edu/eclipse/" />
+  <!-- <property name="URL" value="http://findbugs.cs.umd.edu/eclipse-daily/" /> -->
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/findbugs/" />
+  <property name="workDir" value="${destination}/${version}/"/>
+
+  <target name="run" depends="mirror,regen"/>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
 	<target name="mirror">
-		<property name="URL" value="http://findbugs.cs.umd.edu/eclipse/" />
-		<!-- <property name="URL" value="http://findbugs.cs.umd.edu/eclipse-daily/" /> -->
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/findbugs/" />
-		<property name="workDir" value="${destination}/2.0.2.20121210/"/>
 		<property name="compress" value="true" />
 		<!-- SPECIAL CASE BECAUSE FindBugs update site is not built w/ p2-friendly process (just ugly ant)
 			 JBIDE-13124 need to mirror FIRST to local folder, then a SECOND time to remove artifact.references to remote site and make site self-contained
 		     http://dev.eclipse.org/mhonarc/lists/p2-dev/msg03669.html
 		-->
 		<p2.mirror>
-			<repository location="file:${destination}/temp/" name="findbugs for Eclipse" />
+			<repository location="file:${destination}/temp/" name="Findbugs ${version}" />
 			<source> <repository location="${URL}" /> </source>
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>
 		<p2.mirror>
-			<repository location="file:${destination}/2.0.2.20121210/" name="findbugs for Eclipse" />
+			<repository location="file:${destination}/${version}/" name="Findbugs ${version}" />
 			<source> <repository location="file:${destination}/temp/" /> </source>
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>
 		<delete dir="${destination}/temp/"/>
-		<delete file="${destination}/2.0.2.20121210/content.jar"/>
-		<delete file="${destination}/2.0.2.20121210/artifacts.jar"/>
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/2.0.2.20121210/" artifactRepository="file:${destination}/2.0.2.20121210/" publishartifacts="true" source="${destination}/2.0.2.20121210/" compress="${compress}" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${destination}/2.0.2.20121210" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
