@@ -26,7 +26,6 @@
 			<repository location="file:${workDir}" name="Target Management (TM) + Remote System Explorer (RSE) ${version}" />
 			<source>
 				<repository location="${URL1}" />
-				<repository location="${URL2}" />
 			</source>
 
 			<slicingOptions includeFeatures="true" followStrict="true" />

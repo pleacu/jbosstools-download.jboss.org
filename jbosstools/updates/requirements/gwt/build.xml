@@ -15,7 +15,7 @@
       -application org.eclipse.ant.core.antRunner \
       -f ~/RHDS/updates/requirements/gwt/build.xml -Ddestination=/tmp/gwt-repo
   -->
-  <property name="version" value="3.2.2.v201303261859-rel-r42"/>
+  <property name="version" value="3.2.3.v201304260926-rel-r42"/>
   <property name="URL" value="http://dl.google.com/eclipse/plugin/4.2/"/>
 
   <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/gwt/" />
@@ -23,12 +23,12 @@
 
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="Google Plugin for Eclipse 4.2 ${version}" />
+      <repository location="file:${workDir}" name="GWT SDK 2.5.1, GWT Designer 3.1.2, WindowBuilder 1.5.2, GPE ${version}" />
       <source>
         <repository location="${URL}" />
       </source>
       <!--
-          Google Plugin for Eclipse 4.2 3.2.2.v201303261859-rel-r42 com.google.gdt.eclipse.suite.e42.feature.feature.group
+          Google Plugin for Eclipse 4.2 3.2.3.v201304260926-rel-r42 com.google.gdt.eclipse.suite.e42.feature.feature.group
           Google Web Toolkit SDK 2.5.1  2.5.1 com.google.gwt.eclipse.sdkbundle.feature.feature.group
           GWT Designer Core 3.1.2.r42x201303061525  com.google.gdt.eclipse.designer.hosted.feature.feature.group
           GWT Designer Editor 3.1.2.r42x201303061530  com.google.gdt.eclipse.designer.editor.feature.feature.group
@@ -36,7 +36,7 @@
           WindowBuilder Core  1.5.2.r42x201303061457  org.eclipse.wb.core.feature.feature.group
           WindowBuilder Core UI 1.5.2.r42x201303061516  org.eclipse.wb.core.ui.feature.feature.group
           WindowBuilder CSS Support 1.5.2.r42x201303061510  org.eclipse.wb.css.feature.feature.group
-          WindowBuilder XML Core (requires Eclipse WTP/WST) 1.5.2.r42x201303061518  org.eclipse.wb.core.xml.feature.feature.group
+          WindowBuilder XML Core (requires Eclipse WTP/WST) 1.5.2.r42x201303061518  org.eclipse.wb.core.xml.feature.feature.group          
         -->
       <iu id="com.google.gdt.eclipse.suite.e42.feature.feature.group"/>
       <iu id="com.google.gwt.eclipse.sdkbundle.feature.feature.group"/>

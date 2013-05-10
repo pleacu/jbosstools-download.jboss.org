@@ -16,7 +16,7 @@
 			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
 	-->
 	<target name="mirror">
-		<property name="version" value="3.2.0.v20130212"/>
+		<property name="version" value="3.2.1.v20130402"/>
 		<!-- JIRA connector; note that Subclipse connector is on Subclipse req site, ../subclipse/ -->
 		<!-- <property name="URL1" value="http://update.atlassian.com/atlassian-eclipse-plugin/weekly/e3.6/" /> -->
 
