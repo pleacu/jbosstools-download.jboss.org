@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:

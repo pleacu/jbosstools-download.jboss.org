@@ -24,7 +24,7 @@
 		<p2.mirror>
 			<repository location="file:${workDir}" name="Spring IDE ${version}" />
 			<source>
-				<repository location="${URL1}" />
+				<repository location="${URL}" />
 			</source>
 
 			<iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->

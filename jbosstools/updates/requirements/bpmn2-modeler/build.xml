@@ -19,6 +19,7 @@
       <property name="LONGNAME" value="Eclipse BPMN 2 Modeler"/>
       <property name="version" value="${version}"/>
       <!--   BPMN2 Editor 0.2.5.201305101845 -->
-      <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/0.2.5/" />
+      <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/" />
     </ant>
   </target>
+</project>

@@ -22,7 +22,7 @@
         <repository location="${URL}" />
       </source>
 
-      <slicingOptions includeFeatures="true" followStrict="true" />
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
     </p2.mirror>
   </target>
 </project>
