@@ -4,15 +4,14 @@
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
 			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/PROJECTNAME/build.xml -Ddestination=/tmp/PROJECTNAME-repo
+			-application org.eclipse.ant.core.antRunner -f ~/RHDS/updates/requirements/PROJECTNAME/build.xml -Ddestination=/tmp/PROJECTNAME-repo
 	-->
   <property name="SHORTNAME" value="SHORTNAME"/>
   <property name="LONGNAME" value="Long Name"/>
   <property name="version" value="VERSION"/>
   <property name="URL" value="URL" />
   
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/${version}/" />
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
   <property name="workDir" value="${destination}/${version}/"/>
 
   <target name="run" depends="mirror,regen"/>
@@ -23,7 +22,7 @@
       <source>
         <repository location="${URL}" />
       </source>
-      <slicingOptions includeFeatures="true" followStrict="true" />
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
     </p2.mirror>
   </target>
 </project>
