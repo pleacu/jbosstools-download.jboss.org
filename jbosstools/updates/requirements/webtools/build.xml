@@ -5,13 +5,22 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="SHORTNAME" value="webtools"/>
   <property name="version" value="S-3.5.0M7-20130507050119"/>
+
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="workDir" value="${destination}/${version}"/>
+
   <target name="run">
     <ant antfile="../generic/build.xml" target="run">
-      <property name="SHORTNAME" value="webtools"/>
+      <property name="SHORTNAME" value="${SHORTNAME}"/>
       <property name="LONGNAME" value="Web Tools"/>
       <property name="version" value="${version}"/>
       <property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.5.0/${version}/repository/" />
     </ant>
   </target>
+
+  <!-- because mirroring can take a while, you can use these targets to simply pack200 an existing mirror or regenerate metadata -->
+  <target name="pack"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts"></ant>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"></ant>
 </project>

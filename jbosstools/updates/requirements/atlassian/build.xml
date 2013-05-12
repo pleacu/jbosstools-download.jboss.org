@@ -16,7 +16,7 @@
   <property name="workDir" value="${destination}/${version}"/>
 
   <target name="run" depends="mirror,regen"/>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
   <target name="mirror">
 		<p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" />
