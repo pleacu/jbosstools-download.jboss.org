@@ -8,7 +8,7 @@
   <property name="SHORTNAME" value="kepler"/>
   <property name="version" value="20130510-0900-M7"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
   <property name="workDir" value="${destination}/${version}"/>
 
   <target name="run">
@@ -17,12 +17,11 @@
       <property name="LONGNAME" value="Eclipse Kepler"/>
       <property name="version" value="${version}"/>
       <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
-      <property name="URL" value="http://download.eclipse.org/releases/kepler/201303220900/" />
+      <property name="URL" value="http://download.eclipse.org/releases/kepler/201303220900/"/>
    </ant>
   </target>
 
   <!-- because mirroring can take a while, you can use these targets to simply pack200 an existing mirror or regenerate metadata -->
-  <target name="pack"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts"></ant>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"></ant>
-  </target>
+  <target name="pack"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts"/></target>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
 </project>

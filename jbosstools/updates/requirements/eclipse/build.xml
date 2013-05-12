@@ -8,7 +8,7 @@
   <property name="SHORTNAME" value="eclipse"/>
   <property name="version" value="S-4.3M7-201305020800"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
   <property name="workDir" value="${destination}/${version}"/>
 
   <target name="run">
@@ -21,6 +21,6 @@
   </target>
 
   <!-- because mirroring can take a while, you can use these targets to simply pack200 an existing mirror or regenerate metadata -->
-  <target name="pack"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts"></ant>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"></ant>
+  <target name="pack"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts"/></target>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
 </project>
