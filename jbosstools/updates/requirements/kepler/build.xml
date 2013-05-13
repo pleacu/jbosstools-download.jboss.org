@@ -12,16 +12,23 @@
   <property name="workDir" value="${destination}/${version}"/>
 
   <target name="run">
-    <ant antfile="../generic/build.xml" target="run">
+    <!-- mirror but do NOT pack again -->
+    <ant antfile="../generic/build.xml" target="mirror">
       <property name="SHORTNAME" value="${SHORTNAME}"/>
       <property name="LONGNAME" value="Eclipse Kepler"/>
       <property name="version" value="${version}"/>
+      <property name="latestversiononly" value="false"/>
       <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
       <property name="URL" value="http://download.eclipse.org/releases/kepler/201303220900/"/>
    </ant>
+    <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
+    <delete>
+       <!-- TODO: do we want to purge all the **/*.pack.gz files too? -->
+      <fileset dir="${workDir}" includes="**/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
+    </delete>
+   <ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/>
   </target>
 
-  <!-- because mirroring can take a while, you can use these targets to simply pack200 an existing mirror or regenerate metadata -->
-  <target name="pack"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts"/></target>
+  <!-- because mirroring can take a while, you can use these targets to simply regenerate metadata -->
   <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
 </project>

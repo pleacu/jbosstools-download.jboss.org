@@ -13,6 +13,7 @@
   
   <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
   <property name="workDir" value="${destination}/${version}/"/>
+  <property name="latestversiononly" value="true"/>
 
   <target name="run" depends="mirror">
     <ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/>
@@ -23,7 +24,7 @@
       <source>
         <repository location="${URL}" />
       </source>
-      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
     </p2.mirror>
   </target>
 </project>
