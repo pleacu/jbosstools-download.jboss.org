@@ -7,9 +7,9 @@
   -->
   <property name="SHORTNAME" value="egit"/>
   <property name="LONGNAME" value="EGit + GitHub Support"/>
-  <property name="version" value="2.3.1.201302201838-r"/>
-  <property name="URL1" value="http://download.eclipse.org/egit/updates-2.3/" />
-  <property name="URL2" value="http://download.eclipse.org/egit/github/updates-2.3/" />
+  <property name="version" value="3.0.0.201305080800-m7"/>
+  <property name="URL1" value="http://download.eclipse.org/egit/staging/v3.0.0.201305080800-m7/" />
+  <property name="URL2" value="http://download.eclipse.org/egit/github/staging/v3.0.0.201305080800-m7/" />
   <target name="run">
     <ant antfile="../generic/build.xml" target="run">
       <property name="SHORTNAME" value="${SHORTNAME}"/>
