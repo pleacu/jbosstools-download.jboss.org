@@ -3,9 +3,9 @@
 <repository name='JBoss Tools 4.1 - Extras' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1366732102000'/>
+<property name='p2.timestamp' value='1368639803000'/>
 </properties>
 <children size='1'>
-<child location='4.30.3'/>
+<child location='4.30.4'/>
 </children>
 </repository>
