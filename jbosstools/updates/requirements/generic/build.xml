@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run">
+<project default="mirror">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
@@ -15,12 +15,9 @@
   <property name="workDir" value="${destination}/${version}/"/>
   <property name="latestversiononly" value="true"/>
 
-  <target name="run" depends="mirror">
-    <ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/>
-  </target>
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version}" />
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="${URL}"/>
       <source>
         <repository location="${URL}" />
       </source>

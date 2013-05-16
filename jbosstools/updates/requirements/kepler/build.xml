@@ -9,7 +9,7 @@
   <property name="version" value="20130510-0900-M7"/>
   <property name="version2" value="201305100900"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
+  <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
   <target name="run">
@@ -23,13 +23,11 @@
       <property name="URL" value="http://download.eclipse.org/releases/kepler/${version2}/"/>
    </ant>
     <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
-    <delete>
-       <!-- TODO: do we want to purge all the **/*.pack.gz files too? -->
-      <fileset dir="${workDir}" includes="**/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
-    </delete>
-   <ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/>
+   <p2.remove.iu>
+	<repository location="${workDir}"/>
+	<iu id="org.eclipse.objectteams.otdt.core.patch.feature.group"/>
+	<id id="org.eclipse.jdt.core" version="v_OTDT_r220_201305071454"/>
+   </p2.remove.iu>
   </target>
 
-  <!-- because mirroring can take a while, you can use these targets to simply regenerate metadata -->
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
 </project>
