@@ -11,7 +11,7 @@
   <property name="version" value="VERSION"/>
   <property name="URL" value="URL" />
   
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="destination" value="${basedir}" />
   <property name="workDir" value="${destination}/${version}/"/>
   <property name="latestversiononly" value="true"/>
 

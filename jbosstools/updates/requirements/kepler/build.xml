@@ -5,6 +5,13 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+    <classpath>
+      <pathelement location="../ant-contrib-1.0b3.jar"/>
+    </classpath>
+  </taskdef>
+
+
   <property name="SHORTNAME" value="kepler"/>
   <property name="version" value="20130510-0900-M7"/>
   <property name="version2" value="201305100900"/>
@@ -22,11 +29,25 @@
       <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
       <property name="URL" value="http://download.eclipse.org/releases/kepler/${version2}/"/>
    </ant>
+
+
     <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
+   <path id="patched.jdt.path">
+    <fileset dir="${workDir}/plugins">
+      <include name="org.eclipse.jdt.core_*OTDT*.jar"/>
+    </fileset>    
+   </path>
+   <pathconvert property="patched.jdt.location" refid="patched.jdt.path"/>
+   <propertyregex property="patched.jdt.version"
+              input="${patched.jdt.location}"
+              regexp="org.eclipse.jdt.core_(.*).jar"
+              select="\1"
+              casesensitive="false" />
+
    <p2.remove.iu>
 	<repository location="${workDir}"/>
 	<iu id="org.eclipse.objectteams.otdt.core.patch.feature.group"/>
-	<id id="org.eclipse.jdt.core" version="v_OTDT_r220_201305071454"/>
+	<iu id="org.eclipse.jdt.core" version="${patched.jdt.version}"/>
    </p2.remove.iu>
   </target>
 
