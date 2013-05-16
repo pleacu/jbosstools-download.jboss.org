@@ -12,30 +12,28 @@
   <property name="version" value="4.3.0.v201304271046"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
-  <property name="URL1" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
-  <!-- JBIDE-14421 --><property name="URL2" value="http://download.eclipse.org/webtools/downloads/drops/R3.5.0/I-3.5.0-20130425165816/repository/" />
+  <property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
+  <property name="latestversiononly" value="false"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/" />
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
   <property name="workDir" value="${destination}/${version}"/>
 
-  <target name="run" depends="mirror,regen"/>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
-  <target name="mirror">
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
     <p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" />
       <source>
-        <repository location="${URL1}" />
-        <!-- JBIDE-14421 --><repository location="${URL2}" />
+        <repository location="${URL}" />
       </source>
 
-      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
 
-      <!-- JBIDE-14421 --><iu id="org.eclipse.wst.xml_ui.feature.feature.group" />
       <iu id="org.eclipse.birt.osgi.runtime.sdk.feature.group" />
       <iu id="org.eclipse.birt.feature.group" />
       <iu id="org.eclipse.birt.integration.wtp.feature.group" />
       <iu id="org.eclipse.birt.chart.feature.group" />
       <iu id="org.eclipse.birt.chart.integration.wtp.feature.group" />
     </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>
