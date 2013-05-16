@@ -8,11 +8,11 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1360607217000'/>
+<property name='p2.timestamp' value='1368715715000'/>
 </properties>
 <children size='33'>
 
-<!-- JBT Core: 15 x 2 + 3 = 33 -->
+<!-- JBT Core: 15*2 + 3 = 33 -->
 
 <child location='../../../../staging/jbosstools-base_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-birt_master/all/repo/'/>
