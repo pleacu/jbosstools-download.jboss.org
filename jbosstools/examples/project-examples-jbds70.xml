@@ -90,7 +90,7 @@
         <name>jboss-as-greeter</name>
         <category>Web Applications</category>
         <shortDescription>greeter</shortDescription>
-        <description>greeter</description>
+        <description>This example creates a simple greeting application to demonstrate the use of CDI 1.0, JPA 2.0, JTA 1.1, EJB 3.1 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss AS 7.1</description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-greeter.zip</url>
         <size>19046</size>
         <importType>maven</importType>
