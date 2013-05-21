@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="SHORTNAME" value="kepler"/>
+  <property name="version" value="20130510-0900-M7"/>
+
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <target name="run">
+    <!-- mirror but do NOT pack again -->
+    <ant antfile="../generic/build.xml" target="mirror">
+      <property name="SHORTNAME" value="${SHORTNAME}"/>
+      <property name="LONGNAME" value="Eclipse Kepler"/>
+      <property name="version" value="${version}"/>
+      <property name="latestversiononly" value="false"/>
+      <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
+      <property name="URL" value="http://download.eclipse.org/releases/kepler/201303220900/"/>
+   </ant>
+    <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
+    <delete>
+       <!-- TODO: do we want to purge all the **/*.pack.gz files too? -->
+      <fileset dir="${workDir}" includes="**/org.eclipse.jdt.core_*OTDT*.jar*, **/org.eclipse.objectteams.otdt*.jar*"/>
+    </delete>
+   <ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/>
+  </target>
+
+  <!-- because mirroring can take a while, you can use these targets to simply regenerate metadata -->
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+</project>
