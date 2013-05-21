@@ -1,76 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="nothing-to-do">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="SHORTNAME" value="mylyn"/>
+  <property name="LONGNAME" value="Mylyn"/>
+  <property name="version" value="3.9.0"/>
+  <property name="version2" value="I20130508-0822"/>
+  <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version}/${version2}"/>
+  <property name="latestversiononly" value="true"/>
 
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/mylyn/build.xml"
+  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
+  <property name="workDir" value="${destination}/${version}-${version2}/"/>
 
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version} ${version2}" />
+      <source>
+        <repository location="${URL}" />
+      </source>
 
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			<iu id="org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/mylyn/build.xml -Ddestination=/tmp/mylyn-repo
-	-->
-
-	<target name="nothing-to-do">
-	<echo>Mylyn content is all on the Juno site except the Atlassian connectors for JIRA, CVS, Subclipse/Subversive.
-Therefore there is no need to produce this mirror any more. See ../atlassian/build.xml</echo>
-	</target>
-
-	<target name="mirror">
-		<!-- core mylyn, if not on Indigo site; includes Bugzilla -->
-		<!-- <property name="URL1" value="http://download.eclipse.org/mylyn/snapshots/weekly/" /> -->
-		<!-- <property name="URL1" value="http://download.eclipse.org/mylyn/archive/3.6.0/v20110608-1400/" /> -->
-		<property name="URL1" value="http://download.eclipse.org/mylyn/releases/latest" />
-		<!-- JIRA connector; note that Subclipse connector is on Subclipse req site, ../subclipse/ -->
-		<!-- <property name="URL2" value="http://update.atlassian.com/atlassian-eclipse-plugin/weekly/e3.6/" /> -->
-		<property name="URL2" value="http://update.atlassian.com/atlassian-eclipse-plugin/e3.8" />
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/mylyn/3.8.1.v20120725-0100/" />
-		<property name="compress" value="true" />
-
-		<p2.mirror>
-			<repository location="file:${destination}/3.8.1.v20120725-0100" name="Mylyn 3.8.1.v20120725-0100" />
-			<source>
-				<repository location="${URL1}" />
-				<repository location="${URL2}" />
-			</source>
-
-			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="true" />
-
-			<iu id="org.eclipse.mylyn_feature.feature.group" />
-
-			<iu id="org.eclipse.mylyn.bugzilla_feature.feature.group" />
-			<iu id="org.eclipse.mylyn.commons.compatibility.feature.group" />
-			<iu id="org.eclipse.mylyn.commons.feature.group" />
-			<iu id="org.eclipse.mylyn.commons.repositories.feature.group" />
-			<iu id="org.eclipse.mylyn.commons.repositories.http.feature.group" />
-			<iu id="org.eclipse.mylyn.context_feature.feature.group" />
-			<iu id="org.eclipse.mylyn.discovery.feature.group" />
-
-			<iu id="org.eclipse.mylyn.ide_feature.feature.group" />
-			<iu id="org.eclipse.mylyn.java_feature.feature.group" />
-			<iu id="org.eclipse.mylyn.pde_feature.feature.group" />
-			<iu id="org.eclipse.mylyn.team_feature.feature.group" />
-			<iu id="org.eclipse.mylyn.versions.feature.group" />
-			<iu id="org.eclipse.mylyn.wikitext_feature.feature.group" />
-
-			<iu id="org.eclipse.mylyn.cvs.feature.group" />
-			<iu id="org.eclipse.mylyn.git.feature.group" />
-
-			<iu id="com.atlassian.connector.eclipse.feature.group" />
-			<iu id="com.atlassian.connector.eclipse.cvs.feature.group" />
-			<iu id="com.atlassian.connector.eclipse.jira.feature.group" />
-			<!-- these last two are described as "obsolete" on the update site -->
-			<iu id="com.atlassian.connector.eclipse.subclipse.feature.group" />
-			<iu id="com.atlassian.connector.eclipse.subversive.feature.group" />
-		</p2.mirror>
-
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/3.8.1.v20120725-0100/" artifactRepository="file:${destination}/3.8.1.v20120725-0100/" publishartifacts="true" source="${destination}/3.8.1.v20120725-0100/" compress="${compress}" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${destination}/3.8.1.v20120725-0100" />
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
-	</target>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+      <iu id="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.compatibility.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.core"/>
+      <iu id="org.eclipse.mylyn.commons.identity.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.net"/>
+      <iu id="org.eclipse.mylyn.commons.notifications.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.repositories.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.repositories.http.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.screenshots"/>
+      <iu id="org.eclipse.mylyn.commons.soap"/>
+      <iu id="org.eclipse.mylyn.commons.ui"/>
+      <iu id="org.eclipse.mylyn.commons.xmlrpc"/>
+      <iu id="org.eclipse.mylyn.context_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.cvs.feature.group"/>
+      <iu id="org.eclipse.mylyn.discovery.core"/>
+      <iu id="org.eclipse.mylyn.discovery.feature.group"/>
+      <iu id="org.eclipse.mylyn.discovery.ui"/>
+      <iu id="org.eclipse.mylyn_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.git.feature.group"/>
+      <iu id="org.eclipse.mylyn.ide_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.java_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.monitor.feature.group"/>
+      <iu id="org.eclipse.mylyn.pde_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.tasks.bugs"/>
+      <iu id="org.eclipse.mylyn.tasks.core"/>
+      <iu id="org.eclipse.mylyn.tasks.ide.feature.group"/>
+      <iu id="org.eclipse.mylyn.tasks.ui"/>
+      <iu id="org.eclipse.mylyn.team_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.versions.feature.group"/>
+      <iu id="org.eclipse.mylyn.wikitext_feature.feature.group"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
 </project>
