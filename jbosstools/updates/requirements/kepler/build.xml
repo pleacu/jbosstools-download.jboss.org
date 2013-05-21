@@ -7,6 +7,7 @@
   -->
   <property name="SHORTNAME" value="kepler"/>
   <property name="version" value="20130510-0900-M7"/>
+  <property name="version2" value="201305100900"/>
 
   <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -19,7 +20,7 @@
       <property name="version" value="${version}"/>
       <property name="latestversiononly" value="false"/>
       <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
-      <property name="URL" value="http://download.eclipse.org/releases/kepler/201303220900/"/>
+      <property name="URL" value="http://download.eclipse.org/releases/kepler/${version2}/"/>
    </ant>
     <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
     <delete>
