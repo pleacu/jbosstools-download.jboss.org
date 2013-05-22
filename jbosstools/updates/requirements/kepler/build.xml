@@ -11,44 +11,42 @@
     </classpath>
   </taskdef>
 
-
-  <property name="SHORTNAME" value="kepler"/>
   <property name="version" value="20130510-0900-M7"/>
   <property name="version2" value="201305100900"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
+  <property name="latestversiononly" value="false"/>
 
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
-    <!-- mirror but do NOT pack again -->
     <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="${SHORTNAME}"/>
       <property name="LONGNAME" value="Eclipse Kepler"/>
       <property name="version" value="${version}"/>
-      <property name="latestversiononly" value="false"/>
       <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
       <property name="URL" value="http://download.eclipse.org/releases/kepler/${version2}/"/>
-   </ant>
-
+      <property name="latestversiononly" value="${latestversiononly}"/>
+    </ant>
 
     <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
-   <path id="patched.jdt.path">
-    <fileset dir="${workDir}/plugins">
-      <include name="org.eclipse.jdt.core_*OTDT*.jar"/>
-    </fileset>    
-   </path>
-   <pathconvert property="patched.jdt.location" refid="patched.jdt.path"/>
-   <propertyregex property="patched.jdt.version"
-              input="${patched.jdt.location}"
-              regexp="org.eclipse.jdt.core_(.*).jar"
-              select="\1"
-              casesensitive="false" />
-
-   <p2.remove.iu>
-	<repository location="${workDir}"/>
-	<iu id="org.eclipse.objectteams.otdt.core.patch.feature.group"/>
-	<iu id="org.eclipse.jdt.core" version="${patched.jdt.version}"/>
-   </p2.remove.iu>
+    <path id="patched.jdt.path">
+      <fileset dir="${workDir}/plugins">
+        <include name="org.eclipse.jdt.core_*OTDT*.jar"/>
+      </fileset>    
+    </path>
+    <pathconvert property="patched.jdt.location" refid="patched.jdt.path"/>
+    <propertyregex property="patched.jdt.version"
+      input="${patched.jdt.location}"
+      regexp="org.eclipse.jdt.core_(.*).jar"
+      select="\1" casesensitive="false" />
+    <p2.remove.iu>
+      <repository location="${workDir}"/>
+        <iu id="org.eclipse.objectteams.otdt.core.patch.feature.group"/>
+        <iu id="org.eclipse.jdt.core" version="${patched.jdt.version}"/>
+    </p2.remove.iu>
+   
+    <!-- should we remove refs too?
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+    -->
   </target>
-
 </project>
