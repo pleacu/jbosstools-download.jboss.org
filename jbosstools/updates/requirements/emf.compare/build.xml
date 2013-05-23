@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="version" value="2.1"/>
+  <property name="version2" value="S201305210744"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+  <property name="latestversiononly" value="true"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}-${version2}"/>
+
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <ant antfile="../generic/build.xml" target="mirror">
+      <property name="LONGNAME" value="Web Tools"/>
+      <property name="version" value="${version}-${version2}"/>
+      <property name="URL" value="http://download.eclipse.org/modeling/emf/compare/updates/milestones/${version}/${version2}/"/>
+      <property name="latestversiononly" value="${latestversiononly}"/>
+    </ant>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
