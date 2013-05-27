@@ -311,7 +311,7 @@
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-errai.zip</url>
         <size>19354</size>
         <icon path="icons/jboss.png"/>
-        <tags>central</tags>
+        <importType>maven</importType>
         <included-projects/>
         <fixes>
             <fix type="wtpruntime">
