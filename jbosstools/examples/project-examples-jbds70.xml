@@ -312,7 +312,6 @@
         <size>19354</size>
         <importType>maven</importType>
         <icon path="icons/jboss.png"/>
-        <tags>central</tags>
         <included-projects/>
         <fixes>
             <fix type="wtpruntime">

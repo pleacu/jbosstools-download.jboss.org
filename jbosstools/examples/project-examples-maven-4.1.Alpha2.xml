@@ -310,7 +310,6 @@
         The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.</description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-errai.zip</url>
         <size>19354</size>
-        <importType>maven</importType>
         <icon path="icons/jboss.png"/>
         <tags>central</tags>
         <included-projects/>
