@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/testng/build.xml -Ddestination=/tmp/pmd-repo
-	-->
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
   <property name="version" value="6.8.1.20130330_0839"/>
-  <property name="URL" value="http://beust.com/eclipse/" />
-  
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/testng/${version}/" />
-  <property name="workDir" value="${destination}/${version}/"/>
 
-  <target name="run" depends="mirror,regen"/>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
-  <target name="mirror">
-    <p2.mirror>
-      <repository location="file:${workDir}" name="Web Tools ${version}" />
-      <source>
-        <repository location="${URL}" />
-      </source>
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+  <property name="latestversiononly" value="true"/>
 
-      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
-    </p2.mirror>
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <ant antfile="../generic/build.xml" target="mirror">
+      <property name="LONGNAME" value="TestNG"/>
+      <property name="version" value="${version}"/>
+      <property name="URL" value="http://beust.com/eclipse/" />
+      <property name="latestversiononly" value="${latestversiononly}"/>
+    </ant>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>
