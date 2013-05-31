@@ -23,12 +23,12 @@
 		     http://dev.eclipse.org/mhonarc/lists/p2-dev/msg03669.html
 		-->
 		<p2.mirror>
-			<repository location="file:${destination}/temp/" name="Findbugs ${version}" />
+			<repository location="file:${destination}/temp/" name="Findbugs ${version}" format="${URL}"/>
 			<source> <repository location="${URL}" /> </source>
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>
 		<p2.mirror>
-			<repository location="file:${destination}/${version}/" name="Findbugs ${version}" />
+			<repository location="file:${destination}/${version}/" name="Findbugs ${version}"/>
 			<source> <repository location="file:${destination}/temp/" /> </source>
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>
