@@ -22,7 +22,7 @@
   <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
   <target name="mirror">
 		<p2.mirror>
-			<repository location="file:${workDir}" name="Spring IDE ${version}" />
+			<repository location="file:${workDir}" name="Spring IDE ${version}" format="${URL}"/>
 			<source>
 				<repository location="${URL}" />
 			</source>

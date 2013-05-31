@@ -49,7 +49,7 @@
   <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" />
+      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" format="${URL2}"/>
       <source>
         <repository location="${URL2}" />
 
