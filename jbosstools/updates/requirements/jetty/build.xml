@@ -5,13 +5,14 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="version" value="8.1.9.v20130131"/>
+  
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="jetty"/>
       <property name="LONGNAME" value="Eclipse Jetty"/>
-      <property name="version" value="8.1.9.v20130131"/>
+      <property name="version" value="${version}"/>
       <property name="URL" value="http://download.eclipse.org/jetty/updates/jetty-bundles-8.x/8.1.9.v20130131/" />
    </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>

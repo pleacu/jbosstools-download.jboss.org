@@ -5,12 +5,14 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="version" value="3.5.0.201305241355"/>
+
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Target Management (TM) + Remote System Explorer (RSE)"/>
-      <property name="version" value="3.5.0.201305241355"/>
+      <property name="version" value="${version}"/>
       <property name="URL" value="http://download.eclipse.org/tm/updates/3.5milestones/RC2/" />
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>

@@ -5,13 +5,14 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="version" value="2.1.1.201305311053"/>
+
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="swtbot"/>
       <property name="LONGNAME" value="SWTBot"/>
-      <property name="version" value="2.1.1.201305311053"/>
+      <property name="version" value="${version}"/>
       <property name="URL" value="http://download.eclipse.org/technology/swtbot/snapshots"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>

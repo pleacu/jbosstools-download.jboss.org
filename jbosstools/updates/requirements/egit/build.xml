@@ -14,13 +14,11 @@
   <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="${SHORTNAME}"/>
       <property name="LONGNAME" value="${LONGNAME}"/>
       <property name="version" value="${version}"/>
       <property name="URL" value="${URL1}" />
     </ant>
     <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="${SHORTNAME}"/>
       <property name="LONGNAME" value="${LONGNAME}"/>
       <property name="version" value="${version}"/>
       <property name="URL" value="${URL2}" />
