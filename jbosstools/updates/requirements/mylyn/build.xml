@@ -5,14 +5,13 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="SHORTNAME" value="mylyn"/>
   <property name="LONGNAME" value="Mylyn"/>
   <property name="version" value="3.9.0"/>
-  <property name="version2" value="I20130508-0822"/>
+  <property name="version2" value="I20130529-1332"/>
   <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version}/${version2}"/>
   <property name="latestversiononly" value="true"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/${SHORTNAME}/"/>
+  <property name="destination" value="${basedir}/"/>
   <property name="workDir" value="${destination}/${version}-${version2}/"/>
 
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
