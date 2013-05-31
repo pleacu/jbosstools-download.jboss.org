@@ -5,9 +5,10 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="bpel"/>
       <property name="LONGNAME" value="Eclipse BPEL"/>
       <property name="version" value="1.0.3.v20130509-1351-CI"/>
       <property name="URL" value="http://download.eclipse.org/bpel/site/" />
