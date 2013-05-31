@@ -6,19 +6,19 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.3.0.v201304271046"/>
+  <property name="version" value="4.3.0.v20130527-1812"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
   <property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
   <property name="latestversiononly" value="false"/>
 
-  <property name="destination" value="${basedir}/"/>
+  <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="${URL}"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" />
       <source>
         <repository location="${URL}" />
       </source>

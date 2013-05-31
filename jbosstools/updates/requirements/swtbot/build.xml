@@ -9,7 +9,7 @@
     <ant antfile="../generic/build.xml" target="run">
       <property name="SHORTNAME" value="swtbot"/>
       <property name="LONGNAME" value="SWTBot"/>
-      <property name="version" value="2.1.1.201305101559"/>
+      <property name="version" value="2.1.1.201305311053"/>
       <property name="URL" value="http://download.eclipse.org/technology/swtbot/snapshots"/>
     </ant>
   </target>
