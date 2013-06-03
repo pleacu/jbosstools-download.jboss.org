@@ -13,7 +13,6 @@
 
   <property name="version" value="201306070900-RC3"/>
   <property name="version2" value="201306070900"/>
-
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
