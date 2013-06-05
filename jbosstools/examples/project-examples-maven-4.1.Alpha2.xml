@@ -225,7 +225,7 @@
 		<description>
             This example creates an Helloworld JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7. 
         </description>
-        <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-jax-helloworld-rs.zip</url>
+        <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-rs.zip</url>
         <size>10949</size>
 		<fixes>
 			<fix type="wtpruntime">
