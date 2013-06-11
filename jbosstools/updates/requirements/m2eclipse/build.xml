@@ -7,7 +7,7 @@
       -application org.eclipse.ant.core.antRunner \
       -f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
   -->
-  <property name="version" value="20130507-1357_1.4_1.0"/>
+  <property name="version" value="20130604-1618_1.4_1.0"/>
 
   <!-- currently contains 1.3.1, and we want 1.4
   <property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/> 
@@ -42,14 +42,15 @@
   <property name="URL4d" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-mavenarchiver/"/>
   <property name="URL4e" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/m2eclipse/" />
+  <property name="destination" value="${basedir}" />
   <property name="workDir" value="${destination}/${version}"/>
 
-  <target name="run" depends="mirror,regen"/>
+  <target name="run" depends="mirror"/>
   <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" format="${URL2}"/>
+      <!-- Using format to a good site to have siblings .pack.gz. Using composite in format leads to .blobstore -->
+      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" format="http://download.eclipse.org/m2e-wtp/milestones/kepler/1.0.0/1.0.0.20130507-1357/m2e-wtp/"/>
       <source>
         <repository location="${URL2}" />
 

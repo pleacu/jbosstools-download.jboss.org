@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.3.0.v20130527-1812"/>
+  <property name="version" value="4.3.0.v201306051647"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
   <property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />

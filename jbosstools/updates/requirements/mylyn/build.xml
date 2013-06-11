@@ -7,7 +7,7 @@
   -->
   <property name="LONGNAME" value="Mylyn"/>
   <property name="version" value="3.9.0"/>
-  <property name="version2" value="I20130529-1332"/>
+  <property name="version2" value="v20130610-0100"/>
   <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version}/${version2}"/>
   <property name="latestversiononly" value="true"/>
 

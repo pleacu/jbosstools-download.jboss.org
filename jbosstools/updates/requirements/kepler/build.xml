@@ -11,13 +11,15 @@
     </classpath>
   </taskdef>
 
-  <property name="version" value="201305300900-RC2"/>
-  <property name="version2" value="201305100900"/>
+  <property name="version" value="201306070900-RC3"/>
+  <property name="version2" value="201306070900"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
-  <target name="run">
+  <target name="run" depends="mirror,remove-otdt"/>
+
+  <target name="mirror">
     <!-- mirror but do NOT pack again -->
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Kepler"/>
@@ -26,7 +28,9 @@
       <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/" /> -->
       <property name="URL" value="http://download.eclipse.org/releases/kepler/${version2}/"/>
     </ant>
+  </target>
 
+  <target name="remove-otdt">
     <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
     <path id="patched.jdt.path">
       <fileset dir="${workDir}/plugins">
