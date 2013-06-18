@@ -6,25 +6,26 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 
   -->
-  <property name="version" value="0.10.0.201303191704"/>
-  <property name="URL1" value="http://download.eclipse.org/vjet/updates-0.10/"/>
+  <property name="version" value="0.10.0.201306041627"/>
+  <property name="URL1a" value="http://download.eclipse.org/vjet/updates-0.10/"/>
+  <property name="URL1b" value="http://download.eclipse.org/vjet/updates-nightly"/>
   <property name="URL2" value="http://download.jboss.org/jbosstools/updates/requirements/orbit/I20130321031113/"/>
   <property name="URL3" value="http://download.jboss.org/jbosstools/updates/requirements/juno/201302132140-R"/>
 
-  <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/vjet/" />
+  <property name="destination" value="${basedir}/"/>
   <property name="workDir" value="${destination}/${version}/"/>
 
-  <target name="run" depends="mirror,regen"/>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
-  <target name="mirror">
+  <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="VJET ${version}" format="${URL1}"/>
+      <repository location="file:${workDir}" name="VJET ${version}" format="${URL1b}"/>
       <source>
-        <repository location="${URL1}" />
+        <repository location="${URL1a}" />
+        <repository location="${URL1b}" />
         <repository location="${URL2}" />
         <repository location="${URL3}" />
       </source>
 
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
       <iu id="org.eclipse.vjet.js.ide.feature.group"/>
         <iu id="org.eclipse.equinox.server.jetty.feature.group"/>
         <iu id="org.eclipse.vjet.core.feature.group"/>
@@ -42,7 +43,7 @@
       <iu id="org.eclipse.vjet.vsf.domkit.feature.group"/>
         <iu id="org.junit4"/>
 
-      <slicingOptions includeFeatures="true" followStrict="true" />
     </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>
