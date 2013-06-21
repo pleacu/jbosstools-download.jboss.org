@@ -12,6 +12,12 @@
 </properties>
 <children size='35'>
 
+<!-- TODO: when adding new builds here, remember to add them to these jobs too:
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
+-->
+
 <!-- JBT Core: 16*2 + 3 = 35 -->
 
 <child location='../../../../staging/jbosstools-aerogear_master/all/repo/'/>

@@ -12,6 +12,12 @@
 </properties>
 <children size='19'>
 
+<!-- TODO: when adding new builds here, remember to add them to these jobs too:
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
+-->
+
 <child location='../../../../staging/jbosstools-aerogear_41/all/repo/'/>
 <child location='../../../../staging/jbosstools-arquillian_41/all/repo/'/>
 <child location='../../../../staging/jbosstools-base_41/all/repo/'/>
