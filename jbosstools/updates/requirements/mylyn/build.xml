@@ -17,7 +17,7 @@
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version} ${version2}" format="${URL}"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version} ${version2}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
       </source>

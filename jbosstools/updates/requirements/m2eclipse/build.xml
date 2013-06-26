@@ -10,7 +10,7 @@
   <property name="version" value="20130604-1618_1.4_1.0"/>
 
   <!-- currently contains 1.3.1, and we want 1.4
-  <property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/> 
+  <property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/>
   -->
 
   <!-- this is included in URL2 now, milestones/kepler/1.0.0/
@@ -25,7 +25,7 @@
   <property name="URL2b" value="http://download.eclipse.org/m2e-wtp/snapshots/kepler/0.18.0/m2e-wtp-jpa/"/> -->
 
   <!-- newer content in 4b and 4d so probably don't need this anymore
-  <property name="URL3" value="https://repository.sonatype.org/content/repositories/forge-sites/m2e-extras/0.15.0/N/0.15.0.201206251206/"/> 
+  <property name="URL3" value="https://repository.sonatype.org/content/repositories/forge-sites/m2e-extras/0.15.0/N/0.15.0.201206251206/"/>
   -->
 
   <property name="URL4a" value="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/"/>
@@ -50,7 +50,7 @@
   <target name="mirror">
     <p2.mirror>
       <!-- Using format to a good site to have siblings .pack.gz. Using composite in format leads to .blobstore -->
-      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" format="http://download.eclipse.org/m2e-wtp/milestones/kepler/1.0.0/1.0.0.20130507-1357/m2e-wtp/"/>
+      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL2}" />
 
@@ -79,7 +79,7 @@
       <iu id="org.sonatype.m2e.mavenarchiver.feature.feature.group"/>
       <iu id="org.sonatype.m2e.modello.feature.feature.group"/>
       <iu id="org.sonatype.m2e.plexus.annotations.feature.feature.group"/>
-      <iu id="org.sonatype.m2e.sisuindex.feature.feature.group"/>-->      
+      <iu id="org.sonatype.m2e.sisuindex.feature.feature.group"/>-->
     </p2.mirror>
   </target>
 </project>

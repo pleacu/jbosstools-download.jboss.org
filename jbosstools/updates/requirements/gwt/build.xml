@@ -18,7 +18,7 @@
   <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="${URL}"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
       </source>
@@ -31,7 +31,7 @@
           WindowBuilder Core  1.5.2.r42x201303061457  org.eclipse.wb.core.feature.feature.group
           WindowBuilder Core UI 1.5.2.r42x201303061516  org.eclipse.wb.core.ui.feature.feature.group
           WindowBuilder CSS Support 1.5.2.r42x201303061510  org.eclipse.wb.css.feature.feature.group
-          WindowBuilder XML Core (requires Eclipse WTP/WST) 1.5.2.r42x201303061518  org.eclipse.wb.core.xml.feature.feature.group          
+          WindowBuilder XML Core (requires Eclipse WTP/WST) 1.5.2.r42x201303061518  org.eclipse.wb.core.xml.feature.feature.group
         -->
       <iu id="com.google.gdt.eclipse.suite.e42.feature.feature.group"/>
       <iu id="com.google.gwt.eclipse.sdkbundle.feature.feature.group"/>

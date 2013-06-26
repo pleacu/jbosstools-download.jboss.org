@@ -9,14 +9,14 @@
   <property name="LONGNAME" value="Long Name"/>
   <property name="version" value="VERSION"/>
   <property name="URL" value="URL" />
-  
+
   <property name="destination" value="${basedir}" />
   <property name="workDir" value="${destination}/${version}/"/>
   <property name="latestversiononly" value="true"/>
 
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="${URL}"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
       </source>

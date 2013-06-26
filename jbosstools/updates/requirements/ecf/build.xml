@@ -22,7 +22,7 @@
 		<property name="compress" value="true" />
 
 		<p2.mirror>
-			<repository location="file:${destination}/3.5.6/" name="ECF plugins for Eclipse 3.6+" format="${URL}"/>
+			<repository location="file:${destination}/3.5.6/" name="ECF plugins for Eclipse 3.6+" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source>
 				<repository location="${URL}" />
 			</source>

@@ -23,7 +23,7 @@
 		     http://dev.eclipse.org/mhonarc/lists/p2-dev/msg03669.html
 		-->
 		<p2.mirror>
-			<repository location="file:${destination}/temp/" name="Findbugs ${version}" format="${URL}"/>
+			<repository location="file:${destination}/temp/" name="Findbugs ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source> <repository location="${URL}" /> </source>
 			<slicingOptions includeFeatures="true" followStrict="true" />
 		</p2.mirror>

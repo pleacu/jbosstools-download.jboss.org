@@ -27,7 +27,7 @@
 		<property name="compress" value="true" />
 
 		<p2.mirror>
-			<repository location="file:${destination}/2.7.2.v20120130-0943/" name="EMF plugins for Eclipse 3.7" format="${URL1}"/>
+			<repository location="file:${destination}/2.7.2.v20120130-0943/" name="EMF plugins for Eclipse 3.7" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source>
 				<repository location="${URL1}" />
 				<repository location="${URL2}" />

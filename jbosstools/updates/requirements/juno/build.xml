@@ -25,7 +25,7 @@
 	<target name="run" depends="mirror,regen"/>
 	<target name="mirror">
 		<p2.mirror>
-			<repository location="file:${destination}/${version}/" name="Juno ${version}" format="${URL1}"/>
+			<repository location="file:${destination}/${version}/" name="Juno ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source>
 				<repository location="${URL1}" />
 			</source>

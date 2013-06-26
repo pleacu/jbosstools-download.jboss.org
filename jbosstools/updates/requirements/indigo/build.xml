@@ -26,7 +26,7 @@
 	<target name="run" depends="mirror,regen"/>
 	<target name="mirror">
 		<p2.mirror>
-			<repository location="file:${destination}/201202240900-SR2/" name="Indigo 201202240900-SR2" format="${URL1}"/>
+			<repository location="file:${destination}/201202240900-SR2/" name="Indigo 201202240900-SR2" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source>
 				<repository location="${URL1}" />
 				<repository location="${URL2}" />

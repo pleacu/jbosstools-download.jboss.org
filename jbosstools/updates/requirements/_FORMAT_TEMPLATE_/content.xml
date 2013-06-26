@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository name="Template" type="org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository" version="1.0.0">
+  <properties size="2">
+    <property name="p2.compressed" value="true"/>
+  </properties>
+</repository>

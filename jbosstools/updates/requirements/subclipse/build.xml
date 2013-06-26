@@ -20,7 +20,7 @@
   <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
   <target name="mirror">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="${URL1}"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL1}" />
         <repository location="${URL2}" />

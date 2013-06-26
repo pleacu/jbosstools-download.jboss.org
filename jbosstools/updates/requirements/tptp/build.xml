@@ -23,7 +23,7 @@
 		<property name="compress" value="true" />
 
 		<p2.mirror>
-			<repository location="file:${destination}/4.7/" name="TPTP plugins for Eclipse 3.6 (EOL)" format="${URL}"/>
+			<repository location="file:${destination}/4.7/" name="TPTP plugins for Eclipse 3.6 (EOL)" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source>
 				<repository location="${URL}" />
 			</source>

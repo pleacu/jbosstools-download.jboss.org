@@ -17,7 +17,7 @@
 
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="VJET ${version}" format="${URL1b}"/>
+      <repository location="file:${workDir}" name="VJET ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL1a}" />
         <repository location="${URL1b}" />

@@ -29,7 +29,7 @@
         <property name="version" value="1.5"/>
 
 		<p2.mirror>
-			<repository location="file:${destination}/${version}/" name="Chrome Theme" format="${URL1}"/>
+			<repository location="file:${destination}/${version}/" name="Chrome Theme" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
 			<source>
 				<repository location="${URL1}" />
 			</source>
