@@ -2,12 +2,13 @@
 <site>
 	<category-def label="JBoss Application Server Adapters" name="org.eclipse.wst.server.core.serverAdapter">
 	</category-def>
-	<feature id="org.jboss.ide.eclipse.as.feature" url="features/org.jboss.ide.eclipse.as.feature_2.4.100.Beta1-v20130524-1742-B65.jar" version="2.4.100.Beta1-v20130524-1742-B65">
+	<feature id="org.jboss.ide.eclipse.as.feature" url="features/org.jboss.ide.eclipse.as.feature_2.4.100.Beta2-v20130625-0903-B81.jar" version="2.4.100.Beta2-v20130625-0903-B81">
 		<category name="org.eclipse.wst.server.core.serverAdapter"/>
 	</feature>
-	<feature id="org.jboss.tools.stacks.core.feature" url="features/org.jboss.tools.stacks.core.feature_1.0.0.Beta1-v20130525-0108-B68.jar" version="1.0.0.Beta1-v20130525-0108-B68"></feature>
-	<feature id="org.jboss.ide.eclipse.archives.feature" url="features/org.jboss.ide.eclipse.archives.feature_3.4.100.Beta1-v20130524-1742-B65.jar" version="3.4.100.Beta1-v20130524-1742-B65"></feature>
-	<feature id="org.jboss.tools.jmx.feature" url="features/org.jboss.tools.jmx.feature_1.4.0.Beta1-v20130524-1742-B65.jar" version="1.4.0.Beta1-v20130524-1742-B65"></feature>
-	<feature id="org.jboss.tools.runtime.core.feature" url="features/org.jboss.tools.runtime.core.feature_2.1.0.Beta1-v20130525-0108-B68.jar" version="2.1.0.Beta1-v20130525-0108-B68"></feature>
-	<feature id="org.jboss.tools.common.core.feature" url="features/org.jboss.tools.common.core.feature_3.5.0.Beta1-v20130525-0108-B68.jar" version="3.5.0.Beta1-v20130525-0108-B68"></feature>
+	<feature id="org.jboss.tools.foundation.feature" url="features/org.jboss.tools.foundation.feature_1.0.0.Beta2-v20130621-2106-B84.jar" version="1.0.0.Beta2-v20130621-2106-B84"></feature>
+	<feature id="org.jboss.tools.stacks.core.feature" url="features/org.jboss.tools.stacks.core.feature_1.0.0.Beta2-v20130621-2106-B84.jar" version="1.0.0.Beta2-v20130621-2106-B84"></feature>
+	<feature id="org.jboss.ide.eclipse.archives.feature" url="features/org.jboss.ide.eclipse.archives.feature_3.4.100.Beta2-v20130625-0903-B81.jar" version="3.4.100.Beta2-v20130625-0903-B81"></feature>
+	<feature id="org.jboss.tools.jmx.feature" url="features/org.jboss.tools.jmx.feature_1.4.0.Beta2-v20130625-0903-B81.jar" version="1.4.0.Beta2-v20130625-0903-B81"></feature>
+	<feature id="org.jboss.tools.runtime.core.feature" url="features/org.jboss.tools.runtime.core.feature_2.1.0.Beta2-v20130621-2106-B84.jar" version="2.1.0.Beta2-v20130621-2106-B84"></feature>
+	<feature id="org.jboss.tools.common.core.feature" url="features/org.jboss.tools.common.core.feature_3.5.1.Beta2-v20130621-2106-B84.jar" version="3.5.1.Beta2-v20130621-2106-B84"></feature>
 </site>
