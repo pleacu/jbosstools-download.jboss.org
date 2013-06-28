@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1368839126000'/>
+<property name='p2.timestamp' value='1372387785000'/>
 </properties>
 <children size='35'>
 
@@ -60,9 +60,8 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
 
 <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
 
-<!-- Freemarker is unchanged in 4.1.x since 4.0.x, so use those bits and disable the 4.1.x jobs until needed
-<child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/> -->
-<child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/freemarker/'/>
+<child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/>
+<!-- <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/> -->
 
 <!-- GWT is unchanged in 4.1.x since 4.0.x, so use those bits and disable the 4.1.x jobs until needed
 <child location='../../../../staging/jbosstools-gwt_41/all/repo/'/> -->
