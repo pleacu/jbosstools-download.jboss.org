@@ -8,29 +8,29 @@
   <property name="version" value="3.2.6"/>
   <property name="version2" value="3.2.6.v200903300643"/>
 
-	<property name="destination" value="${basedir}"/>
-	<property name="workDir" value="${destination}/${version}"/>
-	<property name="latestversiononly" value="true"/>
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+  <property name="latestversiononly" value="true"/>
 
-	<property name="URL1" value="http://pmd.sourceforge.net/eclipse" />
-	<target name="run" depends="mirror,regen"/>
+  <property name="URL1" value="http://pmd.sourceforge.net/eclipse" />
+  <target name="run" depends="mirror,regen"/>
 
-	<target name="mirror">
-		<p2.mirror>
-			<repository location="file:${workDir}/" name="PMD ${version}" />
-			<source>
-				<repository location="${URL1}" />
-			</source>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}/" name="PMD ${version}" />
+      <source>
+        <repository location="${URL1}" />
+      </source>
 
-			<slicingoptions includefeatures="true" followstrict="true" latestversiononly="${latestversiononly}" />
-			<iu id="net.sourceforge.pmd.eclipse.feature.group" version="${version2}"/>
-		</p2.mirror>
-	</target>
+      <slicingoptions includefeatures="true" followstrict="true" latestversiononly="${latestversiononly}" />
+      <iu id="net.sourceforge.pmd.eclipse.feature.group" version="${version2}"/>
+    </p2.mirror>
+  </target>
   <!-- SPECIAL CASE: regenerate metadata to remove external refs to sourceforge.net: must force download from OUR mirror, not theirs -->
-	<target name="regen">
-		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}/" artifactRepository="file:${workDir}/" publishartifacts="true" source="${workDir}/" compress="true" />
-		<p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-		<delete><fileset dir="${workDir}" includes="*.pack.gz"/></delete>
-		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
-	</target>
+  <target name="regen">
+    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}/" artifactRepository="file:${workDir}/" publishartifacts="true" source="${workDir}/" compress="true" />
+    <p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
+    <delete><fileset dir="${workDir}" includes="*.pack.gz"/></delete>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
 </project>
