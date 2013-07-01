@@ -29,7 +29,7 @@
 	<target name="regen">
 		<p2.publish.featuresAndBundles metadataRepository="file:${workDir}/" artifactRepository="file:${workDir}/" publishartifacts="true" source="${workDir}/" compress="true" />
 		<p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
-    <delete><fileset dir="${workDir}" includes="*.pack.gz"/></delete>
+		<delete><fileset dir="${workDir}" includes="*.pack.gz"/></delete>
 		<ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
 	</target>
 </project>
