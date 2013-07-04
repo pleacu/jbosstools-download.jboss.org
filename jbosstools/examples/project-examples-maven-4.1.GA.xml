@@ -352,8 +352,8 @@ This example requires the helloworld-rs project to be deployed.
         <shortDescription>helloworld-errai</shortDescription>
         <description>This example demonstrates the use of CDI 1.0 and Errai in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
         The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.</description>
-        <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-errai.zip</url>
-        <size>19354</size>
+        <url>http://download.jboss.org/jbosstools/examples/4.1.0.GA/helloworld-errai.zip</url>
+        <size>19826</size>
         <icon path="icons/jboss.png"/>
         <importType>maven</importType>
         <included-projects/>
