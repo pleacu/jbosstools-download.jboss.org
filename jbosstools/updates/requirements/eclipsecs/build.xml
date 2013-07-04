@@ -5,8 +5,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="5.6.0.201209221626"/>
-
+  <property name="version" value="5.6.1.201306282206"/>
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
