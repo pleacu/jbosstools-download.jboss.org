@@ -253,8 +253,8 @@
             </fix>
         </fixes>
 		<importType>maven</importType>
+        <tags>central</tags>        
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
-		<tags>central</tags>
 		<priority>15</priority>
         <icon path="icons/jboss.png" />           
     </project>	
@@ -299,7 +299,6 @@ This example requires the helloworld-rs project to be deployed.
         <importType>maven</importType>
         <importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
         <!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
-        <tags>central</tags>
         <priority>16</priority>
         <icon path="icons/jboss.png" />           
     </project>  
@@ -312,8 +311,8 @@ This example requires the helloworld-rs project to be deployed.
         <shortDescription>helloworld-jms</shortDescription>
         <description>This example demonstrates the use of CDI 1.0 and JMS external producer/consumer client in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1.
         The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.</description>
-        <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-jms.zip</url>
-        <size>7913</size>
+        <url>http://download.jboss.org/jbosstools/examples/4.1.0.GA/helloworld-jms.zip</url>
+        <size>8480</size>
         <importType>maven</importType>
         <icon path="icons/jboss.png"/>
         <tags>central</tags>
@@ -344,7 +343,82 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
         </fixes>
     </project>
-    
+  <project>
+    <id>jdf-helloworld-mdb</id>
+    <name>helloworld-mdb</name>
+    <category>Back-end Applications</category>
+    <shortDescription>helloworld-mdb</shortDescription>
+    <description>Helloworld Message-Driven Bean with Servlet 3.0 as client</description>
+    <url>http://download.jboss.org/jbosstools/examples/4.1.0.GA/helloworld-mdb.zip</url>
+    <size>15639</size>
+    <importType>maven</importType>
+    <icon path="icons/jboss.png"/>
+    <tags>central</tags>
+    <included-projects/>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.4.0,2.0.0)</property>
+        <property name="description">This project example requires m2e &gt;= 1.4.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.4.0,2.0.0)</property>
+        <property name="description">This project example requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+    </fixes>
+  </project>
+  <project>
+    <id>jdf-deltaspike-helloworld-jms</id>
+    <name>deltaspike-helloworld-jms</name>
+    <category>Back-end Applications</category>
+    <shortDescription>deltaspike-helloworld-jms</shortDescription>
+    <description>deltaspike-helloworld-jms: Helloworld JMS producer/consumer client with DeltaSpike property configuration</description>
+    <url>http://download.jboss.org/jbosstools/examples/4.1.0.GA/deltaspike-helloworld-jms.zip</url>
+    <size>14778</size>
+    <importType>maven</importType>
+    <icon path="icons/jboss.png"/>
+    <tags>central</tags>
+    <included-projects/>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">This project example requires m2e &gt;= 1.1.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[0.16.0,2.0.0)</property>
+        <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.4.0,2.0.0)</property>
+        <property name="description">This project example requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+    </fixes>
+  </project>      
     <project>
         <id>jdf-jboss-as-helloworld-errai</id>
         <name>jboss-as-helloworld-errai</name>
@@ -430,7 +504,6 @@ This example requires the helloworld-rs project to be deployed.
         <importType>maven</importType>
         <importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
         <!--welcome type="cheatsheets" url="/jboss-as-numberguess/.cheatsheet.xml"/-->
-        <tags>central</tags>
         <icon path="icons/jboss.png" />           
     </project>
     
