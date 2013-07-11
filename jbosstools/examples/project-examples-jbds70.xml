@@ -38,7 +38,7 @@
       </fix>
     </fixes>
   </project>
-  
+
   <project>
         <id>jboss-as-kitchensink</id>
         <name>jboss-as-kitchensink</name>
@@ -82,9 +82,9 @@
         <!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
         <tags>central</tags>
         <priority>19</priority>
-        <icon path="icons/jboss.png" />           
-    </project>  
-    
+        <icon path="icons/jboss.png" />
+    </project>
+
     <project>
         <id>jdf-jboss-as-greeter</id>
         <name>jboss-as-greeter</name>
@@ -123,8 +123,8 @@
                 <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
             </fix>
         </fixes>
-    </project>    
-    
+    </project>
+
     <project>
         <id>jboss-as-helloworld</id>
         <name>jboss-as-helloworld</name>
@@ -142,7 +142,7 @@
             <fix type="wtpruntime">
                 <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
                 <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
-                
+
                 <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
             <fix type="plugin">
@@ -166,12 +166,12 @@
         </fixes>
         <importType>maven</importType>
         <importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
-        <!--welcome type="cheatsheets" url="/jboss-as-helloworld/.cheatsheet.xml"/--> 
+        <!--welcome type="cheatsheets" url="/jboss-as-helloworld/.cheatsheet.xml"/-->
         <tags>central</tags>
         <priority>17</priority>
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
     </project>
-    
+
     <project>
         <id>jboss-as-kitchensink-rf</id>
         <name>jboss-as-kitchensink-rf</name>
@@ -214,7 +214,7 @@
         <!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
         <tags>central</tags>
         <priority>16</priority>
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
     </project>
    <project>
      <id>jboss-as-helloworld-rs</id>
@@ -223,7 +223,7 @@
 		<category>Back-end Applications</category>
 		<shortDescription>helloworld-rs</shortDescription>
 		<description>
-            This example creates an Helloworld JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+            This example creates an Helloworld JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7.
         </description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-rs.zip</url>
         <size>10949</size>
@@ -253,11 +253,11 @@
             </fix>
         </fixes>
 		<importType>maven</importType>
-        <tags>central</tags>        
+        <tags>central</tags>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
 		<priority>15</priority>
-        <icon path="icons/jboss.png" />           
-    </project>	
+        <icon path="icons/jboss.png" />
+    </project>
     <project>
         <id>jboss-as-jax-rs-client</id>
         <name>jboss-as-jax-rs-client</name>
@@ -265,7 +265,7 @@
         <category>Back-end Applications</category>
         <shortDescription>jax-rs-client</shortDescription>
         <description>
-            This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+            This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7.
 
 This example requires the helloworld-rs project to be deployed.
         </description>
@@ -300,10 +300,10 @@ This example requires the helloworld-rs project to be deployed.
         <importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
         <!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
         <priority>16</priority>
-        <icon path="icons/jboss.png" />           
-    </project>  
-    
-    
+        <icon path="icons/jboss.png" />
+    </project>
+
+
     <project>
         <id>jdf-jboss-as-helloworld-jms</id>
         <name>jboss-as-helloworld-jms</name>
@@ -395,7 +395,7 @@ This example requires the helloworld-rs project to be deployed.
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
         <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
@@ -418,7 +418,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
       </fix>
     </fixes>
-  </project>      
+  </project>
     <project>
         <id>jdf-jboss-as-helloworld-errai</id>
         <name>jboss-as-helloworld-errai</name>
@@ -460,10 +460,10 @@ This example requires the helloworld-rs project to be deployed.
                 <property name="versions">[2.4,)</property>
                 <property name="description">This project example requires Google Plugin for Eclipse</property>
                 <property name="connectorIds">com.google.gpe.gwt</property>
-            </fix>         
+            </fix>
         </fixes>
-    </project>  
-    
+    </project>
+
     <project>
         <id>jboss-as-numberguess</id>
         <name>jboss-as-numberguess</name>
@@ -504,9 +504,9 @@ This example requires the helloworld-rs project to be deployed.
         <importType>maven</importType>
         <importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
         <!--welcome type="cheatsheets" url="/jboss-as-numberguess/.cheatsheet.xml"/-->
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
     </project>
-    
+
     <!-- Examples from former *community*.xml descriptors-->
     <project>
         <category>Richfaces 4.0/JSF 2.0</category>
@@ -521,7 +521,7 @@ This example requires the helloworld-rs project to be deployed.
             http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/richfaces-examples/richfaces-simpleapp.zip
         </url>
         <importType>maven</importType>
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
         <fixes>
             <fix type="wtpruntime">
                 <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.60</property>

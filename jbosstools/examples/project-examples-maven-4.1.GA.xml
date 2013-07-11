@@ -38,7 +38,7 @@
       </fix>
     </fixes>
   </project>
-  
+
   <project>
 		<id>jboss-as-kitchensink</id>
 		<name>jboss-as-kitchensink</name>
@@ -82,9 +82,9 @@
 		<!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
 		<tags>central</tags>
 		<priority>19</priority>
-        <icon path="icons/jboss.png" />           
-    </project>	
-	
+        <icon path="icons/jboss.png" />
+    </project>
+
 	<project>
         <id>jdf-jboss-as-greeter</id>
         <name>jboss-as-greeter</name>
@@ -123,8 +123,8 @@
                 <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
             </fix>
         </fixes>
-    </project>    
-	
+    </project>
+
 	<project>
 	    <id>jboss-as-helloworld</id>
 	    <name>jboss-as-helloworld</name>
@@ -142,7 +142,7 @@
 			<fix type="wtpruntime">
 				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
 				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
-                
+
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
 			<fix type="plugin">
@@ -166,12 +166,12 @@
         </fixes>
 		<importType>maven</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
-		<!--welcome type="cheatsheets" url="/jboss-as-helloworld/.cheatsheet.xml"/--> 
+		<!--welcome type="cheatsheets" url="/jboss-as-helloworld/.cheatsheet.xml"/-->
 		<tags>central</tags>
 		<priority>17</priority>
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
     </project>
-    
+
     <project>
 		<id>jboss-as-kitchensink-rf</id>
 		<name>jboss-as-kitchensink-rf</name>
@@ -214,7 +214,7 @@
 		<!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
 		<tags>central</tags>
 		<priority>16</priority>
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
     </project>
    <project>
 		<id>jboss-as-helloworld-rs</id>
@@ -223,7 +223,7 @@
 		<category>Back-end Applications</category>
 		<shortDescription>helloworld-rs</shortDescription>
 		<description>
-            This example creates an Helloworld JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+            This example creates an Helloworld JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7.
         </description>
         <url>http://download.jboss.org/jbosstools/examples/4.0.0.GA/jboss-as-helloworld-rs.zip</url>
         <size>10949</size>
@@ -256,8 +256,8 @@
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
 		<tags>central</tags>
 		<priority>17</priority>
-        <icon path="icons/jboss.png" />           
-    </project>	    
+        <icon path="icons/jboss.png" />
+    </project>
     <project>
 		<id>jboss-as-jax-rs-client</id>
 		<name>jboss-as-jax-rs-client</name>
@@ -265,7 +265,7 @@
 		<category>Back-end Applications</category>
 		<shortDescription>jax-rs-client</shortDescription>
 		<description>
-            This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7. 
+            This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7.
 
 This example requires the helloworld-rs project to be deployed.
         </description>
@@ -300,8 +300,8 @@ This example requires the helloworld-rs project to be deployed.
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
 		<!-- <welcome type="cheatsheets" url="/jboss-as-kitchensink/.cheatsheet.xml"/>  -->
 		<priority>16</priority>
-        <icon path="icons/jboss.png" />           
-    </project>	
+        <icon path="icons/jboss.png" />
+    </project>
     <project>
         <id>jdf-jboss-as-helloworld-jms</id>
         <name>jboss-as-helloworld-jms</name>
@@ -393,7 +393,7 @@ This example requires the helloworld-rs project to be deployed.
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
         <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
@@ -416,7 +416,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
       </fix>
     </fixes>
-  </project>      
+  </project>
     <project>
         <id>jdf-jboss-as-helloworld-errai</id>
         <name>jboss-as-helloworld-errai</name>
@@ -458,10 +458,10 @@ This example requires the helloworld-rs project to be deployed.
                 <property name="versions">[2.4,)</property>
                 <property name="description">This project example requires Google Plugin for Eclipse</property>
                 <property name="connectorIds">com.google.gpe.gwt</property>
-            </fix>         
+            </fix>
         </fixes>
-    </project>  
-    
+    </project>
+
 	<project>
 	    <id>jboss-as-numberguess</id>
 	    <name>jboss-as-numberguess</name>
@@ -502,9 +502,9 @@ This example requires the helloworld-rs project to be deployed.
 		<importType>maven</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
 		<!--welcome type="cheatsheets" url="/jboss-as-numberguess/.cheatsheet.xml"/-->
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
     </project>
-    
+
     <!-- Examples from former *community*.xml descriptors-->
 	<project>
 		<category>Richfaces 4.0/JSF 2.0</category>
@@ -519,7 +519,7 @@ This example requires the helloworld-rs project to be deployed.
 			http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/richfaces-examples/richfaces-simpleapp.zip
         </url>
 		<importType>maven</importType>
-        <icon path="icons/jboss.png" />           
+        <icon path="icons/jboss.png" />
 		<fixes>
 			<fix type="wtpruntime">
 				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.60</property>
@@ -545,7 +545,7 @@ This example requires the helloworld-rs project to be deployed.
 		<category>Seam</category>
 		<name>photoalbum-mavenized</name>
 		<included-projects>
-		photoalbum-mavenized,photoalbum-mavenized-ear,photoalbum-mavenized-ejb,photoalbum-mavenized-parent 
+		photoalbum-mavenized,photoalbum-mavenized-ear,photoalbum-mavenized-ejb,photoalbum-mavenized-parent
 		</included-projects>
 		<shortDescription>PhotoAlbum - EAR mavenized (RichFaces 3.3.1.GA, Seam 2.2.0.GA)</shortDescription>
 		<description>This example demonstrates the use of RichFaces components. It includes the photoalbum-mavenized,photoalbum-mavenized-ear,photoalbum-mavenized-ejb and photoalbum-mavenized-parent projects.
@@ -556,7 +556,7 @@ This example requires the helloworld-rs project to be deployed.
         http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/photoalbum-mavenized.zip
 		</url>
         <importType>maven</importType>
-        <icon path="icons/jboss.png" />          
+        <icon path="icons/jboss.png" />
 		<fixes>
         <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.50, org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.51, org.jboss.ide.eclipse.as.runtime.50, org.jboss.ide.eclipse.as.runtime.42</property>
@@ -580,10 +580,10 @@ This example requires the helloworld-rs project to be deployed.
         <property name="description">This project example requires JBoss Maven Tools.</property>
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.seam.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jpa.feature</property>
         </fix>
-        
+
 		</fixes>
         </project>
-        
+
         <project>
 		<category>Seam</category>
 		<name>booking2</name>
@@ -591,14 +591,14 @@ This example requires the helloworld-rs project to be deployed.
 		booking,booking-ear,booking-ejb,booking-parent,booking-test
 		</included-projects>
 		<shortDescription>Seam Booking Example - EAR mavenized</shortDescription>
-		<description>This example demonstrates the use of Seam in a Java EE 5 environment. 
+		<description>This example demonstrates the use of Seam in a Java EE 5 environment.
         Transaction and persistence context management is handled by the EJB container.
         It includes the booking, booking-ear, booking-ejb,booking-test and booking-parent projects.
         Requires JBoss Enterprise Application Platform 4.3/JBoss Application Server 4.2.x, Seam 2.0, m2eclipse and testng plugins.
         </description>
 		<size>203639</size>
         <importType>maven</importType>
-        <icon path="icons/jboss.png" />  
+        <icon path="icons/jboss.png" />
 		<url>
         http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/booking-mavenized.zip
 		</url>
@@ -608,7 +608,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="downloadId">org.jboss.tools.runtime.core.as.423</property>
         <property name="description">This project example requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
         </fix>
-        
+
         <fix type="seam">
         <property name="allowed-versions">2.0.0, 2.0.1, 2.0.2</property>
         <property name="downloadId">org.jboss.tools.runtime.core.seam.202</property>
@@ -632,7 +632,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.testng.eclipse</property>
         <property name="description">The TestNG plugin is required if you want to run Seam tests. You can install it using the following update site: http://beust.com/eclipse</property>
         </fix>
-        
+
 		</fixes>
         </project>
         <project>
@@ -642,7 +642,7 @@ This example requires the helloworld-rs project to be deployed.
 		booking,booking-ear,booking-ejb,booking-parent,booking-test
 		</included-projects>
 		<shortDescription>Seam Booking Example - EAR mavenized - Seam 2.1.1.GA</shortDescription>
-		<description>This example demonstrates the use of Seam in a Java EE 5 environment. 
+		<description>This example demonstrates the use of Seam in a Java EE 5 environment.
         Transaction and persistence context management is handled by the EJB container.
         It includes the booking, booking-ear, booking-ejb, booking-test and booking-parent projects.
         Requires JBoss Enterprise Application Platform 4.3/JBoss Application Server 4.2.x, Seam 2.1, m2eclipse and testng plugins.
@@ -652,7 +652,7 @@ This example requires the helloworld-rs project to be deployed.
         http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/booking-mavenized-2.1.1.zip
 		</url>
         <importType>maven</importType>
-        <icon path="icons/jboss.png" />  
+        <icon path="icons/jboss.png" />
 		<fixes>
         <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
@@ -683,8 +683,8 @@ This example requires the helloworld-rs project to be deployed.
         <property name="description">The TestNG plugin is required if you want to run Seam tests. You can install it using the following update site: http://beust.com/eclipse</property>
         </fix>
 		</fixes>
-        </project>    
-    -->	
+        </project>
+    -->
 	<project>
 		<category>RESTEasy</category>
 		<name>simple</name>
@@ -692,7 +692,7 @@ This example requires the helloworld-rs project to be deployed.
             simple
         </included-projects>
 		<shortDescription>RESTEasy Simple Example</shortDescription>
-		<description>This project is a simple example showing usage of @Path, @GET, PUT, POST, and @PathParam. It uses pure streaming output and includes the 'simple' project. 
+		<description>This project is a simple example showing usage of @Path, @GET, PUT, POST, and @PathParam. It uses pure streaming output and includes the 'simple' project.
             Requires m2e-wtp and JBoss Enterprise Application Platform 4.3/5.0 or JBoss Application Server 4.2.x/5.x.
         </description>
 		<size>16939</size>
@@ -700,7 +700,7 @@ This example requires the helloworld-rs project to be deployed.
 			http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/resteasy-examples/resteasySimple.zip
         </url>
         <importType>maven</importType>
-        <icon path="icons/jboss.png" />          
+        <icon path="icons/jboss.png" />
 		<fixes>
 			<fix type="wtpruntime">
 				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.50, org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.51, org.jboss.ide.eclipse.as.runtime.50, org.jboss.ide.eclipse.as.runtime.42</property>
@@ -720,6 +720,6 @@ This example requires the helloworld-rs project to be deployed.
 				<property name="connectorIds">org.jboss.tools.maven.feature</property>
             </fix>
         </fixes>
-    </project>    
+    </project>
 </projects>
 
