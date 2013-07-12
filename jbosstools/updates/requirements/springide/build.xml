@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run">
+<project default="mirror">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
 		export JAVA_HOME=/opt/jdk1.6.0; \
 		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
@@ -8,7 +8,7 @@
 			-f ~/RHDS/updates/requirements/springide/build.xml -Ddestination=/tmp/pmd-repo
 	-->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.2.0.201303060654-RELEASE-e4.3" />
+  <property name="version" value="3.3.0.201307091516-RELEASE" />
   <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
   <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
   <!-- 3.3 milestones <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
@@ -17,8 +17,6 @@
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
-  <target name="run" depends="mirror,regen"/>
-  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
   <target name="mirror">
 		<p2.mirror>
 			<repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
