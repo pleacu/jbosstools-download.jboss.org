@@ -6,14 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.3.0.201307091516-RELEASE" />
+  <property name="version" value="3.2.0.201303060654-RELEASE-e4.3" />
   <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
-  <!-- TODO: JBIDE-15202 move this to a Central TP; currently included here as needed to resolve and include org.json in the mirror -->
-  <property name="version2" value="R20130517111416"/>
-  <property name="URL2" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version2}/repository/"/>
-  <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
-  <property name="URL3" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
-
   <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
   <!-- 3.3 milestones <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
   <!-- 3.3 nightlies <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
@@ -27,8 +21,6 @@
       <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
-        <repository location="${URL2}" />
-        <repository location="${URL3}" />
       </source>
 
       <!-- Not needed: platformfilter="true"  -->
@@ -45,16 +37,6 @@
       <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
-      <iu id="org.springframework.ide.eclipse.wizard"/>
-      <iu id="org.springframework.ide.eclipse.config.ui"/>
-      <iu id="org.springframework.ide.eclipse.maven"/>
-
-      <!-- Orbit bundles -->
-      <iu id="org.json"/>
-
-      <!-- Optional bundles -->
-      <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
-      <iu id="org.datanucleus.ide.eclipse"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
