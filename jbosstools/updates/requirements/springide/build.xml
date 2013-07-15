@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="mirror">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/springide/build.xml -Ddestination=/tmp/pmd-repo
-	-->
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
   <property name="LONGNAME" value="Spring IDE"/>
   <property name="version" value="3.3.0.201307091516-RELEASE" />
   <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
+  <property name="version2" value="R20130517111416"/>
+  <property name="URL2" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version2}/repository/"/>
+  <property name="URL3" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
+
   <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
   <!-- 3.3 milestones <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
   <!-- 3.3 nightlies <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
@@ -17,27 +19,39 @@
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
-  <target name="mirror">
-		<p2.mirror>
-			<repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
-			<source>
-				<repository location="${URL}" />
-			</source>
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
+        <repository location="${URL3}" />
+      </source>
 
-			<iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
-			<iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.batch.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.data.feature.feature.group" /> <!-- new -->
-			<iu id="org.springframework.ide.eclipse.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.integration.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.maven.feature.feature.group"/> <!-- new -->
-			<iu id="org.springframework.ide.eclipse.mylyn.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
-			<iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
+      <!-- platformfilter="true"  -->
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+      <iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
+      <iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.batch.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.data.feature.feature.group" /> <!-- new -->
+      <iu id="org.springframework.ide.eclipse.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.integration.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.maven.feature.feature.group"/> <!-- new -->
+      <iu id="org.springframework.ide.eclipse.mylyn.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.wizard"/>
+      <iu id="org.springframework.ide.eclipse.config.ui"/>
+      <iu id="org.springframework.ide.eclipse.maven"/>
+      <!-- optional bundles -->
+      <iu id="org.datanucleus.ide.eclipse"/>
+      <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
 
-			<slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" platformfilter="true" />
-		</p2.mirror>
-	</target>
+      <!-- Orbit bundles -->
+      <iu id="org.json"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
 </project>
