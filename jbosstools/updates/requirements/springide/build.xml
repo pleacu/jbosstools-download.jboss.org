@@ -33,6 +33,7 @@
 
       <!-- Not needed: platformfilter="true"  -->
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+      <!-- Features to include in Central connector -->
       <iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
       <iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
@@ -45,16 +46,21 @@
       <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
-      <iu id="org.springframework.ide.eclipse.wizard"/>
+
+      <!-- Plugins to include to avoid console warnings after installation -->
       <iu id="org.springframework.ide.eclipse.config.ui"/>
       <iu id="org.springframework.ide.eclipse.maven"/>
+      <iu id="org.springframework.ide.eclipse.wizard"/>
 
-      <!-- Orbit bundles -->
+      <!-- Required 3rd party plugins (on SpringIDE or Orbit site) not properly referenced by features -->
+      <iu id="javax.jms"/>
+      <iu id="org.aopalliance"/>
+      <iu id="org.aspectj.runtime"/>
       <iu id="org.json"/>
 
-      <!-- Optional bundles -->
-      <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
+      <!-- Optional bundles included to avoid console warnings after installation -->
       <iu id="org.datanucleus.ide.eclipse"/>
+      <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
