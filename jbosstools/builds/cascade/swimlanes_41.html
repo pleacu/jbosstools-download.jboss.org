@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Build Job Swimlanes</title>
+<style>
+@import url("../../web/site.css");
+</style>
+<p align="center"><table width="890" align="center">
+	<th><td colspan="2"><h2>Build Job Swimlanes, JBoss Tools 4.1</h2></td></tr>
+	<tr bgcolor="#DDDDDD">
+		<th>JBoss Tools Project</th>
+		<th>Depends On</th>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>Arquillian<b style="color:#1cd725;font-size:15px"> *</b></td>
+		<td>Central, Portlet, JavaEE, VPE, XulRunner, JST, Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>Central</td>
+		<td>Portlet, JavaEE, VPE, XulRunner, JST, Server, Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>Portlet</td>
+		<td>JavaEE, VPE, XulRunner, JST, Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>JavaEE</td>
+		<td>VPE, XulRunner, JST, Server, Hibernate, Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>VPE</td>
+		<td>Aerogear<b style="color:#1cd725;font-size:15px"> *</b>, XulRunner, JST, Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>Aerogear / Cordova<b style="color:#1cd725;font-size:15px"> *</b></td>
+		<td>--</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>XulRunner</td>
+		<td>--</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>JST</td>
+		<td>Server<b style="color:darkred;font-size:15px"> *</b>, Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>LiveReload<b style="color:#1cd725;font-size:15px"> *</b></td>
+		<td>Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>OpenShift</td>
+		<td>Server, Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>WebServices</td>
+		<td>Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>BIRT</td>
+		<td>Hibernate, Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>Hibernate</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>Server</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>GWT</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>Forge</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>Freemarker</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>Base</td>
+		<td>--</td>
+	</tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr bgcolor="#DDDDDD">
+		<th>JBTIS Project</th>
+		<th>Depends On</th>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>BPEL</td>
+		<td>Server, Base</td>
+	</tr>
+	<tr bgcolor="#EEEEEE">
+		<td>ESB</td>
+		<td>Base</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+		<td>JBPM</td>
+		<td>Base</td>
+	</tr>
+	<tr><td colspan="3"><p><b style="color:darkred;font-size:15px">*</b> - <i><small>JST does not actually depend on Server, but in order to prevent the same dependency chain from appearing more than once (JavaEE -> Base, JST -> Base) and causing duplicate GAVs in the Tycho/Maven reactor, bootstrap profiles are as noted above.</small></i></p>
+
+<br/><br/>
+	</td></tr>
+</table>
+</p>
+<p align="center">
+<img src="images/HowWeBuild_Diagram_Git_Repos_JBT41.png"/><br/>
+<b style="color:#1cd725;font-size:25px">*</b><i><small> - Indicates a change compared to previous release (eg., new project, new dependency)</small></i>
+</p>
+<p>&nbsp;</p>
+<p align="right">Old swimlanes:<br/> <a href="swimlanes_40.html">JBT 4.0</a> (Github) :: <a href="swimlanes_32_33_40.txt">JBT 3.2 - 4.0</a> (SVN)</p>
+</body>
+</html>
