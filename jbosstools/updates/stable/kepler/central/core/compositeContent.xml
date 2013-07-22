@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?compositeArtifactRepository version='1.0.0'?>
-<repository name='JBoss Tools Core 4.1 Central - Development Milestone' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='JBoss Tools Core 4.1 Central - Stable Release' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
 <!-- 
@@ -10,7 +10,7 @@
 <property name='p2.timestamp' value='1359751123000'/>
 </properties>
 <children size='3'>
-<child location='http://download.jboss.org/jbosstools/updates/development/kepler/'/>
+<child location='http://download.jboss.org/jbosstools/updates/stable/kepler/'/>
 <child location='http://download.jboss.org/jbosstools/updates/kepler/'/>
 <child location='http://download.jboss.org/jbosstools/updates/kepler/extras/'/>
 </children>
