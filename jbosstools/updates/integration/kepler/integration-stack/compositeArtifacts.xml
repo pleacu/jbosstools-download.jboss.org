@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools Integration Stack - Integration Builds Composite Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<properties size='2'>
+<property name='p2.compressed' value='true'/>
+<!-- 
+     get new time w/ 
+      date +%s000
+-->
+<property name='p2.timestamp' value='1360958747000'/>
+</properties>
+<children size='9'>
+<child location='bpel/'/>
+<child location='droolsjbpm/'/>
+<child location='esb/'/>
+<child location='jbpm3/'/>
+<child location='modeshape/'/>
+
+<!-- TODO: JBIDE-11098 remove this once contents have moved to esb, jbpm3, and droolsjbpm -->
+<child location='runtime-detection/'/>
+
+<child location='savara/'/>
+<child location='switchyard/'/>
+<child location='teiddesigner/'/>
+</children>
+</repository>
