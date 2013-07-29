@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools Builds - updates/stable/juno/soa-tooling/modeshape' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<properties size='2'><property name='p2.timestamp' value='1359043866000'/><property name='p2.compressed' value='true'/></properties>
+<children size='2'>
+<child location='3.0.0.Final/'/>
+<child location='3.1.0.Final/'/>
+</children>
+</repository>
+
