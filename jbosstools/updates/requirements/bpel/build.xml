@@ -5,7 +5,8 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="1.0.3.v20130509-1351-CI"/>
+  <property name="version" value="1.0.3.v20130816-0911-H221-CI"/>
+  <property name="version2" value="1.0.3"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -13,7 +14,7 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse BPEL"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/bpel/site/" />
+      <property name="URL" value="http://download.eclipse.org/bpel/site/${version2}/" />
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
