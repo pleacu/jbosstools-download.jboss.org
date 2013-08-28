@@ -7,7 +7,7 @@
   -->
   <property name="LONGNAME" value="Eclipse BPMN 2 Modeler + BPMN2 Project Feature"/>
   <property name="version" value="0.2.6"/>
-  <property name="version2" value="201305221604"/>
+  <property name="version2" value="201306261903"/>
   <property name="version3" value="S20130423"/>
 
   <!--   BPMN2 Editor 0.2.6.201305221604 -->
