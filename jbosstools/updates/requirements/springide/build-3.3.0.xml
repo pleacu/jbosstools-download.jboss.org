@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="Spring IDE"/>
+  <property name="version" value="3.3.0.201307091516-RELEASE" />
+  <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
+  <!-- TODO: JBIDE-15202 move this to a Central TP; currently included here as needed to resolve and include org.json in the mirror -->
+  <property name="version2" value="R20130517111416"/>
+  <property name="URL2" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version2}/repository/"/>
+  <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
+  <property name="URL3" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
+
+  <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
+  <!-- 3.3 milestones <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
+  <!-- 3.3 nightlies <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
+        <repository location="${URL3}" />
+      </source>
+
+      <!-- Not needed: platformfilter="true"  -->
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+      <!-- Features to include in Central connector -->
+      <iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
+      <iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.batch.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.data.feature.feature.group" /> <!-- new -->
+      <iu id="org.springframework.ide.eclipse.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.integration.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.maven.feature.feature.group"/> <!-- new -->
+      <iu id="org.springframework.ide.eclipse.mylyn.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
+
+      <!-- Plugins to include to avoid console warnings after installation -->
+      <iu id="org.springframework.ide.eclipse.config.ui"/>
+      <iu id="org.springframework.ide.eclipse.maven"/>
+      <iu id="org.springframework.ide.eclipse.wizard"/>
+
+      <!-- Required 3rd party plugins (on SpringIDE or Orbit site) not properly referenced by features -->
+      <iu id="javax.jms"/>
+      <iu id="org.aopalliance"/>
+      <iu id="org.aspectj.runtime"/>
+      <iu id="org.json"/>
+
+      <!-- Optional bundles included to avoid console warnings after installation -->
+      <iu id="org.datanucleus.ide.eclipse"/>
+      <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
