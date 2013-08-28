@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    export JAVA_HOME=/opt/jdk1.6.0; \
+    ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner \
+      -f ~/RHDS/updates/requirements/gwt/build.xml -Ddestination=/tmp/gwt-repo
+  -->
+  <property name="LONGNAME" value="GWT SDK 2.5.1, GWT Designer 3.1.2, WindowBuilder 1.5.2, GPE"/>
+  <property name="version" value="3.2.3.v201304260926-rel-r42"/>
+  <property name="URL" value="http://dl.google.com/eclipse/plugin/4.2/"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}/"/>
+
+  <target name="run" depends="mirror,regen"/>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="pack.artifacts.and.regen.metadata"/></target>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+      </source>
+      <!--
+          Google Plugin for Eclipse 4.2 3.2.3.v201304260926-rel-r42 com.google.gdt.eclipse.suite.e42.feature.feature.group
+          Google Web Toolkit SDK 2.5.1  2.5.1 com.google.gwt.eclipse.sdkbundle.feature.feature.group
+          GWT Designer Core 3.1.2.r42x201303061525  com.google.gdt.eclipse.designer.hosted.feature.feature.group
+          GWT Designer Editor 3.1.2.r42x201303061530  com.google.gdt.eclipse.designer.editor.feature.feature.group
+          GWT Designer GPE  3.1.2.r42x201303061641  com.google.gdt.eclipse.designer.gpe.feature.feature.group
+          WindowBuilder Core  1.5.2.r42x201303061457  org.eclipse.wb.core.feature.feature.group
+          WindowBuilder Core UI 1.5.2.r42x201303061516  org.eclipse.wb.core.ui.feature.feature.group
+          WindowBuilder CSS Support 1.5.2.r42x201303061510  org.eclipse.wb.css.feature.feature.group
+          WindowBuilder XML Core (requires Eclipse WTP/WST) 1.5.2.r42x201303061518  org.eclipse.wb.core.xml.feature.feature.group
+        -->
+      <iu id="com.google.gdt.eclipse.suite.e42.feature.feature.group"/>
+      <iu id="com.google.gwt.eclipse.sdkbundle.feature.feature.group"/>
+      <iu id="com.google.gdt.eclipse.designer.gpe.feature.feature.group"/>
+        <iu id="com.google.gdt.eclipse.designer.editor.feature.feature.group"/>
+          <iu id="com.google.gdt.eclipse.designer.hosted.feature.feature.group"/>
+          <iu id="org.eclipse.wb.core.feature.feature.group"/>
+          <iu id="org.eclipse.wb.css.feature.feature.group"/>
+          <iu id="org.eclipse.wb.core.java.feature.feature.group"/>
+          <iu id="org.eclipse.wb.core.xml.feature.feature.group"/>
+      <iu id="org.eclipse.wb.core.ui.feature.feature.group"/>
+
+      <slicingOptions includeFeatures="true" followStrict="true" />
+    </p2.mirror>
+  </target>
+</project>
