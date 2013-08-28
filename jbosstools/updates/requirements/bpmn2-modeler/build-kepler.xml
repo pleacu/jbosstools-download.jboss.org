@@ -10,7 +10,7 @@
   <property name="version2" value="201306261903"/>
   <property name="version3" value="S20130423"/>
 
-  <!--   BPMN2 Editor 0.2.6.201305221604 -->
+  <!--   BPMN2 Editor 0.2.6.201306261903 -->
   <!-- <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/" /> -->
   <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/kepler/${version}/" />
   <!-- BPMN2 Project Feature 0.7.0.201304230617 -->
@@ -18,7 +18,7 @@
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${version}-${version2}_${version3}_kepler"/>
+  <property name="workDir" value="${destination}/${version}.${version2}_${version3}_kepler"/>
 
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
