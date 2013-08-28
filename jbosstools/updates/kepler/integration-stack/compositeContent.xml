@@ -7,9 +7,9 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1377285181000'/>
+<property name='p2.timestamp' value='1377713009000'/>
 </properties>
 <children size='1'>
-<child location='../../../targetplatforms/jbtistarget/4.1.2.Final/REPO/'/>
+<child location='../../../targetplatforms/jbtistarget/4.1.3.Final/REPO/'/>
 </children>
 </repository>
