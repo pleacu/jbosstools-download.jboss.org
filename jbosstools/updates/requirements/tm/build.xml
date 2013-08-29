@@ -11,9 +11,10 @@
   <property name="workDir" value="${destination}/${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
+      <property name="SHORTNAME" value="tm"/>
       <property name="LONGNAME" value="Target Management (TM) + Remote System Explorer (RSE)"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/tm/updates/3.5milestones/RC3/" />
+      <property name="version" value="3.5-Kepler-SR1-RC2"/>
+      <property name="URL" value="http://download.eclipse.org/tm/updates/3.5milestones/SR1-RC2/" />
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>

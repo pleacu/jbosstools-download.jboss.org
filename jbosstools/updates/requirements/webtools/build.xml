@@ -5,7 +5,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="S-3.5.0RC3-20130604205852"/>
+  <property name="version" value="M-3.5.1RC1-20130815140246"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -16,7 +16,7 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Web Tools"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.5.0/${version}/repository/"/>
+      <property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.5.1/${version}/repository/"/>
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
