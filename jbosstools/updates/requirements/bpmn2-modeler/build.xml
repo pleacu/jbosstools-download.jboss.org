@@ -5,25 +5,28 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="LONGNAME" value="Eclipse BPMN 2 Modeler + BPMN2 Project Feature"/>
-  <property name="version" value="0.2.6"/>
-  <property name="version2" value="201306261903"/>
-  <property name="version3" value="S20130423"/>
 
-  <!--   BPMN2 Editor 0.2.6.201306261903 -->
+  <!-- as of 0.2.7 this works with Juno and Kepler. Depends on Graphiti 0.10.x -->
+  <property name="LONGNAME" value="Eclipse BPMN 2 Modeler + BPMN2 Project Feature"/>
+  <property name="version" value="0.2.7"/>
+  <property name="version2" value="0.2.7.201308301511"/>
+  <property name="version3" value="S20130822"/>
+  <property name="version4" value="0.7.0.201308220617"/>
+
+  <!--   BPMN2 Editor 0.2.7.201308301511 -->
   <!-- <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/" /> -->
   <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/kepler/${version}/" />
-  <!-- BPMN2 Project Feature 0.7.0.201304230617 -->
+  <!-- BPMN2 Project Feature 0.7.0.201308220617 -->
   <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/milestones/${version3}/" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${version}.${version2}_${version3}_kepler"/>
+  <property name="workDir" value="${destination}/${version2}_${version4}_kepler"/>
 
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version}-${version2}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version2}_${version4}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
         <repository location="${URL2}" />
