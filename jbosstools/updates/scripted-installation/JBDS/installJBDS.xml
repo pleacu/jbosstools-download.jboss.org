@@ -48,9 +48,9 @@ Installable Units:
     <echo>
     COMMANDLINE PARAMS:
 
-    install   - csv list of features to install (without spaces); if missing, install ALL found features.
+    install   - csv list of features to install (without spaces); default is com.jboss.jbds.product.feature.feature.group
 
-    sourceZip - /full/path/to/jbosstools-Update-*.zip; zip must exist
+    sourceZip - /full/path/to/jbdevstudio-product-universal-*.jar; jar must exist
 
     targetDir - /full/path/to/an/existing/jbdevstudio/or/eclipse/; folder must exist
 
@@ -58,28 +58,27 @@ Installable Units:
 
     otherRepos - csv list of local, zipped, or remote update sites from which to install 
       additional feature groups, eg., from JBoss Central, use 
-        http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/
+        https://devstudio.jboss.com/updates/7.0/central/
 
     RUNNING THIS SCRIPT:
 
-    This example will install all of JBoss Tools:
+    This example will install the "Bring Your Own Eclipse" feature of Red Hat JBoss Developer Studio (everything but the product branding):
 
     /path/to/eclipse-dir/eclipse -consolelog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner \
-      -f /path/to/installJBossTools.xml \
-      -DsourceZip=/path/to/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
+      -f /path/to/installJBDS.xml \
+      -DsourceZip=/path/to/jbdevstudio-product-universal-7.0.0.GA-v20130720-0044-B364.jar \
       -DtargetDir=/path/to/eclipse-dir \
-      -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/
 
-    This example will install JBoss Tools (Central only) and support for Subclipse w/ SVNKit:
+    This example will install Red Hat JBoss Developer Studio and support for Subclipse w/ SVNKit:
 
     /path/to/eclipse-dir/eclipse -consolelog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner \
-      -f /path/to/installJBossTools.xml \
-      -DsourceZip=/path/to/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
+      -f /path/to/installJBDS.xml \
+      -DsourceZip=/path/to/jbdevstudio-product-universal-7.0.0.GA-v20130720-0044-B364.jar \
       -DtargetDir=/path/to/eclipse-dir \
-      -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/
-      -Dinstall="org.jboss.tools.community.central.feature.feature.group,\
+      -DotherRepos=https://devstudio.jboss.com/updates/7.0/central/core/ \
+      -Dinstall="com.jboss.jbds.product.feature.feature.group,\
 org.tigris.subversion.subclipse.feature.group,\
 org.tigris.subversion.clientadapter.svnkit.feature.feature.group,\
 com.collabnet.subversion.merge.feature.feature.group,\
@@ -90,7 +89,7 @@ org.tmatesoft.svnkit.feature.group"
 </echo>
   </target>
 
-  <property name="install" value="" />
+  <property name="install" value="com.jboss.jbds.product.feature.feature.group" />
   <property name="otherRepos" value="" />
 
   <property name="sourceZip" value="" />

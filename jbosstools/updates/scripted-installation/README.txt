@@ -1,5 +1,5 @@
-The scripts in this folder can be used to install JBoss Tools via commandline
-into a new or existing Eclipse 3.6 installation.
+The scripts in this folder can be used to install Red Hat JBoss Developer Studio or JBoss Tools via commandline
+into a new or existing Eclipse 4.2 installation.
 
 .cmd is for Windows
 .sh is for Mac or Linux
@@ -8,36 +8,37 @@ These files are simply wrappers which call Ant and run the .xml script, passing
 in variables for source, target, and what to install (if not everything). They 
 contain examples of what you might want to do.
 
-Last tested with Eclipse 3.6.2 (maintenance build) for linux 32-bit (Fedora 12, 
-OpenJDK 6) and JBoss Tools 3.2.0.CR1 on Jan 11, 2011. First attempt was incomplete
-due to timeout, but on second attempt install succeeded in 9 mins. Script used 
-is below for reference. Resulting footprint on disk (including Eclipse): 784M
+Last tested with Eclipse Standard 4.3 (Kepler) for linux 64-bit (Fedora 18, 
+Oracle JDK 1.7.0_17), using:
+
+* JBoss Developer Studio 7.0.0.GA installer jar
+* JBoss Tools 4.1.0.Final update site zip
+
+Script used is below for reference.
 
 For a simpler script that does not require ant-contrib and can be used w/ a URL instead of only a zip as input, see director.xml. 
 Note that this script will not throw helpful error messages if commandline params are invalid or missing.
 
--- Nick Boldt (nboldt@redhat.com)
+-- Nick Boldt (nboldt@redhat.com), 2013-09-03
 
 --- --- --- --- --- --- --- --- 
 
-workspace=/home/nboldt/eclipse/workspace-clean36; \
-target=/home/nboldt/eclipse/36clean; \
-eclipse=/home/nboldt/tmp/Eclipse_Bundles/eclipse-SDK-M20110105-0951-linux-gtk.tar.gz; \
-echo "Wipe $target/eclipse and $workspace ..."; rm -fr $target/eclipse $workspace; \
-echo "Unpack $eclipse ..."; cd $target; tar xzf $eclipse; cd -; \
-export GDK_NATIVE_WINDOWS=true; \
-$target/eclipse/eclipse -clean -consolelog -nosplash -data $workspace \
-	-application org.eclipse.ant.core.antRunner -f installJBossTools.xml \
-	-DtargetDir=$target/eclipse \
-	-DsourceZip=/tmp/jbosstools-3.2_trunk.aggregate-Update-SNAPSHOT.zip \
-	-DotherRepos=\
-http://download.jboss.org/jbosstools/updates/target-platform/latest/,\
-http://download.eclipse.org/releases/helios/,\
-http://download.eclipse.org/birt/update-site/2.6/,\
-http://m2eclipse.sonatype.org/sites/m2e/,\
-http://m2eclipse.sonatype.org/sites/m2e-extras/,\
-http://subclipse.tigris.org/update_1.6.x\
-	-vm /opt/jdk1.5.0_19/bin/java -vmargs -Xms128M \
-	-Xmx256M -XX:PermSize=128M -XX:MaxPermSize=256M \
-	2>&1 | tee "$target/eclipse.log.`date`.txt"
+target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /home/nboldt/tmp/Eclipse_Bundles/eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz 
+${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+  ~/tru/download.jboss.org/jbosstools/updates/scripted-installation/JBDS/installJBDS.xml \
+  -DsourceZip=/home/nboldt/tmp/JBDS_Installers/jbdevstudio-product-universal-7.0.0.GA-v20130720-0044-B364.jar \
+  -DtargetDir=${target}/eclipse/
+
+# [p2.dir] Installing com.jboss.jbds.product.feature.feature.group 7.0.0.GA-v20130720-0044-B364.
+# [p2.dir] Operation completed in 50795 ms.
+
+--- --- --- --- --- --- --- --- 
+
+target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /home/nboldt/tmp/Eclipse_Bundles/eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz 
+${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+  ~/tru/download.jboss.org/jbosstools/updates/scripted-installation/installJBossTools.xml \
+  -DsourceZip=/home/nboldt/tmp/JBossTools/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
+  -DtargetDir=${target}/eclipse/
  

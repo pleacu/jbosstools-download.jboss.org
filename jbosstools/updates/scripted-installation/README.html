@@ -1,0 +1,110 @@
+<pre>
+
+                                                     Last updated: <b>2013-09-03</b>
+
+The scripts in this folder can be used to install Red Hat JBoss Developer Studio 
+or JBoss Tools via commandline into a new or existing Eclipse 4.2 installation.
+
+  .cmd is for Windows
+  .sh is for Mac or Linux
+
+These files are simply wrappers which use Eclipse to call Ant, passing 
+in variables for source, target, and what to install (if not everything).
+Run the script as `ant -f installJBossTools.xml help` for example usage.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+Last tested with <a href="http://www.eclipse.org/downloads/packages/eclipse-standard-43/keplerr">Eclipse Standard</a> or <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplerr">Eclipse IDE for Java EE Developers</a> 4.3 (Kepler) for linux 64-bit (Fedora 18, 
+Oracle JDK 1.7.0_17), using:
+
+  * <a href="https://devstudio.jboss.com/earlyaccess/7.0/"><b>JBoss Developer Studio 7.0.0.GA installer jar</b></a>
+  * <a href="http://www.jboss.org/tools/download/stable/4_1"><b>JBoss Tools 4.1.0.Final update site zip</b></a>
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+Usage examples:
+<blockquote>
+# install JBDS into Eclipse Standard bundle
+target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /home/nboldt/tmp/Eclipse_Bundles/<b>eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz</b>
+${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+  ~/tru/download.jboss.org/jbosstools/updates/scripted-installation/JBDS/installJBDS.xml \
+  -DsourceZip=/home/nboldt/tmp/JBDS_Installers/<a href="https://devstudio.jboss.com/earlyaccess/7.0/"><b>jbdevstudio-product-universal-7.0.0.GA-v20130720-0044-B364.jar</b></a> \
+  -DtargetDir=${target}/eclipse/
+
+# [p2.dir] Installing com.jboss.jbds.product.feature.feature.group 7.0.0.GA-v20130720-0044-B364.
+# [p2.dir] Operation completed in 50795 ms.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+# install JBDS and Subclipse w/ SVNKit adapter into Eclipse Standard bundle
+target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /home/nboldt/tmp/Eclipse_Bundles/<b>eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz</b>
+${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+  ~/tru/download.jboss.org/jbosstools/updates/scripted-installation/JBDS/installJBDS.xml \
+  -DsourceZip=/home/nboldt/tmp/JBDS_Installers/<a href="https://devstudio.jboss.com/earlyaccess/7.0/"><b>jbdevstudio-product-universal-7.0.0.GA-v20130720-0044-B364.jar</b></a> \
+  -DtargetDir=${target}/eclipse/
+  -DotherRepos=https://devstudio.jboss.com/updates/7.0/central/core/ 
+  -Dinstall="org.jboss.tools.community.central.feature.feature.group,\
+org.tigris.subversion.subclipse.feature.group,\
+org.tigris.subversion.clientadapter.svnkit.feature.feature.group,\
+com.collabnet.subversion.merge.feature.feature.group,\
+net.java.dev.jna.feature.group,\
+org.tigris.subversion.clientadapter.feature.feature.group,\
+org.tigris.subversion.subclipse.graph.feature.feature.group,\
+org.tmatesoft.svnkit.feature.group"
+
+# [p2.dir] Installing com.jboss.jbds.product.feature.feature.group 7.0.0.GA-v20130720-0044-B364.
+# [p2.dir] Installing org.tigris.subversion.subclipse.feature.group 1.8.20.
+# [p2.dir] Installing org.tigris.subversion.clientadapter.svnkit.feature.feature.group 1.7.9.1.
+# ...
+# [p2.dir] Operation completed in 231507 ms.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+# install all of JBT into Eclipse Standard bundle
+target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /home/nboldt/tmp/Eclipse_Bundles/<b>eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz</b>
+${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+  ~/tru/download.jboss.org/jbosstools/updates/scripted-installation/installJBossTools.xml \
+  -DsourceZip=/home/nboldt/tmp/JBossTools/<a href="http://www.jboss.org/tools/download/stable/4_1"><b>jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip</b></a> \
+  -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/ \
+  -DtargetDir=${target}/eclipse/
+
+# [p2.dir] Installing org.hibernate.eclipse.feature.source.feature.group 3.7.0.Final-v20130717-0715-B84.
+# ...
+# [p2.dir] Installing org.mozilla.xulrunner.feature.feature.group 1.9.218.Final-v20121126-2356-B155.
+# [p2.dir] Operation completed in 212518 ms.
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+# install JBT Central, including Subclipse w/ SVNKit into Eclipse JEE bundle
+target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /home/nboldt/tmp/Eclipse_Bundles/<b>eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz</b>
+${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
+  ~/tru/download.jboss.org/jbosstools/updates/scripted-installation/installJBossTools.xml \
+  -DsourceZip=/home/nboldt/tmp/JBossTools/<a href="http://www.jboss.org/tools/download/stable/4_1"><b>jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip</b></a> \
+  -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/ \
+  -DtargetDir=${target}/eclipse/
+  -Dinstall="org.jboss.tools.community.central.feature.feature.group,\
+org.tigris.subversion.subclipse.feature.group,\
+org.tigris.subversion.clientadapter.svnkit.feature.feature.group,\
+com.collabnet.subversion.merge.feature.feature.group,\
+net.java.dev.jna.feature.group,\
+org.tigris.subversion.clientadapter.feature.feature.group,\
+org.tigris.subversion.subclipse.graph.feature.feature.group,\
+org.tmatesoft.svnkit.feature.group"
+
+# [p2.dir] Installing org.jboss.tools.community.central.feature.feature.group 1.2.0.Final-v20130719-2050-B70.
+# [p2.dir] Installing org.tigris.subversion.subclipse.feature.group 1.8.20.
+# [p2.dir] Installing org.tigris.subversion.clientadapter.svnkit.feature.feature.group 1.7.9.1.
+# ...
+# [p2.dir] Operation completed in 55635 ms.
+</blockquote>
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+
+For a simpler script which can be used w/ an input URL instead of a local update 
+site archive as input, see <a href=director.xml>director.xml</a>. Note that director.xml does not throw 
+helpful error messages if commandline params are invalid or missing.
+
+</pre>
