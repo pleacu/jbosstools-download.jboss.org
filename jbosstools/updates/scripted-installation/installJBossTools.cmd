@@ -1,25 +1,8 @@
 @echo off
 
-:: plugin-only install example - two plugins
-c:\eclipse\36clean\eclipse\eclipse.exe -consolelog -nosplash -data c:\tmp ^
-      -application org.eclipse.ant.core.antRunner ^
-      -f installJBossTools.xml ^
-	-DsourceZip=c:\eclipse\36clean\jbosstools-3.2.0.M2.aggregate-Update-2010-09-08_17-17-54-H243.zip ^
-	-DtargetDir=c:\eclipse\36clean\eclipse ^
-	-Dinstall=org.jboss.tools.jmx.core,org.jboss.tools.jmx.ui
-	
-:: simple install example - one feature
-:: note that if the file is org.jboss.tools.jmx.feature_*.jar, the feature to install is org.jboss.tools.jmx.feature.feature.group
-c:\eclipse\36clean\eclipse\eclipse.exe -consolelog -nosplash -data c:\tmp ^
-      -application org.eclipse.ant.core.antRunner ^
-      -f installJBossTools.xml ^
-	-DsourceZip=c:\eclipse\36clean\jbosstools-3.2.0.M2.aggregate-Update-2010-09-08_17-17-54-H243.zip ^
-	-DtargetDir=c:\eclipse\36clean\eclipse ^
-	-Dinstall=org.jboss.tools.jmx.feature.feature.group
-
 :: install all of JBT into Eclipse Standard bundle
-cd c:\eclipse\43clean; rm -fr c:\eclipse\43clean\eclipse
-tar xzf c:\tmp\Eclipse_Bundles\eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz
+:: cd c:\eclipse\43clean
+:: tar xzf c:\tmp\Eclipse_Bundles\eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz
 c:\eclipse\43clean\eclipse\eclipse -consolelog -nosplash -data c:\tmp -application org.eclipse.ant.core.antRunner -f ^
   c:\path\to\installJBossTools.xml ^
   -DsourceZip=c:\tmp\JBossTools\jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip ^
@@ -32,8 +15,8 @@ c:\eclipse\43clean\eclipse\eclipse -consolelog -nosplash -data c:\tmp -applicati
 :: [p2.dir] Operation completed in 212518 ms.
 
 :: install JBT Central, including Subclipse w/ SVNKit into Eclipse JEE bundle
-cd c:\eclipse\43clean; rm -fr c:\eclipse\43clean\eclipse
-tar xzf c:\tmp\Eclipse_Bundles\eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz
+:: cd c:\eclipse\43clean
+:: tar xzf c:\tmp\Eclipse_Bundles\eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz
 c:\eclipse\43clean\eclipse\eclipse -consolelog -nosplash -data c:\tmp -application org.eclipse.ant.core.antRunner -f ^
   c:\path\to\installJBossTools.xml ^
   -DsourceZip=c:\tmp\JBossTools\jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip ^
