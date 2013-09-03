@@ -4,7 +4,7 @@ baseInstallDir=${HOME}
 
 if [[ $1 ]]; then
   installerJar=$1
-  installDir=/home/nboldt/${installerJar//.jar}
+  installDir=${HOME}/${installerJar//.jar}
   installDir=${installDir##*/}
   installXML=/tmp/${installDir}.install.xml
 else
