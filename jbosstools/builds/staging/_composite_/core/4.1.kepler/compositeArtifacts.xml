@@ -8,9 +8,9 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1378582934000'/>
+<property name='p2.timestamp' value='1378586507000'/>
 </properties>
-<children size='13'>
+<children size='21'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
@@ -22,18 +22,18 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
 
   <!-- <child location='../../../../staging/xulrunner-1.9.2/all/repo/'/> -->
   <!-- <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/> -->
-
-<!-- ## UNCHANGED SINCE 4.1.0.Final; included in updates/stable/kepler/ ## -->
-
   <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/'/>
-  <!-- <child location='../../../../staging/jbosstools-birt_41/all/repo/'/> -->
-  <!-- <child location='../../../../staging/jbosstools-forge_41/all/repo/'/> -->
-  <!-- <child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/> -->
-  <!-- <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/> -->
-  <!-- <child location='../../../../staging/jbosstools-gwt_41/all/repo/'/> -->
-  <!-- <child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/gwt/'/> -->
-  <!-- <child location='../../../../staging/jbosstools-hibernate_41/all/repo/'/> -->
-  <!-- <child location='../../../../staging/jbosstools-portlet_41/all/repo/'/> -->
+
+<!-- ## UNCHANGED SINCE 4.1.0.Final, so include both previous updates/stable/kepler/ and new staging site ## -->
+
+  <child location='../../../../staging/jbosstools-birt_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-forge_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/>
+  <child location='../../../../staging/jbosstools-gwt_41/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/gwt/'/>
+  <child location='../../../../staging/jbosstools-hibernate_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-portlet_41/all/repo/'/>
 
 <!-- ## SOME PARTS CHANGED SINCE 4.1.0.Final, so include both previous updates/stable/kepler/ and new staging site ## -->
 
