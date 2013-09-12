@@ -6,10 +6,10 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 
   -->
-  <property name="version" value="0.10.0.201306041627"/>
+  <property name="version" value="0.10.0.201307160408"/>
   <property name="URL1a" value="http://download.eclipse.org/vjet/updates-0.10/"/>
   <property name="URL1b" value="http://download.eclipse.org/vjet/updates-nightly"/>
-  <property name="URL2" value="http://download.jboss.org/jbosstools/updates/requirements/orbit/I20130321031113/"/>
+  <property name="URL2" value="http://download.jboss.org/jbosstools/updates/requirements/orbit/R20130517111416/"/>
   <property name="URL3" value="http://download.jboss.org/jbosstools/updates/requirements/juno/201302132140-R"/>
 
   <property name="destination" value="${basedir}/"/>
