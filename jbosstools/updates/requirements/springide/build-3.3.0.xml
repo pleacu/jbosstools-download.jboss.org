@@ -62,6 +62,16 @@
       <iu id="org.datanucleus.ide.eclipse"/>
       <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
     </p2.mirror>
+
+    <!-- https://issues.jboss.org/browse/JBDS-2623 must remove bad partial IU, then regen metadata for single plugin or Tycho will complain about "units from an old style update site" not being useable for provisioning a TP -->
+    <p2.remove.iu>
+      <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <iu id="org.datanucleus.ide.eclipse"/>
+    </p2.remove.iu>
+    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true">
+      <bundles dir="${workDir}/plugins" includes="org.datanucleus.ide.eclipse*"/>
+    </p2.publish.featuresAndBundles>
+
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>
