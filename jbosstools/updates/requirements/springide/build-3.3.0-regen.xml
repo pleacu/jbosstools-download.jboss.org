@@ -64,7 +64,7 @@
     </p2.mirror>
 
     <!-- https://issues.jboss.org/browse/JBDS-2623 must regen metadata for single plugin as Tycho complains about "units from an old style update site" -->
-    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="${compress}">
+    <p2.publish.featuresAndBundles metadataRepository="file:${workDir}" artifactRepository="file:${workDir}" publishartifacts="true" source="${workDir}" compress="true">
       <bundles dir="${workDir}/plugins" includes="org.datanucleus.ide.eclipse*"/>
     </p2.publish.featuresAndBundles>
 
