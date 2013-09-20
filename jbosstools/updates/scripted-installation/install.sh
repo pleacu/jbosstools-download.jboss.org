@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # install all of JBT into Eclipse Standard bundle
-target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
-tar xzf /home/nboldt/tmp/Eclipse_Bundles/eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz
+target=${HOME}/eclipse/eclipse43; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /tmp/eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz
 ${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
-  /path/to/installJBossTools.xml \
-  -DsourceZip=/home/nboldt/tmp/JBossTools/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
+  install.xml \
+  -DsourceZip=/tmp/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
   -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/ \
   -DtargetDir=${target}/eclipse/
 
@@ -15,11 +15,11 @@ ${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.ecli
 # [p2.dir] Operation completed in 212518 ms.
 
 # install JBT Central, including Subclipse w/ SVNKit into Eclipse JEE bundle
-target=/home/nboldt/eclipse/43clean; cd ${target}; rm -fr ${target}/eclipse
-tar xzf /home/nboldt/tmp/Eclipse_Bundles/eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz
+target=${HOME}/eclipse/eclipse43; cd ${target}; rm -fr ${target}/eclipse
+tar xzf /tmp/eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz
 ${target}/eclipse/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f \
-  /path/to/installJBossTools.xml \
-  -DsourceZip=/home/nboldt/tmp/JBossTools/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
+  install.xml \
+  -DsourceZip=/tmp/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
   -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/ \
   -DtargetDir=${target}/eclipse/
   -Dinstall="org.jboss.tools.community.central.feature.feature.group,\

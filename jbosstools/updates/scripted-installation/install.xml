@@ -66,7 +66,7 @@ Installable Units:
 
     /path/to/eclipse-dir/eclipse -consolelog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner \
-      -f /path/to/installJBossTools.xml \
+      -f /path/to/install.xml \
       -DsourceZip=/path/to/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
       -DtargetDir=/path/to/eclipse-dir \
       -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/
@@ -75,7 +75,7 @@ Installable Units:
 
     /path/to/eclipse-dir/eclipse -consolelog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner \
-      -f /path/to/installJBossTools.xml \
+      -f /path/to/install.xml \
       -DsourceZip=/path/to/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip \
       -DtargetDir=/path/to/eclipse-dir \
       -DotherRepos=http://download.jboss.org/jbosstools/updates/stable/kepler/central/core/

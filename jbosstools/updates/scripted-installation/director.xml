@@ -24,13 +24,6 @@
 			-DtargetDir=/path/to/eclipse-dir/ \
 			-DIUs=org.jboss.tools.maven.feature.feature.group,org.jboss.tools.community.central.feature.feature.group
 
-    This example will install the "Bring Your Own Eclipse" feature of Red Hat JBoss Developer Studio (everything but the product branding):
-
-		/path/to/eclipse-dir/eclipse -consolelog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner \
-      		-f /path/to/director.xml \
-			-DsourceSites=https://devstudio.jboss.com/updates/7.0/central/core/ \
-			-DtargetDir=/path/to/eclipse-dir/ \
-			-DIUs=com.jboss.jbds.product.feature.feature.group
 </echo>
 	</target>
 
