@@ -8,13 +8,14 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1379965289000'/>
+<property name='p2.timestamp' value='1379971799000'/>
 </properties>
-<children size='2'>
+<children size='3'>
 
 <!-- ## UNCHANGED SINCE 4.1.0.Final; included in updates/stable/kepler/ ## -->
 
-  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/JBossTools-4.1.0.Final.core/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/JBossTools-4.1.1.Alpha1.coretests/'/>
 
 <!-- ## CHANGED IN 4.1.0.1.Final ## -->
 
