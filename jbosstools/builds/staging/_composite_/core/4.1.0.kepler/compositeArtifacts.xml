@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools - Core - Staging Repository' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<properties size='3'>
+<property name='p2.compressed' value='true'/>
+<!-- 
+     get new time w/ 
+      date +%s000
+-->
+<property name='p2.atomic.composite.loading' value='false'/>
+<property name='p2.timestamp' value='1379965289000'/>
+</properties>
+<children size='2'>
+
+<!-- ## UNCHANGED SINCE 4.1.0.Final; included in updates/stable/kepler/ ## -->
+
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/'/>
+
+<!-- ## CHANGED IN 4.1.0.1.Final ## -->
+
+  <child location='../../../../staging/jbosstools-central_410/all/repo/'/>
+
+</children>
+</repository>
