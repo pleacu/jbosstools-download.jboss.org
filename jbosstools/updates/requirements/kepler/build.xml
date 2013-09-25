@@ -11,14 +11,9 @@
     </classpath>
   </taskdef>
 
-<<<<<<< HEAD
-  <property name="version" value="201306070900-RC3"/>
-  <property name="version2" value="201306070900"/>
-=======
-  <property name="version" value="201308220900-4.4.1RC1"/>
-  <property name="version2" value="201305100900"/>
+  <property name="version" value="201309200900-SR1"/>
+  <property name="version2" value="201309200900"/>
 
->>>>>>> JBIDE-15382: Create some Kepler SR1 RC mirrors
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 

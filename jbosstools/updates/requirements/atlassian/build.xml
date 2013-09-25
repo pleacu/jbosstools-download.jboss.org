@@ -8,8 +8,8 @@
 			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
 	-->
   <property name="LONGNAME" value="Atlassian Connectors"/>
-  <property name="version" value="3.2.1.v20130402"/>
-  <property name="URL" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.6" />
+  <property name="version" value="3.2.2.v20130909"/>
+  <property name="URL" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.7" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>

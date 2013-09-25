@@ -6,8 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="EGit + GitHub Support"/>
-  <property name="version" value="3.0.1.201307141637-r"/>
-  <property name="URL1" value="http://download.eclipse.org/egit/updates-3.0.1" />
+  <property name="version" value="3.0.3.201309161630-r"/>
+  <property name="URL1" value="http://download.eclipse.org/egit/updates-3.0.3" />
   <property name="URL2" value="http://download.eclipse.org/egit/github/updates-3.0" />
 
   <property name="destination" value="${basedir}"/>
