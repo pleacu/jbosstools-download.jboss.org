@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1378591539000'/>
+<property name='p2.timestamp' value='1380670462000'/>
 </properties>
 <children size='20'>
 
@@ -27,7 +27,6 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
 <!-- ## UNCHANGED SINCE 4.1.0.Final, so include both previous updates/stable/kepler/ and new staging site ## -->
 
   <child location='../../../../staging/jbosstools-birt_41/all/repo/'/>
-  <child location='../../../../staging/jbosstools-forge_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/>
   <!-- Site does not exist, but no tests depend on it <child location='../../../../staging/jbosstools-gwt_41/all/repo/'/> -->
@@ -38,6 +37,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
 <!-- ## SOME PARTS CHANGED SINCE 4.1.0.Final, so include both previous updates/stable/kepler/ and new staging site ## -->
 
   <child location='../../../../staging/jbosstools-base_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-forge_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-javaee_41/all/repo/'/>
 
 <!-- ## CHANGED SINCE 4.1.0.Final ## -->
