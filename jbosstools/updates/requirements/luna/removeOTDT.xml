@@ -5,20 +5,28 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="S-3.6.0M2-20130925174106"/>
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+    <classpath>
+      <pathelement location="../ant-contrib.jar"/>
+    </classpath>
+  </taskdef>
+
+  <property name="version" value="20130530-0900-RC2"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
   <property name="latestversiononly" value="false"/>
 
-  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
-    <ant antfile="../generic/build.xml" target="mirror">
-      <property name="LONGNAME" value="Web Tools"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/webtools/downloads/drops/R3.6.0/${version}/repository/"/>
-      <property name="latestversiononly" value="${latestversiononly}"/>
-    </ant>
+    <p2.remove.iu>
+      <repository location="${workDir}"/>
+        <iu id="org.eclipse.objectteams.otdt.core.patch.feature.group" version="2.2.0.201305281023"/>
+        <iu id="org.eclipse.objectteams.otdt.core.patch.feature.jar" version="2.2.0.201305281023"/>
+        <iu id="org.eclipse.jdt.core" version="3.9.0.v_OTDT_r220_201305281023"/>
+    </p2.remove.iu>
+   
+    <!-- should we remove refs too?
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+    -->
   </target>
 </project>
