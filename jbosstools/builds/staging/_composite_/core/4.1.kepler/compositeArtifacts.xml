@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1380730157000'/>
+<property name='p2.timestamp' value='1381250281000'/>
 </properties>
 <children size='19'>
 
@@ -22,27 +22,20 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/gwt/'/>
 
-<!-- ## UNCHANGED SINCE 4.1.0.Final, so include both previous updates/stable/kepler/ and new staging site ## -->
+<!-- ## UNCHANGED SINCE 4.1.0.Final, so include previous updates/stable/kepler/core/ releases (JBIDE-15606) ## -->
   <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/>
-
-  <!-- TODO: <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/birt/'/> -->
-  <child location='../../../../staging/jbosstools-birt_41/all/repo/'/>
-  <!-- TODO: <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/hibernate/'/> --> 
-  <child location='../../../../staging/jbosstools-hibernate_41/all/repo/'/>
-  <!-- TODO: <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/portlet/'/> -->
-  <child location='../../../../staging/jbosstools-portlet_41/all/repo/'/>
-
-<!-- ## SOME PARTS CHANGED SINCE 4.1.0.Final, so include both previous updates/stable/kepler/ and new staging site ## -->
-
-  <child location='../../../../staging/jbosstools-base_41/all/repo/'/>
-  <child location='../../../../staging/jbosstools-forge_41/all/repo/'/>
-  <child location='../../../../staging/jbosstools-javaee_41/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/birt/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/hibernate/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/portlet/'/>
 
 <!-- ## CHANGED SINCE 4.1.0.Final ## -->
 
   <child location='../../../../staging/jbosstools-aerogear_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-arquillian_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-base_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-central_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-forge_41/all/repo/'/>
+  <child location='../../../../staging/jbosstools-javaee_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-jst_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-livereload_41/all/repo/'/>
   <child location='../../../../staging/jbosstools-openshift_41/all/repo/'/>
