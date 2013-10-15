@@ -7,9 +7,9 @@
       -application org.eclipse.ant.core.antRunner \
       -f ~/RHDS/updates/requirements/gwt/build.xml -Ddestination=/tmp/gwt-repo
   -->
-  <property name="LONGNAME" value="GWT SDK 2.5.1, GWT Designer 3.1.2, WindowBuilder 1.5.2, GPE e43 3.4.2"/>
-  <property name="version" value="3.4.2.v201310081834-rel-r43"/>
-  <property name="URL" value="http://dl.google.com/eclipse/plugin/4.3/"/>
+  <property name="LONGNAME" value="GWT SDK 2.5.1, GWT Designer 3.1.2, WindowBuilder 1.5.2, GPE e42 3.4.2"/>
+  <property name="version" value="3.4.2.v201310081834-rel-r42"/>
+  <property name="URL" value="http://dl.google.com/eclipse/plugin/4.2/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}/"/>
@@ -23,16 +23,16 @@
         <repository location="${URL}" />
       </source>
       <!-- copied from p2 browser:
-          com.google.gdt.eclipse.designer.editor.feature.feature.group  3.1.2.r43x201307151447
-          com.google.gdt.eclipse.designer.gpe.feature.feature.group 3.1.2.r43x201307151506
-          com.google.gdt.eclipse.designer.hosted.feature.feature.group  3.1.2.r43x201307151442
-          com.google.gdt.eclipse.suite.e43.feature.feature.group  3.4.2.v201310081834-rel-r43   * NEW, e43 *
+          com.google.gdt.eclipse.designer.editor.feature.feature.group  3.1.2.r42x201307151447
+          com.google.gdt.eclipse.designer.gpe.feature.feature.group 3.1.2.r42x201307151506    
+          com.google.gdt.eclipse.designer.hosted.feature.feature.group  3.1.2.r42x201307151442
+          com.google.gdt.eclipse.suite.e42.feature.feature.group  3.4.2.v201310081840-rel-r42   * NEW, e42 *
           com.google.gwt.eclipse.sdkbundle.feature.feature.group  2.5.1                         * UNCHANGED *
-          org.eclipse.wb.core.feature.feature.group 1.6.0.r43x201305211944
-          org.eclipse.wb.core.java.feature.feature.group  1.6.0.r43x201306031644
-          org.eclipse.wb.core.ui.feature.feature.group  1.6.0.r43x201306031651
-          org.eclipse.wb.core.xml.feature.feature.group 1.6.0.r43x201306031653
-          org.eclipse.wb.css.feature.feature.group  1.6.0.r43x201306031647
+          org.eclipse.wb.core.feature.feature.group 1.6.0.r42x201305211944
+          org.eclipse.wb.core.java.feature.feature.group  1.6.0.r42x201306031644
+          org.eclipse.wb.core.ui.feature.feature.group  1.6.0.r42x201306031651
+          org.eclipse.wb.core.xml.feature.feature.group 1.6.0.r42x201306031653
+          org.eclipse.wb.css.feature.feature.group  1.6.0.r42x201306031647
         -->
       <iu id="com.google.gdt.eclipse.suite.e42.feature.feature.group"/>
       <iu id="com.google.gwt.eclipse.sdkbundle.feature.feature.group"/>
