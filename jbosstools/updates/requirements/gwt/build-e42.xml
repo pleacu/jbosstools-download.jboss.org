@@ -8,7 +8,7 @@
       -f ~/RHDS/updates/requirements/gwt/build.xml -Ddestination=/tmp/gwt-repo
   -->
   <property name="LONGNAME" value="GWT SDK 2.5.1, GWT Designer 3.1.2, WindowBuilder 1.5.2, GPE e42 3.4.2"/>
-  <property name="version" value="3.4.2.v201310081834-rel-r42"/>
+  <property name="version" value="3.4.2.v201310081840-rel-r42"/>
   <property name="URL" value="http://dl.google.com/eclipse/plugin/4.2/"/>
 
   <property name="destination" value="${basedir}"/>
