@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.3.0.201307091516-RELEASE" />
+  <property name="version" value="3.4.0.201310051539-RELEASE" />
   <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
   <!-- TODO: JBIDE-15202 move this to a Central TP; currently included here as needed to resolve and include org.json in the mirror -->
   <property name="version2" value="R20130517111416"/>
