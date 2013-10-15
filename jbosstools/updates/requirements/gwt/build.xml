@@ -34,7 +34,7 @@
           org.eclipse.wb.core.xml.feature.feature.group 1.6.0.r43x201306031653
           org.eclipse.wb.css.feature.feature.group  1.6.0.r43x201306031647
         -->
-      <iu id="com.google.gdt.eclipse.suite.e42.feature.feature.group"/>
+      <iu id="com.google.gdt.eclipse.suite.e43.feature.feature.group"/> <!-- NEW -->
       <iu id="com.google.gwt.eclipse.sdkbundle.feature.feature.group"/>
       <iu id="com.google.gdt.eclipse.designer.gpe.feature.feature.group"/>
         <iu id="com.google.gdt.eclipse.designer.editor.feature.feature.group"/>
