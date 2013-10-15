@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 
   -->
-  <property name="version" value="0.10.0.201307160408"/>
+  <property name="version" value="0.10.0.201309201624"/>
   <property name="URL1a" value="http://download.eclipse.org/vjet/updates-0.10/"/>
   <property name="URL1b" value="http://download.eclipse.org/vjet/updates-nightly"/>
   <property name="URL2" value="http://download.jboss.org/jbosstools/updates/requirements/orbit/R20130517111416/"/>
