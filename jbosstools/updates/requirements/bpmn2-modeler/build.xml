@@ -8,12 +8,12 @@
 
   <!-- as of 0.2.7 this works with Juno and Kepler. Depends on Graphiti 0.10.x -->
   <property name="LONGNAME" value="Eclipse BPMN 2 Modeler + BPMN2 Project Feature"/>
-  <property name="version" value="0.3.0"/>
-  <property name="version2" value="0.3.0.201310101754"/>
+  <property name="version" value="1.0M1"/>
+  <property name="version2" value="1.0M1.201310151945"/>
   <property name="version3" value="S20130822"/>
   <property name="version4" value="0.7.0.201308220617"/>
 
-  <!--   BPMN2 Editor 0.3.0.201310101754 -->
+  <!--   BPMN2 Editor 1.0M1.201310151945 -->
   <!-- <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/" /> -->
   <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/kepler/${version}/" />
   <!-- BPMN2 Project Feature 0.7.0.201308220617 -->
