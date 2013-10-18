@@ -7,7 +7,7 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1377529487000'/>
+<property name='p2.timestamp' value='1382111965000'/>
 </properties>
 <children size='3'>
 <!-- JBT latest dev or stable release -->
@@ -16,7 +16,7 @@
 <child location='http://download.jboss.org/jbosstools/updates/kepler/integration-stack/'/>
 <!-- JBTIS latest development or stable release -->
 <child location='http://download.jboss.org/jbosstools/updates/development/kepler/integration-stack/'/>
-<!-- JBTIS latest extras release. Currently not required -->
-<!-- could be added later if needed <child location='http://download.jboss.org/jbosstools/updates/kepler/extras/integration-stack/'/> -->
+<!-- JBTIS Central TP site (for 3rd party extras). Currently not required -->
+<!-- <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtiscentraltarget/kepler/'/> -->
 </children>
 </repository>
