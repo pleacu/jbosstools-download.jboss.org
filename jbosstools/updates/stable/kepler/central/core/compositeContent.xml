@@ -11,7 +11,7 @@
 </properties>
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/'/>
-<child location='http://download.jboss.org/jbosstools/updates/kepler/'/>
-<child location='http://download.jboss.org/jbosstools/updates/kepler/extras/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/kepler/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/kepler/'/>
 </children>
 </repository>
