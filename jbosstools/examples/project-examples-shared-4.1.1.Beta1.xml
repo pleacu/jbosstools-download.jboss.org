@@ -172,7 +172,9 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 			<version>0.0.1-SNAPSHOT</version>
 			<javaPackage>org.jboss.tools.example.html5</javaPackage>
 		</mavenArchetype>
-        <tags>wizard</tags>
+    <essentialEnterpriseDependencies>org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-wfk-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-wfk-2</essentialEnterpriseDependencies>
+
+    <tags>wizard</tags>
         <icon path="icons/html5.png" />
     </project>		
 	<!-- Richfaces project  -->
