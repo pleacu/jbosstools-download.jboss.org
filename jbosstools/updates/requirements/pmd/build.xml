@@ -11,8 +11,7 @@
   <property name="workDir" value="${destination}/${version}"/>
   <property name="latestversiononly" value="true"/>
 
-  <!-- http://pmd.sourceforge.net/eclipse -->
-  <property name="URL1" value="https://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/" />
+  <property name="URL1" value="http://pmd.sourceforge.net/eclipse" />
   <target name="run" depends="mirror,regen"/>
 
   <target name="mirror">
@@ -28,9 +27,9 @@
   </target>
   <!-- regenerate metadata to remove external refs in to sourceforge.net: want to download from OUR mirror, not their site -->
   <target name="regen">
-    <delete><fileset dir="${workDir}" includes="*/*.pack.gz"/></delete>
     <p2.publish.featuresAndBundles metadataRepository="file:${workDir}/" artifactRepository="file:${workDir}/" publishartifacts="true" source="${workDir}/" compress="true" />
-    <p2.process.artifacts pack="false" repositoryPath="file:${workDir}" />
+    <p2.process.artifacts pack="true" repositoryPath="file:${workDir}" />
+    <delete><fileset dir="${workDir}" includes="*.pack.gz"/></delete>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>
