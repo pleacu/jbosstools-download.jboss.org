@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="AJDT"/>
+  <property name="version" value="2.2.3.e43x-RELEASE-20130627-0800" />
+  <property name="URL" value="http://download.eclipse.org/tools/ajdt/43/update/"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+      </source>
+
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
