@@ -62,6 +62,7 @@
       <iu id="org.aspectj.runtime"/>
       <iu id="org.codehaus.jackson.core"/>
       <iu id="org.codehaus.jackson.mapper"/>
+      <iu id="org.eclipse.contribution.visualiser"/>
       <iu id="org.json"/>
 
       <!-- Optional bundles included to avoid console warnings after installation -->

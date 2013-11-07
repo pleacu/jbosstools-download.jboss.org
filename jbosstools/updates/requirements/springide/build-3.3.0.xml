@@ -57,6 +57,7 @@
       <iu id="javax.jms"/>
       <iu id="org.aopalliance"/>
       <iu id="org.aspectj.runtime"/>
+      <iu id="org.eclipse.contribution.visualiser"/>
       <iu id="org.json"/>
 
       <!-- Optional bundles included to avoid console warnings after installation -->
