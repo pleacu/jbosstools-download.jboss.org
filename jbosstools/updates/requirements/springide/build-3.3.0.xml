@@ -35,6 +35,7 @@
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
       <!-- Features to include in Central connector -->
       <iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
+      <iu id="org.springframework.ide.eclipse.ajdt.feature.feature.group" /> <!-- new for 3.3+ -->
       <iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.batch.feature.feature.group" />
