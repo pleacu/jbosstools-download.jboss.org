@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>JBoss Tools - Scripted Installation</title>
+<link href="http://download.jboss.org/jbosstools/web/site.css" rel="stylesheet" type="text/css">
+</head>
+<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+<center>
+<table cellspacing="0" cellpadding="0" class="table" width="905" border="0">
+  <tr>
+    <td colspan="3"><img src="https://www.jboss.org/dms/tools/images/tools-banner.png"/></td>
+  </tr>
+  <tr>
+    <td>&#160;&#160;&#160;&#160;&#160;&#160;</td>
+    <td>&#160;&#160;&#160;&#160;&#160;&#160;</td>
+    <td>&#160;&#160;&#160;&#160;&#160;&#160;</td>
+  </tr>
+  <tr>
+    <td>&#160;&#160;&#160;&#160;&#160;&#160;</td>
+    <td>
+    <h2 class="title">Scripted Installation</h2>
+    <table width="100%">
+      <tr class="light-row" style="height: 30px">
+        <td class="bodyText">
+          <p>Scripted installation for JBoss Tools removes the need to step through the Eclipse's installation GUI. This enables simplified repeat installations or installations in bulk. 
+
+          <p>These scripts will install JBoss Tools via commandline into a new or existing Eclipse 4.3 installation.
+
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr class="header"><td class="sub-header" width="100%"><span>Ant Scripts</span></td></tr>
+      <tr class="dark-row" style="height: 30px">
+        <td class="bodyText">
+          <p>&nbsp;</p>
+          <p>These scripts use Eclipse's AntRunner along with comandline arguments for source, target, and what to install. </p>
+            <p>Run <tt style="color:green">ant -f install.xml help</tt> or <tt style="color:green">ant -f director.xml help</tt> for commandline syntax, or see examples below.</p>
+          <ul>
+            <li><a href="install.xml">install.xml</a> - Custom ant script to install from an update site zip, such as jbosstools-Update-*.zip, &amp; optionally other sites
+            <li><a href="director.xml">director.xml</a> - Bare-bones ant script to install from any update site(s); must explicitly list all IUS to install
+          </ul>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr class="header"><td class="sub-header" width="100%"><span>Usage Examples</span></td></tr>
+      <tr class="light-row" style="height: 30px">
+        <td class="bodyText">
+          <p>&nbsp;</p>
+          <p>Run <tt style="color:green">ant -f install.xml help</tt> or <tt style="color:green">ant -f director.xml help</tt> for commandline syntax, or see these examples.</p>
+          <ul>
+              <li><a href="examples.cmd.txt">examples.cmd.txt</a> (Microsoft Windows operating system)
+              <li><a href="examples.sh.txt">examples.sh.txt</a> (OS X or Linux-based operating system)
+          </ul>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr class="header"><td class="sub-header" width="100%"><span>Red Hat JBoss Developer Studio</span></td></tr>
+      <tr class="dark-row" style="height: 30px">
+        <td class="bodyText">
+          <p>&nbsp;</p>
+          <p>To script the installation of 
+          <a href="https://devstudio.jboss.com/">Red Hat JBoss Developer Studio</a>, <a href="https://devstudio.jboss.com/download/scripted-install/">click here</a>.</p>
+          <p>&nbsp;</p>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</center>
+</body>
+</html>
