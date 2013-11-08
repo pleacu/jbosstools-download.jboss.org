@@ -343,7 +343,7 @@ This example requires the helloworld-rs project to be deployed.
     </project>
   <project>
     <id>jdf-helloworld-mdb</id>
-    <name>helloworld-mdb</name>
+    <name>jboss-helloworld-mdb</name>
     <category>Back-end Applications</category>
     <shortDescription>helloworld-mdb</shortDescription>
     <description>Helloworld Message-Driven Bean with Servlet 3.0 as client</description>

@@ -345,19 +345,19 @@ This example requires the helloworld-rs project to be deployed.
     </project>
   <project>
     <id>jdf-helloworld-mdb</id>
-    <name>helloworld-mdb</name>
+    <name>jboss-helloworld-mdb</name>
     <category>Back-end Applications</category>
     <shortDescription>helloworld-mdb</shortDescription>
     <description>Helloworld Message-Driven Bean with Servlet 3.0 as client</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.1.0.GA/helloworld-mdb.zip</url>
-    <size>15639</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.1.1.GA/eap/jboss-helloworld-mdb.zip</url>
+    <size>15425</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png"/>
     <tags>central</tags>
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, , org.jboss.ide.eclipse.as.runtime.eap.62</property>
         <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
@@ -377,7 +377,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="id">org.jboss.tools.maven.core</property>
         <property name="versions">[1.4.0,2.0.0)</property>
         <property name="description">This project example requires JBoss Maven Tools.</property>
-        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature</property>
       </fix>
     </fixes>
   </project>

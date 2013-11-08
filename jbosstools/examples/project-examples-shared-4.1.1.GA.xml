@@ -229,7 +229,6 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 			<version>0.0.1-SNAPSHOT</version>
 			<javaPackage>org.jboss.tools.example.richfaces</javaPackage>
 		</mavenArchetype>
-        <essentialEnterpriseDependencies>org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.2.Final-redhat-1,org.richfaces:richfaces-bom:pom:4.2.3.Final-redhat-1,</essentialEnterpriseDependencies>
         <tags>wizard</tags>
         <icon path="icons/rf_logo.png" />
 	</project>
