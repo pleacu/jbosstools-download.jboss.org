@@ -1,4 +1,5 @@
-def basedir = new File(".") 
+def basedir = new File(System.getProperty("quickstart.basedir","."))
+println basedir 
 
 println "Renaming project examples"
 
