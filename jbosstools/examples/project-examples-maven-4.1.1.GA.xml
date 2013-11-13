@@ -721,5 +721,45 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
         </fixes>
     </project>
+
+  <project>
+    <id>wfk-kitchensink-backbone</id>
+    <name>jboss-kitchensink-backbone</name>
+    <category>Mobile Applications</category>
+    <shortDescription>kitchensink-backbone</shortDescription>
+    <description>A Backbone.js and Java EE 6 HTML5 mobile web application for use with JBoss.</description>
+    <url>http://download.jboss.org/jbosstools/examples/4.1.1.GA/wfk/jboss-kitchensink-backbone.zip</url>
+    <size>495324</size>
+    <importType>maven</importType>
+    <icon path="icons/jboss.png"/>
+    <tags>central</tags>
+    <included-projects/>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.62</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6.x or JBoss Application Server 7.1</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">This project example requires m2e &gt;= 1.4.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">This project example requires m2e-wtp &gt;= 1.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.4.0,2.0.0)</property>
+        <property name="description">This project example requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
+      </fix>
+    </fixes>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9</essentialEnterpriseDependencies>
+  </project>
 </projects>
 
