@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
-<entry url="http://download.jboss.org/jbosstools/updates/JBossTools-3.3.2.Final.core/plugins/org.jboss.tools.central.discovery_1.0.1.v20130112-0624-H128-Final_JBDS-2807.jar" permitCategories="true"/>
+<entry url="http://download.jboss.org/jbosstools/updates/JBossTools-3.3.2.Final.core/plugins/org.jboss.tools.central.discovery_1.0.1.v20130112-0624-H128-Final_JBDS-2807_2.jar" permitCategories="true"/>
 <entry url="http://download.jboss.org/jbosstools/updates/soatools-3.3.3.Final/plugins/org.jboss.tools.central.discovery.soa-tooling_1.0.3.v20130128-2313-H2-Final.jar" permitCategories="true"/>
 </directory>
  
