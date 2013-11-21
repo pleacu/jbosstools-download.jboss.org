@@ -7,7 +7,7 @@
       -application org.eclipse.ant.core.antRunner \
       -f ~/RHDS/updates/requirements/m2eclipse/build.xml -Ddestination=/tmp/m2eclipse-repo
   -->
-  <property name="version" value="20131904_1.5_1.1_LunaM2"/>
+  <property name="version" value="20131112"/>
 
   <!-- currently contains 1.3.1, and we want 1.4
   <property name="URL1a" value="http://download.eclipse.org/technology/m2e/releases/"/>
@@ -47,7 +47,7 @@
   <target name="mirror">
     <p2.mirror>
       <!-- Using format to a good site to have siblings .pack.gz. Using composite in format leads to .blobstore -->
-      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.1,  (mirrored ${version})" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <repository location="file:${workDir}" name="m2e/1.4, m2e-wtp/0.18, m2e-extras/0.15, m2e-apt/1.0.1, m2eclipse-buildhelper/0.15.0, m2e-jdt-compiler/1.0.1, m2e-mavenarchiver/0.15.0, m2e-wro4j/1.0.2,  (mirrored ${version})" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
 	<repository location="${URL1b}"/>
         <repository location="${URL2}" />
