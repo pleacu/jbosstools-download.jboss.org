@@ -10,15 +10,15 @@
 <property name='p2.atomic.composite.loading' value='false'/>
 <property name='p2.timestamp' value='1372387785000'/>
 </properties>
-<children size='35'>
+<children size='36'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
-https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 -->
 
-<!-- JBT Core: 16*2 + 3 = 35 -->
+<!-- JBT Core: 17*2 + 2 = 36 -->
 
 <child location='../../../../staging/jbosstools-aerogear_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-arquillian_master/all/repo/'/>
@@ -27,17 +27,18 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
 <child location='../../../../staging/jbosstools-central_master/all/repo/'/>
 
 <child location='../../../../staging/jbosstools-forge_master/all/repo/'/>
+<child location='../../../../staging/jbosstools-freemarker_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-hibernate_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-javaee_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-jst_master/all/repo/'/>
-<child location='../../../../staging/jbosstools-livereload_master/all/repo/'/>
 
+<child location='../../../../staging/jbosstools-livereload_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-openshift_master/all/repo/'/>
 <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
 <child location='../../../../staging/jbosstools-portlet_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-server_master/all/repo/'/>
-<child location='../../../../staging/jbosstools-vpe_master/all/repo/'/>
 
+<child location='../../../../staging/jbosstools-vpe_master/all/repo/'/>
 <child location='../../../../staging/jbosstools-webservices_master/all/repo/'/>
 
 <child location='../../../../staging.previous/jbosstools-aerogear_master/all/repo/'/>
@@ -47,20 +48,20 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_41/
 <child location='../../../../staging.previous/jbosstools-central_master/all/repo/'/>
 
 <child location='../../../../staging.previous/jbosstools-forge_master/all/repo/'/>
+<child location='../../../../staging.previous/jbosstools-freemarker_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-hibernate_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-javaee_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-jst_master/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-livereload_master/all/repo/'/>
 
+<child location='../../../../staging.previous/jbosstools-livereload_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-openshift_master/all/repo/'/>
 <child location='../../../../staging.previous/openshift-java-client-master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-portlet_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-server_master/all/repo/'/>
-<child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
 
+<child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
 <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
 
-<child location='../../../../staging/jbosstools-freemarker_41/all/repo/'/>
 <!-- <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/> -->
 
 <!-- GWT is unchanged in 4.1.x since 4.0.x, so use those bits and disable the 4.1.x jobs until needed
