@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools - Core - Staging Repository' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<properties size='3'>
+<property name='p2.compressed' value='true'/>
+<!-- 
+     get new time w/ 
+      date +%s000
+-->
+<property name='p2.atomic.composite.loading' value='false'/>
+<property name='p2.timestamp' value='1382721130000'/>
+</properties>
+<children size='19'>
+
+<!-- TODO: when adding new builds here, remember to add them to these jobs too:
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
+-->
+
+<!-- ## UNCHANGED SINCE 4.0.x.Final; included in updates/stable/kepler/ ## -->
+  <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/gwt/'/>
+
+<!-- ## UNCHANGED SINCE 4.1.0.Final, so include previous updates/stable/kepler/core/ releases (JBIDE-15606) ## -->
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/birt/'/>
+
+<!-- ## CHANGED SINCE 4.1.0.Final ## -->
+
+  <child location='../../../../staging/jbosstools-aerogear_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-arquillian_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-base_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-central_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-forge_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-hibernate_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-javaee_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-jst_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-livereload_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-openshift_42/all/repo/'/>
+  <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
+  <child location='../../../../staging/jbosstools-portlet_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-server_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-vpe_42/all/repo/'/>
+  <child location='../../../../staging/jbosstools-webservices_42/all/repo/'/>
+
+</children>
+</repository>
