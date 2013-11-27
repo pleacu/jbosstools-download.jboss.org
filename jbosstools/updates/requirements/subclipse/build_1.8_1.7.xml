@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="mirror">
-	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-	
-		-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} 
-		-consoleLog -nosplash -data /tmp
-		-application org.eclipse.ant.core.antRunner
-		-f "/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/subclipse/build.xml"
-		
-		or, run headless on qa01 server, where Eclipse is installed into ~/eclipse:
-		
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner \
-			-f ~/RHDS/updates/requirements/subclipse/build.xml -Ddestination=/tmp/subclipse-repo
-	-->
-	<target name="mirror">
-		<property name="URL1" value="http://subclipse.tigris.org/update_1.8.x" />
-		<property name="URL2" value="http://eclipse.svnkit.com/1.7.x/" />
-		
-		<property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/subclipse/" />
-		<property name="compress" value="true" />
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    export JAVA_HOME=/opt/jdk1.6.0; \
+    ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner \
+      -f ~/RHDS/updates/requirements/birt/build.xml -Ddestination=/tmp/birt-repo
+  -->
+  <property name="LONGNAME" value="Subclipse 1.8 + SVNKit 1.7 plugins for Subversion 1.7 and Eclipse"/>
+  <property name="version" value="1.8.20_1.7.9.1"/>
+  <property name="URL1" value="http://subclipse.tigris.org/update_1.8.x" />
+  <property name="URL2" value="http://eclipse.svnkit.com/1.7.x/" />
 
-		<p2.mirror>
-			<repository location="file:${destination}/1.8_1.7/" name="Subclipse 1.8 + SVNKit 1.7 plugins for Subversion 1.7 and Eclipse 3.7" />
-			<source>
-				<repository location="${URL1}" />
-				<repository location="${URL2}" />
-			</source>
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
 
-			<slicingOptions includeFeatures="true" followStrict="true" />
-		</p2.mirror>
+  <target name="run" depends="mirror,regen"/>
+  <!-- packing throws NPE, so regen.metadata only (do not pack) -->
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL1}" />
+        <repository location="${URL2}" />
+      </source>
 
-		<p2.publish.featuresAndBundles metadataRepository="file:${destination}/1.8_1.7/" artifactRepository="file:${destination}/1.8_1.7/" publishartifacts="true" source="${destination}/1.8_1.7/" compress="${compress}" />
-	</target>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+
+      <iu id="com.collabnet.subversion.merge.feature.feature.group" />
+      <iu id="net.java.dev.jna.feature.group" />
+      <iu id="org.tigris.subversion.subclipse.feature.group" />
+      <iu id="org.tigris.subversion.subclipse.mylyn.feature.group" />
+      <iu id="org.tigris.subversion.clientadapter.feature.feature.group" />
+      <iu id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" />
+      <iu id="org.tigris.subversion.subclipse.graph.feature.feature.group" />
+      <iu id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" />
+      <iu id="org.tmatesoft.svnkit.feature.group" />
+    </p2.mirror>
+  </target>
 </project>
