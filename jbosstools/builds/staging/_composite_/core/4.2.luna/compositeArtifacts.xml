@@ -33,11 +33,13 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
   <child location='../../../../staging/jbosstools-base_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-central_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-forge_42/all/repo/'/>
+
   <child location='../../../../staging/jbosstools-hibernate_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-javaee_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-jst_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-livereload_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-openshift_42/all/repo/'/>
+
   <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
   <child location='../../../../staging/jbosstools-portlet_42/all/repo/'/>
   <child location='../../../../staging/jbosstools-server_42/all/repo/'/>
