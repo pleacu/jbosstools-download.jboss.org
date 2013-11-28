@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-    export JAVA_HOME=/opt/jdk1.6.0; \
-    ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-      org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-      -application org.eclipse.ant.core.antRunner \
-      -f ~/RHDS/updates/requirements/birt/build.xml -Ddestination=/tmp/birt-repo
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Subclipse 1.10 + SVNKit 1.8 plugins for Subversion 1.8 and Eclipse"/>
   <property name="version" value="1.10.3_1.8.0.r10086_v20131126_1344"/>
@@ -38,7 +36,9 @@
       <iu id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" />
       <iu id="org.tigris.subversion.subclipse.graph.feature.feature.group" />
       <iu id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" />
-      <iu id="org.tmatesoft.svnkit.feature.group" />
+      <iu id="org.tmatesoft.svnkit.feature.group" version="1.8.0.r10086_v20131126_1344"/>
+      <iu id="org.tmatesoft.sqljet" version="1.1.9.r1308_v20131126_1322"/>
+      <iu id="org.tmatesoft.svnkit" version="1.8.0.r10086_v20131126_1344"/>
     </p2.mirror>
   </target>
 </project>
