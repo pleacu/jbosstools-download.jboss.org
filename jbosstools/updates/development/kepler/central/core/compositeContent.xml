@@ -12,6 +12,6 @@
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/updates/development/kepler/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/kepler/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/kepler/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.31.0.Final-SNAPSHOT/REPO/'/>
 </children>
 </repository>
