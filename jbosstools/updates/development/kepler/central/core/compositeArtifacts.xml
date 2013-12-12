@@ -7,11 +7,11 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1382111965000'/>
+<property name='p2.timestamp' value='1386882206000'/>
 </properties>
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/updates/development/kepler/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/kepler/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.31.0.Final-SNAPSHOT/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/kepler/'/>
 </children>
 </repository>
