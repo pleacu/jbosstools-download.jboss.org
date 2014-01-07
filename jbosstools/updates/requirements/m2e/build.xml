@@ -5,11 +5,9 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.3.2.v201312131027"/>
-  <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
-  <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
-  <property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
+  <property name="LONGNAME" value="m2e"/>
+  <property name="version" value="1.5.0.20131218-1208"/>
+  <property name="URL" value="http://download.eclipse.org/technology/m2e/milestones/1.5/${version}" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
@@ -24,12 +22,6 @@
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
-
-      <iu id="org.eclipse.birt.osgi.runtime.sdk.feature.group" />
-      <iu id="org.eclipse.birt.feature.group" />
-      <iu id="org.eclipse.birt.integration.wtp.feature.group" />
-      <iu id="org.eclipse.birt.chart.feature.group" />
-      <iu id="org.eclipse.birt.chart.integration.wtp.feature.group" />
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>

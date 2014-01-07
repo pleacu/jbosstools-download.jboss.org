@@ -11,8 +11,8 @@
     </classpath>
   </taskdef>
 
-  <property name="version" value="201311150900"/>
-  <property name="versionLabel" value="M3"/>
+  <property name="version" value="201312200900"/>
+  <property name="versionLabel" value="M4"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}-${versionLabel}"/>

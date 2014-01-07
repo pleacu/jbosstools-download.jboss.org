@@ -5,7 +5,8 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="3.6.0.M3"/>
+  <property name="milestone" value="M4"/>
+  <property name="version" value="3.6.0.${milestone}"/>
   
 
   <property name="destination" value="${basedir}"/>
@@ -15,7 +16,7 @@
       <property name="SHORTNAME" value="tm"/>
       <property name="LONGNAME" value="Target Management (TM) + Remote System Explorer (RSE)"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/tm/updates/3.6milestones/M3/" />
+      <property name="URL" value="http://download.eclipse.org/tm/updates/3.6milestones/${milestone}/" />
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>

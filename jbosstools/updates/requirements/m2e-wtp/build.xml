@@ -6,8 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="m2e-wtp"/>
-  <property name="version" value="1.1.0.20130821-1331"/>
-  <property name="URL" value="http://download.eclipse.org/m2e-wtp/milestones/luna/1.1.0/1.1.0.20130821-1331" />
+  <property name="version" value="1.1.0.20131218-1954"/>
+  <property name="URL" value="http://download.eclipse.org/m2e-wtp/milestones/luna/1.1.0/${version}" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
