@@ -11,6 +11,6 @@
 </properties>
 <children size='1'>
 <!-- JBTIS latest development or stable release -->
-<child location='http://download.jboss.org/jbosstools/updates/development/kepler/integration-stack/aggregate/4.1.3.CR1/'/>
+<child location='http://download.jboss.org/jbosstools/updates/development/kepler/integration-stack/aggregate/4.1.3.CR2/'/>
 </children>
 </repository>
