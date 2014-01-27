@@ -10,13 +10,15 @@
 <property name='p2.timestamp' value='1382111965000'/>
 </properties>
 <children size='3'>
+
 <!-- JBT latest dev or stable release -->
 <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/'/>
-<!-- JBTIS latest target platform -->
-<child location='http://download.jboss.org/jbosstools/updates/kepler/integration-stack/'/>
+
 <!-- JBTIS latest stable release -->
-<!-- TODO: uncomment this once the site exists <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/integration-stack/'/> -->
-<!-- JBTIS Central TP site (for 3rd party extras). Currently not required -->
-<!-- <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtiscentraltarget/kepler/'/> -->
+<child location='http://download.jboss.org/jbosstools/updates/stable/kepler/integration-stack/'/>
+
+<!-- JBTIS latest target platform -->
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.1.5.Final/'/>
+
 </children>
 </repository>
