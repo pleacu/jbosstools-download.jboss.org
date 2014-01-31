@@ -5,7 +5,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="2.1.1.201307101628"/>
+  <property name="version" value="2.2.0"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -14,7 +14,7 @@
       <property name="LONGNAME" value="SWTBot"/>
       <property name="version" value="${version}"/>
       <!-- <property name="URL" value="http://download.eclipse.org/technology/swtbot/snapshots"/> nightlies -->
-      <property name="URL" value="http://download.eclipse.org/technology/swtbot/releases/latest/"/>
+      <property name="URL" value="http://download.eclipse.org/technology/swtbot/releases/${version}/"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
