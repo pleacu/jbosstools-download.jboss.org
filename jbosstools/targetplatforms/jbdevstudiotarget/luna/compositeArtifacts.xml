@@ -15,6 +15,6 @@ nnoremap <Leader>ts :call ReplaceTimestamp()<CR>
 <property name='p2.timestamp' value='1374510738000'/>
 </properties>
 <children size='1'>
-<child location='../4.40.0.Alpha1-SNAPSHOT/REPO/'/>
+<child location='../4.40.0.Alpha2/REPO/'/>
 </children>
 </repository>
