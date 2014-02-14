@@ -6,23 +6,23 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
 
-  <!-- as of 0.2.7 this works with Juno and Kepler. Depends on Graphiti 0.10.x -->
   <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 Project Feature"/>
-  <property name="version" value="1.0.1"/>
-  <property name="version2" value="1.0.1.201312111931"/>
+  <property name="version" value="1.0.2"/>
+  <property name="version2" value="1.0.2.201402102317"/>
   <property name="version3" value="S20130822"/>
   <property name="version4" value="0.7.0.201308220617"/>
+  <property name="eclver" value="luna"/>
 
   <!--   BPMN2 Editor 1.0.1.201312111931 -->
   <!-- <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/" /> -->
-  <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/kepler/${version}/" />
+  <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/${eclver}/${version}/" />
 
   <!-- BPMN2 Project Feature 0.7.0.201308220617 -->
   <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/milestones/${version3}/" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${version2}_${version4}_kepler"/>
+  <property name="workDir" value="${destination}/${version2}_${version4}_${eclver}"/>
 
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
