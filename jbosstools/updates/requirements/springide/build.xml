@@ -6,17 +6,15 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.4.0.201310051539-RELEASE" />
-  <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
-  <!-- TODO: JBIDE-15202 move this to a Central TP; currently included here as needed to resolve and include org.json in the mirror -->
-  <property name="version2" value="R20130517111416"/>
-  <property name="URL2" value="http://download.eclipse.org/tools/orbit/downloads/drops/${version2}/repository/"/>
+  <property name="version" value="3.5.0.201402030809-M2" />
+  <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" />
+    <!-- 3.5 releases  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.4/"/> -->
+    <!-- 3.5 nightlies <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/e4.4/"/> -->
+
   <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
-  <property name="URL3" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
+  <property name="URL2" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
 
   <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
-  <!-- 3.3 milestones <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
-  <!-- 3.3 nightlies <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -26,9 +24,8 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL}" />
+        <repository location="${URL1}" />
         <repository location="${URL2}" />
-        <repository location="${URL3}" />
       </source>
 
       <!-- Not needed: platformfilter="true"  -->
