@@ -21,7 +21,7 @@
 <child location='../../../../staging/soatools-3.3.0_GA.component--jbpm/all/repo/'/>
 <child location='../../../../staging/soatools-3.3.0_GA.component--modeshape/all/repo/'/>
 <child location='../../../../staging/soatools-3.3.3_Final.component--runtime-soa/all/repo/'/>
-<child location='../../../../staging/soatools-3.3.5_Final.component--teiid-designer/all/repo/'/>
+<child location='../../../../staging/soatools-3.3.6_Final.component--teiid-designer/all/repo/'/>
 <child location='http://download.jboss.org/savara/releases/updates/2.0.0.Final/'/>
 <child location='http://download.jboss.org/jbosstools/updates/stable/indigo/soa-tooling/switchyard/0.5.0.Final/'/>
 
