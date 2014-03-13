@@ -7,6 +7,7 @@
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
 	-->
+  <!-- 20140313: as of Luna M6, nothing new -->
   <property name="LONGNAME" value="Atlassian Connectors"/>
   <property name="version" value="3.2.2.v20130909"/>
   <property name="URL" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.7" />

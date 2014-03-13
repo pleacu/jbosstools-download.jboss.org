@@ -5,6 +5,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
+  <!-- 20140313: as of Luna M6, nothing new -->
   <property name="milestone" value="M4"/>
   <property name="version" value="3.6.0.${milestone}"/>
   
