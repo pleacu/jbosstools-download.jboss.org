@@ -6,8 +6,9 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="AJDT"/>
-  <property name="version" value="2.2.3.e43x-RELEASE-20130627-0800" />
-  <property name="URL" value="http://download.eclipse.org/tools/ajdt/43/update/"/>
+  <property name="version" value="2.2.4.e44x-20140205-0900" />
+  <!-- <property name="URL" value="http://download.eclipse.org/tools/ajdt/44/update/"/> -->
+  <property name="URL" value="http://download.eclipse.org/tools/ajdt/44/dev/update/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>

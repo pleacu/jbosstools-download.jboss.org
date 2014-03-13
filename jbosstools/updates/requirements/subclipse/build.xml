@@ -6,10 +6,10 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Subclipse 1.10 + SVNKit 1.8 plugins for Subversion 1.8 and Eclipse"/>
-  <property name="version" value="1.10.3_1.8.0.r10086_v20131126_1344"/>
-  <!-- org.tigris.subversion.subclipse.feature.group  1.10.3 -->
+  <property name="version" value="1.10.4_1.8.4.r10218_v20140302_1242"/>
+  <!-- org.tigris.subversion.subclipse.feature.group  1.10.4 -->
   <property name="URL1" value="http://subclipse.tigris.org/update_1.10.x" />
-  <!-- org.tmatesoft.svnkit.feature.group 1.8.0.r10086_v20131126_1344 -->
+  <!-- org.tmatesoft.svnkit.feature.group 1.8.4.r10218_v20140302_1242 -->
   <property name="URL2" value="http://eclipse.svnkit.com/1.8.x/" />
 
   <property name="destination" value="${basedir}"/>
@@ -36,9 +36,9 @@
       <iu id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" />
       <iu id="org.tigris.subversion.subclipse.graph.feature.feature.group" />
       <iu id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" />
-      <iu id="org.tmatesoft.svnkit.feature.group" version="1.8.0.r10086_v20131126_1344"/>
-      <iu id="org.tmatesoft.sqljet" version="1.1.9.r1308_v20131126_1322"/>
-      <iu id="org.tmatesoft.svnkit" version="1.8.0.r10086_v20131126_1344"/>
+      <iu id="org.tmatesoft.svnkit.feature.group"/>
+      <iu id="org.tmatesoft.sqljet"/>
+      <iu id="org.tmatesoft.svnkit"/>
     </p2.mirror>
   </target>
 </project>
