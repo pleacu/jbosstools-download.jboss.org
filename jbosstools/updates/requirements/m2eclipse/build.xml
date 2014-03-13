@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run">
+<project default="deprecated">
+  <target name="deprecated">
+    <echo>This script is no longer needed as the following features exist in the Luna site itself:
+  * org.eclipse.m2e.feature.feature.group 1.5.0
+  * org.eclipse.m2e.tests.common 1.5.0
+  * org.eclipse.m2e.wtp.feature.feature.group 1.1.0
+  * org.eclipse.m2e.wtp.jaxrs.feature.feature.group 1.1.0
+  * org.eclipse.m2e.wtp.jpa.feature.feature.group 1.1.0
+  * org.eclipse.m2e.wtp.jsf.feature.feature.group 1.1.0
+
+Note that m2e-apt and m2e-buildhelper are still mirrored separately. See
+
+http://download.jboss.org/jbosstools/updates/m2e-extensions/
+</echo>
+  </target>
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     export JAVA_HOME=/opt/jdk1.6.0; \
     ${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \

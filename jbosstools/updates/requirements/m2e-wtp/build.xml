@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run">
+<project default="deprecated">
+  <target name="deprecated">
+    <echo>This script is no longer needed as the following features exist in the Luna site itself:
+  * org.eclipse.m2e.feature.feature.group 1.5.0
+  * org.eclipse.m2e.tests.common 1.5.0
+  * org.eclipse.m2e.wtp.feature.feature.group 1.1.0
+  * org.eclipse.m2e.wtp.jaxrs.feature.feature.group 1.1.0
+  * org.eclipse.m2e.wtp.jpa.feature.feature.group 1.1.0
+  * org.eclipse.m2e.wtp.jsf.feature.feature.group 1.1.0
+
+Note that m2e-apt and m2e-buildhelper are still mirrored separately. See
+
+http://download.jboss.org/jbosstools/updates/m2e-extensions/
+</echo>
+  </target>
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="m2e-wtp"/>
-  <property name="version" value="1.1.0.20131218-1954"/>
+  <property name="version" value="1.1.0.20140312-1427"/>
   <property name="URL" value="http://download.eclipse.org/m2e-wtp/milestones/luna/1.1.0/${version}" />
   <property name="latestversiononly" value="false"/>
 
