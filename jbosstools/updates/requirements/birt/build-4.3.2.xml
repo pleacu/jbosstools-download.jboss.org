@@ -6,10 +6,10 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.4.0.v20140311-1438"/>
+  <property name="version" value="4.3.2.v201312131027"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
-  <property name="URL" value="http://download.eclipse.org/birt/update-site/luna-interim/" />
+  <property name="URL" value="http://download.eclipse.org/birt/update-site/kepler-interim/" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
