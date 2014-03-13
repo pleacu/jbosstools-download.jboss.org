@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run">
+<project default="deprecated">
+  <target name="deprecated">
+    <echo>This script is no longer needed as all the features we use in the target platform exist in the Luna site itself.
+</echo>
+  </target>
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
