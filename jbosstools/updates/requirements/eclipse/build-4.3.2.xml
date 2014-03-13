@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="deprecated">
-  <target name="deprecated">
-    <echo>This script is no longer needed as all the features we use in the target platform exist in the Luna site itself.
-</echo>
-  </target>
+<project default="run">
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="S-4.4M6-201403061200"/>
+  <property name="version" value="S-4.3RC2a-201305262000"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -20,7 +16,7 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Platform"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/eclipse/updates/4.4milestones/${version}/"/>
+      <property name="URL" value="http://download.eclipse.org/eclipse/updates/4.3milestones/${version}/"/>
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
