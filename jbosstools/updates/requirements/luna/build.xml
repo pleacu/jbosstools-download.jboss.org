@@ -10,7 +10,7 @@
       <pathelement location="../ant-contrib.jar"/>
     </classpath>
   </taskdef>
-  <property name="version" value="201403122026"/>
+  <property name="version" value="201403140900"/>
   <property name="versionLabel" value="M6"/>
 
   <property name="destination" value="${basedir}"/>
@@ -23,8 +23,8 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Luna"/>
       <property name="version" value="${version}"/>
-      <!-- <property name="URL" value="http://download.eclipse.org/releases/luna/${version}/"/> -->
-      <property name="URL" value="http://download.eclipse.org/releases/staging/"/>
+      <property name="URL" value="http://download.eclipse.org/releases/luna/${version}/"/>
+      <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/"/> -->
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
   </target>
