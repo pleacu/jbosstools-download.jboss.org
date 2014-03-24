@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1386929825000'/>
+<property name='p2.timestamp' value='1395627955000'/>
 </properties>
 <children size='19'>
 
@@ -24,26 +24,27 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 
 <!-- ## UNCHANGED SINCE 4.1.0.Final, so include previous updates/stable/kepler/core/ releases (JBIDE-15606) ## -->
   <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/birt/'/>
 
 <!-- ## CHANGED SINCE 4.1.0.Final ## -->
 
   <child location='../../../../staging/jbosstools-aerogear_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-arquillian_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-base_4.2.luna/all/repo/'/>
+  <child location='../../../../staging/jbosstools-birt_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-central_4.2.luna/all/repo/'/>
-  <child location='../../../../staging/jbosstools-forge_4.2.luna/all/repo/'/>
 
+  <child location='../../../../staging/jbosstools-forge_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-hibernate_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-javaee_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-jst_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-livereload_4.2.luna/all/repo/'/>
-  <child location='../../../../staging/jbosstools-openshift_4.2.luna/all/repo/'/>
 
+  <child location='../../../../staging/jbosstools-openshift_4.2.luna/all/repo/'/>
   <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
   <child location='../../../../staging/jbosstools-portlet_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-server_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-vpe_4.2.luna/all/repo/'/>
+
   <child location='../../../../staging/jbosstools-webservices_4.2.luna/all/repo/'/>
 
 </children>
