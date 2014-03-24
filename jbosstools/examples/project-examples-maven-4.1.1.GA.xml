@@ -14,8 +14,8 @@
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
       <fix type="plugin">
@@ -54,8 +54,8 @@
         <size>108318</size>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+				<property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
 			<fix type="plugin">
@@ -100,8 +100,8 @@
         <included-projects/>
         <fixes>
             <fix type="wtpruntime">
-                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-                <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+                <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
                 <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
             <fix type="plugin">
@@ -140,8 +140,8 @@
         <size>108318</size>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+				<property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
 
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
@@ -186,8 +186,8 @@
         <size>108318</size>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+				<property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
 			<fix type="plugin">
@@ -229,8 +229,8 @@
         <size>10949</size>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+				<property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
 			<fix type="plugin">
@@ -273,8 +273,8 @@ This example requires the helloworld-rs project to be deployed.
         <size>108318</size>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+				<property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
 			<fix type="plugin">
@@ -317,8 +317,8 @@ This example requires the helloworld-rs project to be deployed.
         <included-projects/>
         <fixes>
             <fix type="wtpruntime">
-                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-                <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+                <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
                 <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
             <fix type="plugin">
@@ -355,8 +355,8 @@ This example requires the helloworld-rs project to be deployed.
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, , org.jboss.ide.eclipse.as.runtime.eap.62</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
       <fix type="plugin">
@@ -393,8 +393,8 @@ This example requires the helloworld-rs project to be deployed.
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
       <fix type="plugin">
@@ -431,8 +431,8 @@ This example requires the helloworld-rs project to be deployed.
         <included-projects/>
         <fixes>
             <fix type="wtpruntime">
-                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-                <property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+                <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
                 <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
             <fix type="plugin">
@@ -476,8 +476,8 @@ This example requires the helloworld-rs project to be deployed.
         <size>12825</size>
 		<fixes>
 			<fix type="wtpruntime">
-				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61</property>
-				<property name="description">This project example requires JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</property>
+				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
+				<property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
 				<property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
             </fix>
 			<fix type="plugin">
@@ -737,7 +737,7 @@ This example requires the helloworld-rs project to be deployed.
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.62</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 6.x or JBoss Application Server 7.1</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
       <fix type="plugin">
