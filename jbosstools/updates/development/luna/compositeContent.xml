@@ -7,9 +7,9 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1392912185000'/>
+<property name='p2.timestamp' value='1395760494000'/>
 </properties>
-<children size='0'>
+<children size='1'>
 <child location='http://download.jboss.org/jbosstools/updates/JBossTools-4.2.0.Alpha2.core/'/>
 </children>
 </repository>
