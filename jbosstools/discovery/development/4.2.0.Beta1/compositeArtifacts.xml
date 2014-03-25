@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools Central - composite staging site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1395766880000'/>
+    <property name='p2.compressed' value='true'/>
+  </properties>
+  <children size='3'>
+    <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.40.0.Beta1/REPO/'/>
+    <child location='http://download.jboss.org/jbosstools/updates/staging/JBossTools-4.2.0.Beta1.core/'/>
+    <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.40.0.Beta2-SNAPSHOT/REPO/'/>
+  </children>
+</repository>
