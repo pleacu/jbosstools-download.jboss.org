@@ -98,7 +98,9 @@ ${install}
   </target>
   <!-- Like list.feature.groups, but this will return a list of plugins, EXCLUDING platform-specific fragments like 
        org.eclipse.equinox.launcher.gtk.aix.ppc64 or org.eclipse.equinox.executable_root.gtk.linux.s390x 
-       See: http://stackoverflow.com/questions/18082719/command-line-to-find-units-in-a-p2-repository-using-p2-query-languange
+       Ref: http://stackoverflow.com/questions/18082719/command-line-to-find-units-in-a-p2-repository-using-p2-query-languange
+
+       See also: https://github.com/jbosstools/jbosstools-build-ci/blob/master/util/installFromTarget.sh
   -->
   <target name="list.plugins" depends="setup">
     <antcall target="list.ius">
