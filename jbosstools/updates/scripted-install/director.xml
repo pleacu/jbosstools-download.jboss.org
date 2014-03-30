@@ -92,9 +92,23 @@ ${install}
       See also: https://github.com/jbosstools/jbosstools-build-ci/blob/master/util/installFromCentral.sh
   -->
   <target name="list.feature.groups" depends="setup">
-    <echo>Searching for feature.groups in ${p2.director.input.repo} ...</echo>
+    <antcall target="list.ius">
+      <param name="liststring" value="-list Q:group"/>
+    </antcall>
+  </target>
+  <!-- Like list.feature.groups, but this will return a list of plugins, EXCLUDING platform-specific fragments like 
+       org.eclipse.equinox.launcher.gtk.aix.ppc64 or org.eclipse.equinox.executable_root.gtk.linux.s390x 
+       See: http://stackoverflow.com/questions/18082719/command-line-to-find-units-in-a-p2-repository-using-p2-query-languange
+  -->
+  <target name="list.plugins" depends="setup">
+    <antcall target="list.ius">
+      <param name="liststring" value="-list 'Q:everything.select(y | everything.select(x | x.properties ~= filter(&quot;(org.eclipse.equinox.p2.bundle.localization='plugin')&quot;)).collect(x | x.requirements).flatten().exists(r | y ~= r))'"/>
+    </antcall>
+  </target>
+  <target name="list.ius" depends="setup">
+    <property name="liststring" value="   -list "/>
+    <echo>Searching for IUs in ${p2.director.input.repo} with ${liststring} ...</echo>
     <exec executable="${p2.director.install.path}/eclipse" failonerror="true" timeout="1200000" taskname="list" output="${output}" logerror="false">
-      <!-- deprecated application for Eclipse 3.4: org.eclipse.equinox.p2.director.app.application -->
       <arg line=" -application org.eclipse.equinox.p2.director" />
       <arg line=" -clean -nosplash" />
       <arg line=" --launcher.suppressErrors" />
@@ -104,7 +118,7 @@ ${install}
       <arg line=" -profile ${profileName}" />
       <arg line=" -destination ${p2.director.install.path}" />
       <arg line=" -bundlepool ${p2.director.install.path}" />
-      <arg line=" -list Q:group" />
+      <arg line=" ${liststring}" />
       <arg line=" -metadataRepository ${p2.director.input.repo}"/>
       <arg line=" -artifactRepository ${p2.director.input.repo},file:${p2.director.install.path}" />
       <arg line=" -profileProperties org.eclipse.update.install.features=true" />
@@ -112,7 +126,7 @@ ${install}
       <!-- this appears to cause: 'The copies of profile epp.package.jee are not in sync' <arg line=" -Declipse.p2.data.area=${p2.director.install.path}/p2" /> -->
       <arg line=" -Declipse.p2.MD5Check=false" />
     </exec>
-    <echo>Feature.group list written to ${output}</echo>
+    <echo>IU list written to ${output}</echo>
   </target>
 
   <!-- helper task used to perform any arbitrary XSL transform. Usage: 
