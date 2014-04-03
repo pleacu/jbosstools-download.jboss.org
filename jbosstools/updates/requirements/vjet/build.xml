@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 
   -->
-  <property name="version" value="0.10.0.201402070708"/>
+  <property name="version" value="0.10.0.201403201656"/>
   <property name="URL1a" value="http://download.eclipse.org/vjet/updates-0.10/"/>
   <property name="URL1b" value="http://download.eclipse.org/vjet/updates-nightly"/>
   <property name="URL2" value="http://download.jboss.org/jbosstools/updates/requirements/orbit/R20130517111416/"/>
@@ -26,23 +26,21 @@
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
-      <iu id="org.eclipse.vjet.js.ide.feature.group"/>
-        <iu id="org.eclipse.equinox.server.jetty.feature.group"/>
-        <iu id="org.eclipse.vjet.core.feature.group"/>
-        <iu id="org.eclipse.vjet.eclipse.feature.group"/>
-        <iu id="org.eclipse.vjet.extmod.dltk.core.feature.group"/>
-        <iu id="org.eclipse.vjet.extmod.jsdt.feature.group"/>
-        <iu id="org.eclipse.vjet.extmod.rhino.feature.group"/>
-        <iu id="org.eclipse.vjet.rt.feature.group"/>
-        <iu id="org.eclipse.vjet.web.feature.group"/>
-        <iu id="org.w3c.dom.events"/>
-
+      <!-- remove this feature as it's just a wrapper for other features <iu id="org.eclipse.vjet.js.ide.feature.group"/> -->
+      <!-- remove this feature as a newer version is included in Luna <iu id="org.eclipse.equinox.server.jetty.feature.group"/> -->
+      <iu id="org.eclipse.vjet.core.feature.group"/>
+      <iu id="org.eclipse.vjet.eclipse.feature.group"/>
+      <iu id="org.eclipse.vjet.extmod.dltk.core.feature.group"/>
+      <iu id="org.eclipse.vjet.extmod.jsdt.feature.group"/>
+      <iu id="org.eclipse.vjet.extmod.rhino.feature.group"/>
+      <iu id="org.eclipse.vjet.rt.feature.group"/>
+      <iu id="org.eclipse.vjet.web.feature.group"/>
+      <!-- remove this plugin as already included in Luna <iu id="org.w3c.dom.events"/> -->
       <iu id="org.eclipse.vjet.codegen.feature.group"/>
         <iu id="org.eclipse.vjet.resource.feature.group"/>
-
       <iu id="org.eclipse.vjet.vsf.domkit.feature.group"/>
+        <!-- include org.junit4_4.8.1 instead of org.junit_4.11.0 in Luna -->
         <iu id="org.junit4"/>
-
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
