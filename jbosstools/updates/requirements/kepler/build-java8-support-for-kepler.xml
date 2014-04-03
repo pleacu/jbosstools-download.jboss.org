@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="Java 8 Support for Kepler SR2"/>
+  <property name="version1" value="P20140317-1600"/>
+  <property name="version2" value="3.5.2-20140329045715"/>
+  <property name="version3" value="1.4.1.20140328-1905"/>
+  <property name="version" value="20140403_Eclipse-4.3.2-${version1}_WTP-${version2}_m2e-${version3}"/>
+  <property name="URL1" value="http://download.eclipse.org/eclipse/updates/4.3-P-builds/"/>
+  <property name="URL2" value="http://download.eclipse.org/webtools/patches/drops/R3.5.2/P-${version2}/repository/"/>
+  <property name="URL3" value="http://download.eclipse.org/technology/m2e/releases/1.4/${version3}"/>
+  <property name="latestversiononly" value="false"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} - Eclipse 4.3.2 Patch ${version1}, WTP Patch ${version2}, M2E ${version3}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL1}" />
+        <repository location="${URL2}" />
+        <repository location="${URL3}" />
+      </source>
+
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
