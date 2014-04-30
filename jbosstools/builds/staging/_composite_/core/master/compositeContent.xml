@@ -8,9 +8,9 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1396632725000'/>
+<property name='p2.timestamp' value='1398839804000'/>
 </properties>
-<children size='37'>
+<children size='34'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
@@ -30,8 +30,8 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
   <child location='../../../../staging/jbosstools-aerogear_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-arquillian_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-base_master/all/repo/'/>
-  <child location='../../../../staging/jbosstools-browsersim_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-birt_master/all/repo/'/>
+  <child location='../../../../staging/jbosstools-browsersim_master/all/repo/'/>
 
   <child location='../../../../staging/jbosstools-central_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-forge_master/all/repo/'/>
@@ -41,11 +41,10 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 
   <child location='../../../../staging/jbosstools-livereload_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-openshift_master/all/repo/'/>
-  <child location='../../../../staging/openshift-java-client-master/all/repo/'/>
   <child location='../../../../staging/jbosstools-portlet_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-server_master/all/repo/'/>
-
   <child location='../../../../staging/jbosstools-vpe_master/all/repo/'/>
+
   <child location='../../../../staging/jbosstools-webservices_master/all/repo/'/>
 
   <child location='../../../../staging.previous/jbosstools-aerogear_master/all/repo/'/>
@@ -62,11 +61,10 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 
   <child location='../../../../staging.previous/jbosstools-livereload_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-openshift_master/all/repo/'/>
-  <child location='../../../../staging.previous/openshift-java-client-master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-portlet_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-server_master/all/repo/'/>
-
   <child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
+
   <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
 
 </children>
