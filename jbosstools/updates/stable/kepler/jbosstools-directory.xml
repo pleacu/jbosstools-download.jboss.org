@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
 <entry url="plugins/org.jboss.tools.central.discovery_1.2.201.Final-v20140416-0805-B610.jar" permitCategories="true"/>
-<entry url="plugins/org.jboss.tools.central.discovery.integration-stack_4.1.3.Final-v20140122-1613-B225.jar" permitCategories="true"/>
+<entry url="plugins/org.jboss.tools.central.discovery.integration-stack_4.1.4.Final-v20140409-0146-B11.jar" permitCategories="true"/>
 </directory>
