@@ -26,15 +26,15 @@
       </fix>
       <fix type="plugin">
         <property name="id">org.eclipse.m2e.wtp</property>
-        <property name="versions">[0.16.0,2.0.0)</property>
-        <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
         <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
       </fix>
       <fix type="plugin">
         <property name="id">org.jboss.tools.maven.core</property>
         <property name="versions">[1.4.0,2.0.0)</property>
         <property name="description">This project example requires JBoss Maven Tools.</property>
-        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
   </project>
@@ -66,15 +66,15 @@
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
 				<property name="id">org.jboss.tools.maven.core</property>
 				<property name="versions">[1.3.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
-				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.jsf.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
             </fix>
         </fixes>
 		<importType>maven</importType>
@@ -112,15 +112,15 @@
             </fix>
             <fix type="plugin">
                 <property name="id">org.eclipse.m2e.wtp</property>
-                <property name="versions">[0.16.0,2.0.0)</property>
-                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
                 <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
             <fix type="plugin">
                 <property name="id">org.jboss.tools.maven.core</property>
                 <property name="versions">[1.4.0,2.0.0)</property>
                 <property name="description">This project example requires JBoss Maven Tools.</property>
-                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
             </fix>
         </fixes>
     </project>
@@ -153,15 +153,15 @@
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
 				<property name="id">org.jboss.tools.maven.core</property>
 				<property name="versions">[1.4.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
-				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature</property>
             </fix>
         </fixes>
 		<importType>maven</importType>
@@ -198,15 +198,15 @@
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
 				<property name="id">org.jboss.tools.maven.core</property>
 				<property name="versions">[1.3.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
-				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.jsf.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
             </fix>
         </fixes>
 		<importType>maven</importType>
@@ -241,15 +241,15 @@
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
 				<property name="id">org.jboss.tools.maven.core</property>
 				<property name="versions">[1.3.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
-				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature</property>
             </fix>
         </fixes>
 		<importType>maven</importType>
@@ -285,15 +285,15 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
 				<property name="id">org.jboss.tools.maven.core</property>
 				<property name="versions">[1.3.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
-				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.jsf.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature</property>
             </fix>
         </fixes>
 		<importType>maven</importType>
@@ -405,15 +405,15 @@ This example requires the helloworld-rs project to be deployed.
       </fix>
       <fix type="plugin">
         <property name="id">org.eclipse.m2e.wtp</property>
-        <property name="versions">[0.16.0,2.0.0)</property>
-        <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
         <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
       </fix>
       <fix type="plugin">
         <property name="id">org.jboss.tools.maven.core</property>
         <property name="versions">[1.4.0,2.0.0)</property>
         <property name="description">This project example requires JBoss Maven Tools.</property>
-        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
   </project>
@@ -444,15 +444,15 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
 				<property name="id">org.jboss.tools.maven.core</property>
 				<property name="versions">[1.3.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Maven Tools.</property>
-				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.jsf.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+				<property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature</property>
             </fix>
         </fixes>
 		<importType>maven</importType>
@@ -484,8 +484,8 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
@@ -496,151 +496,7 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
         </fixes>
     </project>
-    <!-- Too many errors, disabling
-        <project>
-		<category>Seam</category>
-		<name>photoalbum-mavenized</name>
-		<included-projects>
-		photoalbum-mavenized,photoalbum-mavenized-ear,photoalbum-mavenized-ejb,photoalbum-mavenized-parent
-		</included-projects>
-		<shortDescription>PhotoAlbum - EAR mavenized (RichFaces 3.3.1.GA, Seam 2.2.0.GA)</shortDescription>
-		<description>This example demonstrates the use of RichFaces components. It includes the photoalbum-mavenized,photoalbum-mavenized-ear,photoalbum-mavenized-ejb and photoalbum-mavenized-parent projects.
-        The example requires Seam 2.2,JBoss Enterprise Application Platform 4.3/5.0 or JBoss Application Server 4.2.x/5.x and m2eclipse.
-		</description>
-		<size>16441344</size>
-		<url>
-        http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/photoalbum-mavenized.zip
-		</url>
-        <importType>maven</importType>
-        <icon path="icons/jboss.png" />
-		<fixes>
-        <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.50, org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.51, org.jboss.ide.eclipse.as.runtime.50, org.jboss.ide.eclipse.as.runtime.42</property>
-        <property name="downloadId">org.jboss.tools.runtime.core.as.510</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 4.3/5.0 or JBoss Application Server 4.2.x/5.x</property>
-        </fix>
-        <fix type="seam">
-        <property name="allowed-versions">2.2.0</property>
-        <property name="downloadId">org.jboss.tools.runtime.core.seam.222</property>
-        <property name="description">This project example requires Seam 2.2</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.eclipse.m2e.wtp</property>
-        <property name="versions">[0.16,2.0)</property>
-        <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
-        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.jboss.tools.maven.core</property>
-        <property name="versions">[1.4.0,2.0.0)</property>
-        <property name="description">This project example requires JBoss Maven Tools.</property>
-        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.seam.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jpa.feature</property>
-        </fix>
-
-		</fixes>
-        </project>
-
-        <project>
-		<category>Seam</category>
-		<name>booking2</name>
-		<included-projects>
-		booking,booking-ear,booking-ejb,booking-parent,booking-test
-		</included-projects>
-		<shortDescription>Seam Booking Example - EAR mavenized</shortDescription>
-		<description>This example demonstrates the use of Seam in a Java EE 5 environment.
-        Transaction and persistence context management is handled by the EJB container.
-        It includes the booking, booking-ear, booking-ejb,booking-test and booking-parent projects.
-        Requires JBoss Enterprise Application Platform 4.3/JBoss Application Server 4.2.x, Seam 2.0, m2eclipse and testng plugins.
-        </description>
-		<size>203639</size>
-        <importType>maven</importType>
-        <icon path="icons/jboss.png" />
-		<url>
-        http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/booking-mavenized.zip
-		</url>
-		<fixes>
-        <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
-        <property name="downloadId">org.jboss.tools.runtime.core.as.423</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
-        </fix>
-
-        <fix type="seam">
-        <property name="allowed-versions">2.0.0, 2.0.1, 2.0.2</property>
-        <property name="downloadId">org.jboss.tools.runtime.core.seam.202</property>
-        <property name="description">This project example requires Seam 2.0</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.eclipse.m2e.wtp</property>
-        <property name="versions">[0.16,2.0)</property>
-        <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
-        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.jboss.tools.maven.core</property>
-        <property name="versions">[1.4.0,2.0.0)</property>
-        <property name="description">This project example requires JBoss Maven Tools.</property>
-        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.seam.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jpa.feature</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.testng.eclipse</property>
-        <property name="versions">6.7.0</property>
-        <property name="connectorIds">org.testng.eclipse</property>
-        <property name="description">The TestNG plugin is required if you want to run Seam tests. You can install it using the following update site: http://beust.com/eclipse</property>
-        </fix>
-
-		</fixes>
-        </project>
-        <project>
-		<category>Seam</category>
-		<name>booking3-mavenized</name>
-		<included-projects>
-		booking,booking-ear,booking-ejb,booking-parent,booking-test
-		</included-projects>
-		<shortDescription>Seam Booking Example - EAR mavenized - Seam 2.1.1.GA</shortDescription>
-		<description>This example demonstrates the use of Seam in a Java EE 5 environment.
-        Transaction and persistence context management is handled by the EJB container.
-        It includes the booking, booking-ear, booking-ejb, booking-test and booking-parent projects.
-        Requires JBoss Enterprise Application Platform 4.3/JBoss Application Server 4.2.x, Seam 2.1, m2eclipse and testng plugins.
-        </description>
-		<size>196608</size>
-		<url>
-        http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/booking-mavenized-2.1.1.zip
-		</url>
-        <importType>maven</importType>
-        <icon path="icons/jboss.png" />
-		<fixes>
-        <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
-        <property name="downloadId">org.jboss.tools.runtime.core.as.423</property>
-        <property name="description">This project example requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
-        </fix>
-        <fix type="seam">
-        <property name="allowed-versions">2.1.0, 2.1.1, 2.1.2</property>
-        <property name="downloadId">org.jboss.tools.runtime.core.seam.212</property>
-        <property name="description">This project example requires Seam 2.1</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.eclipse.m2e.wtp</property>
-        <property name="versions">[0.16,2.0)</property>
-        <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
-        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.jboss.tools.maven.core</property>
-        <property name="versions">[1.4.0,2.0.0)</property>
-        <property name="description">This project example requires JBoss Maven Tools.</property>
-        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.seam.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jpa.feature</property>
-        </fix>
-        <fix type="plugin">
-        <property name="id">org.testng.eclipse</property>
-        <property name="versions">6.7.0</property>
-        <property name="connectorIds">org.testng.eclipse</property>
-        <property name="description">The TestNG plugin is required if you want to run Seam tests. You can install it using the following update site: http://beust.com/eclipse</property>
-        </fix>
-		</fixes>
-        </project>
-    -->
+    
 	<project>
 		<category>RESTEasy</category>
 		<name>simple</name>
@@ -665,8 +521,8 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
-				<property name="versions">[0.16,2.0)</property>
-				<property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+				<property name="versions">[1.0.0,2.0.0)</property>
+				<property name="description">This project example requires m2e-wtp &gt;= 1.0.0.</property>
 				<property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
             </fix>
 			<fix type="plugin">
@@ -692,7 +548,7 @@ This example requires the helloworld-rs project to be deployed.
     <included-projects/>
     <fixes>
       <fix type="wtpruntime">
-        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.62</property>
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61,org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
         <property name="description">This project example requires JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or WildFly 8.0</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
       </fix>
