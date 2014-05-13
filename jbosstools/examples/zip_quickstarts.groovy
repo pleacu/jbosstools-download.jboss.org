@@ -1,3 +1,17 @@
+categories = [
+  "jboss-as-kitchensink-html5-mobile":"Mobile Applications",
+  "jboss-kitchensink-backbone":"Mobile Applications",
+  "jboss-kitchensink-angularjs":"Mobile Applications",
+  "jboss-as-kitchensink":"Web Applications",
+  "jboss-as-kitchensink-rf":"Web Applications",
+  "jboss-as-greeter":"Web Applications",
+  "jboss-as-helloworld":"Web Applications",
+  "jboss-as-helloworld-rs":"Back-end Applications",
+  "deltaspike-helloworld-jms":"Back-end Applications",
+  "jboss-as-jax-rs-client":"Back-end Applications",
+  "jboss-helloworld-mdb":"Back-end Applications",
+  "jboss-as-numberguess":"Back-end Applications",
+]
 
 def basedir = project.basedir.canonicalPath.replace("\\", "/") 
 
@@ -53,7 +67,7 @@ xmlDocument = builder.bind {
                  project {
                      id("jdf-"+module)
                      name(module)
-                     category("JBoss Developer Framework")
+                     category(getCategory(module))
                      shortDescription(sanitize(p.name.text()))
                      description(sanitize(p.description.text()))
                      url("${examplesBaseUrl}/${module}.zip")
@@ -64,8 +78,8 @@ xmlDocument = builder.bind {
                      "included-projects"()
                      fixes() {
                        fix(type:"wtpruntime") {
-                          property(name:"allowed-types", "org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.62")
-                          property(name:"description", "This project example requires JBoss Enterprise Application Platform 6.x or JBoss Application Server 7.1")
+                          property(name:"allowed-types", "org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80")
+                          property(name:"description", "This project example requires JBoss Enterprise Application Platform 6.x, JBoss Application Server 7.1 or WildFly 8.0")
                           property(name:"downloadId", "org.jboss.tools.runtime.core.as.711")
                        }
                        fix(type:"plugin") {
@@ -114,3 +128,7 @@ def String sanitize(String text) {
         .replace("JBoss AS Quickstarts ","")
 }
 
+def String getCategory(String id) {
+  def cat = categories[id]
+  cat?:"JBoss Developer Framework"
+}
