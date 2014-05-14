@@ -13,6 +13,8 @@ categories = [
   "jboss-as-numberguess":"Back-end Applications",
 ]
 
+featured = categories.keySet()
+
 def basedir = project.basedir.canonicalPath.replace("\\", "/") 
 
 def zipDir = new File(project.build.directory,"zips")
@@ -74,7 +76,9 @@ xmlDocument = builder.bind {
                      size(zip.length())
                      importType("maven")
                      icon(path:"icons/jboss.png")
-                     tags("central")
+                     if (featured.contains(module)) {
+                       tags("central")
+                     }
                      "included-projects"()
                      fixes() {
                        fix(type:"wtpruntime") {
