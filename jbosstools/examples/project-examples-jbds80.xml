@@ -36,6 +36,7 @@
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9</essentialEnterpriseDependencies>
   </project>
 
   <project>
@@ -81,7 +82,8 @@
 		<!-- <welcome type="cheatsheets" url="/jboss-kitchensink/.cheatsheet.xml"/>  -->
 		<tags>central</tags>
 		<priority>19</priority>
-        <icon path="icons/jboss.png" />
+      <icon path="icons/jboss.png" />
+      <essentialEnterpriseDependencies>org.jboss.bom.eap:jboss-javaee-6.0-with-tools:pom:6.2.0.GA,org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.2.0.GA</essentialEnterpriseDependencies>
     </project>
 
 	<project>
@@ -122,6 +124,7 @@
                 <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
             </fix>
         </fixes>
+      <essentialEnterpriseDependencies>org.jboss.spec:jboss-javaee-6.0:pom:3.0.2.Final-redhat-7</essentialEnterpriseDependencies>
     </project>
 
 	<project>
@@ -169,8 +172,8 @@
 		<tags>central</tags>
 		<priority>17</priority>
         <icon path="icons/jboss.png" />
+      <essentialEnterpriseDependencies>org.jboss.spec:jboss-javaee-6.0:pom:3.0.2.Final-redhat-7</essentialEnterpriseDependencies>
     </project>
-
     <project>
 		<id>jboss-kitchensink-rf</id>
 		<name>jboss-kitchensink-rf</name>
@@ -213,8 +216,10 @@
 		<!-- <welcome type="cheatsheets" url="/jboss-kitchensink/.cheatsheet.xml"/>  -->
 		<tags>central</tags>
 		<priority>16</priority>
-        <icon path="icons/jboss.png" />
+    <icon path="icons/jboss.png" />
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9,org.jboss.bom.wfk:jboss-javaee-6.0-with-richfaces:pom:2.4.0-redhat-2,</essentialEnterpriseDependencies>
     </project>
+
    <project>
 		<id>jboss-helloworld-rs</id>
 		<name>jboss-helloworld-rs</name>
@@ -256,6 +261,7 @@
 		<tags>central</tags>
 		<priority>17</priority>
         <icon path="icons/jboss.png" />
+      <essentialEnterpriseDependencies>org.jboss.spec:jboss-javaee-6.0:pom:3.0.2.Final-redhat-7</essentialEnterpriseDependencies>
     </project>
     <project>
 		<id>jboss-jax-rs-client</id>
@@ -299,7 +305,8 @@ This example requires the helloworld-rs project to be deployed.
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Project Examples feature.</importTypeDescription>
 		<!-- <welcome type="cheatsheets" url="/jboss-kitchensink/.cheatsheet.xml"/>  -->
 		<priority>16</priority>
-        <icon path="icons/jboss.png" />
+       <icon path="icons/jboss.png" />
+       <essentialEnterpriseDependencies>org.jboss.spec:jboss-javaee-6.0:pom:3.0.2.Final-redhat-7</essentialEnterpriseDependencies>
     </project>
     <project>
         <id>jdf-jboss-helloworld-jms</id>
@@ -339,6 +346,7 @@ This example requires the helloworld-rs project to be deployed.
                 <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
             </fix>
         </fixes>
+        <essentialEnterpriseDependencies>org.jboss.as:jboss-as-jms-client-bom:pom:7.3.0.Final-redhat-14</essentialEnterpriseDependencies>
     </project>
   <project>
     <id>jdf-helloworld-mdb</id>
@@ -377,6 +385,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.jboss.tools.maven.feature</property>
       </fix>
     </fixes>
+    <essentialEnterpriseDependencies>org.jboss.spec:jboss-javaee-6.0:pom:3.0.2.Final-redhat-7</essentialEnterpriseDependencies>
   </project>
   <project>
     <id>jdf-deltaspike-helloworld-jms</id>
@@ -415,6 +424,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-deltaspike:pom:2.4.0-redhat-2,org.jboss.as:jboss-as-jms-client-bom:pom:7.2.1.Final-redhat-10</essentialEnterpriseDependencies>
   </project>
 
 	<project>
@@ -537,6 +547,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9</essentialEnterpriseDependencies>
   </project>
 </projects>
 
