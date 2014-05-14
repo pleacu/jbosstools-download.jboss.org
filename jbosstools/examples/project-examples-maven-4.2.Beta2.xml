@@ -1,5 +1,4 @@
 <projects>
-<projects>
   <project>
     <id>jdf-jboss-kitchensink-html5-mobile</id>
     <name>jboss-kitchensink-html5-mobile</name>
@@ -626,4 +625,3 @@ This example requires the helloworld-rs project to be deployed.
     </project>
 
 </projects>
-
