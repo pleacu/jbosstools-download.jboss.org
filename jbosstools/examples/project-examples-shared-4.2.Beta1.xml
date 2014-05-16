@@ -243,6 +243,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
         <description>An archetype that generates a starter Spring MVC application with Java EE persistence settings (server bootstrapped JPA, JTA transaction management) for JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</description>
 		<size>165567</size>
 		<url/>
+    <stacksType>spring-kitchensink</stacksType>
 		<fixes>
 			<fix type="wtpruntime">
 				<property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -271,10 +272,12 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		<importType>mavenArchetype</importType>
 		<importTypeDescription>The project example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
 		<mavenArchetype>
+    <!--
 			<archetypeGroupId>org.jboss.spring.archetypes</archetypeGroupId>
 			<archetypeArtifactId>spring-mvc-webapp</archetypeArtifactId>
 			<archetypeVersion>1.0.0.CR6</archetypeVersion>
-            <groupId>org.jboss.tools.example</groupId>
+    -->
+     <groupId>org.jboss.tools.example</groupId>
 			<artifactId>jboss-springmvc-webapp</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<javaPackage>org.jboss.tools.example.springmvc</javaPackage>
