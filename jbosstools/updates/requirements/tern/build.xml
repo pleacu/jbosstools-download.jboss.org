@@ -6,7 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 
   -->
-  <property name="version" value="0.2.0.201404252310-SNAPSHOT"/>
+  <property name="LONGNAME" value="Tern.java (Early Access)"/>
+  <property name="version" value="0.2.0.201405210810-SNAPSHOT"/>
   <property name="URL1" value="http://oss.opensagres.fr/tern.repository/0.2.0-SNAPSHOT/"/>
 
   <property name="destination" value="${basedir}/"/>
@@ -14,7 +15,7 @@
 
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="VJET ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL1}" />
       </source>
