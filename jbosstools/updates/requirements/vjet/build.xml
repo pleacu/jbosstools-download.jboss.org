@@ -6,6 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 
   -->
+  <property name="LONGNAME" value="VJET (Early Access)"/>
   <property name="version" value="0.10.0.201403201656"/>
   <property name="URL1a" value="http://download.eclipse.org/vjet/updates-0.10/"/>
   <property name="URL1b" value="http://download.eclipse.org/vjet/updates-nightly"/>
@@ -17,7 +18,7 @@
 
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="VJET ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL1a}" />
         <repository location="${URL1b}" />
