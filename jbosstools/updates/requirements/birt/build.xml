@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.4.0.v20140520-1129"/>
+  <property name="version" value="4.4.0.v20140521-1030"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
   <property name="URL" value="http://download.eclipse.org/birt/update-site/luna-interim/" />
