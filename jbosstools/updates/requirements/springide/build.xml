@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.5.0.201404011509-RELEASE" />
+  <property name="version" value="3.5.1.201404300732-RELEASE" />
     <!-- 3.5 milestone <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
   <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
   <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.4/"/> -->
