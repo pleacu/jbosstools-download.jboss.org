@@ -7,8 +7,10 @@
 
   -->
   <property name="LONGNAME" value="Tern.java (Early Access)"/>
-  <property name="version" value="0.2.0.201405210810-SNAPSHOT"/>
+  <property name="version" value="0.2.0.201405210810a-SNAPSHOT"/>
   <property name="URL1" value="http://oss.opensagres.fr/tern.repository/0.2.0-SNAPSHOT/"/>
+  <!-- JBIDE-17321 workaround for missing com.googlecode.json-simple_1.1.1.jar which was in the previous Tern version -->
+  <property name="URL2" value="http://downloads.jboss.org/jbosstools/updates/requirements/tern/0.2.0.201404252310-SNAPSHOT/"/>
 
   <property name="destination" value="${basedir}/"/>
   <property name="workDir" value="${destination}/${version}/"/>
@@ -18,6 +20,7 @@
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL1}" />
+        <repository location="${URL2}" />
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
