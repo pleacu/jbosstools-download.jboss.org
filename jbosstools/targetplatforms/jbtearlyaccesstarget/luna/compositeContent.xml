@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='JBoss Central Target Platform - Early Access - Luna' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+	<properties size='2'>
+		<property name='p2.compressed' value='true'/>
+		<property name='p2.timestamp' value='1401477782000'/>
+	</properties>
+	<children size='1'>
+		<child location='../4.40.0.Beta3-SNAPSHOT/'/>
+	</children>
+</repository>
