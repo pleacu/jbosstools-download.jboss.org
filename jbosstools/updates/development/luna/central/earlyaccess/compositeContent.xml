@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='JBoss Tools Core 4.2 Central - Early Access - Development Milestone' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<properties size='2'>
+<property name='p2.compressed' value='true'/>
+<!-- date +%s000 -->
+<property name='p2.timestamp' value='1401478227000'/>
+</properties>
+<children size='4'>
+<child location='http://download.jboss.org/jbosstools/updates/development/luna/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/luna/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/luna/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/luna/'/>
+</children>
+</repository>
