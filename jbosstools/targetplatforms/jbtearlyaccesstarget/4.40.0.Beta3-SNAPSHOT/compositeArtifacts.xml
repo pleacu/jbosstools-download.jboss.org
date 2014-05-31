@@ -9,7 +9,7 @@
 	<children size='3'>
 		<!-- JBIDE-17318: initial site will contain AngularJS, VJET, and Arqullian -->
 		<child location='http://download.jboss.org/jbosstools/updates/requirements/vjet/0.10.0.201403201656/'/>
-		<child location='http://oss.opensagres.fr/angularjs-eclipse/0.2.0-SNAPSHOT/'/>
+		<child location='http://download.jboss.org/jbosstools/updates/requirements/angularjs/0.2.0.201405210817/'/>
 		<child location='http://download.jboss.org/jbosstools/builds/staging/jbosstools-arquillian_4.2.luna/all/repo/'/>
 	</children>
 </repository>
