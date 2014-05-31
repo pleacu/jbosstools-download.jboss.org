@@ -4,12 +4,13 @@
 	<properties size='2'>
 		<property name='p2.compressed' value='true'/>
 		<!-- Update the timestamp!  date +%s000 -->
-		<property name='p2.timestamp' value='1401477782000'/>
+		<property name='p2.timestamp' value='1401579243000'/>
 	</properties>
-	<children size='3'>
-		<!-- JBIDE-17318: initial site will contain AngularJS, VJET, and Arqullian -->
+	<children size='4'>
+		<!-- JBIDE-17318: initial site will contain AngularJS (depends on tern), VJET, and Arqullian -->
 		<child location='http://download.jboss.org/jbosstools/updates/requirements/vjet/0.10.0.201403201656/'/>
 		<child location='http://download.jboss.org/jbosstools/updates/requirements/angularjs/0.2.0.201405210817/'/>
+			<child location='http://download.jboss.org/jbosstools/updates/requirements/tern/0.2.0.201405210810-SNAPSHOT/'/>
 		<child location='http://download.jboss.org/jbosstools/builds/staging/jbosstools-arquillian_4.2.luna/all/repo/'/>
 	</children>
 </repository>
