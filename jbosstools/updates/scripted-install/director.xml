@@ -12,7 +12,9 @@
     
     sourceSites - csv list of URLs from which to install
     
-    targetDir - /full/path/to/an/existing/jbdevstudio/eclipse; folder must exist
+    targetDir - /full/path/to/an/existing/jbdevstudio/studio or /full/path/to/eclipse; folder must exist
+
+    exec - Eclipse or JBDS executable to run; eg., ${p2.director.install.path}/eclipse or ${p2.director.install.path}/jbdevstudio
     
     RUNNING THIS SCRIPT
 
@@ -30,6 +32,7 @@
   <property name="install" value="" />
   <property name="sourceSites" value="" />
   <property name="targetDir" value="" />
+  <property name="exec" value="${targetDir}/eclipse"/>
 
   <target name="setup">
     <property name="p2.director.extraArgs" value="" />
@@ -46,7 +49,7 @@
         pns = project.getProperty("profileName").split(";"); pn = pns[pns.length-1]; pn = pn.replace(".profile",""); project.setProperty("profileName",pn);
       ]]> </script>
     <mkdir dir="${p2.director.install.path}" />
-    <chmod perm="ugo+rwx" file="${p2.director.install.path}/eclipse" />
+    <chmod perm="ugo+rwx" file="${exec}" />
   </target>
 
   <target name="run.director" depends="setup">
@@ -56,7 +59,7 @@ Source Sites: ${p2.director.input.repo}
 IUS to Install:
 ${install}
 </echo>
-    <exec executable="${p2.director.install.path}/eclipse" failonerror="true" dir="${p2.director.install.path}" timeout="1200000" taskname="p2.dir">
+    <exec executable="${exec}" failonerror="true" dir="${p2.director.install.path}" timeout="1200000" taskname="p2.dir">
       <!-- deprecated application for Eclipse 3.4: org.eclipse.equinox.p2.director.app.application -->
       <arg line=" -application org.eclipse.equinox.p2.director" />
       <arg line=" -clean -nosplash" />
@@ -110,7 +113,8 @@ ${install}
   <target name="list.ius" depends="setup">
     <property name="liststring" value="   -list "/>
     <echo>Searching for IUs in ${p2.director.input.repo} with ${liststring} ...</echo>
-    <exec executable="${p2.director.install.path}/eclipse" failonerror="true" timeout="1200000" taskname="list" output="${output}" logerror="false">
+    <!-- redirect errors, like "Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0" to a property so they won't end up in the IU listfile -->
+    <exec executable="${exec}" failonerror="true" timeout="1200000" taskname="list" output="${output}" errorproperty="director.errors">
       <arg line=" -application org.eclipse.equinox.p2.director" />
       <arg line=" -clean -nosplash" />
       <arg line=" --launcher.suppressErrors" />
@@ -128,7 +132,8 @@ ${install}
       <!-- this appears to cause: 'The copies of profile epp.package.jee are not in sync' <arg line=" -Declipse.p2.data.area=${p2.director.install.path}/p2" /> -->
       <arg line=" -Declipse.p2.MD5Check=false" />
     </exec>
-    <echo>IU list written to ${output}</echo>
+    <echo>Result: ${director.errors}
+IU list written to ${output}</echo>
   </target>
 
   <!-- helper task used to perform any arbitrary XSL transform. Usage: 
