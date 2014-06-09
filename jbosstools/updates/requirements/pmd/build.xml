@@ -5,13 +5,13 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="4.0.2.v20131031-1124"/>
+  <property name="version" value="4.0.3.v20140427-0831"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
   <property name="latestversiononly" value="true"/>
 
-  <property name="URL1" value="http://pmd.sourceforge.net/eclipse" />
+  <property name="URL1" value="http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/" />
   <target name="run" depends="mirror,regen"/>
 
   <target name="mirror">
