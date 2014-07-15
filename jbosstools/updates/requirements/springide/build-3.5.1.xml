@@ -6,18 +6,15 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.6.0.201407080615-RELEASE" />
+  <property name="version" value="3.5.1.201404300732-RELEASE" />
     <!-- 3.5 milestone <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
-  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.4/"/>
+  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.3/"/>
   <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.4/"/> -->
 
   <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
   <property name="URL2" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
 
   <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
-
-  <property name="URL3" value="http://download.eclipse.org/releases/luna/201406250900/"/>
-  
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -29,7 +26,6 @@
       <source>
         <repository location="${URL1}" />
         <repository location="${URL2}" />
-        <repository location="${URL3}" />
       </source>
 
       <!-- Not needed: platformfilter="true"  -->
@@ -48,7 +44,6 @@
       <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
       <iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
-      <iu id="org.springsource.ide.eclipse.commons.quicksearch.feature.feature.group" /> <!-- new, but not yet included in Central. see JBDS-2686 -->
 
       <!-- Plugins to include to avoid console warnings after installation -->
       <iu id="org.springframework.ide.eclipse.config.ui"/>
@@ -69,10 +64,6 @@
 
       <!-- Optional bundles included to avoid console warnings after installation -->
       <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
-
-      <!-- required from Luna -->
-      <iu id="org.eclipse.mylyn.java.ui"/>
-
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
