@@ -33,7 +33,7 @@
       </source>
 
       <!-- Not needed: platformfilter="true"  -->
-      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+      <slicingOptions includeFeatures="true" followStrict="false" latestversiononly="true" />
       <!-- Features to include in Central connector -->
       <iu id="org.springframework.ide.eclipse.ajdt.feature.feature.group" /> <!-- new for 3.3+ -->
       <iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
@@ -62,9 +62,12 @@
       <iu id="org.apache.httpcomponents.httpclient"/>
       <iu id="org.apache.httpcomponents.httpcore"/>
       <iu id="org.aspectj.runtime"/>
+      <iu id="org.aspectj.weaver"/>
       <iu id="org.codehaus.jackson.core"/>
       <iu id="org.codehaus.jackson.mapper"/>
       <iu id="org.eclipse.contribution.visualiser"/>
+      <iu id="org.eclipse.equinox.weaving.hook"/>
+      <iu id="org.eclipse.osgi"/>
       <iu id="org.json"/>
 
       <!-- Optional bundles included to avoid console warnings after installation -->
