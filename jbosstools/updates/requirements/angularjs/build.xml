@@ -7,7 +7,7 @@
 
   -->
   <property name="LONGNAME" value="AngularJS for Web Tools (Early Access)"/>
-  <property name="version" value="0.4.0.201407030919"/>
+  <property name="version" value="0.4.0.201408101318"/>
   <property name="URL1" value="http://oss.opensagres.fr/angularjs-eclipse/0.4.0-SNAPSHOT/"/>
 
   <property name="destination" value="${basedir}/"/>
