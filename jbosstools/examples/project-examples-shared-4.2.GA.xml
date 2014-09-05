@@ -314,7 +314,7 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 				<property name="id">org.eclipse.m2e.core</property>
 				<property name="versions">[1.0.0,2.0.0)</property>
 				<property name="description">This project example requires JBoss Tools Forge &gt;= 1.5.</property>
-				<property name="connectorIds">jboss-forge-feature</property>
+				<property name="connectorIds">forge-tools-feature</property>
 			</fix>
 			<fix type="plugin">
 				<property name="id">org.eclipse.m2e.wtp</property>
