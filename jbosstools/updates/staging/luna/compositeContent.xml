@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools Builds - updates/staging/luna/' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<properties size='2'><property name='p2.timestamp' value='1410764988000'/><property name='p2.compressed' value='true'/></properties>
+<children size='4'>
+<child location='jbosstools-4.2.0.CR1b-updatesite-webtools/'/>
+<child location='jbosstools-4.2.0.CR1b-updatesite-hibernatetools/'/>
+<child location='jbosstools-4.2.0.CR1b-updatesite-coretests/'/>
+<child location='jbosstools-4.2.0.CR1b-updatesite-core/'/>
+</children>
+</repository>
+
