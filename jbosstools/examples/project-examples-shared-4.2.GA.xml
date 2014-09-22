@@ -298,10 +298,10 @@ This project is setup to allow you to create a compliant Java EE 6 application u
 		<category>JBoss Maven Archetypes</category>
 		<name>jboss-forge-html5-archetype</name>
 		<included-projects>jboss-forge-html5-archetype</included-projects>
-		<shortDescription>Forge HTML5 Project</shortDescription>
+		<shortDescription>AngularJS Forge Project</shortDescription>
         <priority>3</priority>
-        <headLine>Create a Java EE 6 HTML5 web application project with JBoss Forge</headLine>
-		<description>An archetype that generates a simple project and demonstrates how to use JBoss Forge to build a full a Java EE 6 HTML5 Webapp for JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</description>
+        <headLine>Create a modern Java EE 6 + HTML5 web application project with JBoss Forge</headLine>
+		<description>This project is a sample project that will show how to build an JavaEE application with AngularJS, HTML5 and Bootstrap 3 by using JBoss Forge. \nThe application is deployable to JBoss Enterprise Platform 6 or JBoss Application Server 7.1 or higher.</description>
 		<size>165567</size>
 		<url/>
     	<fixes>
