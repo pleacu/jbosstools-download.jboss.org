@@ -302,7 +302,6 @@ This project is setup to allow you to create a compliant Java EE 6 application u
         <priority>3</priority>
         <headLine>Create a modern Java EE 6 + HTML5 web application project with JBoss Forge</headLine>
 		<description>This project is a sample project that will show how to build an JavaEE application with AngularJS, HTML5 and Bootstrap 3 by using JBoss Forge.
-
 The application is deployable to JBoss Enterprise Platform 6 or JBoss Application Server 7.1 or higher.</description>
 		<size>165567</size>
 		<url/>
