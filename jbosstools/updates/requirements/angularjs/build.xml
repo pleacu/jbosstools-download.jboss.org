@@ -7,11 +7,11 @@
 
   -->
   <property name="LONGNAME" value="AngularJS for Web Tools (Early Access)"/>
-  <property name="version" value="0.6.0.201409231617"/>
+  <property name="version" value="0.6.0.201409251425"/>
   <property name="URL1" value="http://oss.opensagres.fr/angularjs-eclipse/0.6.0-SNAPSHOT/"/>
 
   <property name="destination" value="${basedir}/"/>
-  <property name="workDir" value="${destination}/${version}/"/>
+  <property name="workDir" value="${destination}/${version}-SNAPSHOT/"/>
 
   <target name="run">
     <p2.mirror>
