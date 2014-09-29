@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
-  </target>
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
+
   -->
   <property name="LONGNAME" value="EGit + GitHub Support"/>
   <property name="version" value="3.5.0.201409260305-r"/>
