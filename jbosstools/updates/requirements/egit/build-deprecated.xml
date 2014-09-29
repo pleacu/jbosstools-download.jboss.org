@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="deprecated">
+  <target name="deprecated">
+    <echo>This script is no longer needed as all the features we use in the target platform exist in the Luna site itself.
+</echo>
+  </target>
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="EGit + GitHub Support"/>
+  <property name="version" value="3.2.0.201312181205-r"/>
+  <property name="URL1" value="http://download.eclipse.org/egit/updates-3.2" />
+  <property name="URL2" value="http://download.eclipse.org/egit/github/updates-3.2" />
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+  <target name="run">
+    <ant antfile="../generic/build.xml" target="mirror">
+      <property name="LONGNAME" value="${LONGNAME}"/>
+      <property name="version" value="${version}"/>
+      <property name="URL" value="${URL1}" />
+    </ant>
+    <ant antfile="../generic/build.xml" target="mirror">
+      <property name="LONGNAME" value="${LONGNAME}"/>
+      <property name="version" value="${version}"/>
+      <property name="URL" value="${URL2}" />
+    </ant>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>

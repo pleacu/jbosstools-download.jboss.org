@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="deprecated">
-  <target name="deprecated">
-    <echo>This script is no longer needed as all the features we use in the target platform exist in the Luna site itself.
-</echo>
+<project default="run">
   </target>
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
@@ -10,23 +7,23 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="EGit + GitHub Support"/>
-  <property name="version" value="3.2.0.201312181205-r"/>
-  <property name="URL1" value="http://download.eclipse.org/egit/updates-3.2" />
-  <property name="URL2" value="http://download.eclipse.org/egit/github/updates-3.2" />
+  <property name="version" value="3.5.0.201409260305-r"/>
+  <property name="URL1" value="http://download.eclipse.org/egit/updates-3.5/" />
+  <property name="URL2" value="http://download.eclipse.org/egit/github/updates-3.5/" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
+
   <target name="run">
-    <ant antfile="../generic/build.xml" target="mirror">
-      <property name="LONGNAME" value="${LONGNAME}"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="${URL1}" />
-    </ant>
-    <ant antfile="../generic/build.xml" target="mirror">
-      <property name="LONGNAME" value="${LONGNAME}"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="${URL2}" />
-    </ant>
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL1}" />
+        <!-- <repository location="${URL2}" /> -->
+      </source>
+
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+    </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>
