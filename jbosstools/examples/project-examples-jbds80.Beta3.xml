@@ -593,9 +593,9 @@ This client application performs GET, PUT, POST and DELETE queries to the REST s
                 <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.jaxrs.feature</property>
             </fix>
             <fix type="plugin">
-                <property name="id">org.jboss.tools.aerogear.hybrid.core</property>
-                <property name="versions">[1.1.0,2.0.0)</property>
-                <property name="description">This project example requires JBoss Hybrid Mobile Application Development Tools.</property>
+                <property name="id">org.eclipse.thym.core</property>
+                <property name="versions">[0.1.0,1.0.0)</property>
+                <property name="description">This project example requires Eclipse Hybrid Mobile Tools.</property>
                 <property name="connectorIds">org.jboss.tools.aerogear.hybrid</property>
             </fix>
         </fixes>
