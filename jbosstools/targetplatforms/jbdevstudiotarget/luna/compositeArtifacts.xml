@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
-<repository name='JBoss Developer Studio Target Platform - Luna' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<repository name='JBoss Developer Studio Target Platform - Luna SR1' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
 <!-- 
@@ -12,9 +12,9 @@ fun! ReplaceTimestamp()
 endfun
 nnoremap <Leader>ts :call ReplaceTimestamp()<CR>
 -->
-<property name='p2.timestamp' value='1406321707000'/>
+<property name='p2.timestamp' value='1413826561000'/>
 </properties>
 <children size='1'>
-<child location='../4.40.0.Beta4/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/static/targetplatforms/jbdevstudiotarget/4.41.0.Final/REPO/'/>
 </children>
 </repository>
