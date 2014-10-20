@@ -9,7 +9,9 @@
 -->
 <property name='p2.timestamp' value='1386882691000'/>
 </properties>
-<children size='0'>
-<!-- <child location='http://download.jboss.org/jbosstools/updates/JBossTools-4.2.0.Final.core/'/> -->
+<children size='2'>
+<child location='http://download.jboss.org/jbosstools/static/releases/jbosstools-4.2.0.Final-updatesite-core/'/>
+<!-- TODO make sure TP can be resolved after JBIDE-18541 is done <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/luna/'/> -->
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/luna/'/>
 </children>
 </repository>
