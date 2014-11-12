@@ -2,5 +2,6 @@
 <directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
 <entry url="plugins/org.jboss.tools.central.discovery.earlyaccess_4.2.0.Final-v20141017-0422-B363.jar" permitCategories="true"/>
 <entry url="plugins/org.jboss.tools.central.discovery_4.2.0.Final-v20141017-0422-B363.jar" permitCategories="true"/>
-<entry url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.2.0.Beta1-v20141023-1045-B289.jar" permitCategories="true"/>
+<!-- JBTIS-360
+<entry url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.2.0.Beta1-v20141023-1045-B289.jar" permitCategories="true"/> -->
 </directory>
