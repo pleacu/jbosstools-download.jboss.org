@@ -10,6 +10,8 @@
 <child location='http://download.jboss.org/jbosstools/updates/development/luna/'/>
 <!-- TODO make sure TP can be resolved after JBIDE-18541 is done <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/luna/'/><child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/luna/'/> -->
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/luna/'/>
-<!-- TODO add JBTIS here -->
+<!-- JBTIS -->
+<child location='http://download.jboss.org/jbosstools/updates/development/luna/integration-stack'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/luna/'/>
 </children>
 </repository>
