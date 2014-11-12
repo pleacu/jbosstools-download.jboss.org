@@ -4,7 +4,7 @@
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
 <!-- date +%s000 -->
-<property name='p2.timestamp' value='1413848313000'/>
+<property name='p2.timestamp' value='1415817212000'/>
 </properties>
 <children size='4'>
 <child location='http://download.jboss.org/jbosstools/updates/stable/luna/'/>
