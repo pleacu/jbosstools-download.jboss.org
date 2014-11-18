@@ -16,7 +16,7 @@
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}-${versionLabel}"/>
 
-  <target name="run" depends="mirror,remove-otdt"/>
+  <target name="run" depends="mirror,removeOTDT"/>
 
   <target name="mirror">
     <!-- mirror but do NOT pack again -->
@@ -24,12 +24,12 @@
       <property name="LONGNAME" value="Eclipse Mars"/>
       <property name="version" value="${version}"/>
       <!--property name="URL" value="http://download.eclipse.org/releases/mars/${version}/"/-->
-      <!--property name="URL" value="http://download.eclipse.org/releases/staging/"/-->
+      <property name="URL" value="http://download.eclipse.org/releases/staging/"/>
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
   </target>
 
-  <target name="remove-otdt">
+  <target name="checkOTDT">
     <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
     <path id="patched.jdt.path">
       <fileset dir="${workDir}/plugins">
@@ -42,6 +42,17 @@
               regexp="org.eclipse.jdt.core_(.*).jar"
               select="\1"
               casesensitive="false" />
+    <condition property="containsOTDT">
+      <and>
+        <isset property="patched.jdt.version"/>
+        <not>
+          <equals arg1="${patched.jdt.version}" arg2=""/>
+        </not>
+      </and>
+    </condition>
+  </target>
+
+  <target name="removeOTDT" depends="checkOTDT" if="containsOTDT">
     <p2.remove.iu>
       <repository location="${workDir}"/>
       <iu id="org.eclipse.objectteams.otdt.core.patch.feature.group"/>
