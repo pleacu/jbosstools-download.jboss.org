@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1416721451000'/>
+<property name='p2.timestamp' value='1416803144000'/>
 </properties>
 <children size='18'>
 
@@ -27,9 +27,9 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 
 <!-- ## UNCHANGED SINCE 4.2.0.Final ## -->
 
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-aerogear/4.2.0.Final'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-hibernate/4.2.0.Final'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-livereload/4.2.0.Final'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-aerogear/4.2.0.Final/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-hibernate/4.2.0.Final/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-livereload/4.2.0.Final/all/repo/'/>
 
 <!-- ## CHANGED SINCE 4.2.0.Final ## -->
 
