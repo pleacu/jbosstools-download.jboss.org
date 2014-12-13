@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <category-def label="JBoss Application Server Adapters" name="org.eclipse.wst.server.core.serverAdapter">
+  </category-def>
+  <feature id="org.jboss.ide.eclipse.as.feature" url="features/org.jboss.ide.eclipse.as.feature_3.0.0.Final-v20141016-1911-B95.jar" version="3.0.0.Final-v20141016-1911-B95">
+    <category name="org.eclipse.wst.server.core.serverAdapter"/>
+  </feature>
+  <feature id="org.jboss.tools.foundation.feature" url="features/org.jboss.tools.foundation.feature_1.1.0.Final-v20141016-2021-B66.jar" version="1.1.0.Final-v20141016-2021-B66"/>
+  <feature id="org.jboss.tools.stacks.core.feature" url="features/org.jboss.tools.stacks.core.feature_1.1.0.Final-v20141016-2021-B66.jar" version="1.1.0.Final-v20141016-2021-B66"/>
+  <feature id="org.jboss.ide.eclipse.archives.feature" url="features/org.jboss.ide.eclipse.archives.feature_3.5.0.Final-v20141016-1911-B95.jar" version="3.5.0.Final-v20141016-1911-B95"/>
+  <feature id="org.jboss.tools.jmx.feature" url="features/org.jboss.tools.jmx.feature_1.6.0.Final-v20141016-1911-B95.jar" version="1.6.0.Final-v20141016-1911-B95"/>
+  <feature id="org.jboss.tools.runtime.core.feature" url="features/org.jboss.tools.runtime.core.feature_3.0.0.Final-v20141016-2021-B66.jar" version="3.0.0.Final-v20141016-2021-B66"/>
+  <feature id="org.jboss.tools.common.core.feature" url="features/org.jboss.tools.common.core.feature_3.6.0.Final-v20141016-2021-B66.jar" version="3.6.0.Final-v20141016-2021-B66"/>
+  <bundle id="org.jboss.tools.usage"/>
+</site>
