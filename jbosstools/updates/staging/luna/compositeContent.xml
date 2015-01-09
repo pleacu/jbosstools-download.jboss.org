@@ -7,10 +7,10 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1418617693000'/>
+<property name='p2.timestamp' value='1420841289000'/>
 </properties>
 <children size='3'>
-<child location='http://download.jboss.org/jbosstools/updates/staging/luna/jbosstools-4.2.1.Final-updatesite-core/'/>
+<child location='http://download.jboss.org/jbosstools/updates/staging/luna/jbosstools-4.2.2.Final-updatesite-core/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.41.1.Final/REPO/'/>
 <!-- TODO make sure TP can be resolved after JBIDE-18541 is done <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/luna/'/> -->
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.41.1.Final-SNAPSHOT/REPO/'/>
