@@ -1,0 +1,68 @@
+<projects>
+  <project>
+    <category>Seam</category>
+    <name>registration</name>
+    <included-projects>registration,registration-ejb,registration-ear,registration-test</included-projects>
+    <shortDescription>Seam Registration Example - EAR (including a test project)</shortDescription>
+    <description>This is a trivial example for the Seam tutorial. It requires JBoss Enterprise Application Platform 4.3/JBoss Application Server 4.2.x, Seam 2.0 and TestNG plugin. It includes the registration,registration-ejb,registration-ear,registration-test projects.
+    </description>
+    <size>31657984</size>
+    <url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/registration.zip</url>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
+        <property name="eclipse-projects">registration,registration-ejb,registration-ear</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
+      </fix>
+      <fix type="plugin" required="true">
+        <property name="id">org.jboss.tools.project.examples.seam</property>
+        <property name="versions">[3.0,5.0)</property>
+        <property name="description">The seam example plugins are required to configure this application</property>
+        <property name="connectorIds">org.jboss.tools.seam.connector</property>
+      </fix>
+      <fix type="seam">
+        <property name="allowed-versions">2.0.0, 2.0.1, 2.0.2</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.seam.222</property>
+        <property name="eclipse-projects">registration</property>
+        <property name="description">This project example requires Seam 2.0</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.testng.eclipse</property>
+        <property name="versions">6.8.0</property>
+        <property name="description">The TestNG plugin is required if you want to run Seam tests.</property>
+        <property name="connectorIds">org.testng.eclipse</property>
+      </fix>
+    </fixes>
+  </project>
+  <project>
+    <category>Seam</category>
+    <name>registration2</name>
+    <included-projects>registration,registration-ejb,registration-ear</included-projects>
+    <shortDescription>Seam Registration Example - EAR</shortDescription>
+    <description>This is a trivial example for the Seam tutorial. It requires JBoss Enterprise Application Platform 4.3/JBoss Application Server 4.2.x and Seam 2.0. The example creates the registration,registration-ejb,registration-ear projects. It includes a tutorial.
+    </description>
+    <size>8450048</size>
+    <url>http://anonsvn.jboss.org/repos/jbosstools/workspace/snjeza/seam-examples/registration2.zip</url>
+    <welcome type="cheatsheets" url="/registration/cheatsheets/registration.xml" />
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
+        <property name="eclipse-projects">registration,registration-ejb,registration-ear</property>
+        <property name="description">This project example requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.423</property>
+      </fix>
+      <fix type="plugin" required="true">
+        <property name="id">org.jboss.tools.project.examples.seam</property>
+        <property name="versions">[3.0,5.0)</property>
+        <property name="description">The seam example plugins are required to configure this application</property>
+        <property name="connectorIds">org.jboss.tools.seam.connector</property>
+      </fix>
+      <fix type="seam">
+        <property name="allowed-versions">2.0.0, 2.0.1, 2.0.2</property>
+        <property name="eclipse-projects">registration</property>
+        <property name="description">This project example requires Seam 2.0</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.seam.202</property>
+      </fix>
+    </fixes>
+  </project>
+</projects>
