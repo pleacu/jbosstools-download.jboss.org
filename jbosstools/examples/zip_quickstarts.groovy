@@ -128,8 +128,8 @@ This will prevent WTP from opening the proper url when running on a JBoss server
 }
 
 def String sanitize(String text) {
-    text.replace("JBoss AS Quickstarts: ","")
-        .replace("JBoss AS Quickstarts ","")
+    text.replace("JBoss EAP Quickstarts: ","").replace("JBoss WFK Quickstarts: ","")
+        .replace("JBoss EAP Quickstarts ","").replace("JBoss WFK Quickstarts ","")
 }
 
 def String getCategory(String id) {
