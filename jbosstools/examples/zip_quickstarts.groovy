@@ -2,15 +2,15 @@ categories = [
   "jboss-as-kitchensink-html5-mobile":"Mobile Applications",
   "jboss-kitchensink-backbone":"Mobile Applications",
   "jboss-kitchensink-angularjs":"Mobile Applications",
-  "jboss-as-kitchensink":"Web Applications",
-  "jboss-as-kitchensink-rf":"Web Applications",
-  "jboss-as-greeter":"Web Applications",
-  "jboss-as-helloworld":"Web Applications",
-  "jboss-as-helloworld-rs":"Back-end Applications",
+  "jboss-kitchensink":"Web Applications",
+  "jboss-kitchensink-rf":"Web Applications",
+  "jboss-greeter":"Web Applications",
+  "jboss-helloworld":"Web Applications",
+  "jboss-helloworld-rs":"Back-end Applications",
   "deltaspike-helloworld-jms":"Back-end Applications",
-  "jboss-as-jax-rs-client":"Back-end Applications",
+  "jboss-jax-rs-client":"Back-end Applications",
   "jboss-helloworld-mdb":"Back-end Applications",
-  "jboss-as-numberguess":"Back-end Applications",
+  "jboss-numberguess":"Back-end Applications",
 ]
 
 featured = categories.keySet()
@@ -83,12 +83,12 @@ xmlDocument = builder.bind {
                      fixes() {
                        fix(type:"wtpruntime") {
                           property(name:"allowed-types", "org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80")
-                          property(name:"description", "This project example requires JBoss Enterprise Application Platform 6.x, JBoss Application Server 7.1 or WildFly 8.0")
-                          property(name:"downloadId", "org.jboss.tools.runtime.core.as.711")
+                          property(name:"description", "This project example requires JBoss Enterprise Application Platform 6.x, JBoss Application Server 7.1 or WildFly 8.x")
+                          property(name:"downloadId", "wildfly-820finalruntime")
                        }
                        fix(type:"plugin") {
                           property(name:"id", "org.eclipse.m2e.core")
-                          property(name:"versions", "[1.0.0,2.0.0)")
+                          property(name:"versions", "[1.5.0,2.0.0)")
                           property(name:"description", "This project example requires m2e &gt;= 1.4.")
                           property(name:"connectorIds", "org.eclipse.m2e.feature")
                        }
@@ -102,7 +102,7 @@ xmlDocument = builder.bind {
                           property(name:"id", "org.jboss.tools.maven.core")
                           property(name:"versions", "[1.4.0,2.0.0)")
                           property(name:"description", "This project example requires JBoss Maven Tools.")
-                          property(name:"connectorIds", "org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature")
+                          property(name:"connectorIds", "org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature")
                        }
                      }
                  }
