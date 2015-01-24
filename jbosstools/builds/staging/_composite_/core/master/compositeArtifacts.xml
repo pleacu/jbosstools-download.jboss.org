@@ -8,9 +8,9 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1403553863000'/>
+<property name='p2.timestamp' value='1422131756000'/>
 </properties>
-<children size='35'>
+<children size='36'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
@@ -22,10 +22,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
   <!-- JBIDE-16960 remove <child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/gwt/'/> -->
 
-<!-- ## UNCHANGED SINCE 4.1.0.Final, so include previous updates/stable/kepler/core/ releases (JBIDE-15606) ## -->
-<!--  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/> -->
-
-<!-- ## CHANGED SINCE 4.1.0.Final ## -->
+<!-- ## CHANGED SINCE 4.2.0.Final ## -->
 
   <child location='../../../../staging/jbosstools-aerogear_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-arquillian_master/all/repo/'/>
@@ -68,6 +65,10 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 
   <child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
+
+  <!-- ## NEW FOR 4.3.0, treat Thym as a project, not as part of the target platform (JBIDE-18869) ## -->
+  <!-- TODO: change this when changing URL in parent pom -->
+  <child location='http://downloads.jboss.org/jbosstools/updates/integration/luna/core/thym/'/>
 
 </children>
 </repository>
