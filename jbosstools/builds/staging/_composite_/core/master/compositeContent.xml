@@ -66,7 +66,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
   <child location='../../../../staging.previous/jbosstools-vpe_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-webservices_master/all/repo/'/>
 
-  <!-- ## NEW FOR 4.3.0, treat Thym as a project, not as part of the target platform (JBIDE-18869) ## -->
+  <!-- ## NEW FOR 4.2.3 and 4.3.0, treat Thym as a project, not as part of the target platform (JBIDE-18869) ## -->
   <!-- TODO: change this when changing URL in parent pom -->
   <child location='http://downloads.jboss.org/jbosstools/updates/integration/luna/core/thym/'/>
 
