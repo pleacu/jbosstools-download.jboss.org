@@ -586,7 +586,7 @@ This example requires the helloworld-rs project to be deployed.
             </fix>
         </fixes>
     </project>
-    
+
 	<project>
 		<category>RESTEasy</category>
 		<name>simple</name>
@@ -629,7 +629,7 @@ This example requires the helloworld-rs project to be deployed.
     <included-projects>contacts-mobile-basic-client, contacts-mobile-basic-services</included-projects>
     <shortDescription>contacts-mobile-basic</shortDescription>
     <description>This example contains :
-- contacts-mobile-basic-services : a Maven-based Java EE 6 web application, acting as a REST service back-end 
+- contacts-mobile-basic-services : a Maven-based Java EE 6 web application, acting as a REST service back-end
 - contacts-mobile-basic-client : an Apache Cordova-based client project, deployed on a mobile device
 
 First, deploy contacts-mobile-basic-services to a JBoss EAP 6 server, so that it exposes :
@@ -641,7 +641,7 @@ This client application performs GET, PUT, POST and DELETE queries to the REST s
     <icon path="icons/jboss.png"/>
     <tags>central</tags>
     <size>7340236</size>
-    <url>http://dl.bintray.com/jbosstools/examples/contacts-mobile-basic/0.0.1/contacts-mobile.zip</url>
+    <url>http://dl.bintray.com/jbosstools/examples/contacts-mobile-basic/0.0.2/contacts-mobile.zip</url>
         <fixes>
             <fix type="wtpruntime">
                 <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61,org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
