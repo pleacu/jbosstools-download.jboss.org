@@ -471,8 +471,8 @@
     <category>Mobile Applications</category>
     <shortDescription>kitchensink-backbone</shortDescription>
     <description>A Backbone.js and Java EE 6 HTML5 mobile web application for use with JBoss.</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/wfk/jboss-kitchensink-backbone.zip</url>
-    <size>495316</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/wfk-2.7.0.Final/jboss-kitchensink-backbone.zip</url>
+    <size>639410</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
@@ -502,7 +502,7 @@
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
-    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9</essentialEnterpriseDependencies>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.7.0-redhat-1,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA</essentialEnterpriseDependencies>
   </project>
 
   <project>
