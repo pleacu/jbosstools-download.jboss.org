@@ -8,9 +8,9 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1423769902000'/>
+<property name='p2.timestamp' value='1423773138000'/>
 </properties>
-<children size='33'>
+<children size='32'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
@@ -21,6 +21,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
 <!-- ## UNCHANGED SINCE 4.2.0.Final; included in updates/stable/kepler/ ## -->
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/birt/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/freemarker/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
 
 <!-- ## CHANGED SINCE 4.2.0.Final ## -->
@@ -33,7 +34,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
 
   <child location='../../../../staging/jbosstools-central_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-forge_master/all/repo/'/>
-  <child location='../../../../staging/jbosstools-freemarker_master/all/repo/'/>
+  <!-- <child location='../../../../staging/jbosstools-freemarker_master/all/repo/'/> -->
   <child location='../../../../staging/jbosstools-hibernate_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-javaee_master/all/repo/'/>
 
@@ -54,7 +55,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
 
   <child location='../../../../staging.previous/jbosstools-central_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-forge_master/all/repo/'/>
-  <child location='../../../../staging.previous/jbosstools-freemarker_master/all/repo/'/>
+  <!-- <child location='../../../../staging.previous/jbosstools-freemarker_master/all/repo/'/> -->
   <child location='../../../../staging.previous/jbosstools-hibernate_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-javaee_master/all/repo/'/>
 
