@@ -8,9 +8,9 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1422981456000'/>
+<property name='p2.timestamp' value='1423773985000'/>
 </properties>
-<children size='19'>
+<children size='18'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-integration-matrix_master/
@@ -18,39 +18,29 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_42/
 -->
 
-<!-- ## UNCHANGED SINCE 4.0.x.Final; included in updates/stable/kepler/ ## -->
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
-  <!-- JBIDE-16960 remove <child location='http://download.jboss.org/jbosstools/updates/stable/juno/core/gwt/'/> -->
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/birt/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/freemarker/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/hibernate/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/livereload/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
 
-<!-- ## UNCHANGED SINCE 4.1.0.Final, so include previous updates/stable/kepler/core/ releases (JBIDE-15606) ## -->
-<!--  <child location='http://download.jboss.org/jbosstools/updates/stable/kepler/core/freemarker/'/> -->
-
-<!-- ## UNCHANGED SINCE 4.2.0.Final ## -->
-
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-hibernate/4.2.0.Final/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/jbosstools-livereload/4.2.0.Final/all/repo/'/>
-
-<!-- ## CHANGED SINCE 4.2.0.Final ## -->
+<!-- ## CHANGED SINCE 4.2.2 ## -->
 
   <child location='../../../../staging/jbosstools-aerogear_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-arquillian_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-base_4.2.luna/all/repo/'/>
-  <child location='../../../../staging/jbosstools-birt_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-browsersim_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-central_4.2.luna/all/repo/'/>
+
   <child location='../../../../staging/jbosstools-forge_4.2.luna/all/repo/'/>
-  <child location='../../../../staging/jbosstools-freemarker_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-javaee_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-jst_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-openshift_4.2.luna/all/repo/'/>
-  <child location='../../../../staging/jbosstools-portlet_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-server_4.2.luna/all/repo/'/>
+
   <child location='../../../../staging/jbosstools-vpe_4.2.luna/all/repo/'/>
   <child location='../../../../staging/jbosstools-webservices_4.2.luna/all/repo/'/>
-
-  <!-- ## NEW FOR 4.2.3 and 4.3.0, treat Thym as a project, not as part of the target platform (JBIDE-18869) ## -->
-  <!-- TODO: change this when changing URL in parent pom -->
-  <child location='http://downloads.jboss.org/jbosstools/updates/stable/luna/core/thym/'/>
 
 </children>
 </repository>
