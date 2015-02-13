@@ -8,7 +8,7 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1423773138000'/>
+<property name='p2.timestamp' value='1423840713000'/>
 </properties>
 <children size='32'>
 
@@ -20,7 +20,6 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
 
 <!-- ## UNCHANGED SINCE 4.2.0.Final; included in updates/stable/kepler/ ## -->
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/birt/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/freemarker/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
 
@@ -29,7 +28,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
   <child location='../../../../staging/jbosstools-aerogear_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-arquillian_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-base_master/all/repo/'/>
-  <!-- <child location='../../../../staging/jbosstools-birt_master/all/repo/'/> -->
+  <child location='../../../../staging/jbosstools-birt_master/all/repo/'/>
   <child location='../../../../staging/jbosstools-browsersim_master/all/repo/'/>
 
   <child location='../../../../staging/jbosstools-central_master/all/repo/'/>
@@ -50,7 +49,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
   <child location='../../../../staging.previous/jbosstools-aerogear_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-arquillian_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-base_master/all/repo/'/>
-  <!-- <child location='../../../../staging.previous/jbosstools-birt_master/all/repo/'/> -->
+  <child location='../../../../staging.previous/jbosstools-birt_master/all/repo/'/>
   <child location='../../../../staging.previous/jbosstools-browsersim_master/all/repo/'/>
 
   <child location='../../../../staging.previous/jbosstools-central_master/all/repo/'/>
