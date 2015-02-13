@@ -11,7 +11,7 @@
 </properties>
 <children size='2'>
 <!-- JBTIS latest development or stable release -->
-<child location='http://download.jboss.org/jbosstools/updates/development/luna/integration-stack/aggregate/4.2.0.CR2/earlyaccess/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.2.1.CR1/earlyaccess/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/updates/development/luna/integration-stack/aggregate/4.2.0.CR3/earlyaccess/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.2.1.Final/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
