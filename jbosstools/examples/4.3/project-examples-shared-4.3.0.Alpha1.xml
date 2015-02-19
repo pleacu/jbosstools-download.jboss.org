@@ -16,7 +16,7 @@
       create a compliant Java EE application leveraging JSF, CDI, EJB, JPA and Bean Validation frameworks.
     </description>
     <size>8192</size>
-    <url/>
+    <url>http://www.jboss.org/get-started/</url>
     <stacksId>jboss-javaee6-webapp-archetype</stacksId>
     <stacksType>javaee-web</stacksType>
     <fixes>
@@ -63,7 +63,7 @@
     <headLine>Create a multi-module, Maven-based Java EE EAR application</headLine>
     <description>An archetype that generates a starter Java EE webapp project for JBoss Enterprise Application Platform 6 or JBoss Application Server. The project is an EAR, with an EJB-JAR and WAR.</description>
     <size>13806</size>
-    <url/>
+    <url>http://www.jboss.org/get-started/</url>
     <stacksId>jboss-javaee6-webapp-ear-archetype</stacksId>
     <stacksType>javaee-ear</stacksType>
     <fixes>
@@ -113,7 +113,7 @@
     <headLine>Create a Java EE 6 HTML5 Mobile web application project</headLine>
     <description>An archetype that generates a Java EE 6 HTML5 Mobile Webapp project for JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</description>
     <size>165567</size>
-    <url/>
+    <url>http://www.jboss.org/get-started/</url>
     <stacksId>jboss-html5-mobile-archetype</stacksId>
     <stacksType>html5-mobile</stacksType>
     <fixes>
@@ -164,7 +164,7 @@
     <headLine>Create a Java EE 6 web application project based on Richfaces</headLine>
     <description>An archetype that generates a simple Richfaces application</description>
     <size>165567</size>
-    <url/>
+    <url>http://www.jboss.org/get-started/</url>
     <stacksId>richfaces-archetype-kitchensink</stacksId>
     <stacksType>richfaces-kitchensink</stacksType>
     <fixes>
@@ -214,7 +214,7 @@
     <headLine>Create a Spring MVC web application project</headLine>
     <description>An archetype that generates a starter Spring MVC application with Java EE persistence settings (server bootstrapped JPA, JTA transaction management) for JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</description>
     <size>165567</size>
-    <url/>
+    <url>http://www.jboss.org/get-started/</url>
     <stacksId>spring-mvc-webapp</stacksId>
     <stacksType>spring-kitchensink</stacksType>
     <fixes>
@@ -261,7 +261,7 @@
     <headLine>Create a modern Java EE 6 + HTML5 web application project with JBoss Forge</headLine>
     <description>This project is a sample project that will show how to build an JavaEE application with AngularJS, HTML5 and Bootstrap 3 by using JBoss Forge. The application is deployable to JBoss Enterprise Platform 6 or JBoss Application Server 7.1 or higher.</description>
     <size>165567</size>
-    <url/>
+    <url>http://www.jboss.org/get-started/</url>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
