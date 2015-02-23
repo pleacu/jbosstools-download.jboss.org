@@ -507,7 +507,7 @@ This example requires the helloworld-rs project to be deployed.
         <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature</property>
       </fix>
     </fixes>
-    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.7.0-redhat-1,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA</essentialEnterpriseDependencies>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.7.0-redhat-1,org.jboss.bom.eap:jboss-javaee-6.0-with-hibernate:pom:6.3.2.GA</essentialEnterpriseDependencies>
   </project>
 
   <project>
