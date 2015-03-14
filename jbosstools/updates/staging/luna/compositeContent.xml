@@ -12,7 +12,7 @@
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/updates/staging/luna/jbosstools-4.2.3.CR1-updatesite-core/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.42.0.Final-SNAPSHOT/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.42.0.Final-SNAPSHOT/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.42.0.CR1-SNAPSHOT/REPO/'/>
 </children>
 </repository>
 
