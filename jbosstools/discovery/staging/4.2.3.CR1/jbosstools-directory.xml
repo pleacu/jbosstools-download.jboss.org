@@ -1,2 +1,4 @@
-<entry url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.2.0.Final-v20150219-1432-B334.jar" permitCategories="true"/>
+<directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
+<entry url="plugins/org.jboss.tools.central.discovery_4.2.3.CR1-v20150314-1541-B508.jar" permitCategories="true"/>
+<entry permitCategories="true" url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.2.0.Final-v20150219-1432-B334.jar"/>
 </directory>
