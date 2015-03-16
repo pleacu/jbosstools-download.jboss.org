@@ -7,10 +7,10 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1412874744000'/>
+<property name='p2.timestamp' value='1426512361000'/>
 </properties>
 <children size='1'>
 <!-- JBTIS latest development or stable release -->
-<child location='http://download.jboss.org/jbosstools/updates/stable/kepler/integration-stack/aggregate/4.1.6.Final/'/>
+<child location='http://download.jboss.org/jbosstools/updates/stable/kepler/integration-stack/aggregate/4.1.7.Final/'/>
 </children>
 </repository>
