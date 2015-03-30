@@ -6,8 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <!-- 20140313: as of Luna M6, nothing new -->
-  <property name="milestone" value="RC4"/>
-  <property name="version" value="3.6.0.${milestone}"/>
+  <property name="milestone" value="M6"/>
+  <property name="version" value="4.0.0.${milestone}"/>
   
 
   <property name="destination" value="${basedir}"/>
@@ -17,7 +17,7 @@
       <property name="SHORTNAME" value="tm"/>
       <property name="LONGNAME" value="Target Management (TM) + Remote System Explorer (RSE)"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/tm/updates/3.6milestones/${milestone}/" />
+      <property name="URL" value="http://download.eclipse.org/tm/updates/4.0milestones"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>

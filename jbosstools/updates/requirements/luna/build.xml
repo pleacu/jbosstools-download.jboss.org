@@ -10,8 +10,8 @@
       <pathelement location="../ant-contrib.jar"/>
     </classpath>
   </taskdef>
-  <property name="version" value="201406120900"/>
-  <property name="versionLabel" value="RC4"/>
+  <property name="version" value="201502190900"/>
+  <property name="versionLabel" value="SR2-RC4"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}-${versionLabel}"/>
@@ -23,8 +23,9 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Luna"/>
       <property name="version" value="${version}"/>
-      <!--property name="URL" value="http://download.eclipse.org/releases/luna/${version}/"/-->
-      <property name="URL" value="http://download.eclipse.org/releases/staging/"/>
+      <!-- property name="URL" value="http://download.eclipse.org/releases/luna/${version}/"/ -->
+      <!--property name="URL" value="http://download.eclipse.org/releases/staging/"/-->
+      <property name="URL" value="http://download.eclipse.org/releases/maintenance/"/>
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
   </target>

@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="releaseStream" value="R3.7.0"/>
-  <property name="version" value="S-3.7.0M3-20141111153131"/>
+  <property name="version" value="S-3.7.0M6-20150324000117"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>

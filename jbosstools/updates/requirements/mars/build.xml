@@ -10,8 +10,8 @@
       <pathelement location="../ant-contrib.jar"/>
     </classpath>
   </taskdef>
-  <property name="version" value="201411121001"/>
-  <property name="versionLabel" value="M3"/>
+  <property name="version" value="201503291000"/>
+  <property name="versionLabel" value="M6"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}-${versionLabel}"/>
