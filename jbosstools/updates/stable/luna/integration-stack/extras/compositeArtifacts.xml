@@ -11,6 +11,6 @@
 </properties>
 <children size='1'>
 <!-- SAP Tooling -->
-<child location='http://download.jboss.org/jbosstools/updates/development/luna/integration-stack/extras/jboss-fuse-sap-tool-suite/7.3.0.Beta1/'/>
+<child location='http://download.jboss.org/jbosstools/updates/development/luna/integration-stack/jboss-fuse-sap-tool-suite/7.3.0.Beta1/all/repo'/>
 </children>
 </repository>
