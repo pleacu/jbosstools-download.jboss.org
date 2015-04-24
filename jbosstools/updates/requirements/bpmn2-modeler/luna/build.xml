@@ -7,17 +7,17 @@
   -->
 
   <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 Project Feature"/>
-  <property name="version" value="1.1.2"/>
-  <property name="version2" value="1.1.2.Final"/>
+  <property name="version" value="1.1.3"/>
+  <property name="version2" value="1.1.3.Final"/>
   <property name="version3" value="1.1.0"/>
   <property name="version4" value="1.1.0.Final"/>
   <property name="eclver" value="luna"/>
 
-  <!-- BPMN2 Editor 1.1.2.Final -->
+  <!-- BPMN2 Editor 1.1.3.Final -->
   <!-- <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/site/" /> -->
   <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/${eclver}/${version}/" />
 
-  <!-- BPMN2 Project Feature 1.0.0.201412192138 -->
+  <!-- BPMN2 Project Feature 1.1.0 -->
   <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/${eclver}/${version3}/" />
   <property name="latestversiononly" value="false"/>
 
