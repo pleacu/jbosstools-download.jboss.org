@@ -5,8 +5,8 @@
     <category>Mobile Applications</category>
     <shortDescription>kitchensink-html5-mobile</shortDescription>
     <description>An AeroGear and Java EE 6 HTML5 mobile web application for use with JBoss.</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/wfk/jboss-kitchensink-html5-mobile.zip</url>
-    <size>471347</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/wfk-2.7.0.Final/jboss-kitchensink-html5-mobile.zip</url>
+    <size>572260</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
@@ -49,8 +49,8 @@
       This is your project! It's a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1. This project is setup to allow you to create a
       compliant Java EE 6 application using JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to help you get your feet wet with database access in enterprise Java.
     </description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-kitchensink.zip</url>
-    <size>91084</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-kitchensink.zip</url>
+    <size>92217</size>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -91,8 +91,8 @@
     <category>Web Applications</category>
     <shortDescription>greeter</shortDescription>
     <description>This example creates a simple greeting application to demonstrate the use of CDI 1.0, JPA 2.0, JTA 1.1, EJB 3.1 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss AS 7.1</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-greeter.zip</url>
-    <size>23244</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-greeter.zip</url>
+    <size>24307</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
@@ -136,8 +136,8 @@
     <description>
       This example demonstrates the use of CDI 1.0 and Servlet 3 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1. The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
     </description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-helloworld.zip</url>
-    <size>11908</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-helloworld.zip</url>
+    <size>12124</size>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -182,8 +182,8 @@
       This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss AS 7. This project is setup to allow you to create a compliant Java EE
       6 application using JSF 2.0 with RichFaces 4, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in enterprise Java.
     </description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/wfk/jboss-kitchensink-rf.zip</url>
-    <size>144804</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/wfk-2.7.0.Final/jboss-helloworld-rf.zip</url>
+    <size>17265</size>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -227,8 +227,8 @@
     <description>
       This example creates an Helloworld JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7.
     </description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-helloworld-rs.zip</url>
-    <size>14744</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-helloworld-rs.zip</url>
+    <size>15941</size>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -270,8 +270,8 @@
     <description>
       This example demonstrates an external JAX-RS RestEasy client which interacts with a JAX-RS Web service that uses CDI 1.0 and JAX-RS in JBoss Enterprise Application Platform 6 or JBoss AS 7. Requires the helloworld-rs project to be deployed.
     </description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-jax-rs-client.zip</url>
-    <size>10178</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-jax-rs-client.zip</url>
+    <size>10279</size>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -311,8 +311,8 @@
     <shortDescription>helloworld-jms</shortDescription>
     <description>This example demonstrates the use of CDI 1.0 and JMS external producer/consumer client in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1. The example can be deployed using Maven from the command line or from Eclipse using
       JBoss Tools.</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-helloworld-jms.zip</url>
-    <size>13536</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-helloworld-jms.zip</url>
+    <size>14224</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
@@ -350,8 +350,8 @@
     <category>Back-end Applications</category>
     <shortDescription>helloworld-mdb</shortDescription>
     <description>Helloworld Message-Driven Bean with Servlet 3.0 as client</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-helloworld-mdb.zip</url>
-    <size>20622</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-helloworld-mdb.zip</url>
+    <size>19606</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
@@ -389,8 +389,8 @@
     <category>Back-end Applications</category>
     <shortDescription>deltaspike-helloworld-jms</shortDescription>
     <description>Helloworld JMS producer/consumer client with DeltaSpike property configuration</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/wfk/jboss-deltaspike-helloworld-jms.zip</url>
-    <size>24936</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/wfk-2.7.0.Final/jboss-deltaspike-helloworld-jms.zip</url>
+    <size>24703</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
@@ -432,8 +432,8 @@
     <description>
       This example demonstrates the use of CDI 1.0 and JSF 2.0 in JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1. The example can be deployed using Maven from the command line or from Eclipse using JBoss Tools.
     </description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/eap/jboss-numberguess.zip</url>
-    <size>15130</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/eap-6.4.0.GA/jboss-numberguess.zip</url>
+    <size>15334</size>
     <fixes>
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.wildfly.80</property>
@@ -511,8 +511,8 @@
     <category>Web Applications</category>
     <shortDescription>kitchensink-angularjs</shortDescription>
     <description>A starter Java EE 6 webapp project for use on JBoss EAP 6, generated from the jboss-javaee6-webapp archetype, using AngularJS for the view</description>
-    <url>http://download.jboss.org/jbosstools/examples/4.2.0.GA/wfk/jboss-kitchensink-angularjs.zip</url>
-    <size>210918</size>
+    <url>http://download.jboss.org/jbosstools/examples/4.3/wfk-2.7.0.Final/jboss-kitchensink-angularjs.zip</url>
+    <size>295812</size>
     <importType>maven</importType>
     <icon path="icons/jboss.png" />
     <tags>central</tags>
