@@ -289,7 +289,7 @@
 
       <fix type="plugin">
         <property name="id">org.eclipse.angularjs.core</property>
-        <property name="versions">[0.4)</property>
+        <property name="versions">0.4</property>
         <property name="description">requires AngularJS Eclipse.</property>
         <property name="connectorIds">angularjs-eclipse-feature</property>
       </fix>
