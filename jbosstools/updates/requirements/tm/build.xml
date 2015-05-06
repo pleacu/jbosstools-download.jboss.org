@@ -5,19 +5,17 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <!-- 20140313: as of Luna M6, nothing new -->
-  <property name="milestone" value="M6"/>
-  <property name="version" value="4.0.0.${milestone}"/>
-  
+  <property name="milestone" value="4.0.0.M7"/>
+  <property name="version" value="20150429"/>
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${version}"/>
+  <property name="workDir" value="${destination}/${milestone}_${version}"/>
   <target name="run">
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="SHORTNAME" value="tm"/>
       <property name="LONGNAME" value="Target Management (TM) + Remote System Explorer (RSE)"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/tm/updates/4.0milestones"/>
+      <property name="URL" value="http://download.eclipse.org/tm/updates/4.0milestones/${version}"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
