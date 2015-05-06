@@ -9,7 +9,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="S-4.4M6-201403061200"/>
+  <property name="version" value="S-4.5M7-201504301445"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -20,7 +20,7 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Platform"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/eclipse/updates/4.4milestones/${version}/"/>
+      <property name="URL" value="http://download.eclipse.org/eclipse/updates/4.5milestones/${version}/"/>
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
