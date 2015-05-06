@@ -11,8 +11,8 @@
   -->
 
   <property name="LONGNAME" value="Mylyn"/>
-  <property name="version" value="3.11.0"/>
-  <property name="version2" value="v20140314-2044"/>
+  <property name="version" value="3.16.0"/>
+  <property name="version2" value="v20150506-0011"/>
   <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version}/${version2}"/>
   <property name="latestversiononly" value="true"/>
 
@@ -28,9 +28,10 @@
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
-      <iu id="org.eclipse.mylyn.commons.soap_feature.feature.group"/>
+      <!-- does not exist in Mylyn 3.16 <iu id="org.eclipse.mylyn.commons.soap_feature.feature.group"/> -->
       <iu id="org.eclipse.mylyn.htmltext.feature.group"/>
-      <iu id="org.eclipse.mylyn.subclipse.feature.group"/>
+      <iu id="org.eclipse.mylyn.subclipse.feature.group"/> <!-- requires plugin org.tigris.subversion.subclipse.core and mylyn versions -->
+        <iu id="org.eclipse.mylyn.versions.feature.group"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
