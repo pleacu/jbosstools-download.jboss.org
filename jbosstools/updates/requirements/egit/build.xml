@@ -8,8 +8,9 @@
   -->
   <property name="LONGNAME" value="EGit + GitHub Support"/>
   <property name="version" value="v4.0.0.201505050340-m2"/>
-  <property name="URL1" value="http://download.eclipse.org/egit/staging/v4.0.0.201505050340-m2" />
-  <property name="URL2" value="http:/download.eclipse.org/egit/github/updates-nightly" />
+  <property name="URL1" value="http://download.eclipse.org/egit/staging/${version}" />
+  <property name="URL2" value="http://download.eclipse.org/egit/updates-nightly" />
+  <property name="URL3" value="http://download.eclipse.org/egit/github/updates-nightly" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -20,6 +21,7 @@
       <source>
         <repository location="${URL1}" />
         <repository location="${URL2}" />
+        <repository location="${URL3}" />
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
