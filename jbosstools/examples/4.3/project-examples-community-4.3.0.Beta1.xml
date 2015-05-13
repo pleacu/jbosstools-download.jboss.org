@@ -12,7 +12,7 @@
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
         <property name="eclipse-projects">registration,registration-ejb,registration-ear</property>
-        <property name="description">Requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
+        <property name="description">Requires JBoss EAP 4.3 or JBoss AS 4.2.x</property>
       </fix>
       <fix type="plugin" required="true">
         <property name="id">org.jboss.tools.project.examples.seam</property>
@@ -48,7 +48,7 @@
       <fix type="wtpruntime">
         <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.43, org.jboss.ide.eclipse.as.runtime.42</property>
         <property name="eclipse-projects">registration,registration-ejb,registration-ear</property>
-        <property name="description">Requires JBoss Enterprise Application Platform 4.3 or JBoss Application Server 4.2.x</property>
+        <property name="description">Requires JBoss EAP 4.3 or JBoss AS 4.2.x</property>
         <property name="downloadId">org.jboss.tools.runtime.core.as.423</property>
       </fix>
       <fix type="plugin" required="true">
