@@ -7,7 +7,7 @@
 
   -->
   <property name="LONGNAME" value="EGit + GitHub Support"/>
-  <property name="version" value="v4.0.0.201505050340-m2"/>
+  <property name="version" value="v4.0.0.201505260635-rc2"/> <!-- look in /staging/ -->
   <property name="URL1" value="http://download.eclipse.org/egit/staging/${version}" />
   <property name="URL2" value="http://download.eclipse.org/egit/updates-nightly" />
   <property name="URL3" value="http://download.eclipse.org/egit/github/updates-nightly" />

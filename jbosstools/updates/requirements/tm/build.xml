@@ -5,8 +5,8 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="milestone" value="4.0.0.M7"/>
-  <property name="version" value="20150429"/>
+  <property name="milestone" value="4.0.0.RC1"/>
+  <property name="version" value="20150522"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${milestone}_${version}"/>

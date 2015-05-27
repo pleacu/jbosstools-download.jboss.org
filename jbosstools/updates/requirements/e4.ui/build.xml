@@ -7,7 +7,7 @@
 
   -->
   <property name="LONGNAME" value="e4 UI"/>
-  <property name="version" value="201503301551-SNAPSHOT"/>
+  <property name="version" value="0.1.0.v20150519-0600-RC1-SNAPSHOT"/>
   <property name="URL1" value="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.ui" />
 
   <property name="destination" value="${basedir}"/>
