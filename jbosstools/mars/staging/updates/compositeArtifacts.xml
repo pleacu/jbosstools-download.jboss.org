@@ -9,7 +9,7 @@
 <child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.0.Beta1a/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.50.0.Beta1/REPO/'/>
 <child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.0.Beta1a/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.Beta1/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.Beta1-SNAPSHOT/REPO/'/>
 </children>
 </repository>
 
