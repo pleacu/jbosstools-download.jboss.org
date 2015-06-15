@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+    java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
+
   -->
-  <property name="milestone" value="4.0.0.RC1"/>
-  <property name="version" value="20150522"/>
+  <property name="LONGNAME" value="TM + Terminal"/>
+  <property name="version" value="v4.0.0.RC4"/> <!-- look in /staging/ -->
+  <property name="tmURL" value="http://download.eclipse.org/tm/updates/4.0milestones/20150522/" />
+  <property name="tmTerminalURL" value="http://download.eclipse.org/tm/terminal/builds/4.0/milestones/rc4" />
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${milestone}_${version}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
   <target name="run">
-    <ant antfile="../generic/build.xml" target="mirror">
-      <property name="SHORTNAME" value="tm"/>
-      <property name="LONGNAME" value="Target Management (TM) + Remote System Explorer (RSE)"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/tm/updates/4.0milestones/${version}"/>
-    </ant>
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${tmURL}" />
+        <repository location="${tmTerminalURL}" />
+      </source>
+
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+    </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
 </project>

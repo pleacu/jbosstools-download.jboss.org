@@ -5,7 +5,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="0.1.0-SNAPSHOT-201412031506"/>
+  <property name="version" value="0.3.0"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -13,8 +13,8 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="THyM"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://download.eclipse.org/thym/snapshots/"/>
-      <!-- <property name="URL" value="http://download.eclipse.org/thym/releases/${version}/"/> -->
+      <!--property name="URL" value="http://download.eclipse.org/thym/snapshots/"/-->
+      <property name="URL" value="http://download.eclipse.org/thym/releases/${version}/"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>

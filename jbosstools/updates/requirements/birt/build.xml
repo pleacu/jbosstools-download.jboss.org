@@ -6,11 +6,11 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.5.0.v201505260702-RC2"/>
+  <property name="version" value="4.5.0.v201506092134"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
-  <property name="URL" value="http://download.eclipse.org/birt/update-site/mars.rc2/" />
-  <!-- property name="URL" value="http://download.eclipse.org/birt/update-site/mars-interim/" /-->
+  <!--property name="URL" value="http://download.eclipse.org/birt/update-site/mars.rc2/" /-->
+  <property name="URL" value="http://download.eclipse.org/birt/update-site/mars-interim/" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
