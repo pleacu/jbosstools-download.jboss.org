@@ -6,10 +6,11 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.6.0.201407080615-RELEASE" />
-    <!-- 3.5 milestone <property name="URL1" value="https://dist.springframework.org/milestone/IDE/" /> -->
-  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.4/"/>
-  <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.4/"/> -->
+  <property name="version" value="3.6.4.201503051146-RELEASE" />
+  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.5/"/>
+  <!-- 3.7 nightlies available here, eg., 3.7.0.201506181755-CI-B262 -->
+  <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/> -->
+  <!-- <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
 
   <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
   <property name="URL2" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
