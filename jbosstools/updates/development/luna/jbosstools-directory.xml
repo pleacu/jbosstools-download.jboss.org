@@ -1,6 +1,6 @@
 <directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
 <entry url="plugins/org.jboss.tools.central.discovery.earlyaccess_4.2.3.Final-v20150327-0914-B526.jar" permitCategories="true"/>
 <entry url="plugins/org.jboss.tools.central.discovery_4.2.3.Final-v20150327-0914-B526.jar" permitCategories="true"/>
-<entry permitCategories="true" url="plugins/org.jboss.tools.central.discovery.integration-stack_4.2.2.Final-v20150616-1821-B17"/>
-<entry permitCategories="true" url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.2.2.Final-v20150616-1821-B17"/>
+<entry permitCategories="true" url="plugins/org.jboss.tools.central.discovery.integration-stack_4.2.2.Final-v20150622-1126-B18"/>
+<entry permitCategories="true" url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.2.2.Final-v20150622-1126-B18"/>
 </directory>
