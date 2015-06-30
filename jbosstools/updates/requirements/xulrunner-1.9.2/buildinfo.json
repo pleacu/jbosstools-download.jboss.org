@@ -1,0 +1,29 @@
+{
+    "timestamp" : 1435679244000,
+    "revision" : {
+        "HEAD" : "2edce933f7d64efbb4d7a5b16be8dadae8de766e",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [{
+            "name" : "origin",
+            "url" : "git://github.com/jbosstools/jbosstools-xulrunner.git",
+            "ref" : "jbosstools-4.1.x"
+        }]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+        "java.version" : "1.7.0",
+        "user.dir" : "/qa/local/hudson_workspace/workspace/xulrunner-1.9.2",
+        "os.arch" : "x86_64",
+        "RELEASE" : "Yes",
+        "BUILD_ID" : "2012-11-26_18-50-16",
+        "BUILD_ALIAS" : "Final",
+        "JOB_NAME" : "xulrunner-1.9.2",
+        "os.version" : "2.6.18-128.1.1.el5",
+        "BUILD_NUMBER" : "155",
+        "TARGET_PLATFORM_VERSION" : "null",
+        "HOSTNAME" : "dsp06.mw.lab.eng.bos.redhat.com",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "2012-11-26_18-50-16-B155",
+        "WORKSPACE" : "/qa/local/hudson_workspace/workspace/xulrunner-1.9.2"
+    }
+}
