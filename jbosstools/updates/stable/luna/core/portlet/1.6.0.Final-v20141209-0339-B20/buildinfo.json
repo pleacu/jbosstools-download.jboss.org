@@ -1,0 +1,29 @@
+{
+    "timestamp" : 1435679244000,
+    "revision" : {
+        "HEAD" : "4eec888e7045ab1413934670cbdcdf7a11447b52",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [{
+            "name" : "origin",
+            "url" : "git://github.com/jbosstools/jbosstools-portlet.git",
+            "ref" : "jbosstools-4.2.x"
+        }]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "4.41.1.CR2",
+        "java.version" : "1.7.0",
+        "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-portlet_4.2.luna/sources/site",
+        "os.arch" : "amd64",
+        "RELEASE" : "",
+        "BUILD_ID" : "2014-12-08_22-36-13",
+        "BUILD_ALIAS" : "Final",
+        "JOB_NAME" : "jbosstools-portlet_4.2.luna",
+        "os.version" : "2.6.32-431.11.2.el6.x86_64",
+        "BUILD_NUMBER" : "20",
+        "TARGET_PLATFORM_VERSION" : "4.40.0.Final",
+        "HOSTNAME" : "dev192.mw.lab.eng.bos.redhat.com",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "SNAPSHOT",
+        "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-portlet_4.2.luna/sources/site"
+    }
+}
