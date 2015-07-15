@@ -7,7 +7,7 @@
 			-application org.eclipse.ant.core.antRunner \
 			-f ~/RHDS/updates/requirements/findbugs/build.xml -Ddestination=/tmp/findbugs-repo
 	-->
-  <property name="version" value="3.0.0.20140706-2cfb468"/>
+  <property name="version" value="3.0.1.20150306-5afe4d1"/>
   <property name="URL" value="http://findbugs.cs.umd.edu/eclipse/" />
   <!-- <property name="URL" value="http://findbugs.cs.umd.edu/eclipse-daily/" /> -->
   <property name="destination" value="/home/nboldt/tru/download.jboss.org/jbosstools/updates/requirements/findbugs/" />
