@@ -300,7 +300,7 @@
     <mavenArchetype>
       <archetypeGroupId>org.jboss.tools.archetypes</archetypeGroupId>
       <archetypeArtifactId>jboss-forge-html5</archetypeArtifactId>
-      <archetypeVersion>1.0.0-SNAPSHOT</archetypeVersion>
+      <archetypeVersion>1.0.0.Final</archetypeVersion>
       <archetypeRepository>https://repository.jboss.org/nexus/content/repositories/snapshots/</archetypeRepository>
       <groupId>org.jboss.tools.example</groupId>
       <artifactId>jboss-forge-html5</artifactId>
