@@ -3,13 +3,13 @@
 <repository name='JBoss Tools - mars/staging/updates/' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1434687055000'/>
+<property name='p2.timestamp' value='1437154929000'/>
 </properties>
 <children size='4'>
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.0.Beta1c/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.50.0.Beta1/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.0.Beta1c/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.Beta1-SNAPSHOT/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.0.Beta2/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.50.0.Beta2/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.0.Beta2/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.Beta2-SNAPSHOT/REPO/'/>
 </children>
 </repository>
 
