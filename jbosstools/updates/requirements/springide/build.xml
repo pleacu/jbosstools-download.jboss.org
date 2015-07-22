@@ -6,9 +6,9 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.6.4.201503051146-RELEASE" />
+  <property name="version" value="3.7.0.201506251244-RELEASE" />
   <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.5/"/>
-  <!-- 3.7 nightlies available here, eg., 3.7.0.201506181755-CI-B262 -->
+  <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
   <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/> -->
   <!-- <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
 
@@ -17,7 +17,7 @@
 
   <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
 
-  <property name="URL3" value="http://download.eclipse.org/releases/luna/201406250900/"/>
+  <property name="URL3" value="http://download.eclipse.org/releases/mars/"/>
   
 
   <property name="destination" value="${basedir}"/>
