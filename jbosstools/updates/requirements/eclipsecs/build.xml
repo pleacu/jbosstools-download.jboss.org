@@ -5,15 +5,25 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="5.7.0.201402131929"/>
+
+  <property name="LONGNAME" value="eclipsecs"/>
+  <property name="version" value="6.5.0.201504121610"/>
+  <property name="URL1" value="https://sourceforge.net/projects/eclipse-cs/files/updatesite/6.5.0/"/>
+  <property name="URL2" value="http://sevntu-checkstyle.github.com/sevntu.checkstyle/update-site/"/>
+
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
-  <target name="run">
-    <ant antfile="../generic/build.xml" target="mirror">
-      <property name="LONGNAME" value="eclipsecs"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="http://eclipse-cs.sf.net/update/"/>
-    </ant>
-    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+
+  <target name="run" depends="mirror,regen"/>
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL1}" />
+        <repository location="${URL2}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+    </p2.mirror>
   </target>
 </project>
