@@ -70,6 +70,7 @@
       <iu id="org.eclipse.equinox.weaving.hook"/>
       <iu id="org.eclipse.osgi"/>
       <iu id="org.json"/>
+      <iu id="org.dadacoalition.yedit"/>
 
       <!-- Optional bundles included to avoid console warnings after installation -->
       <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
