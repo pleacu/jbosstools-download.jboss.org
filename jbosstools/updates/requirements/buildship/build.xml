@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="Buildship"/>
+  <property name="version" value="1.0.2.v20150831-1514" />
+  <property name="URL1" value="http://download.eclipse.org/buildship/updates/e45/releases/1.0/${version}/"/>
+  <!-- 
+    http://download.eclipse.org/buildship/updates/e45/releases
+    http://download.eclipse.org/buildship/updates/e45/milestones/1.0
+    http://download.eclipse.org/buildship/updates/e45/snapshots/1.0
+  -->
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL1}" />
+      </source>
+
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+      <!-- <iu id="org.eclipse.buildship.feature.group"/> -->
+
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
