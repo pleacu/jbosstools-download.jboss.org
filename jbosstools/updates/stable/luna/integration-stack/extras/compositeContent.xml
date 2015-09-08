@@ -7,10 +7,10 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1427202741000'/>
+<property name='p2.timestamp' value='1441737277000'/>
 </properties>
-<children size='0'>
-<!-- SAP Tooling -->
-<!-- <child location='http://download.jboss.org/jbosstools/updates/stable/luna/integration-stack/jboss-fuse-sap-tool-suite/7.3.0.Final/all/repo'/> -->
+<children size='1'>
+  <!-- SAP Tooling -->
+  <child location='jboss-fuse-sap-tool-suite/'/>
 </children>
 </repository>
