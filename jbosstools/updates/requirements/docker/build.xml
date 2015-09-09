@@ -23,5 +23,6 @@
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+    <ant antfile="${destination}/../remove.configure.instruction.xml" target="remove.configure.instruction"/>
   </target>
 </project>
