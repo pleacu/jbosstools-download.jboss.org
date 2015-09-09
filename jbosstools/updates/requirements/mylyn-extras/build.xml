@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Mylyn Extras"/>
-  <property name="version" value="2.6.0.N20150706-2134"/>
+  <property name="version" value="2.6.0.N20150901-2143"/>
   <property name="URL" value="http://download.eclipse.org/mylyn/snapshots/nightly/docs/"/>
   <property name="latestversiononly" value="true"/>
 

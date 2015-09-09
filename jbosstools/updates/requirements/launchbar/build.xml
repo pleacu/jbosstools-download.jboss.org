@@ -7,8 +7,8 @@
 
   -->
   <property name="LONGNAME" value="CDT Launchbar"/>
-  <property name="version" value="1.0.0.201506011405"/>
-  <property name="URL1" value="http://download.eclipse.org/tools/cdt/launchbar/mars/rc4/" />
+  <property name="version" value="1.0.1.201509081531"/>
+  <property name="URL1" value="http://download.eclipse.org/tools/cdt/launchbar/mars.1/" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
