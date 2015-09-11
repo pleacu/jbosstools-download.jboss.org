@@ -11,7 +11,7 @@
     </classpath>
   </taskdef>
   <property name="version" value="201509081000"/>
-  <property name="versionLabel" value="SR1.RC3"/>
+  <property name="versionLabel" value="M1"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}-${versionLabel}"/>
@@ -23,9 +23,9 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Mars"/>
       <property name="version" value="${version}"/>
-      <!--property name="URL" value="http://download.eclipse.org/releases/mars/${version}/"/-->
-      <!-- use maintenance after Neon.0 is done to get Neon.1, not staging -->
-      <property name="URL" value="http://download.eclipse.org/releases/maintenance/"/>
+      <!--property name="URL" value="http://download.eclipse.org/releases/neon/${version}/"/-->
+      <property name="URL" value="http://download.eclipse.org/releases/staging/"/>
+      <!-- use maintenance after Neon.0 is done to get Neon.1 -->
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
   </target>
