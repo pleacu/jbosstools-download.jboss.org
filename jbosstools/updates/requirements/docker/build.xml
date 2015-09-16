@@ -12,7 +12,7 @@
   <property name="URL" value="http://download.eclipse.org/linuxtools/update-mars-1-docker-rc4/"/>
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${version}-RC3"/>
+  <property name="workDir" value="${destination}/${version}"/>
 
   <target name="run">
     <p2.mirror>
