@@ -8,12 +8,12 @@
 
   <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 Project Feature"/>
   <property name="version"  value="1.2.1"/>
-  <property name="version2" value="1.2.1.201509092023"/>
+  <property name="version2" value="1.2.1.201509111741"/>
   <property name="version3" value="1.2.1"/>
   <property name="version4" value="1.2.1"/>
   <property name="eclver"   value="mars"/>
 
-  <!-- BPMN2 Modeler/Editor 1.2.1.201509092023 -->
+  <!-- BPMN2 Modeler/Editor -->
   <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/${eclver}/${version}/" />
 
   <!-- BPMN2 Project Feature 1.2.1 -->
