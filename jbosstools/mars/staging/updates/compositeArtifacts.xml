@@ -3,12 +3,12 @@
 <repository name='JBoss Tools - mars/staging/updates/' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1442161179000'/>
+<property name='p2.timestamp' value='1442596015000'/>
 </properties>
 <children size='4'>
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.0.CR1/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.50.0.CR1-SNAPSHOT/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.0.CR1/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.0.CR1a/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.51.0.Final/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.0.CR1a/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.CR1-SNAPSHOT/REPO/'/>
 </children>
 </repository>
