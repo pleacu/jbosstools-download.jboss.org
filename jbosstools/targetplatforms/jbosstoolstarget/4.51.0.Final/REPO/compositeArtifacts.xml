@@ -7,6 +7,6 @@
 <property name='p2.timestamp' value='1442943333000'/>
 </properties>
 <children size='1'>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.51.0.Final/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/static/targetplatforms/jbosstoolstarget/4.51.0.Final/REPO/'/>
 </children>
 </repository>
