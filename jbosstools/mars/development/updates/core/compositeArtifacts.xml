@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
-<repository name='JBoss Tools 4.3.0.Beta2 Development Milestone Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<repository name='JBoss Tools 4.3.0.CR1 Development Milestone Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1438125157000'/>
+<property name='p2.timestamp' value='1442942470000'/>
 </properties>
 <children size='4'>
-<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/core/4.3.0.Beta2/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.50.0.Beta2/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/central/4.3.0.Beta2/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.Beta2-SNAPSHOT/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/core/4.3.0.CR1/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.51.0.Final/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/central/4.3.0.CR1/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.CR1-SNAPSHOT/REPO/'/>
 </children>
 </repository>
 
