@@ -12,6 +12,6 @@
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/static/releases/jbosstools-4.2.3.Final-updatesite-core/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.42.0.Final/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/luna/'/>
+<child location='http://download.jboss.org/jbosstools/static/targetplatforms/jbtcentraltarget/4.42.0.Final/REPO/'/>
 </children>
 </repository>
