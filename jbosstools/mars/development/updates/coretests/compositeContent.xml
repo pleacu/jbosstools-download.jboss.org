@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
-<repository name='JBoss Tools 4.3.0.CR1 Development Milestone Tests Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<repository name='JBoss Tools 4.3.0.Final Development Milestone Tests Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1443557359000'/>
+<property name='p2.timestamp' value='1444146197000'/>
 </properties>
 <children size='2'>
 <child location='http://download.jboss.org/jbosstools/mars/development/updates/core/'/>
-<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/coretests/4.3.0.CR1/'/>
+<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/coretests/4.3.0.Final/'/>
 </children>
 </repository>
 
