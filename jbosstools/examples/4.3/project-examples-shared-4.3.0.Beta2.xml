@@ -43,7 +43,7 @@
     <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
     <mavenArchetype>
       <groupId>org.jboss.tools.examples</groupId>
-      <artifactId>jboss-javaee6-webapp</artifactId>
+      <artifactId>jboss-javaee-webapp</artifactId>
       <version>0.0.1-SNAPSHOT</version>
       <javaPackage>org.jboss.tools.examples</javaPackage>
       <properties>
