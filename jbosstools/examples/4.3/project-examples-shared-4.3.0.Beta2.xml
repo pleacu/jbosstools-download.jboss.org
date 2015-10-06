@@ -96,7 +96,7 @@
     <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
     <mavenArchetype>
       <groupId>org.jboss.tools.example</groupId>
-      <artifactId>jboss-javaee6-multi</artifactId>
+      <artifactId>jboss-javaee-multi</artifactId>
       <version>0.0.1-SNAPSHOT</version>
       <javaPackage>org.jboss.tools.example</javaPackage>
     </mavenArchetype>
