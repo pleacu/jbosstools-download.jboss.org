@@ -4,7 +4,7 @@
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
 <!-- Update the timestamp!  echo ${date +%s}000 -->
-<property name='p2.timestamp' value='1442943333000'/>
+<property name='p2.timestamp' value='1444146555000'/>
 </properties>
 <children size='1'>
 <child location='http://download.jboss.org/jbosstools/static/targetplatforms/jbosstoolstarget/4.51.0.Final/REPO/'/>
