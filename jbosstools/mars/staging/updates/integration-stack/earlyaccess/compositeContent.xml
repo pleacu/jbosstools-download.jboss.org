@@ -10,9 +10,8 @@
 <property name='p2.timestamp' value='1442259007000'/>
 </properties>
 <children size='3'>
-<!-- JBTIS latest development or stable release -->
 <child location='http://download.jboss.org/jbosstools/mars/stable/updates/'/>
-<child location='http://download.jboss.org/jbosstools/mars/development/updates/integration-stack/4.3.0.Alpha2/earlyaccess/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.0.Alpha2/earlyaccess/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Beta1f-SNAPSHOT/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
