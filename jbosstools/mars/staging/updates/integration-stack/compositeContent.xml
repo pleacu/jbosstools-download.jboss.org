@@ -12,7 +12,7 @@
 <children size='3'>
 <child location='http://download.jboss.org/jbosstools/mars/stable/updates/'/>
 <!-- JBTIS latest development or stable release -->
-<child location='http://download.jboss.org/jbosstools/mars/development/updates/integration-stack/4.3.0.Alpha2/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.0.Alpha2/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Beta1f-SNAPSHOT/jbtis/REPO/'/>
 </children>
 </repository>
