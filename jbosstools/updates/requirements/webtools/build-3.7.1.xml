@@ -5,9 +5,8 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <!-- webtools/downloads/drops/R3.8.0/I-3.8.0-20150915010029/repository/ -->
-  <property name="releaseStream" value="R3.8.0"/>
-  <property name="version" value="I-3.8.0-20150915010029"/>
+  <property name="releaseStream" value="R3.7.1"/>
+  <property name="version" value="S-3.7.1-RC4-20150915020029"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
