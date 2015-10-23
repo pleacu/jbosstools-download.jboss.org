@@ -7,8 +7,8 @@
 
   -->
   <property name="LONGNAME" value="AngularJS for Web Tools (Early Access)"/>
-  <property name="version" value="0.8.0.201501200034-SNAPSHOT"/>
-  <property name="URL1" value="http://oss.opensagres.fr/angularjs-eclipse/0.8.0-SNAPSHOT/"/>
+  <property name="version" value="1.0.0.201508312121"/>
+  <property name="URL1" value="http://oss.opensagres.fr/angularjs-eclipse/1.0.0/"/>
 
   <property name="destination" value="${basedir}/"/>
   <property name="workDir" value="${destination}/${version}/"/>
@@ -19,7 +19,7 @@
       <source>
         <repository location="${URL1}" />
       </source>
-      <iu id="angularjs-eclipse-feature.feature.group"/>
+      <!-- include everything <iu id="angularjs-eclipse-feature.feature.group"/> -->
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
