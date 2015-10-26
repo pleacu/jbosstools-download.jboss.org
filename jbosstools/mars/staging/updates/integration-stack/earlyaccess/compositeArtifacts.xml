@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
-<repository name='JBoss Tools Integration Stack 4.3.x - Development Milestone' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<repository name='JBoss Tools Integration Stack Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
 <!-- 
@@ -9,9 +9,9 @@
 -->
 <property name='p2.timestamp' value='1442259000000'/>
 </properties>
-<children size='3'>
-<child location='http://download.jboss.org/jbosstools/mars/stable/updates/'/>
+<children size='2'>
+  <!-- IS ONLY -->
 <child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.0.Alpha2/earlyaccess/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Beta1f-SNAPSHOT/jbtis/earlyaccess/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Final/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
