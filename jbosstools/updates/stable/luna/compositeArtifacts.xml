@@ -9,9 +9,10 @@
 -->
 <property name='p2.timestamp' value='1427891921000'/>
 </properties>
-<children size='3'>
+<children size='4'>
 <child location='http://download.jboss.org/jbosstools/static/releases/jbosstools-4.2.3.Final-updatesite-core/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.42.0.Final/REPO/'/>
 <child location='http://download.jboss.org/jbosstools/static/targetplatforms/jbtcentraltarget/4.42.0.Final/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/updates/stable/luna/integration-stack/'/>
 </children>
 </repository>
