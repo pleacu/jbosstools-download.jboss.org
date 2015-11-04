@@ -12,6 +12,6 @@
 <children size='2'>
 <!-- JBTIS latest development or stable release -->
 <child location='http://download.jboss.org/jbosstools/updates/stable/luna/integration-stack/aggregate/4.2.3.Final/earlyaccess/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.2.7.Final/jbtis/earlyaccess/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.2.8.Final/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
