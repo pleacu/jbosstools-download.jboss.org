@@ -10,9 +10,9 @@
       <pathelement location="../ant-contrib.jar"/>
     </classpath>
   </taskdef>
-  <!-- http://download.eclipse.org/releases/neon/201510021100/ -->
-  <property name="version" value="201510021100"/>
-  <property name="versionLabel" value="M2"/>
+  <!-- http://download.eclipse.org/releases/neon/201511131000/ -->
+  <property name="version" value="201511131000"/>
+  <property name="versionLabel" value="M3"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}-${versionLabel}"/>
