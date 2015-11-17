@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="BIRT (Chart + WTP support only)"/>
-  <property name="version" value="4.5.0.v201506092134"/>
+  <property name="version" value="4.5.0.v201510231925"/>
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2-interim/" /> -->
   <!-- <property name="URL" value="http://download.eclipse.org/birt/update-site/4.2/" /> -->
   <!--property name="URL" value="http://download.eclipse.org/birt/update-site/mars.rc2/" /-->
@@ -31,6 +31,11 @@
       <iu id="org.eclipse.birt.integration.wtp.feature.group" />
       <iu id="org.eclipse.birt.chart.feature.group" />
       <iu id="org.eclipse.birt.chart.integration.wtp.feature.group" />
+      <!-- JBIDE-20976 org.eclipse.core.runtime.compatibility is no longer available in Neon.M3 but it's included in the http://download.eclipse.org/birt/update-site/mars-interim site -->
+      <iu id="org.eclipse.core.runtime.compatibility" />
+      <!-- jetty 9.2.9 is required for BIRT 4.5 -->
+      <iu id="org.eclipse.jetty.osgi.boot"/>
+      <iu id="org.eclipse.jetty.deploy"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
