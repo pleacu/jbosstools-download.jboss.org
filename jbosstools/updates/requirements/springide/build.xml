@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <property name="version" value="3.7.0.201506251244-RELEASE" />
+  <property name="version" value="3.7.3.201512072012-CI-B680" />
   <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.5/"/>
   <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
   <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/> -->
@@ -73,6 +73,12 @@
       <iu id="org.dadacoalition.yedit"/>
       <iu id="org.yaml.snakeyaml"/>
       <iu id="com.google.protobuf"/>
+
+      <!-- AJDT dependencies -->
+      <iu id="org.aspectj.feature.group"/>
+      <iu id="org.eclipse.ajdt.feature.group"/>
+      <iu id="org.eclipse.contribution.weaving.feature.group"/>
+      <iu id="org.eclipse.contribution.xref.feature.group"/>
 
       <!-- Optional bundles included to avoid console warnings after installation -->
       <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
