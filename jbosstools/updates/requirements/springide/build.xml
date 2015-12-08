@@ -9,8 +9,8 @@
   <property name="version" value="3.7.3.201512072012-CI-B680" />
   <!-- <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.5/"/> -->
   <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
-  <property name="URL1a" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/>
-  <property name="URL1b" value="http://dist.springframework.org/snapshot/IDE/nightly/"/>
+  <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/>
+  <!-- same nightly site, but without dependencies like equinox.weaving and ajdt <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
 
   <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
   <property name="URL2" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
@@ -28,8 +28,7 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL1a}" />
-        <repository location="${URL1b}" />
+        <repository location="${URL1}" />
         <repository location="${URL2}" />
         <repository location="${URL3}" />
       </source>
@@ -59,6 +58,7 @@
 
       <!-- Required 3rd party plugins (on SpringIDE or Orbit site) not properly referenced by features -->
       <iu id="javax.jms"/>
+      <iu id="javax.validation"/>
       <iu id="org.aopalliance"/>
       <iu id="org.apache.commons.codec"/>
       <iu id="org.apache.httpcomponents.httpclient"/>
@@ -68,7 +68,6 @@
       <iu id="org.codehaus.jackson.core"/>
       <iu id="org.codehaus.jackson.mapper"/>
       <iu id="org.eclipse.contribution.visualiser"/>
-      <iu id="org.eclipse.equinox.weaving.hook"/>
       <iu id="org.eclipse.osgi"/>
       <iu id="org.json"/>
       <iu id="org.dadacoalition.yedit"/>
