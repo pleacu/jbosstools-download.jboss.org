@@ -5,11 +5,12 @@
 <property name='p2.compressed' value='true'/>
 <property name='p2.timestamp' value='1449951943000'/>
 </properties>
-<children size='4'>
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.1.Beta1/'/>
+<children size='5'>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.51.2.Beta1-SNAPSHOT/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.1.Beta1/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.1.Beta1/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.51.0.Beta1-SNAPSHOT/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.1.Beta1/'/>
+<child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/'/>
 </children>
 </repository>
 
