@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='JBoss Tools Integration Stack Central - composite staging site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1444175232589'/>
+    <property name='p2.compressed' value='true'/>
+  </properties>
+  <children size='3'>
+  	<child location='http://download.jboss.org/jbosstools/mars/stable/updates/'/>
+  	<child location='http://download.jboss.org/jbosstools/mars/development/updates/integration-stack/4.3.0.Alpha2'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Beta1f-SNAPSHOT/jbtis/REPO'/>
+  </children>
+</repository>
