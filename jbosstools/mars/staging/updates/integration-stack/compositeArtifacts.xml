@@ -11,7 +11,7 @@
 </properties>
 <children size='2'>
   <!-- IS ONLY -->
-<child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.0.Alpha2/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Final/jbtis/REPO/'/>
+  <child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.0.Beta1-SNAPSHOT/'/>
+  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.1.Beta1-SNAPSHOT/jbtis/REPO/'/>
 </children>
 </repository>
