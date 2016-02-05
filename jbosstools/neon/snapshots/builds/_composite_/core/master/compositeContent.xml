@@ -21,7 +21,7 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.4.ne
 
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/mars/core/birt/'/>
+  <child location='http://download.jboss.org/jbosstools/mars/stable/updates/core/birt/'/>
 
 <!-- ## CHANGED SINCE 4.3.0.Final ## -->
 
