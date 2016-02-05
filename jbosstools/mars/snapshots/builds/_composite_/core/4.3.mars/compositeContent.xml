@@ -21,13 +21,13 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.3.ma
 
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/mars/core/birt/'/>
 
 <!-- ## CHANGED SINCE 4.2.0.Final ## -->
 
   <child location='http://download.jboss.org/jbosstools/mars/snapshots/builds/jbosstools-aerogear_4.3.mars/latest/all/repo/'/>
   <child location='http://download.jboss.org/jbosstools/mars/snapshots/builds/jbosstools-arquillian_4.3.mars/latest/all/repo/'/>
   <child location='http://download.jboss.org/jbosstools/mars/snapshots/builds/jbosstools-base_4.3.mars/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/mars/snapshots/builds/jbosstools-birt_4.3.mars/latest/all/repo/'/>
   <child location='http://download.jboss.org/jbosstools/mars/snapshots/builds/jbosstools-browsersim_4.3.mars/latest/all/repo/'/>
 
   <child location='http://download.jboss.org/jbosstools/mars/snapshots/builds/jbosstools-central_4.3.mars/latest/all/repo/'/>
