@@ -17,31 +17,30 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.4.neon/
 -->
 
-<!-- ## UNCHANGED SINCE 4.2.0.Final; included in updates/stable/kepler/ ## -->
+<!-- ## UNCHANGED SINCE previous releases ## -->
 
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
   <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/mars/core/birt/'/>
 
-<!-- ## CHANGED SINCE 4.2.0.Final ## -->
+<!-- ## CHANGED SINCE 4.3.0.Final ## -->
 
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-aerogear_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-arquillian_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-base_master/'/>
-  <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-birt_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-browsersim_master/'/>
-
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-central_master/'/>
+
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-forge_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-freemarker_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-hibernate_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-javaee_master/'/>
-  
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-jst_master/'/>
+
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-livereload_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-openshift_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-server_master/'/>
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-vpe_master/'/>
-
   <child location='http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-webservices_master/'/>
 
 </children>
