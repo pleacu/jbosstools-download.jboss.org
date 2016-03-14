@@ -1,16 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
-<repository name='JBoss Tools 4.3.0.Final Stable Release Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<repository name='JBoss Tools 4.3.0.Final Stable Release Update Site (With EGit 4.1.1)' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1445951515000'/>
+<property name='p2.timestamp' value='1457972311000'/>
 </properties>
-<children size='5'>
+<children size='6'>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.51.0.Final/REPO/'/>
 <child location='http://download.jboss.org/jbosstools/static/mars/stable/updates/core/4.3.0.Final/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.50.0.Final-SNAPSHOT/REPO/'/>
 <child location='http://download.jboss.org/jbosstools/static/mars/stable/updates/central/4.3.0.Final/'/>
 <child location='http://download.jboss.org/jbosstools/mars/stable/updates/integration-stack/'/>
+<!-- JBIDE-21821 add egit 4.1.1 site -->
+<child location='http://download.jboss.org/jbosstools/updates/requirements/egit/v4.1.1.201511131810-r/'/>
 </children>
 </repository>
-
