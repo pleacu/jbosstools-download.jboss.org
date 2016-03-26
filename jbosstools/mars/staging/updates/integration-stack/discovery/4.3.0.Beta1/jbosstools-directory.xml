@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
+<entry url="http://download.jboss.org/jbosstools/mars/development/updates/discovery.earlyaccess/4.3.1.Beta2/plugins/org.jboss.tools.central.discovery.earlyaccess_4.3.1.Beta2-v20160127-2309-B275.jar" permitCategories="true"/>
+<entry url="http://download.jboss.org/jbosstools/mars/development/updates/discovery.earlyaccess/4.3.1.Beta2/plugins/org.jboss.tools.central.discovery_4.3.1.Beta2-v20160127-2309-B275.jar" permitCategories="true"/>
+<entry url="plugins/org.jboss.tools.central.discovery.integration-stack_4.3.0.Beta1-v20160307-0918-B482.jar" permitCategories="true"/>
+</directory>

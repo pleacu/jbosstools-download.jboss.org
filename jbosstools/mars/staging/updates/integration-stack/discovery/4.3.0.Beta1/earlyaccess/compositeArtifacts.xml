@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeArtifactRepository version='1.0.0'?>
+<repository name='JBoss Tools Integration Stack Central - composite staging site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1457361751832'/>
+    <property name='p2.compressed' value='true'/>
+  </properties>
+  <children size='5'>
+  	<child location='http://download.jboss.org/jbosstools/mars/development/updates/'/>
+  	<child location='http://download.jboss.org/jbosstools/mars/development/updates/integration-stack/4.3.0.Beta1'/>
+  	<child location='http://download.jboss.org/jbosstools/mars/development/updates/integration-stack/4.3.0.Beta1/earlyaccess'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.1.Beta1b/jbtis/REPO'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.1.Beta1b/jbtis/earlyaccess/REPO'/>
+  </children>
+</repository>
