@@ -3,7 +3,7 @@
 <repository name='JBoss Tools 4.3.1.CR1 Development Milestone Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1459011789000'/>
+<property name='p2.timestamp' value='1459438156000'/>
 </properties>
 <children size='5'>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.52.0.CR1-SNAPSHOT/REPO/'/>
