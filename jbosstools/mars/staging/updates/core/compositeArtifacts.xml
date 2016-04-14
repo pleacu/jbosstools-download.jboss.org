@@ -3,12 +3,12 @@
 <repository name='JBoss Tools 4.3.1.CR1c Development Milestone Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1460607213000'/>
+<property name='p2.timestamp' value='1460607340000'/>
 </properties>
 <children size='5'>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.52.0.Final/REPO/'/>
 <child location='http://download.jboss.org/jbosstools/mars/staging/updates/core/4.3.1.CR1c/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.52.0.Final/REPO/'/>
+<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.52.0.Final-SNAPSHOT/REPO/'/>
 <child location='http://download.jboss.org/jbosstools/mars/staging/updates/central/4.3.1.CR1c/'/>
 <child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/'/>
 </children>
