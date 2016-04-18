@@ -2,13 +2,15 @@
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='JBoss Tools - Core + Central Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1460603892185'/>
+    <property name='p2.timestamp' value='1460603907159'/>
     <property name='p2.compressed' value='true'/>
   </properties>
-  <children size='4'>
+  <children size='6'>
   	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.52.0.Final/REPO/'/>
   	<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/core/4.3.1.Final/'/>
   	<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/central/4.3.1.Final/'/>
   	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.52.0.Final-SNAPSHOT/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/static/mars/development/updates/earlyaccess/4.3.1.Final/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.52.0.Final-SNAPSHOT/REPO/'/>
   </children>
 </repository>
