@@ -6,7 +6,7 @@
 <property name='p2.timestamp' value='1461008515000'/>
 </properties>
 <children size='2'>
-<child location='http://download.jboss.org/jbosstools/mars/development/updates/core/'/>
+<child location='http://download.jboss.org/jbosstools/mars/development/updates/'/>
 <child location='http://download.jboss.org/jbosstools/static/mars/development/updates/coretests/4.3.1.Final/'/>
 </children>
 </repository>
