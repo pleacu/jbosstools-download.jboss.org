@@ -9,7 +9,7 @@
 -->
 <property name='p2.timestamp' value='1457363451000'/>
 </properties>
-<children size='2'>
+<children size='0'>
 <!-- IS ONLY -->
 <!--
 <child location='http://download.jboss.org/jbosstools/mars/development/updates/integration-stack/4.3.0.Alpha2/'/>

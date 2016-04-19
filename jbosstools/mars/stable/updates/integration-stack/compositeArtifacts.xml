@@ -5,9 +5,12 @@
 <property name='p2.compressed' value='true'/>
 <property name='p2.timestamp' value='1444146194000'/>
 </properties>
-<children size='2'>
+<children size='0'>
+<!-- IS ONLY -->
+<!--
 <child location='http://download.jboss.org/jbosstools/mars/stable/updates/integration-stack/4.3.0.Alpha2/'/>
 <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.0.Final/jbtis/REPO/'/>
+-->
 </children>
 </repository>
 
