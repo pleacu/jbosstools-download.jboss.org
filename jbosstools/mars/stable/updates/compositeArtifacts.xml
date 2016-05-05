@@ -10,7 +10,7 @@
     <child location='http://download.jboss.org/jbosstools/static/mars/stable/updates/core/4.3.1.Final/'/>
     <child location='http://download.jboss.org/jbosstools/static/mars/stable/updates/central/4.3.1.Final/'/>
     <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.52.0.Final-SNAPSHOT/REPO/'/>
-    <!-- do we still need this here, since all the IS stuff is sourced from another URL? -->
-    <child location='http://download.jboss.org/jbosstools/mars/stable/updates/integration-stack/'/>
+    <!-- optimize URLs exposed publically -->
+    <child location='http://download.jboss.org/jbosstools/static/mars/stable/updates/integration-stack/'/>
   </children>
 </repository>
