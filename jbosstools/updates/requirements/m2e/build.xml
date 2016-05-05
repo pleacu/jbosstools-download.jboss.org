@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="m2e"/>
-  <property name="version" value="1.7.0.20151110-2248"/>
+  <property name="version" value="1.7.0.20160504-0322"/>
   <property name="URL" value="http://download.eclipse.org/technology/m2e/milestones/1.7/${version}/"/>
   <property name="latestversiononly" value="false"/>
 

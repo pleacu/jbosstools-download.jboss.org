@@ -7,7 +7,7 @@
 
   -->
   <property name="LONGNAME" value="JSDT"/>
-  <property name="version" value="3.5.0.v201505071819-SNAPSHOT"/>
+  <property name="version" value="2.0.0.v201604262328"/>
   <property name="URL1" value="http://download.eclipse.org/webtools/jsdt/snapshots/" />
 
   <property name="destination" value="${basedir}"/>

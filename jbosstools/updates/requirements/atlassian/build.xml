@@ -8,7 +8,7 @@
 			-f ~/RHDS/updates/requirements/atlassian/build.xml -Ddestination=/tmp/atlassian-repo
 	-->
   <property name="LONGNAME" value="Atlassian Connectors"/>
-  <property name="version" value="3.2.5.I20150601-0100"/>
+  <property name="version" value="3.2.5.I20150617-0100"/>
   <!-- <property name="URL" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.7" /> -->
   <property name="URL" value="http://update.atlassian.com/atlassian-eclipse-plugin/rest/nightly/e3.7" />
 

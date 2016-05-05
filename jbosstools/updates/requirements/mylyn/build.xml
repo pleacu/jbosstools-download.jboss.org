@@ -11,13 +11,14 @@
   -->
 
   <property name="LONGNAME" value="Mylyn"/>
-  <property name="version" value="3.16.0"/>
-  <property name="version2" value="v20150506-0011"/>
-  <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version}/${version2}"/>
+  <property name="version1" value="3.20.0"/>
+  <property name="version2" value="v20160504-0310/"/>
+  <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version1}/${version2}"/>
   <property name="latestversiononly" value="true"/>
+  <property name="version" value="${version1}-${version2}"/>
 
   <property name="destination" value="${basedir}"/>
-  <property name="workDir" value="${destination}/${version}-${version2}/"/>
+  <property name="workDir" value="${destination}/${version}/"/>
 
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
