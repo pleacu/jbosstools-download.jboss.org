@@ -8,7 +8,7 @@
   -->
   <property name="LONGNAME" value="e4 UI"/>
   <property name="version" value="0.15.0.v20151110-2230"/>
-  <property name="URL1" value="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.ui" />
+  <property name="URL" value="http://download.eclipse.org/e4/snapshots/org.eclipse.e4.ui" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -17,8 +17,7 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL1}" />
-        <!-- <repository location="${URL2}" /> -->
+        <repository location="${URL}" />
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
