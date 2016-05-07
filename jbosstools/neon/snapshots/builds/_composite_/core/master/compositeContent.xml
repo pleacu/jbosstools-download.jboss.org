@@ -10,7 +10,7 @@
 <property name='p2.atomic.composite.loading' value='false'/>
 <property name='p2.timestamp' value='1462953649000'/>
 </properties>
-<children size='18'>
+<children size='17'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
