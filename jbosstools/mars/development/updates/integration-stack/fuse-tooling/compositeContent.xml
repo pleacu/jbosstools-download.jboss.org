@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
 <repository name='JBoss Tools Builds - updates/development/mars/integration-stack/fuse-tooling' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
-<properties size='2'><property name='p2.timestamp' value='1442341034000'/><property name='p2.compressed' value='true'/></properties>
+<properties size='2'><property name='p2.timestamp' value='1462906701000'/><property name='p2.compressed' value='true'/></properties>
 <children size='1'>
-<child location='8.0.0.Alpha1/'/>
+<child location='8.0.0.Beta2/'/>
 </children>
 </repository>
 
