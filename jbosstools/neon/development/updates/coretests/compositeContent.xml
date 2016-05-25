@@ -1,15 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeMetadataRepository version='1.0.0'?>
-<repository name='JBoss Tools 4.4.0.Alpha1 Development Milestone Tests Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
+<repository name='JBoss Tools 4.4.0.Alpha1 Stable Release Tests Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1444146197000'/>
+<property name='p2.timestamp' value='1464213221000'/>
 </properties>
-<children size='0'>
-<!--
-<child location='http://download.jboss.org/jbosstools/neon/development/updates/core/'/>
+<children size='2'>
+<child location='http://download.jboss.org/jbosstools/static/neon/development/updates/core/'/>
 <child location='http://download.jboss.org/jbosstools/static/neon/development/updates/coretests/4.4.0.Alpha1/'/>
--->
 </children>
 </repository>
 
