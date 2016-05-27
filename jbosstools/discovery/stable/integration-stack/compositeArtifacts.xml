@@ -2,10 +2,10 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='JBoss Tools Integration Stack - Central + Early Access (composite site)' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1459186692000'/>
+    <property name='p2.timestamp' value='1464356090000'/>
     <property name='p2.compressed' value='true'/>
   </properties>
   <children size='1'>
-  	<child location='4.2.6.Final'/>
+  	<child location='4.2.7.Final'/>
   </children>
 </repository>
