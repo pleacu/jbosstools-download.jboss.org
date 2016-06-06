@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+
+  <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 Project Feature"/>
+  <property name="version"  value="1.3.0"/>
+  <property name="version2" value="1.3.0.Final"/>
+  <property name="version3" value="1.3.0"/>
+  <property name="version4" value="1.3.0.Final"/>
+  <property name="eclver"   value="neon"/>
+
+  <!-- BPMN2 Modeler/Editor -->
+  <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/${eclver}/${version}/" />
+
+  <!-- BPMN2 Project Feature -->
+  <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/${eclver}/${version3}/" />
+  <property name="latestversiononly" value="false"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version2}_${version4}_${eclver}"/>
+
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version2}_${version4}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
