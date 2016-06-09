@@ -11,8 +11,8 @@
     </classpath>
   </taskdef>
   <!-- http://download.eclipse.org/releases/neon/201602051000/ -->
-  <property name="versionDate" value="201602051000"/>
-  <property name="versionLabel" value="M7"/>
+  <property name="versionDate" value="201606082315"/>
+  <property name="versionLabel" value="RC4"/>
   <property name="version" value="${versionDate}-${versionLabel}"/>
 
   <property name="destination" value="${basedir}"/>
@@ -24,8 +24,8 @@
     <!-- mirror but do NOT pack again -->
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="Eclipse Mars"/>
-      <property name="URL" value="http://download.eclipse.org/releases/neon/${versionDate}/"/>
-      <!-- <property name="URL" value="http://download.eclipse.org/releases/staging/"/> -->
+      <!-- <property name="URL" value="http://download.eclipse.org/releases/neon/${versionDate}/"/> -->
+      <property name="URL" value="http://download.eclipse.org/staging/neon/"/>
       <!-- use maintenance, not staging, after Neon.0 is done to get Neon.1 -->
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
