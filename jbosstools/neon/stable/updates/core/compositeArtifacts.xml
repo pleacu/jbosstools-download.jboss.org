@@ -1,17 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?compositeArtifactRepository version='1.0.0'?>
-<repository name='JBoss Tools 4.4.0.Alpha1 Development Milestone Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
+<repository name='JBoss Tools Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1444146194000'/>
+<property name='p2.timestamp' value='1466447180000'/>
 </properties>
-<children size='0'>
-<!--
-<child location='http://download.jboss.org/jbosstools/static/neon/development/updates/core/4.4.0.Alpha1/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.60.0.Alpha1/REPO/'/>
-<child location='http://download.jboss.org/jbosstools/static/neon/development/updates/central/4.4.0.Alpha1/'/>
-<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.60.0.Alpha1-SNAPSHOT/REPO/'/>
--->
+<children size='1'>
+<child location='../'/>
 </children>
 </repository>
 
