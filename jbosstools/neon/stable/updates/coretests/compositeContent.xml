@@ -6,8 +6,8 @@
 <property name='p2.timestamp' value='1466447180000'/>
 </properties>
 <children size='2'>
-<child location='http://download.jboss.org/jbosstools/static/neon/development/updates/core/'/>
-<child location='http://download.jboss.org/jbosstools/static/neon/development/updates/coretests/4.4.0.Final/'/>
+<child location='http://download.jboss.org/jbosstools/static/neon/stable/updates/core/4.4.0.Final'/>
+<child location='http://download.jboss.org/jbosstools/static/neon/stable/updates/coretests/4.4.0.Final/'/>
 </children>
 </repository>
 
