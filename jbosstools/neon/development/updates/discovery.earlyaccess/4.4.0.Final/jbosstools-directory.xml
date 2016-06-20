@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<directory xmlns="http://www.eclipse.org/mylyn/discovery/directory/">
+<entry url="plugins/org.jboss.tools.central.discovery.earlyaccess_4.4.0.Final-v20160615-2243-B37.jar" permitCategories="true"/>
+<entry url="plugins/org.jboss.tools.central.discovery_4.4.0.Final-v20160615-2243-B37.jar" permitCategories="true"/>
+<entry url="plugins/org.jboss.tools.central.discovery.integration-stack.earlyaccess_4.4.0.Alpha1-SNAPSHOT-v20160610-1331-B506.jar" permitCategories="true"/>
+</directory>
