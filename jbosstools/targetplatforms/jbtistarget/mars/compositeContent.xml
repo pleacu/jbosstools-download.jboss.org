@@ -12,10 +12,10 @@ fun! ReplaceTimestamp()
 endfun
 nnoremap <Leader>ts :call ReplaceTimestamp()<CR>
 -->
-<property name='p2.timestamp' value='1461077216000'/>
+<property name='p2.timestamp' value='1466530283000'/>
 </properties>
 <children size='2'>
-<child location='../4.3.1.Final/jbtis/REPO/'/>
-<child location='../4.3.1.Final/jbtis/earlyaccess/REPO/'/>
+<child location='../4.3.2.Final/jbtis/REPO/'/>
+<child location='../4.3.2.Final/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
