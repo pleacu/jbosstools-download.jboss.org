@@ -7,13 +7,11 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1466616416000'/>
+<property name='p2.timestamp' value='1468506106000'/>
 </properties>
-<children size='3'>
+<children size='2'>
   <!-- IS ONLY -->
-  <child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.1.CR1/earlyaccess/'/>
-  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.1.Final/jbtis/earlyaccess/REPO/'/>
-  <!-- JBTIS-729 add Birt deps into EA site so that this can be installed from JBT 4.4 (Neon) -->
-  <child location='http://download.jboss.org/jbosstools/updates/requirements/birt/4.5.0.v201510231925/'/>
+  <child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.1.CR2/earlyaccess/'/>
+  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.2.Final/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
