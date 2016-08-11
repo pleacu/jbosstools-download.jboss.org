@@ -6,7 +6,7 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Eclipse Docker Tooling"/>
-  <property name="version" value="2.0.0.201605032008"/>
+  <property name="version" value="2.1.0.201608101805"/>
   <!-- <property name="URL" value="http://download.eclipse.org/linuxtools/update-neon-docker-m7/"/>
   <property name="URL2" value="http://download.eclipse.org/linuxtools/updates-docker-nightly-mars/"/>
   <property name="URL" value="http://download.eclipse.org/linuxtools/update-docker-1.2/"/> -->
