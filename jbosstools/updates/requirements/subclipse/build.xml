@@ -5,11 +5,11 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="LONGNAME" value="Subclipse 1.10.9 + SVNKit 1.8.10.r10446_v20150526_1454 plugins for Subversion 1.8 and Eclipse"/>
-  <property name="version" value="1.10.9_1.8.10.r10446_v20150526_1454"/>
-  <!-- org.tigris.subversion.subclipse.feature.group  1.10.9 -->
-  <property name="URL1" value="http://subclipse.tigris.org/update_1.10.x" />
-  <!-- org.tmatesoft.svnkit.feature.group 1.8.10.r10446_v20150526_1454 -->
+  <property name="LONGNAME" value="Subclipse 1.10.13 + SVNKit 1.8.12.r10533_v20160129_0158 plugins for Subversion 1.9 and Eclipse"/>
+  <property name="version" value="1.10.13_1.8.12.r10533_v20160129_0158"/>
+  <!-- org.tigris.subversion.subclipse.feature.group  1.10.13 -->
+  <property name="URL1" value="http://subclipse.tigris.org/update_1.12.x" />
+  <!-- org.tmatesoft.svnkit.feature.group 1.8.12.r10533_v20160129_0158 -->
   <property name="URL2" value="http://eclipse.svnkit.com/1.8.x/" />
 
   <property name="destination" value="${basedir}"/>
