@@ -20,8 +20,8 @@ http://download.jboss.org/jbosstools/updates/m2e-extensions/
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="m2e-wtp"/>
-  <property name="version" value="1.2.2.20160830-1240"/>
-  <property name="URL" value="http://download.eclipse.org/m2e-wtp/milestones/mars/1.2.0/${version}" />
+  <property name="version" value="1.3.1.20160831-1005"/>
+  <property name="URL" value="http://download.eclipse.org/m2e-wtp/milestones/neon/1.3/${version}" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
