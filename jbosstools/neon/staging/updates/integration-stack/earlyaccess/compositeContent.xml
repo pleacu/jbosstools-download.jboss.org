@@ -11,7 +11,7 @@
 </properties>
 <children size='2'>
   <!-- IS ONLY -->
-  <child location='http://download.jboss.org/jbosstools/neon/staging/updates/integration-stack/4.4.0.Alpha1-SNAPSHOT/earlyaccess/'/>
-  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.4.0.Alpha1-SNAPSHOT/jbtis/earlyaccess/REPO/'/>
+  <child location='http://download.jboss.org/jbosstools/neon/staging/updates/integration-stack/4.4.0.Alpha1/earlyaccess/'/>
+  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.4.0.Alpha2-SNAPSHOT/jbtis/earlyaccess/REPO/'/>
 </children>
 </repository>
