@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+<description>JBoss Tools 4.4 (Neon) - Core Tests</description>
+
+<!-- PLEASE NOTE!
+	When updating this file, please be sure that it parses as valid XML before committing it.
+	To test, just run `mvn clean install` in this folder. 
+-->
+<category-def name="JBoss Tools - Core Tests" label="JBoss Tools - Core Tests">
+	<description>JBoss Tools - Core Tests
+	</description>
+</category-def>
+
+<!-- Main Features -->
+<feature id="org.jboss.ide.eclipse.archives.test.feature" url="features/org.jboss.ide.eclipse.archives.test.feature_3.6.101.v20160607-2122.jar" version="3.6.101.v20160607-2122"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.ide.eclipse.as.test.feature" url="features/org.jboss.ide.eclipse.as.test.feature_3.2.1.v20160901-2242.jar" version="3.2.1.v20160901-2242"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.batch.test.feature" url="features/org.jboss.tools.batch.test.feature_1.8.1.v20160615-1816.jar" version="1.8.1.v20160615-1816"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.cdi.seam.test.feature" url="features/org.jboss.tools.cdi.seam.test.feature_1.8.1.v20160607-2131.jar" version="1.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.cdi.deltaspike.test.feature" url="features/org.jboss.tools.cdi.deltaspike.test.feature_1.8.1.v20160607-2131.jar" version="1.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.cdi.test.feature" url="features/org.jboss.tools.cdi.test.feature_1.8.1.v20160607-2131.jar" version="1.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.central.test.feature" url="features/org.jboss.tools.central.test.feature_2.1.1.v20160614-2133.jar" version="2.1.1.v20160614-2133"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.common.all.test.feature" url="features/org.jboss.tools.common.all.test.feature_3.8.1.v20160607-2053.jar" version="3.8.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.project.examples.test.feature" url="features/org.jboss.tools.project.examples.test.feature_3.1.1.v20160614-2134.jar" version="3.1.1.v20160614-2134"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.forge.test.feature" url="features/org.jboss.tools.forge.test.feature_2.0.101.v20160607-1332.jar" version="2.0.101.v20160607-1332"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.forge.ext.test.feature" url="features/org.jboss.tools.forge.ext.test.feature_2.0.101.v20160607-1332.jar" version="2.0.101.v20160607-1332"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.ide.eclipse.freemarker.test.feature" url="features/org.jboss.ide.eclipse.freemarker.test.feature_1.5.101.v20160829-2115.jar" version="1.5.101.v20160829-2115"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.hibernate.eclipse.test.feature" url="features/org.hibernate.eclipse.test.feature_5.1.1.v20160830-1524.jar" version="5.1.1.v20160830-1524"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.jmx.test.feature" url="features/org.jboss.tools.jmx.test.feature_1.8.1.v20160607-2122.jar" version="1.8.1.v20160607-2122"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.jsf.test.feature" url="features/org.jboss.tools.jsf.test.feature_3.8.1.v20160901-0020.jar" version="3.8.1.v20160901-0020"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.jst.test.feature" url="features/org.jboss.tools.jst.test.feature_3.8.1.v20160607-2115.jar" version="3.8.1.v20160607-2115"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.maven.test.feature" url="features/org.jboss.tools.maven.test.feature_1.8.1.v20160614-2136.jar" version="1.8.1.v20160614-2136"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.openshift.express.test.feature" url="features/org.jboss.tools.openshift.express.test.feature_3.3.0.v20160726-1305.jar" version="3.3.0.v20160726-1305"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.openshift.test.feature" url="features/org.jboss.tools.openshift.test.feature_3.3.0.v20160831-0702.jar" version="3.3.0.v20160831-0702"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.portlet.test.feature" url="features/org.jboss.tools.portlet.test.feature_1.6.0.Final-v20141209-0339-B20.jar" version="1.6.0.Final-v20141209-0339-B20"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.runtime.test.feature" url="features/org.jboss.tools.runtime.test.feature_3.2.1.v20160607-2053.jar" version="3.2.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.seam.test.feature" url="features/org.jboss.tools.seam.test.feature_3.8.1.v20160607-2131.jar" version="3.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.foundation.test.feature" url="features/org.jboss.tools.foundation.test.feature_1.3.1.v20160805-1638.jar" version="1.3.1.v20160805-1638"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.stacks.core.test.feature" url="features/org.jboss.tools.stacks.core.test.feature_1.3.1.v20160607-2053.jar" version="1.3.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.test.feature" url="features/org.jboss.tools.test.feature_3.7.1.v20160607-2053.jar" version="3.7.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.usage.test.feature" url="features/org.jboss.tools.usage.test.feature_2.2.1.v20160607-2053.jar" version="2.2.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.vpe.test.feature" url="features/org.jboss.tools.vpe.test.feature_3.8.1.v20160830-1517.jar" version="3.8.1.v20160830-1517"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.ws.test.feature" url="features/org.jboss.tools.ws.test.feature_1.9.1.v20160608-0648.jar" version="1.9.1.v20160608-0648"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.wtp.runtimes.tomcat.tests.feature" url="features/org.jboss.tools.wtp.runtimes.tomcat.tests.feature_1.3.101.v20160607-2122.jar" version="1.3.101.v20160607-2122"><category name="JBoss Tools - Core Tests"/></feature>
+<bundle id="org.jboss.tools.foundation.help.test"><category name="JBoss Tools - Core Tests"/></bundle>
+
+<!-- Source Features -->
+<feature id="org.jboss.ide.eclipse.archives.test.feature.source" url="features/org.jboss.ide.eclipse.archives.test.feature.source_3.6.101.v20160607-2122.jar" version="3.6.101.v20160607-2122"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.foundation.test.feature.source" url="features/org.jboss.tools.foundation.test.feature.source_1.3.1.v20160805-1638.jar" version="1.3.1.v20160805-1638"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.stacks.core.test.feature.source" url="features/org.jboss.tools.stacks.core.test.feature.source_1.3.1.v20160607-2053.jar" version="1.3.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.ide.eclipse.as.test.feature.source" url="features/org.jboss.ide.eclipse.as.test.feature.source_3.2.1.v20160901-2242.jar" version="3.2.1.v20160901-2242"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.batch.test.feature.source" url="features/org.jboss.tools.batch.test.feature.source_1.8.1.v20160615-1816.jar" version="1.8.1.v20160615-1816"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.cdi.seam.test.feature.source" url="features/org.jboss.tools.cdi.seam.test.feature.source_1.8.1.v20160607-2131.jar" version="1.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.cdi.test.feature.source" url="features/org.jboss.tools.cdi.test.feature.source_1.8.1.v20160607-2131.jar" version="1.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.central.test.feature.source" url="features/org.jboss.tools.central.test.feature.source_2.1.1.v20160614-2133.jar" version="2.1.1.v20160614-2133"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.common.all.test.feature.source" url="features/org.jboss.tools.common.all.test.feature.source_3.8.1.v20160607-2053.jar" version="3.8.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.project.examples.test.feature.source" url="features/org.jboss.tools.project.examples.test.feature.source_3.1.1.v20160614-2134.jar" version="3.1.1.v20160614-2134"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.forge.test.feature.source" url="features/org.jboss.tools.forge.test.feature.source_2.0.101.v20160607-1332.jar" version="2.0.101.v20160607-1332"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.forge.ext.test.feature.source" url="features/org.jboss.tools.forge.ext.test.feature.source_2.0.101.v20160607-1332.jar" version="2.0.101.v20160607-1332"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.ide.eclipse.freemarker.test.feature.source" url="features/org.jboss.ide.eclipse.freemarker.test.feature.source_1.5.101.v20160829-2115.jar" version="1.5.101.v20160829-2115"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.hibernate.eclipse.test.feature.source" url="features/org.hibernate.eclipse.test.feature.source_5.1.1.v20160830-1524.jar" version="5.1.1.v20160830-1524"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.jmx.test.feature.source" url="features/org.jboss.tools.jmx.test.feature.source_1.8.1.v20160607-2122.jar" version="1.8.1.v20160607-2122"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.jsf.test.feature.source" url="features/org.jboss.tools.jsf.test.feature.source_3.8.1.v20160901-0020.jar" version="3.8.1.v20160901-0020"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.jst.test.feature.source" url="features/org.jboss.tools.jst.test.feature.source_3.8.1.v20160607-2115.jar" version="3.8.1.v20160607-2115"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.maven.test.feature.source" url="features/org.jboss.tools.maven.test.feature.source_1.8.1.v20160614-2136.jar" version="1.8.1.v20160614-2136"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.openshift.express.test.feature.source" url="features/org.jboss.tools.openshift.express.test.feature.source_3.3.0.v20160726-1305.jar" version="3.3.0.v20160726-1305"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.openshift.test.feature.source" url="features/org.jboss.tools.openshift.test.feature.source_3.3.0.v20160831-0702.jar" version="3.3.0.v20160831-0702"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.portlet.test.feature.source" url="features/org.jboss.tools.portlet.test.feature.source_1.6.0.Final-v20141209-0339-B20.jar" version="1.6.0.Final-v20141209-0339-B20"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.runtime.test.feature.source" url="features/org.jboss.tools.runtime.test.feature.source_3.2.1.v20160607-2053.jar" version="3.2.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.seam.test.feature.source" url="features/org.jboss.tools.seam.test.feature.source_3.8.1.v20160607-2131.jar" version="3.8.1.v20160607-2131"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.test.feature.source" url="features/org.jboss.tools.test.feature.source_3.7.1.v20160607-2053.jar" version="3.7.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.usage.test.feature.source" url="features/org.jboss.tools.usage.test.feature.source_2.2.1.v20160607-2053.jar" version="2.2.1.v20160607-2053"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.vpe.test.feature.source" url="features/org.jboss.tools.vpe.test.feature.source_3.8.1.v20160830-1517.jar" version="3.8.1.v20160830-1517"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.ws.test.feature.source" url="features/org.jboss.tools.ws.test.feature.source_1.9.1.v20160608-0648.jar" version="1.9.1.v20160608-0648"><category name="JBoss Tools - Core Tests"/></feature>
+<feature id="org.jboss.tools.wtp.runtimes.tomcat.tests.feature.source" url="features/org.jboss.tools.wtp.runtimes.tomcat.tests.feature.source_1.3.101.v20160607-2122.jar" version="1.3.101.v20160607-2122"><category name="JBoss Tools - Core Tests"/></feature>
+<bundle id="org.jboss.tools.foundation.help.test.source"><category name="JBoss Tools - Core Tests"/></bundle>
+
+</site>
