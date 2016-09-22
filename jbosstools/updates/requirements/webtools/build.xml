@@ -6,8 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <!-- http://download.eclipse.org/webtools/downloads/drops/R3.8.0/S-3.8.0M7-20160503010110/repository/ -->
-  <property name="releaseStream" value="R3.8.0"/>
-  <property name="version" value="S-3.8.0M7-20160503010110"/>
+  <property name="releaseStream" value="R3.8.1"/>
+  <property name="version" value="R-3.8.1-20160912100321"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
