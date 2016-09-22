@@ -7,7 +7,7 @@
 
   -->
   <property name="LONGNAME" value="TM + Terminal"/>
-  <property name="version" value="4.1.0.201603190914"/> <!-- look in /staging/ -->
+  <property name="version" value="4.1.0.201606052351"/> <!-- look in /staging/ -->
   <property name="tmURL" value="http://download.eclipse.org/tm/updates/4.0/" />
   <property name="tmTerminalURL" value="http://download.eclipse.org/tm/terminal/updates/4.1milestones/" />
 
