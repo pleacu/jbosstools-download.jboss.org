@@ -9,9 +9,8 @@
 -->
 <property name='p2.timestamp' value='1469541846000'/>
 </properties>
-<children size='2'>
+<children size='0'>
   <!-- IS ONLY -->
-  <child location='http://download.jboss.org/jbosstools/mars/staging/updates/integration-stack/4.3.1.CR3/earlyaccess/'/>
-  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.3.2-SNAPSHOT/jbtis/earlyaccess/REPO/'/>
+  <!-- No EA components -->
 </children>
 </repository>
