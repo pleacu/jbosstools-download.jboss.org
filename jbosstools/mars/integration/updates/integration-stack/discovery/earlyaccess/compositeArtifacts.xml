@@ -9,7 +9,9 @@
 -->
 <property name='p2.timestamp' value='1470768296000'/>
 </properties>
-<children size='1'>
-   <child location='../4.3.1.Final/earlyaccess/'/>
+<children size='0'>
+<!--
+  <child location='../4.3.1.Final/earlyaccess/'/>
+-->
 </children>
 </repository>
