@@ -6,8 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="m2eclipse-mavenarchiver"/>
-  <property name="version" value="0.17.1.201605251832-signed-20160525150658"/>
-  <property name="URL" value="http://download.eclipse.org/m2e-wtp/signed/mavenarchiver/0.17.1/" />
+  <property name="version" value="0.17.2.201606141937-signed-20160830073346"/>
+  <property name="URL" value="http://download.eclipse.org/m2e-wtp/signed/mavenarchiver/0.17.2/" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
