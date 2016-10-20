@@ -1,0 +1,1082 @@
+Started by user nboldt@REDHAT.COM
+[EnvInject] - Loading node environment variables.
+Building remotely on dev193-rhel6-x86_64 (jboss-prod-bos jboss-prod-tck jboss-prod) in workspace /mnt/hudson_workspace/workspace/jbosstools-discovery_master
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git://github.com/jbosstools/jbosstools-discovery.git # timeout=10
+Fetching upstream changes from git://github.com/jbosstools/jbosstools-discovery.git
+ > git --version # timeout=10
+ > git -c core.askpass=true fetch --tags --progress git://github.com/jbosstools/jbosstools-discovery.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision fc97129b27eb2d6622435a1373390375e8231d4b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fc97129b27eb2d6622435a1373390375e8231d4b
+ > git rev-list fc97129b27eb2d6622435a1373390375e8231d4b # timeout=10
+ > git tag -a -f -m Jenkins Build #6626 jenkins-jbosstools-discovery_master-6626 # timeout=10
+[jbosstools-discovery_master] $ bash -xe /tmp/hudson3405750530737300921.sh
++ PROPSFILE=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/discovery.properties
++ echo ''
++ JBT_CN_TP=http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/
++ JBT_EA_TP=http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.61.0.AM1-SNAPSHOT/REPO/
++ JBDS_CN_TP=https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/
++ JBDS_EA_TP=https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.61.0.AM1-SNAPSHOT/REPO/
++ [[ AM2 == \S\N\A\P\S\H\O\T ]]
++ buildType=staging
++ JBT_buildversion=4.4.2.AM2
++ [[ AM2 != AM2 ]]
++ JBDS_buildversion=10.2.0.AM2
++ echo JBT_buildversion=4.4.2.AM2
++ echo JBDS_buildversion=10.2.0.AM2
+++ date -u +%Y-%m-%d_%H-%M-%S
++ echo BUILD_TIMESTAMP=2016-10-14_18-25-04
++ echo buildType=staging
++ eclipseReleaseName=neon
++ echo eclipseReleaseName=neon
++ echo JBT_UP=http://download.jboss.org/jbosstools/neon/staging/updates/core/4.4.2.AM2/
++ echo JBT_CN=http://download.jboss.org/jbosstools/neon/staging/updates/central/4.4.2.AM2/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/
++ echo JBT_EA=http://download.jboss.org/jbosstools/neon/staging/updates/earlyaccess/4.4.2.AM2/,http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.61.0.AM1-SNAPSHOT/REPO/
++ JBDSVersion=10.0
++ echo JBDSVersion=10.0
++ echo JBDS_UP=https://devstudio.redhat.com/10.0/staging/updates/core/10.2.0.AM2/
++ echo JBDS_CN=https://devstudio.redhat.com/10.0/staging/updates/central/10.2.0.AM2/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/
++ echo JBDS_EA=https://devstudio.redhat.com/10.0/staging/updates/earlyaccess/10.2.0.AM2/,https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.61.0.AM1-SNAPSHOT/REPO/
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path '/mnt/hudson_workspace/workspace/jbosstools-discovery_master/discovery.properties'
+[EnvInject] - Variables injected successfully.
+[jbosstools-discovery_master] $ /qa/tools/opt/apache-maven-3.2.5/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml -Dversion_ds_base=10.2.0 -DVERSION=AM2 -DTARGET_PLATFORM_VERSION_MAXIMUM=4.61.0.AM1-SNAPSHOT -Dversion_jbt_base=4.4.2 -DJBTCENTRALTARGET_VERSION=4.61.0.AM1-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Djbosstools_site_stream=master -Ddownload.cache.directory=/home/hudson/static_build_env/jbds/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=http://download.jboss.org/jbosstools/neon/staging/updates/core/4.4.2.AM2/ -DEXTRAS_SITE=http://download.jboss.org/jbosstools/neon/staging/updates/central/4.4.2.AM2/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=6626 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -gs /home/hudson/.m2/settings.xml -DTARGET_PLATFORM_VERSION=4.61.0.AM1-SNAPSHOT
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 1.4 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 0.7 KB/sec)
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 2.1 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 4.2 KB/sec)
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 2.5 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 1.6 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 4.2 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.3 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.4 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 1.8 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.1 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools:tycho-plugins:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Computing target platform for MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.61.0.AM1-SNAPSHOT/REPO
+[INFO] Resolving dependencies of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] Resolving class path of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building org.jboss.tools.central.discovery 4.4.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ org.jboss.tools.central.discovery ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:build-qualifier (default-build-qualifier) @ org.jboss.tools.central.discovery ---
+[INFO] The project's OSGi version is 4.4.2.v20160920-1231
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-id (default-validate-id) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-version (default-validate-version) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property) @ org.jboss.tools.central.discovery ---
+[INFO] Setting property 'skipTestsOrITests' to ''.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ org.jboss.tools.central.discovery ---
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 4.6 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.3 KB/sec)
+[INFO] Downloading: http://repository.apache.org/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ org.jboss.tools.central.discovery ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ org.jboss.tools.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:0.26.0:compile (default-compile) @ org.jboss.tools.central.discovery ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ org.jboss.tools.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:0.26.0:plugin-source (plugin-source) @ org.jboss.tools.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:0.26.0:target-platform (default-target-platform) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:package-plugin (default-package-plugin) @ org.jboss.tools.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata-default (default-p2-metadata-default) @ org.jboss.tools.central.discovery ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] 
+[INFO] --- repository-utils:0.26.0-SNAPSHOT:generate-repository-facade (generate-facade) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata (attached-p2-metadata) @ org.jboss.tools.central.discovery ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:0.26.0:compare-version-with-baselines (default) @ org.jboss.tools.central.discovery ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ org.jboss.tools.central.discovery ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery-4.4.2-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:update-local-index (default-update-local-index) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ org.jboss.tools.central.discovery ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build2054912358
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build2054912358
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 20.971 s
+[INFO] Finished at: 2016-10-14T14:25:26-04:00
+[INFO] Final Memory: 54M/652M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /qa/tools/opt/apache-maven-3.2.5/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml -Dversion_ds_base=10.2.0 -DVERSION=AM2 -DTARGET_PLATFORM_VERSION_MAXIMUM=4.61.0.AM1-SNAPSHOT -Dversion_jbt_base=4.4.2 -DJBTCENTRALTARGET_VERSION=4.61.0.AM1-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Djbosstools_site_stream=master -Ddownload.cache.directory=/home/hudson/static_build_env/jbds/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=http://download.jboss.org/jbosstools/neon/staging/updates/core/4.4.2.AM2/ -DEXTRAS_SITE=http://download.jboss.org/jbosstools/neon/staging/updates/central/4.4.2.AM2/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/,http://download.jboss.org/jbosstools/neon/staging/updates/earlyaccess/4.4.2.AM2/,http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.61.0.AM1-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=6626 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -gs /home/hudson/.m2/settings.xml -DTARGET_PLATFORM_VERSION=4.61.0.AM1-SNAPSHOT
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 1.4 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 0.7 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 1.1 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 5.0 KB/sec)
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 2.5 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 1.6 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 4.6 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.3 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.4 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 1.8 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.1 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools:tycho-plugins:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Computing target platform for MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.61.0.AM1-SNAPSHOT/REPO
+[INFO] Resolving dependencies of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] Resolving class path of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building org.jboss.tools.central.discovery.earlyaccess 4.4.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:build-qualifier (default-build-qualifier) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] The project's OSGi version is 4.4.2.v20160920-1231
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-id (default-validate-id) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-version (default-validate-version) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Setting property 'skipTestsOrITests' to ''.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 4.6 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.4 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://repository.apache.org/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:0.26.0:compile (default-compile) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:0.26.0:plugin-source (plugin-source) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:0.26.0:target-platform (default-target-platform) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:package-plugin (default-package-plugin) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata-default (default-p2-metadata-default) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- repository-utils:0.26.0-SNAPSHOT:generate-repository-facade (generate-facade) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata (attached-p2-metadata) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.4.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:0.26.0:compare-version-with-baselines (default) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.4.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.4.2-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:update-local-index (default-update-local-index) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build757319595
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build757319595
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 20.749 s
+[INFO] Finished at: 2016-10-14T14:25:49-04:00
+[INFO] Final Memory: 54M/652M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /qa/tools/opt/apache-maven-3.2.5/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml -Dversion_ds_base=10.2.0 -DVERSION=AM2 -DTARGET_PLATFORM_VERSION_MAXIMUM=4.61.0.AM1-SNAPSHOT -Dversion_jbt_base=4.4.2 -DJBTCENTRALTARGET_VERSION=4.61.0.AM1-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Djbosstools_site_stream=master -Ddownload.cache.directory=/home/hudson/static_build_env/jbds/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=https://devstudio.redhat.com/10.0/staging/updates/core/10.2.0.AM2/ -DEXTRAS_SITE=https://devstudio.redhat.com/10.0/staging/updates/central/10.2.0.AM2/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=6626 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -gs /home/hudson/.m2/settings.xml -DTARGET_PLATFORM_VERSION=4.61.0.AM1-SNAPSHOT
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 1.5 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 0.6 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 1.1 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 2.6 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 2.3 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 1.6 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 4.6 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.4 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 3.5 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 1.8 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.1 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools:tycho-plugins:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Computing target platform for MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.61.0.AM1-SNAPSHOT/REPO
+[INFO] Resolving dependencies of MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml
+[INFO] Resolving class path of MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building com.jboss.jbds.central.discovery 10.2.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.jboss.jbds.central.discovery ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:build-qualifier (default-build-qualifier) @ com.jboss.jbds.central.discovery ---
+[INFO] The project's OSGi version is 10.2.0.v20160920-1231
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-id (default-validate-id) @ com.jboss.jbds.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-version (default-validate-version) @ com.jboss.jbds.central.discovery ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property) @ com.jboss.jbds.central.discovery ---
+[INFO] Setting property 'skipTestsOrITests' to ''.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ com.jboss.jbds.central.discovery ---
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 4.4 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://repository.apache.org/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.7 KB/sec)
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 1.0 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ com.jboss.jbds.central.discovery ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ com.jboss.jbds.central.discovery ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ com.jboss.jbds.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:0.26.0:compile (default-compile) @ com.jboss.jbds.central.discovery ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ com.jboss.jbds.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:0.26.0:plugin-source (plugin-source) @ com.jboss.jbds.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:0.26.0:target-platform (default-target-platform) @ com.jboss.jbds.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:package-plugin (default-package-plugin) @ com.jboss.jbds.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata-default (default-p2-metadata-default) @ com.jboss.jbds.central.discovery ---
+[INFO] No baseline version MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml
+[INFO] 
+[INFO] --- repository-utils:0.26.0-SNAPSHOT:generate-repository-facade (generate-facade) @ com.jboss.jbds.central.discovery ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata (attached-p2-metadata) @ com.jboss.jbds.central.discovery ---
+[INFO] No baseline version MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:0.26.0:compare-version-with-baselines (default) @ com.jboss.jbds.central.discovery ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ com.jboss.jbds.central.discovery ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery-10.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:update-local-index (default-update-local-index) @ com.jboss.jbds.central.discovery ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ com.jboss.jbds.central.discovery ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build1316312654
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build1316312654
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 21.406 s
+[INFO] Finished at: 2016-10-14T14:26:12-04:00
+[INFO] Final Memory: 54M/652M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /qa/tools/opt/apache-maven-3.2.5/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml -Dversion_ds_base=10.2.0 -DVERSION=AM2 -DTARGET_PLATFORM_VERSION_MAXIMUM=4.61.0.AM1-SNAPSHOT -Dversion_jbt_base=4.4.2 -DJBTCENTRALTARGET_VERSION=4.61.0.AM1-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Djbosstools_site_stream=master -Ddownload.cache.directory=/home/hudson/static_build_env/jbds/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=https://devstudio.redhat.com/10.0/staging/updates/core/10.2.0.AM2/ -DEXTRAS_SITE=https://devstudio.redhat.com/10.0/staging/updates/central/10.2.0.AM2/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/,https://devstudio.redhat.com/10.0/staging/updates/earlyaccess/10.2.0.AM2/,https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.61.0.AM1-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=6626 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -gs /home/hudson/.m2/settings.xml -DTARGET_PLATFORM_VERSION=4.61.0.AM1-SNAPSHOT
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 1.5 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 0.7 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (606 B at 2.0 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 5.0 KB/sec)
+[INFO] Downloading: http://maven.repository.redhat.com/ga/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 2.5 KB/sec)
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/targetplatforms/jbosstools-unified/4.61.0.AM1-SNAPSHOT/maven-metadata.xml (869 B at 1.6 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 4.6 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.4 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml (798 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.tycho-plugins:repository-utils:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/repository-utils/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.4 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 1.8 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml (607 B at 2.1 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools:tycho-plugins:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/tycho-plugins/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] Computing target platform for MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery.earlyaccess:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.61.0.AM1-SNAPSHOT/REPO
+[INFO] Resolving dependencies of MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery.earlyaccess:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml
+[INFO] Resolving class path of MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery.earlyaccess:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building com.jboss.jbds.central.discovery.earlyaccess 10.2.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:build-qualifier (default-build-qualifier) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] The project's OSGi version is 10.2.0.v20160920-1231
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-id (default-validate-id) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:validate-version (default-validate-version) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Setting property 'skipTestsOrITests' to ''.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 4.4 KB/sec)
+[INFO] Downloading: https://oss.sonatype.org/content/groups/public/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.4 KB/sec)
+[INFO] Downloading: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading: http://repository.apache.org/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml (789 B at 2.7 KB/sec)
+[WARNING] Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[WARNING] Failure to transfer org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from https://repo.eclipse.org/content/repositories/tycho-snapshots/ was cached in the local repository, resolution will not be reattempted until the update interval of tycho-snapshots has elapsed or updates are forced. Original error: Could not transfer metadata org.jboss.tools.releng:enforcer-rules:0.26.0-SNAPSHOT/maven-metadata.xml from/to tycho-snapshots (https://repo.eclipse.org/content/repositories/tycho-snapshots/): Failed to transfer file: https://repo.eclipse.org/content/repositories/tycho-snapshots/org/jboss/tools/releng/enforcer-rules/0.26.0-SNAPSHOT/maven-metadata.xml. Return code is: 503 , ReasonPhrase:Service Temporarily Unavailable.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:0.26.0:compile (default-compile) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:0.26.0:plugin-source (plugin-source) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:0.26.0:target-platform (default-target-platform) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.26.0:package-plugin (default-package-plugin) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata-default (default-p2-metadata-default) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery.earlyaccess:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- repository-utils:0.26.0-SNAPSHOT:generate-repository-facade (generate-facade) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:p2-metadata (attached-p2-metadata) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: com.jboss.jbds.product.plugins:com.jboss.jbds.central.discovery.earlyaccess:10.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:0.26.0:compare-version-with-baselines (default) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/jbds/product/plugins/com.jboss.jbds.central.discovery.earlyaccess/10.2.0-SNAPSHOT/com.jboss.jbds.central.discovery.earlyaccess-10.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:0.26.0:update-local-index (default-update-local-index) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ com.jboss.jbds.central.discovery.earlyaccess ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build1874043463
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbdevstudio/com.jboss.jbds.central.discovery.earlyaccess/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build1874043463
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 21.038 s
+[INFO] Finished at: 2016-10-14T14:26:35-04:00
+[INFO] Final Memory: 54M/653M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /qa/tools/opt/apache-maven-3.2.5/bin/mvn -Dversion_ds_base=10.2.0 -DVERSION=AM2 -DTARGET_PLATFORM_VERSION_MAXIMUM=4.61.0.AM1-SNAPSHOT -Dversion_jbt_base=4.4.2 -DJBTCENTRALTARGET_VERSION=4.61.0.AM1-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Djbosstools_site_stream=master -DtrimVersion=true -Dmdep.stripClassifier=true -Dartifact=org.jboss.tools.releng:jbosstools-releng-publish:4.4.2.AM1-SNAPSHOT:tar.gz -DoutputDirectory=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources -Dmdep.stripVersion=true -U org.apache.maven.plugins:maven-dependency-plugin:2.9:unpack
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.9:unpack (default-cli) @ standalone-pom ---
+[INFO] Configured Artifact: org.jboss.tools.releng:jbosstools-releng-publish:4.4.2.AM1-SNAPSHOT:tar.gz
+Downloading: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/jbosstools-releng-publish/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+Downloading: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/jbosstools-releng-publish/4.4.2.AM1-SNAPSHOT/maven-metadata.xml
+2/4 KB   4/4 KB            Downloaded: http://snapshots.jboss.org/maven2/org/jboss/tools/releng/jbosstools-releng-publish/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (4 KB at 6.6 KB/sec)
+2/4 KB   3/4 KB   4/4 KB            Downloaded: https://repository.jboss.org/nexus/content/groups/developer/org/jboss/tools/releng/jbosstools-releng-publish/4.4.2.AM1-SNAPSHOT/maven-metadata.xml (4 KB at 3.3 KB/sec)
+[INFO] jbosstools-releng-publish-4.4.2.AM1-SNAPSHOT.tar.gz already unpacked.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.086 s
+[INFO] Finished at: 2016-10-14T14:26:42-04:00
+[INFO] Final Memory: 14M/363M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ bash -xe /tmp/hudson5605240650965503485.sh
++ [[ staging == \s\t\a\g\i\n\g ]]
++ JBT_DC=jbosstools-4.4.2.AM2-build-discovery.central
++ JBT_DE=jbosstools-4.4.2.AM2-build-discovery.earlyaccess
++ pushd /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site
+/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site /mnt/hudson_workspace/workspace/jbosstools-discovery_master
++ rm -fr '*-earlyaccess.properties'
++ wget http://download.jboss.org/jbosstools/neon/snapshots/updates/earlyaccess.properties/master/jbosstools-earlyaccess.properties -q --no-check-certificate -N
++ popd
+/mnt/hudson_workspace/workspace/jbosstools-discovery_master
++ . /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site -t neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo/
++++ mktemp -d
+++ tmpdir=/tmp/tmp.0zi7YOMD3u
+++ mkdir -p /tmp/tmp.0zi7YOMD3u
+++ DESTINATION=tools@filemgmt.jboss.org:/downloads_htdocs/tools
+++ INCLUDES='*'
+++ EXCLUDES=
+++ numbuildstokeep=2
+++ numbuildstolink=2
+++ threshholdwhendelete=2
+++ regenMetadataFlag=
+++ RSYNCFLAGS=
+++ [[ 4 -lt 1 ]]
+++ [[ 4 -gt 0 ]]
+++ case $1 in
+++ SOURCE_PATH=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site
+++ shift 1
+++ shift 1
+++ [[ 2 -gt 0 ]]
+++ case $1 in
+++ TARGET_PATH=neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo/
+++ shift 1
+++ shift 1
+++ [[ 0 -gt 0 ]]
+++ echo '[DEBUG] BUILD_TIMESTAMP = 2016-10-14_18-25-04'
+[DEBUG] BUILD_TIMESTAMP = 2016-10-14_18-25-04
+++ echo '[DEBUG] RSYNCFLAGS = '
+[DEBUG] RSYNCFLAGS = 
+++ [[ '' == '' ]]
+++ seg=.
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon
+++ echo -e 'mkdir neon'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging
+++ echo -e 'mkdir neon/staging'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds
+++ echo -e 'mkdir neon/staging/builds'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo
+++ seg=
+++ [[ -n '' ]]
+++ echo '[INFO] rsync -arzq --protocol=28  /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/* tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo//'
+[INFO] rsync -arzq --protocol=28  /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/* tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo//
+++ rsync -arzq --protocol=28 /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/compositeArtifacts.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/compositeContent.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/jbosstools-directory.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/plugins tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo//
++++ echo neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo/
++++ sed -e 's#/\?downloads_htdocs/tools/##' -e 's#/\?www_htdocs/devstudio/##' -e 's#/\?qa/services/http/binaries/RHDS/##' -e 's#/\?all/repo/\?##' -e 's#/\?all/\?##' -e 's#/$##' -e 's#^/##' -e 's#\(.\+\)/[^/]\+#\1#' -e 's#/\?2016-10-14_18-25-04-B6626/\?##'
+++ PARENT_PATH=neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central
+++ [[ -n 6626 ]]
+++ [[ -n 2016-10-14_18-25-04 ]]
+++ [[ neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central//all/repo/ != neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo/ ]]
+++ echo '[DEBUG] Symlink[BT] tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/latest -> 2016-10-14_18-25-04-B6626'
+[DEBUG] Symlink[BT] tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/latest -> 2016-10-14_18-25-04-B6626
+++ pushd /tmp/tmp.0zi7YOMD3u
+++ ln -s 2016-10-14_18-25-04-B6626 latest
+++ rsync --protocol=28 -l latest tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/
+++ rm -f latest
+++ popd
+++ [[ -n /mnt/hudson_workspace/workspace/jbosstools-discovery_master ]]
+++ [[ -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh ]]
+++ [[ neon/staging/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo/ != neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626/all/repo/ ]]
++++ echo neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central
++++ sed -e 's#\(.\+\)/[^/]\+#\1#'
+++ PARENT_PARENT_PATH=neon/staging/builds
+++ chmod +x /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh
+++ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh -k 2 -l 2 -a 2 -S /all/repo/ -d neon/staging/builds -i jbosstools-4.4.2.AM2-build-discovery.central -DESTINATION tools@filemgmt.jboss.org:/downloads_htdocs/tools
+Logfile: /tmp/tmp.YPwUkeu3Wd/jbosstools-cleanup.sh.log.20161014-1426.txt
+
+Check for neon/staging/builds builds more than 2 days old; keep minimum 2 builds per branch (linked in composite: 2)
+Check /downloads_htdocs/tools/neon/staging/builds/ for dirs matching /jbosstools-4.4.2.AM2-build-discovery.central/ ...
+> Check /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central...
++ /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626 (0d)
+> Check /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central...
+Generate metadata for first 2 of 1 subdir(s) in /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/ (siteName = neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central
+
+++ wgetParams='--timeout=900 --wait=10 --random-wait --tries=10 --retry-connrefused --no-check-certificate -q'
+++ [[ -n jbosstools-discovery_master ]]
+++ bl=/tmp/tmp.0zi7YOMD3u/BUILDLOG.txt
+++ getRemoteFile http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText
+++ getRemoteFileReturn=
+++ grfURL=http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText
+++ mkdir -p /tmp/tmp.0zi7YOMD3u
++++ mktemp --tmpdir=/tmp/tmp.0zi7YOMD3u getRemoteFile.XXXXXX
+++ output=/tmp/tmp.0zi7YOMD3u/getRemoteFile.GafUP4
++++ egrep 'ERROR 404'
++++ wget --timeout=900 --wait=10 --random-wait --tries=10 --retry-connrefused --no-check-certificate -q http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText -O /tmp/tmp.0zi7YOMD3u/getRemoteFile.GafUP4
+++ [[ ! -n '' ]]
+++ getRemoteFileReturn=/tmp/tmp.0zi7YOMD3u/getRemoteFile.GafUP4
+++ [[ -w /tmp/tmp.0zi7YOMD3u/getRemoteFile.GafUP4 ]]
+++ mv /tmp/tmp.0zi7YOMD3u/getRemoteFile.GafUP4 /tmp/tmp.0zi7YOMD3u/BUILDLOG.txt
+++ touch /tmp/tmp.0zi7YOMD3u/BUILDLOG.txt
+++ chmod 664 /tmp/tmp.0zi7YOMD3u/BUILDLOG.txt
+++ rsync -arzq --protocol=28 /tmp/tmp.0zi7YOMD3u/BUILDLOG.txt tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.central/2016-10-14_18-25-04-B6626//logs/
+++ rm -fr /tmp/tmp.0zi7YOMD3u
++ . /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site -t neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo/
++++ mktemp -d
+++ tmpdir=/tmp/tmp.7XhzBdwxRF
+++ mkdir -p /tmp/tmp.7XhzBdwxRF
+++ DESTINATION=tools@filemgmt.jboss.org:/downloads_htdocs/tools
+++ INCLUDES='*'
+++ EXCLUDES=
+++ numbuildstokeep=2
+++ numbuildstolink=2
+++ threshholdwhendelete=2
+++ regenMetadataFlag=
+++ RSYNCFLAGS=
+++ [[ 4 -lt 1 ]]
+++ [[ 4 -gt 0 ]]
+++ case $1 in
+++ SOURCE_PATH=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site
+++ shift 1
+++ shift 1
+++ [[ 2 -gt 0 ]]
+++ case $1 in
+++ TARGET_PATH=neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo/
+++ shift 1
+++ shift 1
+++ [[ 0 -gt 0 ]]
+++ echo '[DEBUG] BUILD_TIMESTAMP = 2016-10-14_18-25-04'
+[DEBUG] BUILD_TIMESTAMP = 2016-10-14_18-25-04
+++ echo '[DEBUG] RSYNCFLAGS = '
+[DEBUG] RSYNCFLAGS = 
+++ [[ '' == '' ]]
+++ seg=.
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon
+++ echo -e 'mkdir neon'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging
+++ echo -e 'mkdir neon/staging'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds
+++ echo -e 'mkdir neon/staging/builds'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo
+++ echo -e 'mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo
+++ seg=
+++ [[ -n '' ]]
+++ echo '[INFO] rsync -arzq --protocol=28  /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/* tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo//'
+[INFO] rsync -arzq --protocol=28  /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/* tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo//
+++ rsync -arzq --protocol=28 /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/compositeArtifacts.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/compositeContent.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/jbosstools-directory.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/jbosstools-earlyaccess.properties /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo//
++++ echo neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo/
++++ sed -e 's#/\?downloads_htdocs/tools/##' -e 's#/\?www_htdocs/devstudio/##' -e 's#/\?qa/services/http/binaries/RHDS/##' -e 's#/\?all/repo/\?##' -e 's#/\?all/\?##' -e 's#/$##' -e 's#^/##' -e 's#\(.\+\)/[^/]\+#\1#' -e 's#/\?2016-10-14_18-25-04-B6626/\?##'
+++ PARENT_PATH=neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess
+++ [[ -n 6626 ]]
+++ [[ -n 2016-10-14_18-25-04 ]]
+++ [[ neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess//all/repo/ != neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo/ ]]
+++ echo '[DEBUG] Symlink[BT] tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/latest -> 2016-10-14_18-25-04-B6626'
+[DEBUG] Symlink[BT] tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/latest -> 2016-10-14_18-25-04-B6626
+++ pushd /tmp/tmp.7XhzBdwxRF
+++ ln -s 2016-10-14_18-25-04-B6626 latest
+++ rsync --protocol=28 -l latest tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/
+++ rm -f latest
+++ popd
+++ [[ -n /mnt/hudson_workspace/workspace/jbosstools-discovery_master ]]
+++ [[ -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh ]]
+++ [[ neon/staging/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo/ != neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626/all/repo/ ]]
++++ echo neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess
++++ sed -e 's#\(.\+\)/[^/]\+#\1#'
+++ PARENT_PARENT_PATH=neon/staging/builds
+++ chmod +x /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh
+++ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh -k 2 -l 2 -a 2 -S /all/repo/ -d neon/staging/builds -i jbosstools-4.4.2.AM2-build-discovery.earlyaccess -DESTINATION tools@filemgmt.jboss.org:/downloads_htdocs/tools
+Logfile: /tmp/tmp.kzOSZ9eEXj/jbosstools-cleanup.sh.log.20161014-1427.txt
+
+Check for neon/staging/builds builds more than 2 days old; keep minimum 2 builds per branch (linked in composite: 2)
+Check /downloads_htdocs/tools/neon/staging/builds/ for dirs matching /jbosstools-4.4.2.AM2-build-discovery.earlyaccess/ ...
+> Check /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess...
++ /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626 (0d)
+> Check /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess...
+Generate metadata for first 2 of 1 subdir(s) in /downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/ (siteName = neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess
+
+++ wgetParams='--timeout=900 --wait=10 --random-wait --tries=10 --retry-connrefused --no-check-certificate -q'
+++ [[ -n jbosstools-discovery_master ]]
+++ bl=/tmp/tmp.7XhzBdwxRF/BUILDLOG.txt
+++ getRemoteFile http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText
+++ getRemoteFileReturn=
+++ grfURL=http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText
+++ mkdir -p /tmp/tmp.7XhzBdwxRF
++++ mktemp --tmpdir=/tmp/tmp.7XhzBdwxRF getRemoteFile.XXXXXX
+++ output=/tmp/tmp.7XhzBdwxRF/getRemoteFile.xmFrV1
++++ egrep 'ERROR 404'
++++ wget --timeout=900 --wait=10 --random-wait --tries=10 --retry-connrefused --no-check-certificate -q http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText -O /tmp/tmp.7XhzBdwxRF/getRemoteFile.xmFrV1
+++ [[ ! -n '' ]]
+++ getRemoteFileReturn=/tmp/tmp.7XhzBdwxRF/getRemoteFile.xmFrV1
+++ [[ -w /tmp/tmp.7XhzBdwxRF/getRemoteFile.xmFrV1 ]]
+++ mv /tmp/tmp.7XhzBdwxRF/getRemoteFile.xmFrV1 /tmp/tmp.7XhzBdwxRF/BUILDLOG.txt
+++ touch /tmp/tmp.7XhzBdwxRF/BUILDLOG.txt
+++ chmod 664 /tmp/tmp.7XhzBdwxRF/BUILDLOG.txt
+++ rsync -arzq --protocol=28 /tmp/tmp.7XhzBdwxRF/BUILDLOG.txt tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/builds/jbosstools-4.4.2.AM2-build-discovery.earlyaccess/2016-10-14_18-25-04-B6626//logs/
+++ rm -fr /tmp/tmp.7XhzBdwxRF
++ . /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh --del -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site -t neon/staging/updates/discovery.central/4.4.2.AM2/
++++ mktemp -d
+++ tmpdir=/tmp/tmp.l2QjAzv8Xa
+++ mkdir -p /tmp/tmp.l2QjAzv8Xa
+++ DESTINATION=tools@filemgmt.jboss.org:/downloads_htdocs/tools
+++ INCLUDES='*'
+++ EXCLUDES=
+++ numbuildstokeep=2
+++ numbuildstolink=2
+++ threshholdwhendelete=2
+++ regenMetadataFlag=
+++ RSYNCFLAGS=
+++ [[ 5 -lt 1 ]]
+++ [[ 5 -gt 0 ]]
+++ case $1 in
+++ RSYNCFLAGS=' --del'
+++ shift 0
+++ shift 1
+++ [[ 4 -gt 0 ]]
+++ case $1 in
+++ SOURCE_PATH=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site
+++ shift 1
+++ shift 1
+++ [[ 2 -gt 0 ]]
+++ case $1 in
+++ TARGET_PATH=neon/staging/updates/discovery.central/4.4.2.AM2/
+++ shift 1
+++ shift 1
+++ [[ 0 -gt 0 ]]
+++ echo '[DEBUG] BUILD_TIMESTAMP = 2016-10-14_18-25-04'
+[DEBUG] BUILD_TIMESTAMP = 2016-10-14_18-25-04
+++ echo '[DEBUG] RSYNCFLAGS =  --del'
+[DEBUG] RSYNCFLAGS =  --del
+++ [[ '' == '' ]]
+++ seg=.
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon
+++ echo -e 'mkdir neon'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging
+++ echo -e 'mkdir neon/staging'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/updates
+++ echo -e 'mkdir neon/staging/updates'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/updates
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/updates/discovery.central
+++ echo -e 'mkdir neon/staging/updates/discovery.central'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/updates/discovery.central
+Couldn't create directory: Failure
+++ for d in '${TARGET_PATH//\// }'
+++ seg=./neon/staging/updates/discovery.central/4.4.2.AM2
+++ echo -e 'mkdir neon/staging/updates/discovery.central/4.4.2.AM2'
+++ sftp tools@filemgmt.jboss.org:/downloads_htdocs/tools/
+Connecting to filemgmt.jboss.org...
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir neon/staging/updates/discovery.central/4.4.2.AM2
+++ seg=
+++ [[ -n '' ]]
+++ echo '[INFO] rsync -arzq --protocol=28  --del /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/* tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/updates/discovery.central/4.4.2.AM2//'
+[INFO] rsync -arzq --protocol=28  --del /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/* tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/updates/discovery.central/4.4.2.AM2//
+++ rsync -arzq --protocol=28 --del /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/compositeArtifacts.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/compositeContent.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/jbosstools-directory.xml /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/plugins tools@filemgmt.jboss.org:/downloads_htdocs/tools/neon/staging/updates/discovery.central/4.4.2.AM2//
++++ echo neon/staging/updates/discovery.central/4.4.2.AM2/
++++ sed -e 's#/\?downloads_htdocs/tools/##' -e 's#/\?www_htdocs/devstudio/##' -e 's#/\?qa/services/http/binaries/RHDS/##' -e 's#/\?all/repo/\?##' -e 's#/\?all/\?##' -e 's#/$##' -e 's#^/##' -e 's#\(.\+\)/[^/]\+#\1#' -e 's#/\?2016-10-14_18-25-04-B6626/\?##'
+++ PARENT_PATH=neon/staging/updates/discovery.central
+++ [[ -n 6626 ]]
+++ [[ -n 2016-10-14_18-25-04 ]]
+++ [[ neon/staging/updates/discovery.central/4.4.2.AM2/ != neon/staging/updates/discovery.central/4.4.2.AM2/ ]]
+++ [[ -n 6626 ]]
+++ [[ neon/staging/updates/discovery.central/4.4.2.AM2/ != neon/staging/updates/discovery.central/4.4.2.AM2/ ]]
++++ echo 4.4.2.AM2/
++++ sed -e 's#/\?all/repo/\?##' -e 's#/\?all/\?##'
+++ BUILD_DIR=4.4.2.AM2/
+++ [[ -n 4.4.2.AM2/ ]]
+++ [[ 4.4.2.AM2/ != 4.4.2.AM2/ ]]
+++ [[ -n /mnt/hudson_workspace/workspace/jbosstools-discovery_master ]]
+++ [[ -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/util/cleanup/jbosstools-cleanup.sh ]]
+++ [[ neon/staging/updates/discovery.central/4.4.2.AM2/ != neon/staging/updates/discovery.central/4.4.2.AM2/ ]]
+++ [[ neon/staging/updates/discovery.central/4.4.2.AM2/ != neon/staging/updates/discovery.central/4.4.2.AM2/ ]]
+++ wgetParams='--timeout=900 --wait=10 --random-wait --tries=10 --retry-connrefused --no-check-certificate -q'
+++ [[ -n jbosstools-discovery_master ]]
+++ bl=/tmp/tmp.l2QjAzv8Xa/BUILDLOG.txt
+++ getRemoteFile http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText
+++ getRemoteFileReturn=
+++ grfURL=http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText
+++ mkdir -p /tmp/tmp.l2QjAzv8Xa
++++ mktemp --tmpdir=/tmp/tmp.l2QjAzv8Xa getRemoteFile.XXXXXX
+++ output=/tmp/tmp.l2QjAzv8Xa/getRemoteFile.NuoedV
++++ egrep 'ERROR 404'
++++ wget --timeout=900 --wait=10 --random-wait --tries=10 --retry-connrefused --no-check-certificate -q http://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-discovery_master/6626/consoleText -O /tmp/tmp.l2QjAzv8Xa/getRemoteFile.NuoedV
