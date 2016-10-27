@@ -7,8 +7,9 @@
   -->
   <!-- 20140313: new, JBDS-2943 -->
   <property name="LONGNAME" value="m2eclipse-egit"/>
-  <property name="version" value="0.14.0.201509090157"/>
-  <property name="URL" value="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.14.0/N/${version}" />
+  <property name="version" value="0.15.0.201610271523"/>
+  <!-- <property name="URL" value="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.14.0/N/${version}" /> -->
+  <property name="URL" value="https://repository.takari.io/content/sites/m2e.extras/m2eclipse-egit/0.15.0/N/${version}" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
