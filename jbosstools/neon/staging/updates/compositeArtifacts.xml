@@ -2,13 +2,13 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='JBoss Tools - Core + Central Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1476469526657'/>
+    <property name='p2.timestamp' value='1478292877539'/>
     <property name='p2.compressed' value='true'/>
   </properties>
   <children size='4'>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.61.0.AM1-SNAPSHOT/REPO/'/>
-  	<child location='http://download.jboss.org/jbosstools/neon/staging/updates/core/4.4.2.AM2/'/>
-  	<child location='http://download.jboss.org/jbosstools/neon/staging/updates/central/4.4.2.AM2/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.61.0.AM2-SNAPSHOT/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/neon/staging/updates/core/4.4.2.AM3/'/>
+  	<child location='http://download.jboss.org/jbosstools/neon/staging/updates/central/4.4.2.AM3/'/>
   	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.61.0.AM1-SNAPSHOT/REPO/'/>
   </children>
 </repository>
