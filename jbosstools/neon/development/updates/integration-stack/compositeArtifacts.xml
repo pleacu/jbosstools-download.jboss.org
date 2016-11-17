@@ -7,13 +7,11 @@
      get new time w/ 
       date +%s000
 -->
-<property name='p2.timestamp' value='1462369803000'/>
+<property name='p2.timestamp' value='1479390908000'/>
 </properties>
 <children size='2'>
-  <!-- IS ONLY -->
-  <!-- nothing released yet
-  <child location='http://download.jboss.org/jbosstools/neon/staging/updates/integration-stack/4.4.0.Alpha1-SNAPSHOT/'/>
-  <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.4.0.Alpha1-SNAPSHOT/jbtis/REPO/'/>
-  -->
+   <!-- IS ONLY -->
+   <child location='http://download.jboss.org/jbosstools/neon/development/updates/integration-stack/4.4.0.Final/'/>
+   <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.4.0.Final/jbtis/REPO/'/>
 </children>
 </repository>
