@@ -24,10 +24,6 @@
 	</developers>
 
 	<properties>
-		<!-- buildType = staging, development, stable -->
-		<buildType>staging</buildType>
-		<version_jbt>4.4.2.Final</version_jbt>
-		<version_ds>10.2.0.GA</version_ds>
 	</properties>
 
 	<build>
@@ -35,6 +31,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.5.0</version>
 				<executions>
 					<execution>
 						<configuration>
@@ -42,12 +39,6 @@
 							<workingDirectory>src/main/</workingDirectory>
 							<arguments>
 								<argument>ide-config.properties.py</argument>
-								<argument>-i</argument>
-								<argument>${version_jbt}</argument>
-								<argument>-d</argument>
-								<argument>${version_ds}</argument>
-								<argument>-t</argument>
-								<argument>${buildType}</argument>
 								<argument>-O</argument>
 								<argument>${project.basedir}/ide-config.properties</argument>
 

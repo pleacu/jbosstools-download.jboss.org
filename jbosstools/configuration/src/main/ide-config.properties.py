@@ -9,11 +9,8 @@ This script will regenerate fragment.properties files for stable, development, s
 then merge those into a single ide-config.properties file."
 
 parser = OptionParser(usage)
-parser.add_option("-i", "--version_jbt",dest="version_jbt", help="JBIDE Fix Version, eg., 4.4.2.Final")
-parser.add_option("-d", "--version_ds", dest="version_ds", help="JBDS Fix Version, eg., 10.2.0.GA")
-parser.add_option("-t", "--buildType",  dest="buildType", help="buildType should be one of staging, development, stable")
-parser.add_option("-O", "--outputFile", dest="outputFile", help="merged destination file with full path")
 
+parser.add_option("-O", "--outputFile", dest="outputFile", help="merged destination file with full path")
 parser.add_option("-C", "--snapshotsRegex",   dest="snapshotsRegex", help="regex to apply to current-snapshots (ci) file")
 parser.add_option("-S", "--stagingRegex",     dest="stagingRegex", help="regex to apply to current-staging file")
 parser.add_option("-D", "--developmentRegex", dest="developmentRegex", help="regex to apply to current-development file")
@@ -21,18 +18,10 @@ parser.add_option("-R", "--stableRegex",      dest="stableRegex", help="regex to
 
 (options, args) = parser.parse_args()
 
-if not options.version_jbt or not options.version_ds or not options.buildType or not options.outputFile:
-    parser.error("Must to specify ALL commandline flags")
+if not options.outputFile:
+    parser.error("Must to specify -O /patht/to/outputfile")
 
-jbide_fixversion = options.version_jbt
-jbds_fixversion = options.version_ds
-buildType = options.buildType
 outputFile = options.outputFile
-
-def printme( str ):
-   "This prints a passed string into this function"
-   print str
-   return
 
 filenames = ['ide-config.current-snapshots-fragment.properties', 'ide-config.current-staging-fragment.properties', \
     'ide-config.current-development-fragment.properties', 'ide-config.current-stable-fragment.properties', \
