@@ -1,0 +1,82 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jboss.tools.releng</groupId>
+	<artifactId>jbosstools-releng-ide-config-properties</artifactId>
+	<version>4.4.2.Final-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>JBoss Tools - Script to update/merge ide-config.properties fragments</name>
+	<licenses>
+		<license>
+			<name>Eclipse Public License</name>
+			<url>http://www.eclipse.org/legal/epl-v10.html</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>tools.jboss.org</id>
+			<name>JBoss Tools</name>
+			<organization>jboss.org/tools</organization>
+			<organizationUrl>http://jboss.org/tools</organizationUrl>
+		</developer>
+	</developers>
+
+	<properties>
+		<!-- buildType = staging, development, stable -->
+		<buildType>staging</buildType>
+		<version_jbt>4.4.2.Final</version_jbt>
+		<version_ds>10.2.0.GA</version_ds>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<executable>python</executable>
+							<workingDirectory>src/main/</workingDirectory>
+							<arguments>
+								<argument>ide-config.properties.py</argument>
+								<argument>-i</argument>
+								<argument>${version_jbt}</argument>
+								<argument>-d</argument>
+								<argument>${version_ds}</argument>
+								<argument>-t</argument>
+								<argument>${buildType}</argument>
+								<argument>-O</argument>
+								<argument>${project.basedir}/ide-config.properties</argument>
+
+								<!-- 1. when moving to the next staging site, both snapshots and staging are updated -->
+
+								<argument>-C</argument>
+								<argument>4.4.2.Final,4.4.3.AM1;10.2.0.GA,10.3.0.AM1</argument>
+								<argument>-S</argument>
+								<argument>4.4.2.AM3,4.4.2.Final;10.2.0.AM3,10.2.0.GA</argument>
+
+								<!-- 2. when releasing a jbosstools milestone --> 
+
+								<!-- <argument>-D</argument>
+								<argument>4.4.2.AM3,4.4.2.Final</argument> -->
+
+								<!-- 3. when releasing a stable -->
+
+								<!-- <argument>-R</argument>
+								<argument>4.4.1.Final,4.4.2.Final;10.1.0.GA,10.2.0.GA</argument> -->
+							</arguments>
+						</configuration>
+						<id>python-build</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
