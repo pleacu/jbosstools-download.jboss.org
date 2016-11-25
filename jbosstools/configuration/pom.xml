@@ -44,10 +44,10 @@
 
 								<!-- 1. when moving to the next staging site, both snapshots (C) and staging (S) are updated -->
 
-								<!-- <argument>-C</argument>
+								<argument>-C</argument>
 								<argument>4.4.2.Final,4.4.3.AM1;10.2.0.GA,10.3.0.AM1</argument>
 								<argument>-S</argument>
-								<argument>4.4.2.AM3,4.4.2.Final;10.2.0.AM3,10.2.0.GA</argument> -->
+								<argument>4.4.2.AM3,4.4.2.Final;10.2.0.AM3,10.2.0.GA</argument>
 
 								<!-- 2. when releasing a jbosstools milestone (D) --> 
 
