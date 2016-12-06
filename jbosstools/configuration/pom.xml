@@ -93,6 +93,7 @@
 										<argument>${project.basedir}/ide-config.properties</argument>
 
 										<!-- 1. when moving to the next staging site, both snapshots (C) and staging (S) are updated -->
+										<!-- TODO: what if there's no _NEXT? do we have to instead comment out the snapshots site? -->
 										<argument>-C</argument>
 										<argument>${version_jbt},${version_jbt_NEXT};${version_ds},${version_ds_NEXT}</argument>
 										<argument>-S</argument>
