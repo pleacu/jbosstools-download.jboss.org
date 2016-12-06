@@ -36,7 +36,24 @@
 		<!-- buildType can be staging, development, or stable, to define which profile to run
 		     and therefore which changes to apply to the ide-config.properties fragments while merging them -->
 		<buildType>staging</buildType>
+		<!-- use these to toggle a section from being commented or uncommented -->
+		<COMMENTED>^jboss.discovery,#jboss.discovery;^jboss.central,#jboss.central</COMMENTED>
+		<COMMENT_JBT>^jboss.discovery(.+${version_jbt}=.+),#jboss.discovery\1;^jboss.central(.+${version_jbt}=.+),#jboss.central\1</COMMENT_JBT>
+		<UNCOMMENT>^#jboss.discovery,jboss.discovery;^#jboss.central,jboss.central</UNCOMMENT>
 	</properties>
+
+<!-- test cases:
+
+1. release a dev milestone:
+git checkout src/main/ide-config.*properties ide-config.properties; mvn clean install -DbuildType=development
+2. release a stable GA:
+mvn clean install -DbuildType=stable
+3. stage a milestone:
+mvn clean install -DbuildType=staging \
+-Dversion_jbt_PREV=4.4.2.Final -Dversion_jbt=4.4.3.AM1 -Dversion_jbt_NEXT=4.4.3.AM2 \
+-Dversion_ds_PREV=10.2.0.GA -Dversion_ds=10.3.0.AM1 -Dversion_ds_NEXT=10.3.0.AM2
+
+-->
 
 	<build>
 		<plugins>
@@ -97,7 +114,7 @@
 										<argument>-C</argument>
 										<argument>${version_jbt},${version_jbt_NEXT};${version_ds},${version_ds_NEXT}</argument>
 										<argument>-S</argument>
-										<argument>${version_jbt_PREV},${version_jbt};${version_ds_PREV},${version_ds}</argument>
+										<argument>${version_jbt_PREV},${version_jbt};${version_ds_PREV},${version_ds};${UNCOMMENT}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<!-- <argument>-D</argument>
@@ -148,11 +165,11 @@
 										<argument>-C</argument>
 										<argument>${version_jbt},${version_jbt_NEXT};${version_ds},${version_ds_NEXT}</argument>
 										<argument>-S</argument>
-										<argument>${version_jbt_PREV},${version_jbt};${version_ds_PREV},${version_ds}</argument>
+										<argument>${version_jbt_PREV},${version_jbt};${version_ds_PREV},${version_ds};${COMMENT_JBT}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<argument>-D</argument>
-										<argument>${version_jbt_PREV},${version_jbt}</argument>
+										<argument>${version_jbt_PREV},${version_jbt};${UNCOMMENT}</argument>
 
 										<!-- 3. when releasing a stable (R) -->
 										<!-- <argument>-R</argument>
@@ -199,11 +216,11 @@
 										<argument>-C</argument>
 										<argument>${version_jbt},${version_jbt_NEXT};${version_ds},${version_ds_NEXT}</argument>
 										<argument>-S</argument>
-										<argument>${version_jbt_PREV},${version_jbt};${version_ds_PREV},${version_ds}</argument>
+										<argument>${version_jbt_PREV},${version_jbt};${version_ds_PREV},${version_ds};${COMMENT_JBT}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<argument>-D</argument>
-										<argument>${version_jbt_PREV},${version_jbt}</argument>
+										<argument>${version_jbt_PREV},${version_jbt};${COMMENTED}</argument>
 
 										<!-- 3. when releasing a stable (R) -->
 										<argument>-R</argument>
