@@ -39,6 +39,7 @@
 		<!-- use these to toggle a section from being commented or uncommented -->
 		<COMMENTED>^jboss.discovery,#jboss.discovery;^jboss.central,#jboss.central</COMMENTED>
 		<COMMENT_JBT>^jboss.discovery(.+${versionWithRespin_jbt}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_jbt}=.+),#jboss.central\1</COMMENT_JBT>
+		<COMMENT_DS>^jboss.discovery(.+${versionWithRespin_ds}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_ds}=.+),#jboss.central\1</COMMENT_DS>
 		<UNCOMMENT>^#jboss.discovery,jboss.discovery;^#jboss.central,jboss.central</UNCOMMENT>
 	</properties>
 
@@ -216,11 +217,11 @@ mvn clean install -DbuildType=staging \
 										<argument>-C</argument>
 										<argument>${versionWithRespin_jbt},${versionWithRespin_jbt_NEXT};${versionWithRespin_ds},${versionWithRespin_ds_NEXT}</argument>
 										<argument>-S</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${versionWithRespin_ds_PREV},${versionWithRespin_ds};${COMMENT_JBT}</argument>
+										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${versionWithRespin_ds_PREV},${versionWithRespin_ds};${COMMENTED}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<argument>-D</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${COMMENTED}</argument>
+										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${COMMENT_JBT}</argument>
 
 										<!-- 3. when releasing a stable (R) -->
 										<argument>-R</argument>
