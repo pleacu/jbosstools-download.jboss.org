@@ -1,0 +1,74 @@
+{
+    "timestamp" : 1480084883749,
+    "revision" : {
+        "HEAD" : "75e53a555f10c304709a13f9ace6d8287d10b4da",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [
+            {
+                "name" : "origin",
+                "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                "ref" : "jbosstools-4.4.2.x"
+            },
+            {
+                "name" : "origin",
+                "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                "ref" : "master"
+            }
+        ]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+        "java.version" : "1.8.0_111",
+        "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.child-sites_4.4.neon/jdk/jdk1.8/label_exp/(RHEL6||RHEL7||beaker||jboss-prod)&&!ia64&&!ppc64/projectName/central/sources/aggregate/central-site",
+        "os.arch" : "amd64",
+        "RELEASE" : "null",
+        "BUILD_ALIAS" : "null",
+        "JOB_NAME" : "null",
+        "os.version" : "2.6.32-642.6.2.el6.x86_64",
+        "BUILD_NUMBER" : "null",
+        "TARGET_PLATFORM_VERSION" : "null",
+        "NODE_NAME" : "null",
+        "HOSTNAME" : "vmg105.hosts.mwqe.eng.bos.redhat.com",
+        "java.vendor" : "Oracle Corporation",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "null",
+        "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.child-sites_4.4.neon/jdk/jdk1.8/label_exp/(RHEL6||RHEL7||beaker||jboss-prod)&&!ia64&&!ppc64/projectName/central/sources/aggregate/central-site"
+    },
+    "upstream" : {"http://download.jboss.org/jbosstools/neon/snapshots/updates/core/4.4.neon/" : {
+        "timestamp" : 1480081548153,
+        "revision" : {
+            "HEAD" : "75e53a555f10c304709a13f9ace6d8287d10b4da",
+            "currentBranch" : "HEAD",
+            "knownReferences" : [
+                {
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                    "ref" : "jbosstools-4.4.2.x"
+                },
+                {
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                    "ref" : "master"
+                }
+            ]
+        },
+        "properties" : {
+            "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+            "java.version" : "1.8.0_111",
+            "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.site_4.4.neon/sources/aggregate/site",
+            "os.arch" : "amd64",
+            "RELEASE" : "null",
+            "BUILD_ALIAS" : "null",
+            "JOB_NAME" : "null",
+            "os.version" : "2.6.32-573.1.1.el6.x86_64",
+            "BUILD_NUMBER" : "null",
+            "TARGET_PLATFORM_VERSION" : "null",
+            "NODE_NAME" : "null",
+            "HOSTNAME" : "dev187.mw.lab.eng.bos.redhat.com",
+            "java.vendor" : "Oracle Corporation",
+            "os.name" : "Linux",
+            "ZIPSUFFIX" : "null",
+            "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.site_4.4.neon/sources/aggregate/site"
+        }
+    }}
+}

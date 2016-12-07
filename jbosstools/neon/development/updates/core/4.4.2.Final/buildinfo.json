@@ -1,0 +1,652 @@
+{
+    "timestamp" : 1480081548153,
+    "revision" : {
+        "HEAD" : "75e53a555f10c304709a13f9ace6d8287d10b4da",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [
+            {
+                "name" : "origin",
+                "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                "ref" : "jbosstools-4.4.2.x"
+            },
+            {
+                "name" : "origin",
+                "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                "ref" : "master"
+            }
+        ]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+        "java.version" : "1.8.0_111",
+        "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.site_4.4.neon/sources/aggregate/site",
+        "os.arch" : "amd64",
+        "RELEASE" : "null",
+        "BUILD_ALIAS" : "null",
+        "JOB_NAME" : "null",
+        "os.version" : "2.6.32-573.1.1.el6.x86_64",
+        "BUILD_NUMBER" : "null",
+        "TARGET_PLATFORM_VERSION" : "null",
+        "NODE_NAME" : "null",
+        "HOSTNAME" : "dev187.mw.lab.eng.bos.redhat.com",
+        "java.vendor" : "Oracle Corporation",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "null",
+        "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.site_4.4.neon/sources/aggregate/site"
+    },
+    "upstream" : {
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-base_4.4.neon/" : {
+            "timestamp" : 1480059340131,
+            "revision" : {
+                "HEAD" : "967dcab74739dc7138426a3d17a81e351e3cf752",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-base.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-base.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-base_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "3.10.0-327.36.3.el7.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg121.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-base_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-server_4.4.neon/" : {
+            "timestamp" : 1480026966471,
+            "revision" : {
+                "HEAD" : "227dd3e43ea9bea1ea73890223ef817fd293ca6e",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-server.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-server.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-server_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.3.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev82.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-server_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-openshift_4.4.neon/" : {
+            "timestamp" : 1480067862223,
+            "revision" : {
+                "HEAD" : "600d3a818152472f95e006f1d5dc62232ae26379",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-openshift.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-openshift.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-openshift_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.1.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev181.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-openshift_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-jst_4.4.neon/" : {
+            "timestamp" : 1480047825491,
+            "revision" : {
+                "HEAD" : "f6a972f9bc04f0fbfb1b8418d34bbb9a19b4288f",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-jst.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-jst.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-jst_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "3.10.0-327.36.3.el7.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg126.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-jst_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-browsersim_4.4.neon/" : {
+            "timestamp" : 1480039280050,
+            "revision" : {
+                "HEAD" : "055a7ab2c41d11cf41740d5bb02ed535fb482361",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-browsersim.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-browsersim.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-browsersim_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-642.6.2.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg112.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-browsersim_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-aerogear_4.4.neon/" : {
+            "timestamp" : 1480039878259,
+            "revision" : {
+                "HEAD" : "c7703054cdc0221d1e3d40be518efc3859c06cdf",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-aerogear.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-aerogear.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-aerogear_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.1.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev176.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-aerogear_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-hibernate_4.4.neon/" : {
+            "timestamp" : 1480037789841,
+            "revision" : {
+                "HEAD" : "78e8eabb9295da9fd468fed64f25a00baeb3d939",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-hibernate.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-hibernate.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-hibernate_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-642.6.2.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg103.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-hibernate_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-javaee_4.4.neon/" : {
+            "timestamp" : 1480040679336,
+            "revision" : {
+                "HEAD" : "9f5c3e07766662d1c7e6b8ad1e624e6c1ca827cb",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-javaee.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-javaee.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-javaee_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-642.6.2.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg106.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-javaee_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-webservices_4.4.neon/" : {
+            "timestamp" : 1480035170702,
+            "revision" : {
+                "HEAD" : "10e93e5a693f99912931ee2ef270a13798d4124a",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-webservices.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-webservices.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-webservices_4.4.neon/sources/site",
+                "os.arch" : "i386",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.3.1.el6.i686",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev106.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-webservices_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/" : {
+            "timestamp" : 1435679244000,
+            "revision" : {
+                "HEAD" : "4eec888e7045ab1413934670cbdcdf7a11447b52",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-portlet.git",
+                    "ref" : "jbosstools-4.2.x"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "4.41.1.CR2",
+                "java.version" : "1.7.0",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-portlet_4.2.luna/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "",
+                "BUILD_ID" : "2014-12-08_22-36-13",
+                "BUILD_ALIAS" : "Final",
+                "JOB_NAME" : "jbosstools-portlet_4.2.luna",
+                "os.version" : "2.6.32-431.11.2.el6.x86_64",
+                "BUILD_NUMBER" : "20",
+                "TARGET_PLATFORM_VERSION" : "4.40.0.Final",
+                "HOSTNAME" : "dev192.mw.lab.eng.bos.redhat.com",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "SNAPSHOT",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-portlet_4.2.luna/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-vpe_4.4.neon/" : {
+            "timestamp" : 1480038545685,
+            "revision" : {
+                "HEAD" : "9aab27c3d83a07fa819832ceeb37598e88e977ae",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-vpe.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-vpe.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-vpe_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.3.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev82.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-vpe_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-arquillian_4.4.neon/" : {
+            "timestamp" : 1480044046488,
+            "revision" : {
+                "HEAD" : "9937dc0023c76d412c278649b8c1c47953fb0ba1",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-arquillian.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-arquillian.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-arquillian_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "3.10.0-327.36.3.el7.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg132.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-arquillian_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-forge_4.4.neon/" : {
+            "timestamp" : 1480025877146,
+            "revision" : {
+                "HEAD" : "0427faf1236959428d3e5b13d77d0f15b356e5c5",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-forge.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-forge.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-forge_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "3.10.0-327.36.3.el7.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "vmg125.hosts.mwqe.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-forge_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-livereload_4.4.neon/" : {
+            "timestamp" : 1480035572896,
+            "revision" : {
+                "HEAD" : "3b9c7067d2490a367750c825aed88d23a5e91e3f",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-livereload.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-livereload.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-livereload_4.4.neon/sources/site",
+                "os.arch" : "i386",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.3.1.el6.i686",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "soavmg11.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-livereload_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-central_4.4.neon/" : {
+            "timestamp" : 1480043030922,
+            "revision" : {
+                "HEAD" : "6c54976f07f04f5ef4eea703c94fb9a4edef2c1e",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-central.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-central.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-central_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.3.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "qa04.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-central_4.4.neon/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/" : {
+            "timestamp" : 1435679244000,
+            "revision" : {
+                "HEAD" : "2edce933f7d64efbb4d7a5b16be8dadae8de766e",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-xulrunner.git",
+                    "ref" : "jbosstools-4.1.x"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.7.0",
+                "user.dir" : "/qa/local/hudson_workspace/workspace/xulrunner-1.9.2",
+                "os.arch" : "x86_64",
+                "RELEASE" : "Yes",
+                "BUILD_ID" : "2012-11-26_18-50-16",
+                "BUILD_ALIAS" : "Final",
+                "JOB_NAME" : "xulrunner-1.9.2",
+                "os.version" : "2.6.18-128.1.1.el5",
+                "BUILD_NUMBER" : "155",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "HOSTNAME" : "dsp06.mw.lab.eng.bos.redhat.com",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "2012-11-26_18-50-16-B155",
+                "WORKSPACE" : "/qa/local/hudson_workspace/workspace/xulrunner-1.9.2"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-freemarker_4.4.neon/" : {
+            "timestamp" : 1480025791802,
+            "revision" : {
+                "HEAD" : "e88105f2843a23bc18462653ef51844f64e9b0cb",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-freemarker.git",
+                        "ref" : "jbosstools-4.4.2.x"
+                    },
+                    {
+                        "name" : "origin",
+                        "url" : "git://github.com/jbosstools/jbosstools-freemarker.git",
+                        "ref" : "master"
+                    }
+                ]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_111",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-freemarker_4.4.neon/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.1.1.el6.x86_64",
+                "BUILD_NUMBER" : "18",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev184.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-freemarker_4.4.neon/sources/site"
+            }
+        }
+    }
+}
