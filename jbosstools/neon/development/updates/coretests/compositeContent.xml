@@ -3,7 +3,7 @@
 <repository name='JBoss Tools 4.4.0.Alpha1 Stable Release Tests Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1481123208000'/>
+<property name='p2.timestamp' value='1481123427000'/>
 </properties>
 <children size='2'>
 <child location='http://download.jboss.org/jbosstools/static/neon/development/updates/core/'/>
