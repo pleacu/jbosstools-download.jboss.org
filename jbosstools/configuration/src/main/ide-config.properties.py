@@ -6,7 +6,7 @@ from os import remove
 from shutil import move
 
 usage = "\n\n\
-Usage 1: %prog -i <version_jbt> -d <version_ds> -t <buildType> -O </path/to/outputFile>\n\n\
+Usage 1: %prog -O </path/to/outputFile>\n\n\
 This script will regenerate fragment.properties files for stable, development, staging, and snapshots properties,\n\
 then merge those into a single ide-config.properties file."
 
@@ -22,7 +22,7 @@ parser.add_option("-X", "--debug",      dest="debug", action="store_true", help=
 (options, args) = parser.parse_args()
 
 if not options.outputFile:
-    parser.error("Must to specify -O /patht/to/outputfile")
+    parser.error("Must to specify -O /path/to/outputFile")
 
 outputFile = options.outputFile
 
@@ -36,20 +36,12 @@ buildTypes_d = {'snapshots': options.snapshotsRegex, 'staging': options.stagingR
 fulllines_d = {}
 productversions_d = {}
 
-# split line and store in fulllines_d and productversions_d; also check for dupes and fail if any found
+# split line and store in fulllines_d and productversions_d
+# also check for dupes and fail if any found
+# also check that if stableRegex is defined, all snapshot, staging, or development URLs with GA or Final are commented out
 def storeLines(lineFixed, line, fname):
     pair = lineFixed.split("=")
     if len(pair) > 1 and (pair[0].count("|jbosstools|") > 0 or pair[0].count("|devstudio|") > 0):
-        # store version = jbosstools|jboss.discovery.directory.url and version = devstudio|jboss.central.webpage.url key pairs; dupes are OK here
-        triple = pair[0].split("|") # jboss.discovery.earlyaccess.list.url|devstudio|10.3.0.AM1
-        if len(triple) > 1 and (triple[0].startswith("jboss.discovery") or triple[0].startswith("jboss.central")): # store only the central/discovery keys
-            if not triple[2] in productversions_d:
-                productversions_d[triple[2]] = { triple[0]: triple[1] } # 10.3.0.AM1 => { jboss.discovery.earlyaccess.list.url : devstudio }
-            else:
-                productversions_d[triple[2]][triple[0]] = triple[1]
-            if options.debug:
-                print "[DEBUG] Store: productversions_d[ " + triple[2] + " ] = { " + triple[0] + ": " + triple[1] + " }"
-
         # check for duplicate keys and fail the build if any found
         if not pair[0] in fulllines_d:
             fulllines_d[pair[0]] = pair[1].rstrip()
@@ -64,6 +56,22 @@ def storeLines(lineFixed, line, fname):
             print "[ERROR] " + fulllines_d[pair[0]]
             print "[ERROR] Duplicate key found reading file:"
             exit(str(fname))
+
+        triple = pair[0].split("|") # jboss.discovery.earlyaccess.list.url|devstudio|10.3.0.AM1
+
+        # check that if stableRegex is defined, all snapshot, staging, or development URLs with GA or Final are commented out
+        if options.stableRegex and not pair[0].startswith("#") and (triple[2].count(".Final") or triple[2].count(".GA")):
+            print "[ERROR] Need to comment out lines with " + triple[1] + "|" + triple[2] + " from file:"
+            exit(str(fname))
+
+        # store version = jbosstools|jboss.discovery.directory.url and version = devstudio|jboss.central.webpage.url key pairs; dupes are OK here
+        if len(triple) > 1 and (triple[0].startswith("jboss.discovery") or triple[0].startswith("jboss.central")): # store only the central/discovery keys
+            if not triple[2] in productversions_d:
+                productversions_d[triple[2]] = { triple[0]: triple[1] } # 10.3.0.AM1 => { jboss.discovery.earlyaccess.list.url : devstudio }
+            else:
+                productversions_d[triple[2]][triple[0]] = triple[1]
+            if options.debug:
+                print "[DEBUG] Store: productversions_d[ " + triple[2] + " ] = { " + triple[0] + ": " + triple[1] + " }"
 
 # merge regex changes into .merged files
 for fname in filenames:
@@ -114,10 +122,6 @@ for version in sorted(productversions_d.iterkeys()):
         if options.debug:
             print ""
         exit (errMsg)
-
-# TODO: if versionWithRespin_ds contains GA, make sure NO /snapshots/ or /staging/ folders are live - should only be /stable/
-
-
 
 # Finally, if everything went well above, write changes to output file, ide-config.properties
 with open(outputFile, 'w') as outfile:
