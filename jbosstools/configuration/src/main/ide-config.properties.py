@@ -32,16 +32,27 @@ filenames = ['ide-config.current-snapshots-fragment.properties', 'ide-config.cur
 
 buildTypes_d = {'snapshots': options.snapshotsRegex, 'staging': options.stagingRegex, 'development': options.developmentRegex, 'stable': options.stableRegex} 
 
-# store kepairs like jboss.discovery.earlyaccess.site.url|devstudio|10.2.0.GA = https://devstudio.redhat.com/10.0/staging/updates/discovery.earlyaccess/10.2.0.GA/
-keypairs_d = {}
+# store key/value pairs like jboss.discovery.earlyaccess.site.url|devstudio|10.2.0.GA = https://devstudio.redhat.com/10.0/staging/updates/discovery.earlyaccess/10.2.0.GA/
+fulllines_d = {}
+productversions_d = {}
 
-# split line and store in keypairs_d; also check for dupes and fail if any found
+# split line and store in fulllines_d and productversions_d; also check for dupes and fail if any found
 def storeLines(lineFixed, line, fname):
     pair = lineFixed.split("=")
     if len(pair) > 1 and (pair[0].count("|jbosstools|") > 0 or pair[0].count("|devstudio|") > 0):
+        # store version = jbosstools|jboss.discovery.directory.url and version = devstudio|jboss.central.webpage.url key pairs; dupes are OK here
+        triple = pair[0].split("|") # jboss.discovery.earlyaccess.list.url|devstudio|10.3.0.AM1
+        if len(triple) > 1 and (triple[0].startswith("jboss.discovery") or triple[0].startswith("jboss.central")): # store only the central/discovery keys
+            if not triple[2] in productversions_d:
+                productversions_d[triple[2]] = { triple[0]: triple[1] } # 10.3.0.AM1 => { jboss.discovery.earlyaccess.list.url : devstudio }
+            else:
+                productversions_d[triple[2]][triple[0]] = triple[1]
+            if options.debug:
+                print "[DEBUG] Store: productversions_d[ " + triple[2] + " ] = { " + triple[0] + ": " + triple[1] + " }"
+
         # check for duplicate keys and fail the build if any found
-        if not pair[0] in keypairs_d:
-            keypairs_d[pair[0]] = pair[1].rstrip()
+        if not pair[0] in fulllines_d:
+            fulllines_d[pair[0]] = pair[1].rstrip()
         elif pair[0][:1] == "#": # comment block
             print "[WARNING] Commented key " + pair[0] + " already defined"
         else:
@@ -50,7 +61,7 @@ def storeLines(lineFixed, line, fname):
                 print "[ERROR] Transformed key " + pair[0] + " (was: " + pairBefore[0] + ") already defined as:"
             else:
                 print "[ERROR] Unchanged key " + pair[0] + " already defined as:"
-            print "[ERROR] " + keypairs_d[pair[0]]
+            print "[ERROR] " + fulllines_d[pair[0]]
             print "[ERROR] Duplicate key found reading file:"
             exit(str(fname))
 
@@ -80,15 +91,35 @@ for fname in filenames:
     infile.close()
 
 # run tests before merging changes into ide-config.properties and the fragment files
-if options.debug:
-    count=0
-    for key, value in keypairs_d.items():
-        count +=1
-        print "[DEBUG] ["+str(count).zfill(3)+"] " + key + " => " + value
+# if options.debug:
+#     count=0
+#     for key, value in fulllines_d.items():
+#         count +=1
+#         print "[DEBUG] ["+str(count).zfill(3)+"] " + key + " => " + value
 
-# for each group of keys (for a given prod|version) check for correct # of keys - should be 8 keys
-# if versionWithRespin_ds contains GA, make sure NO /snapshots/ or /staging/ folders are live - should only be /stable/
+# for each group of keys (for a given prod|version) check for correct # of keys - should be 8 keys or more
+countBlock = 0
+for version in sorted(productversions_d.iterkeys()):
+    countBlock += 1
+    countInner = 0
+    if len(productversions_d[version]) != 8:
+        errMsg = "[ERROR] Expected 8 keys for jboss.*|*|" + version + ", but got: " + str(len(productversions_d[version])) + \
+            " - check your src/main/ide.config.*-fragment.properties files"
+        print errMsg
+        for key in sorted(productversions_d[version].iterkeys()):
+            countInner += 1
+            if options.debug:
+                print "[DEBUG] [" + str(countBlock).zfill(2) + ", " + str(countInner).zfill(2) + "] " + version + " => " + \
+                    key + " => " + productversions_d[version][key]
+        if options.debug:
+            print ""
+        exit (errMsg)
 
+# TODO: if versionWithRespin_ds contains GA, make sure NO /snapshots/ or /staging/ folders are live - should only be /stable/
+
+
+
+# Finally, if everything went well above, write changes to output file, ide-config.properties
 with open(outputFile, 'w') as outfile:
     for fname in filenames:
         # rename the .merged files to overwrite their original file
@@ -101,4 +132,3 @@ with open(outputFile, 'w') as outfile:
                 outfile.write(line)
         infile.close()
 outfile.close()
-
