@@ -34,7 +34,7 @@
 		<versionWithRespin_ds>10.2.0.GA</versionWithRespin_ds>
 		<versionWithRespin_ds_NEXT>10.3.0.AM1</versionWithRespin_ds_NEXT>
 		<!-- buildType can be staging, development, or stable, to define which profile to run
-		     and therefore which changes to apply to the ide-config.properties fragments while merging them -->
+				 and therefore which changes to apply to the ide-config.properties fragments while merging them -->
 		<buildType>staging</buildType>
 		<!-- use these to toggle a section from being commented or uncommented -->
 		<COMMENTED>^jboss.discovery,#jboss.discovery;^jboss.central,#jboss.central</COMMENTED>
@@ -82,7 +82,23 @@ mvn clean install -DbuildType=staging \
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<filesets>
+					<fileset>
+						<directory>${basedir}/src/main</directory>
+						<includes>
+							<include>**/ide-config*.merged</include>
+						</includes>
+						<followSymlinks>false</followSymlinks>
+					</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 
 	<profiles>
