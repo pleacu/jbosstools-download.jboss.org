@@ -24,6 +24,9 @@
 	</developers>
 
 	<properties>
+		<!-- pythonOptions: use -X to enable debugging -->
+		<pythonOptions></pythonOptions>
+
 		<versionWithRespin_jbt_PREV_GA>4.4.1.Final</versionWithRespin_jbt_PREV_GA>
 		<versionWithRespin_jbt_PREV>4.4.2.AM3</versionWithRespin_jbt_PREV>
 		<versionWithRespin_jbt>4.4.2.Final</versionWithRespin_jbt>
@@ -70,6 +73,7 @@ mvn clean install -DbuildType=staging \
 							<arguments>
 								<!-- by default, merge fragments, but don't transform any versions -->
 								<argument>ide-config.properties.py</argument>
+								<argument>${pythonOptions}</argument>
 								<argument>-O</argument>
 								<argument>${project.basedir}/ide-config.properties</argument>
 							</arguments>
@@ -123,6 +127,7 @@ mvn clean install -DbuildType=staging \
 									<workingDirectory>src/main/</workingDirectory>
 									<arguments>
 										<argument>ide-config.properties.py</argument>
+										<argument>${pythonOptions}</argument>
 										<argument>-O</argument>
 										<argument>${project.basedir}/ide-config.properties</argument>
 
@@ -175,6 +180,7 @@ mvn clean install -DbuildType=staging \
 									<workingDirectory>src/main/</workingDirectory>
 									<arguments>
 										<argument>ide-config.properties.py</argument>
+										<argument>${pythonOptions}</argument>
 										<argument>-O</argument>
 										<argument>${project.basedir}/ide-config.properties</argument>
 
@@ -226,6 +232,7 @@ mvn clean install -DbuildType=staging \
 									<workingDirectory>src/main/</workingDirectory>
 									<arguments>
 										<argument>ide-config.properties.py</argument>
+										<argument>${pythonOptions}</argument>
 										<argument>-O</argument>
 										<argument>${project.basedir}/ide-config.properties</argument>
 
@@ -257,5 +264,4 @@ mvn clean install -DbuildType=staging \
 		</profile>
 	</profiles>
 
-
-	</project>
+</project>
