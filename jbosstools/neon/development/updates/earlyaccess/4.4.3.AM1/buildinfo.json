@@ -1,0 +1,60 @@
+{
+    "timestamp" : 1483725735103,
+    "revision" : {
+        "HEAD" : "23a8b538c7cf47d026983e3abef81c16762e8094",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [{
+            "name" : "origin",
+            "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+            "ref" : "master"
+        }]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+        "java.version" : "1.8.0_111",
+        "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.child-sites_master/jdk/jdk1.8/label_exp/(RHEL6||RHEL7||beaker||jboss-prod)&&!ia64&&!ppc64/projectName/earlyaccess/sources/aggregate/earlyaccess-site",
+        "os.arch" : "amd64",
+        "RELEASE" : "null",
+        "BUILD_ALIAS" : "null",
+        "JOB_NAME" : "null",
+        "os.version" : "2.6.32-642.11.1.el6.x86_64",
+        "BUILD_NUMBER" : "null",
+        "TARGET_PLATFORM_VERSION" : "null",
+        "NODE_NAME" : "null",
+        "HOSTNAME" : "dev172.mw.lab.eng.bos.redhat.com",
+        "java.vendor" : "Oracle Corporation",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "null",
+        "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.child-sites_master/jdk/jdk1.8/label_exp/(RHEL6||RHEL7||beaker||jboss-prod)&&!ia64&&!ppc64/projectName/earlyaccess/sources/aggregate/earlyaccess-site"
+    },
+    "upstream" : {"http://download.jboss.org/jbosstools/neon/snapshots/updates/core/master/" : {
+        "timestamp" : 1483723649805,
+        "revision" : {
+            "HEAD" : "23a8b538c7cf47d026983e3abef81c16762e8094",
+            "currentBranch" : "HEAD",
+            "knownReferences" : [{
+                "name" : "origin",
+                "url" : "git://github.com/jbosstools/jbosstools-build-sites.git",
+                "ref" : "master"
+            }]
+        },
+        "properties" : {
+            "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+            "java.version" : "1.8.0_111",
+            "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.site_master/sources/aggregate/site",
+            "os.arch" : "amd64",
+            "RELEASE" : "null",
+            "BUILD_ALIAS" : "null",
+            "JOB_NAME" : "null",
+            "os.version" : "2.6.32-642.11.1.el6.x86_64",
+            "BUILD_NUMBER" : "null",
+            "TARGET_PLATFORM_VERSION" : "null",
+            "NODE_NAME" : "null",
+            "HOSTNAME" : "dev61.mw.lab.eng.bos.redhat.com",
+            "java.vendor" : "Oracle Corporation",
+            "os.name" : "Linux",
+            "ZIPSUFFIX" : "null",
+            "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-build-sites.aggregate.site_master/sources/aggregate/site"
+        }
+    }}
+}
