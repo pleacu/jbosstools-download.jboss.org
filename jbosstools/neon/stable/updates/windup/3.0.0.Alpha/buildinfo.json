@@ -1,0 +1,92 @@
+{
+    "timestamp" : 1479395195905,
+    "revision" : {
+        "HEAD" : "0988ade19520cf055ea59f37d04429777cdbc5f7",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [{
+            "name" : "origin",
+            "url" : "https://github.com/windup/windup-eclipse-plugin.git",
+            "ref" : "release-3.1.0.Alpha"
+        }]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+        "java.version" : "1.8.0_101",
+        "user.dir" : "/mnt/hudson_workspace/workspace/windup-eclipse-plugin-release",
+        "os.arch" : "amd64",
+        "RELEASE" : "null",
+        "BUILD_ALIAS" : "null",
+        "JOB_NAME" : "null",
+        "os.version" : "2.6.32-573.1.1.el6.x86_64",
+        "BUILD_NUMBER" : "null",
+        "TARGET_PLATFORM_VERSION" : "null",
+        "NODE_NAME" : "null",
+        "HOSTNAME" : "dev194.mw.lab.eng.bos.redhat.com",
+        "java.vendor" : "Oracle Corporation",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "null",
+        "WORKSPACE" : "/mnt/hudson_workspace/workspace/windup-eclipse-plugin-release"
+    },
+    "upstream" : {
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-base_master/" : {
+            "timestamp" : 1479367479425,
+            "revision" : {
+                "HEAD" : "8b2862086f6b35d664127985876c2d13c9bf5c7c",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-base.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_101",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-base_master/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.1.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev194.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-base_master/sources/site"
+            }
+        },
+        "http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-forge_master/" : {
+            "timestamp" : 1479167700260,
+            "revision" : {
+                "HEAD" : "165095b941562a188bea57f356a85dec126f23ce",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-forge.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_101",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-forge_master/sources/site",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "null",
+                "os.version" : "2.6.32-573.3.1.el6.x86_64",
+                "BUILD_NUMBER" : "null",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "dev84.mw.lab.eng.bos.redhat.com",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-forge_master/sources/site"
+            }
+        }
+    }
+}
