@@ -27,15 +27,15 @@
 		<!-- pythonOptions: use -X to enable debugging -->
 		<pythonOptions></pythonOptions>
 
-		<versionWithRespin_jbt_PREV_GA>4.4.1.Final</versionWithRespin_jbt_PREV_GA>
-		<versionWithRespin_jbt_PREV>4.4.2.AM3</versionWithRespin_jbt_PREV>
-		<versionWithRespin_jbt>4.4.2.Final</versionWithRespin_jbt>
-		<versionWithRespin_jbt_NEXT>4.4.3.AM1</versionWithRespin_jbt_NEXT>
+		<versionWithRespin_jbt_PREV_GA>4.4.2.Final</versionWithRespin_jbt_PREV_GA>
+		<versionWithRespin_jbt_PREV>4.4.3.AM2</versionWithRespin_jbt_PREV>
+		<versionWithRespin_jbt>4.4.3.Final</versionWithRespin_jbt>
+		<versionWithRespin_jbt_NEXT>4.4.4.AM1</versionWithRespin_jbt_NEXT>
 
-		<versionWithRespin_ds_PREV_GA>10.1.0.GA</versionWithRespin_ds_PREV_GA>
-		<versionWithRespin_ds_PREV>10.2.0.AM3</versionWithRespin_ds_PREV>
-		<versionWithRespin_ds>10.2.0.GA</versionWithRespin_ds>
-		<versionWithRespin_ds_NEXT>10.3.0.AM1</versionWithRespin_ds_NEXT>
+		<versionWithRespin_ds_PREV_GA>10.2.0.GA</versionWithRespin_ds_PREV_GA>
+		<versionWithRespin_ds_PREV>10.3.0.AM2</versionWithRespin_ds_PREV>
+		<versionWithRespin_ds>10.3.0.GA</versionWithRespin_ds>
+		<versionWithRespin_ds_NEXT>10.4.0.AM1</versionWithRespin_ds_NEXT>
 		<!-- buildType can be staging, development, or stable, to define which profile to run
 				 and therefore which changes to apply to the ide-config.properties fragments while merging them -->
 		<buildType>staging</buildType>
