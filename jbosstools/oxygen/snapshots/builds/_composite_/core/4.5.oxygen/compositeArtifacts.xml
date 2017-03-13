@@ -14,7 +14,7 @@
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
-https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.4.neon/
+https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.5.oxygen/
 -->
 
 <!-- ## UNCHANGED SINCE previous releases ## -->
@@ -24,23 +24,23 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.4.ne
 
 <!-- ## CHANGED SINCE 4.3.0.Final ## -->
 
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-aerogear_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-arquillian_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-base_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-browsersim_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-central_4.4.neon/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-aerogear_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-arquillian_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-base_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-browsersim_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-central_4.5.oxygen/latest/all/repo/'/>
 
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-forge_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-freemarker_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-hibernate_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-javaee_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-jst_4.4.neon/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-forge_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-freemarker_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-hibernate_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-javaee_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-jst_4.5.oxygen/latest/all/repo/'/>
 
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-livereload_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-openshift_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-server_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-vpe_4.4.neon/latest/all/repo/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-webservices_4.4.neon/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-livereload_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-openshift_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-server_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-vpe_4.5.oxygen/latest/all/repo/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-webservices_4.5.oxygen/latest/all/repo/'/>
 
 </children>
 </repository>
