@@ -5,7 +5,7 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="version" value="6.11.0"/>
+  <property name="version" value="6.11.0.201703011520"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -16,7 +16,9 @@
     <ant antfile="../generic/build.xml" target="mirror">
       <property name="LONGNAME" value="TestNG"/>
       <property name="version" value="${version}"/>
-      <property name="URL" value="http://dl.bintray.com/testng-team/testng-eclipse-release/${version}" />
+      <!-- <property name="URL" value="http://beust.com/eclipse/" /> -->
+      <!-- <property name="URL" value="http://dl.bintray.com/testng-team/testng-eclipse-release/${version}" /> -->
+      <property name="URL" value="http://dl.bintray.com/testng-team/testng-eclipse-release/updatesites/${version}" />
       <property name="latestversiononly" value="${latestversiononly}"/>
     </ant>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
