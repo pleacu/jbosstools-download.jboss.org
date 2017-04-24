@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
 <repository name='updates/requirements/m2eclipse-tycho/' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
-<properties size='2'><property name='p2.timestamp' value='1479488602000'/><property name='p2.compressed' value='true'/></properties>
+<properties size='2'><property name='p2.timestamp' value='1493043136000'/><property name='p2.compressed' value='true'/></properties>
 <children size='1'>
-<child location='0.9.0.201609061714/'/>
+<child location='0.8.1.201704211436/'/>
 </children>
 </repository>
 
