@@ -5,7 +5,7 @@
     <property name="p2.compressed" value="true"/>
 </properties>
 <children size="2">
-    <child location="http://download.jboss.org/jbosstools/neon/development/updates/windup/4.0.0.Beta1/"/>
+    <child location="http://download.jboss.org/jbosstools/neon/development/updates/rhamt/4.0.0.Beta1/"/>
     <child location="http://download.jboss.org/jbosstools/neon/stable/updates/"/>
 </children>
 </repository>
