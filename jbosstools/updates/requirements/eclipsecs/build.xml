@@ -7,9 +7,8 @@
   -->
 
   <property name="LONGNAME" value="eclipsecs"/>
-  <property name="version" value="6.5.0.201504121610"/>
-  <property name="URL1" value="https://sourceforge.net/projects/eclipse-cs/files/updatesite/6.5.0/"/>
-  <property name="URL2" value="http://sevntu-checkstyle.github.com/sevntu.checkstyle/update-site/"/>
+  <property name="version" value="7.3.0.201612142232"/>
+  <property name="URL" value="https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -20,8 +19,7 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL1}" />
-        <repository location="${URL2}" />
+        <repository location="${URL}" />
       </source>
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
     </p2.mirror>

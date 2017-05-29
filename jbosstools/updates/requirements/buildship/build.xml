@@ -6,8 +6,8 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Buildship"/>
-  <property name="version" value="1.0.2.v20150831-1514" />
-  <property name="URL1" value="http://download.eclipse.org/buildship/updates/e45/releases/1.0/${version}/"/>
+  <property name="version" value="2.0.2.v20170420-0906" />
+  <property name="URL" value="http://download.eclipse.org/buildship/updates/e45/releases/2.x/${version}/"/>
   <!-- 
     http://download.eclipse.org/buildship/updates/e45/releases
     http://download.eclipse.org/buildship/updates/e45/milestones/1.0
@@ -21,7 +21,7 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL1}" />
+        <repository location="${URL}" />
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
