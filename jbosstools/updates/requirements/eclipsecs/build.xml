@@ -7,8 +7,8 @@
   -->
 
   <property name="LONGNAME" value="eclipsecs"/>
-  <property name="version" value="7.3.0.201612142232"/>
-  <property name="URL" value="https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/"/>
+  <property name="version" value="7.6.0.201703111252"/>
+  <property name="URL" value="http://eclipse-cs.sourceforge.net/update/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
