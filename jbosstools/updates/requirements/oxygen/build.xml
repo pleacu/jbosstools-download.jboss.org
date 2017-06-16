@@ -10,9 +10,9 @@
       <pathelement location="../ant-contrib.jar"/>
     </classpath>
   </taskdef>
-  <!-- http://download.eclipse.org/releases/oxygen/201602051000/ -->
-  <property name="versionDate" value="201702031000"/>
-  <property name="versionLabel" value="Oxygen.0.M5"/>
+  <!-- http://download.eclipse.org/releases/oxygen/201706161000/ -->
+  <property name="versionDate" value="201706161000"/>
+  <property name="versionLabel" value="Oxygen.0.RC4a"/>
   <property name="version" value="${versionDate}-${versionLabel}"/>
 
   <property name="destination" value="${basedir}"/>
