@@ -27,23 +27,23 @@
 		<!-- pythonOptions: use -X to enable debugging -->
 		<pythonOptions></pythonOptions>
 
-		<versionWithRespin_jbt_PREV_GA>4.4.2.Final</versionWithRespin_jbt_PREV_GA>
-		<versionWithRespin_jbt_PREV>4.4.3.AM2</versionWithRespin_jbt_PREV>
-		<versionWithRespin_jbt>4.4.3.Final</versionWithRespin_jbt>
-		<versionWithRespin_jbt_NEXT>4.4.4.AM1</versionWithRespin_jbt_NEXT>
+		<versionWithRespin_jbt_PREV_GA>4.4.4.Final</versionWithRespin_jbt_PREV_GA>
+		<versionWithRespin_jbt_PREV>4.4.4.Final</versionWithRespin_jbt_PREV>
+		<versionWithRespin_jbt>4.5.0.AM1d</versionWithRespin_jbt>
+		<versionWithRespin_jbt_NEXT>4.5.0.AM2</versionWithRespin_jbt_NEXT>
 
-		<versionWithRespin_ds_PREV_GA>10.2.0.GA</versionWithRespin_ds_PREV_GA>
-		<versionWithRespin_ds_PREV>10.3.0.AM2</versionWithRespin_ds_PREV>
-		<versionWithRespin_ds>10.3.0.GA</versionWithRespin_ds>
-		<versionWithRespin_ds_NEXT>10.4.0.AM1</versionWithRespin_ds_NEXT>
+		<versionWithRespin_ds_PREV_GA>10.4.0.GA</versionWithRespin_ds_PREV_GA>
+		<versionWithRespin_ds_PREV>10.4.0.GA</versionWithRespin_ds_PREV>
+		<versionWithRespin_ds>11.0.0.AM1d</versionWithRespin_ds>
+		<versionWithRespin_ds_NEXT>11.0.0.AM2</versionWithRespin_ds_NEXT>
 		<!-- buildType can be staging, development, or stable, to define which profile to run
 				 and therefore which changes to apply to the ide-config.properties fragments while merging them -->
 		<buildType>staging</buildType>
 		<!-- use these to toggle a section from being commented or uncommented -->
-		<COMMENTED>^jboss.discovery,#jboss.discovery;^jboss.central,#jboss.central</COMMENTED>
-		<COMMENT_JBT>^jboss.discovery(.+${versionWithRespin_jbt}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_jbt}=.+),#jboss.central\1</COMMENT_JBT>
-		<COMMENT_DS>^jboss.discovery(.+${versionWithRespin_ds}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_ds}=.+),#jboss.central\1</COMMENT_DS>
-		<UNCOMMENT>^#jboss.discovery,jboss.discovery;^#jboss.central,jboss.central</UNCOMMENT>
+		<COMMENTED>^jboss.discovery,#jboss.discovery;^jboss.central,#jboss.central;^jboss.fuse,#jboss.fuse</COMMENTED>
+		<COMMENT_JBT>^jboss.discovery(.+${versionWithRespin_jbt}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_jbt}=.+),#jboss.central\1;^jboss.fuse(.+${versionWithRespin_jbt}=.+),#jboss.fuse\1</COMMENT_JBT>
+		<COMMENT_DS>^jboss.discovery(.+${versionWithRespin_ds}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_ds}=.+),#jboss.central\1;^jboss.fuse(.+${versionWithRespin_ds}=.+),#jboss.fuse\1</COMMENT_DS>
+		<UNCOMMENT>^#jboss.discovery,jboss.discovery;^#jboss.central,jboss.central;^#jboss.fuse,jboss.fuse</UNCOMMENT>
 	</properties>
 
 <!-- test cases:
