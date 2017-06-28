@@ -65,7 +65,7 @@ def storeLines(lineFixed, line, fname):
             exit(str(fname))
 
         # store version = jbosstools|jboss.discovery.directory.url and version = devstudio|jboss.central.webpage.url key pairs; dupes are OK here
-        if len(triple) > 1 and (triple[0].startswith("jboss.discovery") or triple[0].startswith("jboss.central")): # store only the central/discovery keys
+        if len(triple) > 1 and (triple[0].startswith("jboss.fuse") or triple[0].startswith("jboss.discovery") or triple[0].startswith("jboss.central")): # store only the central/discovery keys
             if not triple[2] in productversions_d:
                 productversions_d[triple[2]] = { triple[0]: triple[1] } # 10.3.0.AM1 => { jboss.discovery.earlyaccess.list.url : devstudio }
             else:
