@@ -44,19 +44,46 @@
 		<COMMENT_JBT>^jboss.discovery(.+${versionWithRespin_jbt}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_jbt}=.+),#jboss.central\1;^jboss.fuse(.+${versionWithRespin_jbt}=.+),#jboss.fuse\1</COMMENT_JBT>
 		<COMMENT_DS>^jboss.discovery(.+${versionWithRespin_ds}=.+),#jboss.discovery\1;^jboss.central(.+${versionWithRespin_ds}=.+),#jboss.central\1;^jboss.fuse(.+${versionWithRespin_ds}=.+),#jboss.fuse\1</COMMENT_DS>
 		<UNCOMMENT>^#jboss.discovery,jboss.discovery;^#jboss.central,jboss.central;^#jboss.fuse,jboss.fuse</UNCOMMENT>
+		<TRIM_SUFFIX>(a|b|c|d)=http,=http</TRIM_SUFFIX>
+		<abcd></abcd>
+		<C>${versionWithRespin_jbt},${versionWithRespin_jbt_NEXT};${versionWithRespin_ds},${versionWithRespin_ds_NEXT}</C>
+		<S>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${versionWithRespin_ds_PREV},${versionWithRespin_ds}</S>
+		<D>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt}</D>
+		<R>${versionWithRespin_jbt_PREV_GA},${versionWithRespin_jbt};${versionWithRespin_ds_PREV_GA},${versionWithRespin_ds}</R>
 	</properties>
 
 <!-- test cases:
 
 1. release a dev milestone:
-git checkout src/main/ide-config.*properties ide-config.properties; mvn clean install -DbuildType=development
+git checkout src/main/ide-config.*properties ide-config.properties; mvn clean verify -DbuildType=development
 2. release a stable GA:
-mvn clean install -DbuildType=stable
+mvn clean verify -DbuildType=stable
 3. stage a milestone:
-mvn clean install -DbuildType=staging \
+mvn clean verify -DbuildType=staging \
 -DversionWithRespin_jbt_PREV=4.4.2.Final -DversionWithRespin_jbt=4.4.3.AM1 -DversionWithRespin_jbt_NEXT=4.4.3.AM2 \
 -DversionWithRespin_ds_PREV=10.2.0.GA -DversionWithRespin_ds=10.3.0.AM1 -DversionWithRespin_ds_NEXT=10.3.0.AM2
 
+4. stage a milestone w/ abcd respin suffix, or removing previous respin
+mvn clean verify \
+-DversionWithRespin_jbt_PREV_GA=4.4.4.Final \
+-DversionWithRespin_jbt_PREV=4.5.0.AM2 \
+-DversionWithRespin_jbt=4.5.0.AM1d \
+-DversionWithRespin_jbt_NEXT=4.5.0.GA \
+-DversionWithRespin_ds_PREV_GA=10.4.0.GA \
+-DversionWithRespin_ds_PREV=11.0.0.AM2 \
+-DversionWithRespin_ds=11.0.0.AM1d \
+-DversionWithRespin_ds_NEXT=11.0.0.GA \
+-DbuildType=staging 
+mvn clean verify \
+-DversionWithRespin_jbt_PREV_GA=4.4.4.Final \
+-DversionWithRespin_jbt_PREV=4.5.0.AM1d \
+-DversionWithRespin_jbt=4.5.0.AM2 \
+-DversionWithRespin_jbt_NEXT=4.5.0.GA \
+-DversionWithRespin_ds_PREV_GA=10.4.0.GA \
+-DversionWithRespin_ds_PREV=11.0.0.AM1d \
+-DversionWithRespin_ds=11.0.0.AM2 \
+-DversionWithRespin_ds_NEXT=11.0.0.GA \
+-DbuildType=staging 
 -->
 
 	<build>
@@ -134,17 +161,17 @@ mvn clean install -DbuildType=staging \
 										<!-- 1. when moving to the next staging site, both snapshots (C) and staging (S) are updated -->
 										<!-- TODO: what if there's no _NEXT? do we have to instead comment out the snapshots site? -->
 										<argument>-C</argument>
-										<argument>${versionWithRespin_jbt},${versionWithRespin_jbt_NEXT};${versionWithRespin_ds},${versionWithRespin_ds_NEXT}</argument>
+										<argument>${C}</argument>
 										<argument>-S</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${versionWithRespin_ds_PREV},${versionWithRespin_ds};${UNCOMMENT}</argument>
+										<argument>${S};${UNCOMMENT};${TRIM_SUFFIX}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<!-- <argument>-D</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt}</argument> -->
+										<argument>${D};${COMMENTED}</argument> -->
 
 										<!-- 3. when releasing a stable (R) -->
 										<!-- <argument>-R</argument>
-										<argument>${versionWithRespin_jbt_PREV_GA},${versionWithRespin_jbt};${versionWithRespin_ds_PREV_GA},${versionWithRespin_ds}</argument> -->
+										<argument>${R}</argument> -->
 									</arguments>
 								</configuration>
 								<id>python-build</id>
@@ -186,17 +213,17 @@ mvn clean install -DbuildType=staging \
 
 										<!-- 1. when moving to the next staging site, both snapshots (C) and staging (S) are updated -->
 										<argument>-C</argument>
-										<argument>${versionWithRespin_jbt},${versionWithRespin_jbt_NEXT};${versionWithRespin_ds},${versionWithRespin_ds_NEXT}</argument>
+										<argument>${C}</argument>
 										<argument>-S</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${versionWithRespin_ds_PREV},${versionWithRespin_ds};${COMMENT_JBT}</argument>
+										<argument>${S};${COMMENT_JBT};${TRIM_SUFFIX}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<argument>-D</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${UNCOMMENT}</argument>
+										<argument>${D};${UNCOMMENT}</argument>
 
 										<!-- 3. when releasing a stable (R) -->
 										<!-- <argument>-R</argument>
-										<argument>${versionWithRespin_jbt_PREV_GA},${versionWithRespin_jbt};${versionWithRespin_ds_PREV_GA},${versionWithRespin_ds}</argument> -->
+										<argument>${R}</argument> -->
 									</arguments>
 								</configuration>
 								<id>python-build</id>
@@ -238,17 +265,17 @@ mvn clean install -DbuildType=staging \
 
 										<!-- 1. when moving to the next staging site, both snapshots (C) and staging (S) are updated -->
 										<argument>-C</argument>
-										<argument>${versionWithRespin_jbt},${versionWithRespin_jbt_NEXT};${versionWithRespin_ds},${versionWithRespin_ds_NEXT}</argument>
+										<argument>${C}</argument>
 										<argument>-S</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${versionWithRespin_ds_PREV},${versionWithRespin_ds};${COMMENTED}</argument>
+										<argument>${S};${COMMENTED};${TRIM_SUFFIX}</argument>
 
 										<!-- 2. when releasing a jbosstools milestone (D) --> 
 										<argument>-D</argument>
-										<argument>${versionWithRespin_jbt_PREV},${versionWithRespin_jbt};${COMMENT_JBT}</argument>
+										<argument>${D};${COMMENT_JBT}</argument>
 
 										<!-- 3. when releasing a stable (R) -->
 										<argument>-R</argument>
-										<argument>${versionWithRespin_jbt_PREV_GA},${versionWithRespin_jbt};${versionWithRespin_ds_PREV_GA},${versionWithRespin_ds}</argument>
+										<argument>${R}</argument>
 									</arguments>
 								</configuration>
 								<id>python-build</id>

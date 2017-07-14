@@ -88,6 +88,8 @@ for fname in filenames:
                     lineFixed = line
                     for regexpair in regexpairs:
                         regex = regexpair.split(",") # 4.4.2.Final -> 4.4.3.AM1
+                        if options.debug:
+                            print "[DEBUG] " + regexpair
                         lineFixed = re.sub(regex[0], regex[1], lineFixed)
                     storeLines(lineFixed, line, infile)
                     outfile.write(lineFixed)
