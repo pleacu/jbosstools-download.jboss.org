@@ -68,7 +68,7 @@ mvn clean verify \
 -DversionWithRespin_jbt_PREV_GA=4.4.4.Final \
 -DversionWithRespin_jbt_PREV=4.5.0.AM2 \
 -DversionWithRespin_jbt=4.5.0.AM1d \
--DversionWithRespin_jbt_NEXT=4.5.0.GA \
+-DversionWithRespin_jbt_NEXT=4.5.0.Final \
 -DversionWithRespin_ds_PREV_GA=10.4.0.GA \
 -DversionWithRespin_ds_PREV=11.0.0.AM2 \
 -DversionWithRespin_ds=11.0.0.AM1d \
@@ -78,7 +78,7 @@ mvn clean verify \
 -DversionWithRespin_jbt_PREV_GA=4.4.4.Final \
 -DversionWithRespin_jbt_PREV=4.5.0.AM1d \
 -DversionWithRespin_jbt=4.5.0.AM2 \
--DversionWithRespin_jbt_NEXT=4.5.0.GA \
+-DversionWithRespin_jbt_NEXT=4.5.0.Final \
 -DversionWithRespin_ds_PREV_GA=10.4.0.GA \
 -DversionWithRespin_ds_PREV=11.0.0.AM1d \
 -DversionWithRespin_ds=11.0.0.AM2 \
