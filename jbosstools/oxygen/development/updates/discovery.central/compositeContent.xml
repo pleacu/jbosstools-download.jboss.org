@@ -2,13 +2,13 @@
 <?compositeMetadataRepository version='1.0.0'?>
 <repository name='JBoss Tools - Core + Central Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1500503651000'/>
+    <property name='p2.timestamp' value='1502396570000'/>
     <property name='p2.compressed' value='true'/>
   </properties>
   <children size='4'>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.70.0.AM1-SNAPSHOT/REPO/'/>
-  	<child location='http://download.jboss.org/jbosstools/static/oxygen/development/updates/core/4.5.0.AM2/'/>
-  	<child location='http://download.jboss.org/jbosstools/static/oxygen/development/updates/central/4.5.0.AM2/'/>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.70.0.AM1-SNAPSHOT/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.70.2.Final/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/static/oxygen/development/updates/core/4.5.0.Final/'/>
+  	<child location='http://download.jboss.org/jbosstools/static/oxygen/development/updates/central/4.5.0.Final/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.70.0.Final-SNAPSHOT/REPO/'/>
   </children>
 </repository>
