@@ -3,7 +3,7 @@
 <repository name='JBoss Tools - Fuse Tools Extras Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1502475636000'/>
+<property name='p2.timestamp' value='1502475931000'/>
 </properties>
 <children size='1'>
 <child location='http://download.jboss.org/jbosstools/static/oxygen/stable/updates/fuse-extras/'/>
