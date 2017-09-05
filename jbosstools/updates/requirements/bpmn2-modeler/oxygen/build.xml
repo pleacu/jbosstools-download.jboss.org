@@ -5,17 +5,18 @@
             -consoleLog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 Project Feature"/>
-  <property name="version"  value="1.4.0"/>
-  <property name="version2" value="1.4.0.Final"/>
-  <property name="version3" value="1.3.1"/>
-  <property name="version4" value="1.3.1.Final"/>
+  <property name="version"  value="1.4.1"/>
+  <property name="version2" value="1.4.1.Final"/>
+  <property name="version3" value="1.4.0"/>
+  <property name="version4" value="1.4.0.Final"/>
   <property name="eclver"   value="oxygen"/>
 
   <!-- BPMN2 Modeler/Editor -->
+  <!-- <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/nightly/oxygen/" /> -->
   <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/${eclver}/${version}/" />
 
   <!-- BPMN2 Project Feature -->
-  <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/neon/${version3}/" />
+  <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/oxygen/${version3}/" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
