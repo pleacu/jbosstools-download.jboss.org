@@ -1,0 +1,56 @@
+<html>
+    <head>
+    </head>
+<body>
+<h1>Welcome to OpenShift.io</h1>
+<table>
+    <tr>
+        <td>Acccess token</td><td><div id="access_token_text"></div></td><td><div id="access_token" style="display: none"></div></td>
+    </tr>
+    <tr>
+        <td>Expires in</td><td><div id="expires_in"></div></td></td>
+    </tr>
+    <tr>
+        <td>Refresh token</td><td><div id="refresh_token_text"></div></td><td><div id="refresh_token" style="display: none"></div></td>
+    </tr>
+    <tr>
+        <td>Expires in</td><td><div id="refresh_expires_in"></div></td></td>
+    </tr>
+</table>
+<div id="token_json" style="display: none"></div>
+</body>
+    <script>
+            var request = (function() {
+    var _get = {};
+    var re = /[?&]([^=&]+)(=?)([^&]*)/g;
+    while (m = re.exec(location.search))
+        _get[decodeURIComponent(m[1])] = (m[2] == '=' ? decodeURIComponent(m[3]) : true);
+    return _get;
+})();
+
+
+function displayField(doc, source, name) {
+    if (source[name]) {
+        var element = doc.getElementById(name + "_text");
+        if (element) {
+            element.innerText = source[name].substring(0, 16);
+        }
+        element = doc.getElementById(name);
+        if (element) {
+            element.innerText = source[name];
+        }
+    }
+}
+
+var info = JSON.parse(request.token_json);
+
+var fields = ["access_token", "refresh_token", "expires_in", "refresh_expires_in"];
+for (var i=0; i < fields.length;++i) {
+  displayField(document, info, fields[i]);
+}
+var element = document.getElementById("token_json");
+if (element) {
+    element.innerText = request.token_json;
+}
+            </script>
+    <html>
