@@ -1,31 +1,44 @@
+<!DOCTYPE HTML >
 <html>
     <head>
+        <title>OSIO</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
 <body>
 <h1>Welcome to OpenShift.io</h1>
 <table>
     <tr>
-        <td>Acccess token</td><td><div id="access_token_text"></div></td><td><div id="access_token" style="display: none"></div></td>
+        <td>Acccess token</td>
+        <td>
+            <span id="access_token_text"></span>
+        </td>
+        <td><div id="access_token" style="display: none"></div></td>
     </tr>
     <tr>
-        <td>Expires in</td><td><div id="expires_in"></div></td></td>
+        <td>Expires in</td><td><div id="expires_in"></div></td>
     </tr>
     <tr>
-        <td>Refresh token</td><td><div id="refresh_token_text"></div></td><td><div id="refresh_token" style="display: none"></div></td>
+        <td>Refresh token</td>
+        <td>
+            <span id="refresh_token_text"></span>
+            <button id="visible-button" style="vertical-align:top;">Copy Token</button>
+        </td>
+        <td><div id="refresh_token" style="display: none"></div></td>
     </tr>
     <tr>
-        <td>Expires in</td><td><div id="refresh_expires_in"></div></td></td>
+        <td>Expires in</td><td><div id="refresh_expires_in"></div></td>
     </tr>
 </table>
 <div id="token_json" style="display: none"></div>
+<div id="token_copy_status"></div>
 </body>
     <script>
             var request = (function() {
-    var _get = {};
-    var re = /[?&]([^=&]+)(=?)([^&]*)/g;
-    while (m = re.exec(location.search))
-        _get[decodeURIComponent(m[1])] = (m[2] == '=' ? decodeURIComponent(m[3]) : true);
-    return _get;
+        var _get = {};
+        var re = /[?&]([^=&]+)(=?)([^&]*)/g;
+        while (m = re.exec(location.search))
+            _get[decodeURIComponent(m[1])] = (m[2] == '=' ? decodeURIComponent(m[3]) : true);
+        return _get;
 })();
 
 
@@ -52,5 +65,22 @@ var element = document.getElementById("token_json");
 if (element) {
     element.innerText = request.token_json;
 }
-            </script>
-    <html>
+
+$('#visible-button').click(function (){
+    var text = $('#refresh_token').text();
+    var $input = $('<input type=text>');
+    $input.prop('value', text);
+    $input.appendTo($('#token_copy_status'));
+    $input.focus();
+    $input.select();
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
+    $('#token_copy_status').empty();
+});
+ </script>
+<html>
