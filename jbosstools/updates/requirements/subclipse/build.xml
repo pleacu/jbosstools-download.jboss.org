@@ -5,12 +5,12 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="LONGNAME" value="Subclipse 1.10.13 + SVNKit 1.8.12.r10533_v20160129_0158 plugins for Subversion 1.9 and Eclipse"/>
-  <property name="version" value="1.10.13_1.8.12.r10533_v20160129_0158"/>
-  <!-- org.tigris.subversion.subclipse.feature.group  1.10.13 -->
-  <property name="URL1" value="http://subclipse.tigris.org/update_1.12.x" />
-  <!-- org.tmatesoft.svnkit.feature.group 1.8.12.r10533_v20160129_0158 -->
-  <property name="URL2" value="http://eclipse.svnkit.com/1.8.x/" />
+  <property name="LONGNAME" value="org.tigris.subversion.subclipse 4.2.3.201707071932 + org.tmatesoft.svnkit 1.9.0.r10652 for Subversion 1.9 and Eclipse"/>
+  <property name="version" value="4.2.3.201707071932__1.9.0.r10652"/>
+  <!-- org.tigris.subversion.subclipse.feature.group  4.2.3.201707071932 -->
+  <property name="URL1" value="https://dl.bintray.com/subclipse/releases/subclipse/4.2.x/" />
+  <!-- org.tmatesoft.svnkit.feature.group 1.9.0.r10652 -->
+  <property name="URL2" value="http://eclipse.svnkit.com/1.9.x/" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -39,6 +39,7 @@
       <iu id="org.tmatesoft.svnkit.feature.group"/>
       <iu id="org.tmatesoft.sqljet"/>
       <iu id="org.tmatesoft.svnkit"/>
+      <iu id="org.sonatype.m2e.subclipse.feature.feature.group" />
     </p2.mirror>
   </target>
 </project>
