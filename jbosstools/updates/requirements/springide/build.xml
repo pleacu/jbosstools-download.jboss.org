@@ -6,10 +6,10 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <!-- org.springframework.ide.eclipse.feature.feature.group  3.7.3.201602250914-RELEASE -->
-  <property name="version" value="3.8.2.201610040608-RELEASE" />
+  <!-- org.springframework.ide.eclipse.feature.feature.group  3.9.0.201707061730-RELEASE -->
+  <property name="version" value="3.9.0.201707061730-RELEASE" />
   
-  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.6/"/>
+  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.7"/>
   <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
   <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/> -->
   <!-- same nightly site, but without dependencies like equinox.weaving and ajdt <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
