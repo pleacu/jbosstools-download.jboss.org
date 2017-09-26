@@ -5,12 +5,12 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="LONGNAME" value="org.tigris.subversion.subclipse 4.2.3.201707071932 + org.tmatesoft.svnkit 1.9.0.r10652 for Subversion 1.9 and Eclipse"/>
-  <property name="version" value="4.2.3.201707071932__1.9.0.r10652"/>
+  <property name="LONGNAME" value="org.tigris.subversion.subclipse 4.2.3.201707071932 + org.tmatesoft.svnkit 1.8.15.r10636"/>
+  <property name="version" value="4.2.3.201707071932__1.8.15.r10636"/>
   <!-- org.tigris.subversion.subclipse.feature.group  4.2.3.201707071932 -->
   <property name="URL1" value="https://dl.bintray.com/subclipse/releases/subclipse/4.2.x/" />
-  <!-- org.tmatesoft.svnkit.feature.group 1.9.0.r10652 -->
-  <property name="URL2" value="http://eclipse.svnkit.com/1.9.x/" />
+  <!-- org.tmatesoft.svnkit.feature.group 1.8.15.r10636 -->
+  <property name="URL2" value="http://eclipse.svnkit.com/1.8.x/" />
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
