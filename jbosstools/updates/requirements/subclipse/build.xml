@@ -25,21 +25,7 @@
         <repository location="${URL1}" />
         <repository location="${URL2}" />
       </source>
-
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
-
-      <iu id="com.collabnet.subversion.merge.feature.feature.group" />
-      <iu id="net.java.dev.jna.feature.group" />
-      <iu id="org.tigris.subversion.subclipse.feature.group" />
-      <iu id="org.tigris.subversion.subclipse.mylyn.feature.group" />
-      <iu id="org.tigris.subversion.clientadapter.feature.feature.group" />
-      <iu id="org.tigris.subversion.clientadapter.javahl.feature.feature.group" />
-      <iu id="org.tigris.subversion.subclipse.graph.feature.feature.group" />
-      <iu id="org.tigris.subversion.clientadapter.svnkit.feature.feature.group" />
-      <iu id="org.tmatesoft.svnkit.feature.group"/>
-      <iu id="org.tmatesoft.sqljet"/>
-      <iu id="org.tmatesoft.svnkit"/>
-      <iu id="org.sonatype.m2e.subclipse.feature.feature.group" />
     </p2.mirror>
   </target>
 </project>
