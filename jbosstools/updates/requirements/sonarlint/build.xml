@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
 	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
-		export JAVA_HOME=/opt/jdk1.6.0; \
-		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
-			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
-			-application org.eclipse.ant.core.antRunner -f ~/RHDS/updates/requirements/PROJECTNAME/build.xml -Ddestination=/tmp/PROJECTNAME-repo
+		java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
 	-->
   <property name="LONGNAME" value="SonarLint"/>
   <!-- org.sonarlint.eclipse.feature.feature.group  3.2.0.201706271328 -->
