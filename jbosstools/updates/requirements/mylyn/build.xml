@@ -11,11 +11,10 @@
   -->
 
   <property name="LONGNAME" value="Mylyn"/>
-  <property name="version1" value="3.20.0"/>
-  <property name="version2" value="v20160504-0310/"/>
-  <property name="URL" value="http://download.eclipse.org/mylyn/drops/${version1}/${version2}"/>
+  <property name="version" value="3.23.1-v20170623-2012__3.0.18.20170823144938"/>
+  <property name="URL" value="http://download.eclipse.org/mylyn/releases/oxygen/"/>
+  <!-- /releases/oxygen/ includes docs too -->
   <property name="latestversiononly" value="true"/>
-  <property name="version" value="${version1}-${version2}"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}/"/>
@@ -23,16 +22,34 @@
   <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
   <target name="run">
     <p2.mirror>
-      <repository location="file:${workDir}" name="${LONGNAME} ${version2}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
-      <!-- does not exist in Mylyn 3.16 <iu id="org.eclipse.mylyn.commons.soap_feature.feature.group"/> -->
-      <iu id="org.eclipse.mylyn.htmltext.feature.group"/>
-      <iu id="org.eclipse.mylyn.subclipse.feature.group"/> <!-- requires plugin org.tigris.subversion.subclipse.core and mylyn versions -->
-        <iu id="org.eclipse.mylyn.versions.feature.group"/>
+      <iu id="org.eclipse.mylyn.bugzilla_feature.feature.group" />
+      <iu id="org.eclipse.mylyn.builds.feature.group" />
+      <iu id="org.eclipse.mylyn.commons.feature.group" />
+      <iu id="org.eclipse.mylyn.commons.identity.feature.group" />
+      <iu id="org.eclipse.mylyn.commons.net" />
+      <iu id="org.eclipse.mylyn.commons.notifications.feature.group" />
+      <iu id="org.eclipse.mylyn.commons.repositories.feature.group" />
+      <iu id="org.eclipse.mylyn.commons.repositories.http.feature.group" />
+      <iu id="org.eclipse.mylyn.commons.xmlrpc" />
+      <iu id="org.eclipse.mylyn.context_feature.feature.group" />
+      <iu id="org.eclipse.mylyn.discovery.feature.group" />
+      <iu id="org.eclipse.mylyn.git.feature.group" />
+      <iu id="org.eclipse.mylyn.hudson.feature.group" />
+      <iu id="org.eclipse.mylyn.ide_feature.feature.group" />
+      <iu id="org.eclipse.mylyn.java_feature.feature.group" />
+      <iu id="org.eclipse.mylyn.monitor.feature.group" />
+      <iu id="org.eclipse.mylyn.pde_feature.feature.group" />
+      <iu id="org.eclipse.mylyn.tasks.ide.feature.group" />
+      <iu id="org.eclipse.mylyn.team_feature.feature.group" />
+      <iu id="org.eclipse.mylyn.versions.feature.group" />
+      <iu id="org.eclipse.mylyn.wikitext_feature.feature.group" />
+      <iu id="org.eclipse.mylyn_feature.feature.group" />
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
