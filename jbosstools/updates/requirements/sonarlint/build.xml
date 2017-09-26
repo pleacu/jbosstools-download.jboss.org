@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="mirror">
+	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+		export JAVA_HOME=/opt/jdk1.6.0; \
+		${JAVA_HOME}/bin/java -cp ~/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+			org.eclipse.equinox.launcher.Main -vm ${JAVA_HOME} -consoleLog -nosplash -data /tmp \
+			-application org.eclipse.ant.core.antRunner -f ~/RHDS/updates/requirements/PROJECTNAME/build.xml -Ddestination=/tmp/PROJECTNAME-repo
+	-->
+  <property name="LONGNAME" value="SonarLint"/>
+  <!-- org.sonarlint.eclipse.feature.feature.group  3.2.0.201706271328 -->
+  <property name="version" value="3.2.0.201706271328"/>
+  <!-- or https://sonarsource.bintray.com/SonarLint-for-Eclipse/releases/3.2.0/ -->
+  <property name="URL" value="http://www.sonarlint.org/eclipse/" />
+
+  <property name="destination" value="${basedir}" />
+  <property name="workDir" value="${destination}/${version}/"/>
+  <property name="latestversiononly" value="true"/>
+
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
+  </target>
+</project>
