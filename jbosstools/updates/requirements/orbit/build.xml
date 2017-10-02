@@ -13,14 +13,16 @@
   <property name="workDir" value="${destination}/${version}"/>
   <property name="latestversiononly" value="false"/>
 
-  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
-  <target name="run">
-    <ant antfile="../generic/build.xml" target="mirror">
-      <property name="LONGNAME" value="${LONGNAME}"/>
-      <property name="version" value="${version}"/>
-      <property name="URL" value="${URL}"/>
-      <property name="latestversiononly" value="${latestversiononly}"/>
-    </ant>
-    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  <target name="run" depends="mirror,regen"/>
+  <!-- packing throws NPE, so regen.metadata only (do not pack) -->
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
   </target>
 </project>
