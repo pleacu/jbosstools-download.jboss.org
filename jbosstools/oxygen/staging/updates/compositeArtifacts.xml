@@ -2,13 +2,13 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='JBoss Tools - Core + Central Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1505421038000'/>
+    <property name='p2.timestamp' value='1507219664000'/>
     <property name='p2.compressed' value='true'/>
   </properties>
   <children size='4'>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.71.0.AM2-SNAPSHOT/REPO/'/>
-  	<child location='http://download.jboss.org/jbosstools/oxygen/staging/updates/core/4.5.1.AM2/'/>
-  	<child location='http://download.jboss.org/jbosstools/oxygen/staging/updates/central/4.5.1.AM2/'/>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.70.0.Final-SNAPSHOT/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.71.0.AM3-SNAPSHOT/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/oxygen/staging/updates/core/4.5.1.AM3/'/>
+  	<child location='http://download.jboss.org/jbosstools/oxygen/staging/updates/central/4.5.1.AM3/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.71.0.AM3-SNAPSHOT/REPO/'/>
   </children>
 </repository>
