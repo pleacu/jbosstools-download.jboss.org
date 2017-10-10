@@ -28,7 +28,7 @@
 		<pythonOptions></pythonOptions>
 
 		<versionWithRespin_jbt_PREV_GA>4.5.0.Final</versionWithRespin_jbt_PREV_GA>
-		<versionWithRespin_jbt_PREV>4.5.0.Final</versionWithRespin_jbt_PREV>
+		<versionWithRespin_jbt_PREV>4.5.1.AM2</versionWithRespin_jbt_PREV>
 		<versionWithRespin_jbt>4.5.1.AM3</versionWithRespin_jbt>
 		<versionWithRespin_jbt_NEXT>4.5.1.Final</versionWithRespin_jbt_NEXT>
 
@@ -56,38 +56,28 @@
 
 1. release a dev milestone:
 git checkout src/main/ide-config.*properties ide-config.properties; mvn clean verify -DbuildType=development
+
 2. release a stable GA:
 mvn clean verify -DbuildType=stable
+
 3a. stage a milestone:
 mvn clean verify -DbuildType=staging -DpythonOptions=-X \
--DversionWithRespin_jbt_PREV=4.5.1.AM2 -DversionWithRespin_jbt=4.5.1.AM3 -DversionWithRespin_jbt_NEXT=4.5.1.Final \
--DversionWithRespin_ds_PREV=11.1.0.AM2 -DversionWithRespin_ds=11.1.0.AM3 -DversionWithRespin_ds_NEXT=11.1.0.GA
+-DversionWithRespin_jbt_PREV_GA=4.5.0.Final -DversionWithRespin_jbt_PREV=4.5.1.AM2 -DversionWithRespin_jbt=4.5.1.AM3 -DversionWithRespin_jbt_NEXT=4.5.1.Final \
+-DversionWithRespin_ds_PREV_GA=11.0.0.GA    -DversionWithRespin_ds_PREV=11.1.0.AM2 -DversionWithRespin_ds=11.1.0.AM3 -DversionWithRespin_ds_NEXT=11.1.0.GA
+
 3b. then release the milestone:
 mvn clean verify -DbuildType=development -DpythonOptions=-X \
--DversionWithRespin_jbt_PREV=4.5.1.AM2 -DversionWithRespin_jbt=4.5.1.AM3 -DversionWithRespin_jbt_NEXT=4.5.1.Final \
--DversionWithRespin_ds_PREV=11.1.0.AM2 -DversionWithRespin_ds=11.1.0.AM3 -DversionWithRespin_ds_NEXT=11.1.0.GA
+-DversionWithRespin_jbt_PREV_GA=4.5.0.Final -DversionWithRespin_jbt_PREV=4.5.1.AM2 -DversionWithRespin_jbt=4.5.1.AM3 -DversionWithRespin_jbt_NEXT=4.5.1.Final \
+-DversionWithRespin_ds_PREV_GA=11.0.0.GA    -DversionWithRespin_ds_PREV=11.1.0.AM2 -DversionWithRespin_ds=11.1.0.AM3 -DversionWithRespin_ds_NEXT=11.1.0.GA
 
-4. stage a milestone w/ abcd respin suffix, or removing previous respin
-mvn clean verify \
--DversionWithRespin_jbt_PREV_GA=4.4.4.Final \
--DversionWithRespin_jbt_PREV=4.5.0.AM2 \
--DversionWithRespin_jbt=4.5.0.AM1d \
--DversionWithRespin_jbt_NEXT=4.5.0.Final \
--DversionWithRespin_ds_PREV_GA=10.4.0.GA \
--DversionWithRespin_ds_PREV=11.0.0.AM2 \
--DversionWithRespin_ds=11.0.0.AM1d \
--DversionWithRespin_ds_NEXT=11.0.0.GA \
--DbuildType=staging 
-mvn clean verify \
--DversionWithRespin_jbt_PREV_GA=4.4.4.Final \
--DversionWithRespin_jbt_PREV=4.5.0.AM1d \
--DversionWithRespin_jbt=4.5.0.AM2 \
--DversionWithRespin_jbt_NEXT=4.5.0.Final \
--DversionWithRespin_ds_PREV_GA=10.4.0.GA \
--DversionWithRespin_ds_PREV=11.0.0.AM1d \
--DversionWithRespin_ds=11.0.0.AM2 \
--DversionWithRespin_ds_NEXT=11.0.0.GA \
--DbuildType=staging 
+4. stage a milestone w/ abcd respin suffix, or remove previous respin (?)
+mvn clean verify -DbuildType=staging \
+-DversionWithRespin_jbt_PREV_GA=4.4.4.Final -DversionWithRespin_jbt_PREV=4.5.0.AM2 -DversionWithRespin_jbt=4.5.0.AM1d -DversionWithRespin_jbt_NEXT=4.5.0.Final \
+-DversionWithRespin_ds_PREV_GA=10.4.0.GA    -DversionWithRespin_ds_PREV=11.0.0.AM2 -DversionWithRespin_ds=11.0.0.AM1d -DversionWithRespin_ds_NEXT=11.0.0.GA
+
+mvn clean verify -DbuildType=staging \
+-DversionWithRespin_jbt_PREV_GA=4.4.4.Final -DversionWithRespin_jbt_PREV=4.5.0.AM1d -DversionWithRespin_jbt=4.5.0.AM2 -DversionWithRespin_jbt_NEXT=4.5.0.Final \
+-DversionWithRespin_ds_PREV_GA=10.4.0.GA    -DversionWithRespin_ds_PREV=11.0.0.AM1d -DversionWithRespin_ds=11.0.0.AM2 -DversionWithRespin_ds_NEXT=11.0.0.GA
 -->
 
 	<build>
