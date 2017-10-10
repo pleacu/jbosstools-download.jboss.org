@@ -36,6 +36,16 @@ buildTypes_d = {'snapshots': options.snapshotsRegex, 'staging': options.stagingR
 fulllines_d = {}
 productversions_d = {}
 
+if options.debug:
+    print ""
+    print "[DEBUG] Loaded properties:"
+    if options.outputFile is not None: print "[DEBUG] outputFile       = " + options.outputFile
+    if options.snapshotsRegex is not None: print "[DEBUG] snapshotsRegex   = " + options.snapshotsRegex
+    if options.stagingRegex is not None: print "[DEBUG] stagingRegex     = " + options.stagingRegex
+    if options.developmentRegex is not None: print "[DEBUG] developmentRegex = " + options.developmentRegex
+    if options.stableRegex is not None: print "[DEBUG] stableRegex      = " + options.stableRegex
+    print ""
+
 # split line and store in fulllines_d and productversions_d
 # also check for dupes and fail if any found
 # also check that if stableRegex is defined, all snapshot, staging, or development URLs with GA or Final are commented out
