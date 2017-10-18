@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+	<!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+		java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+	-->
+  <property name="LONGNAME" value="lsp4e"/>
+  <property name="version" value="0.4.0.201710071337"/>
+  <!-- http://download.eclipse.org/lsp4e/snapshots/ -->
+  <property name="URL" value="http://download.eclipse.org/lsp4e/releases/latest/" />
+
+  <property name="destination" value="${basedir}" />
+  <property name="workDir" value="${destination}/${version}/"/>
+  <property name="latestversiononly" value="true"/>
+
+  <target name="run" depends="mirror,regen"/>
+  <!-- packing throws NPE, so regen.metadata only (do not pack) -->
+  <target name="regen"><ant antfile="${destination}/../regen.metadata.xml" target="regen.metadata"/></target>
+  <target name="mirror">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
+  </target>
+</project>
