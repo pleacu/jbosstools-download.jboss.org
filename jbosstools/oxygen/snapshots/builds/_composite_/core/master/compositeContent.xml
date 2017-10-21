@@ -10,7 +10,7 @@
 <property name='p2.atomic.composite.loading' value='false'/>
 <property name='p2.timestamp' value='1499433262000'/>
 </properties>
-<children size='17'>
+<children size='18'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
 https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
@@ -31,12 +31,13 @@ https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.5.ox
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-browsersim_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-central_master/'/>
 
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-fabric8analytics_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-forge_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-hibernate_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-javaee_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-jst_master/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-livereload_master/'/>
 
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-livereload_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-openshift_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-server_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-vpe_master/'/>
