@@ -11,7 +11,7 @@
 </properties>
 <children size='2'>
    <!-- IS ONLY -->
-   <child location='4.5.0.Final/'/>
-   <child location='../../../../targetplatforms/jbtistarget/4.5.0.Final/jbtis/REPO/'/>
+   <child location='4.5.1.Beta1b/'/>
+   <child location='../../../../targetplatforms/jbtistarget/4.5.1.Final/jbtis/REPO/'/>
 </children>
 </repository>

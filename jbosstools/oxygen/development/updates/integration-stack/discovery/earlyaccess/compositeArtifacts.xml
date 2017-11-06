@@ -5,6 +5,8 @@
     <property name='p2.timestamp' value='1487867290000'/>
     <property name='p2.compressed' value='true'/>
   </properties>
-  <children size='0'>
-  </children>
+<children size='1'>
+   <!-- IS ONLY -->
+   <child location='../4.5.1.Beta1b/earlyaccess'/>
+</children>
 </repository>

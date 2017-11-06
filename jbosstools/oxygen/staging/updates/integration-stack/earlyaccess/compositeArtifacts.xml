@@ -11,7 +11,7 @@
 </properties>
 <children size='2'>
   <!-- IS ONLY -->
-   <child location='http://download.jboss.org/jbosstools/oxygen/staging/updates/integration-stack/4.5.1.Beta1a/earlyaccess/'/>
-   <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.5.1.Beta1a/jbtis/REPO/'/>
+   <child location='http://download.jboss.org/jbosstools/oxygen/staging/updates/integration-stack/4.5.1.Beta1b/earlyaccess/'/>
+   <child location='http://download.jboss.org/jbosstools/targetplatforms/jbtistarget/4.5.1.Final/jbtis/REPO/'/>
 </children>
 </repository>

@@ -11,6 +11,6 @@
 </properties>
 <children size='1'>
    <!-- IS ONLY -->
-   <child location='../4.5.1.Beta1a/earlyaccess'/>
+   <child location='../4.5.1.Beta1b/earlyaccess'/>
 </children>
 </repository>
