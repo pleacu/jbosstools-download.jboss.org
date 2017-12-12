@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <description>JBoss Tools 4.5 (Oxygen) Updates - Core</description>
+
+  <!-- PLEASE NOTE!
+    When updating this file, please be sure that it parses as valid XML before committing it.
+    To test, just run `mvn clean install` in this folder.
+  -->
+
+  <feature id="org.jboss.tools.richfaces.feature" url="features/org.jboss.tools.richfaces.feature_3.8.200.v20170908-0911.jar" version="3.8.200.v20170908-0911">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <!-- JBIDE-18869 add Thym to JBT/devstudio directly -->
+  <feature id="org.eclipse.thym.feature" url="features/org.eclipse.thym.feature_2.1.0.201710250850.jar" version="2.1.0.201710250850">
+    <category name="AdditionalTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.jboss.tools.aerogear.easymport.feature" url="features/org.jboss.tools.aerogear.easymport.feature_1.4.102.v20171206-1636.jar" version="1.4.102.v20171206-1636">
+    <category name="AdditionalTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.jboss.tools.aerogear.thym.feature" url="features/org.jboss.tools.aerogear.thym.feature_1.4.5.v20171018-1555.jar" version="1.4.5.v20171018-1555">
+    <category name="AdditionalTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.jboss.tools.feedhenry" url="features/org.jboss.tools.feedhenry_1.2.100.v20171018-1555.jar" version="1.2.100.v20171018-1555">
+    <category name="AdditionalTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.jboss.tools.cordovasim.feature" url="features/org.jboss.tools.cordovasim.feature_3.8.101.v20171206-1636.jar" version="3.8.101.v20171206-1636">
+    <category name="AdditionalTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.jboss.tools.browsersim.feature" url="features/org.jboss.tools.browsersim.feature_3.8.100.v20171003-1156.jar" version="3.8.100.v20171003-1156">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="MobileTools"/>
+  </feature>
+
+  <!-- JBIDE-21377 -->
+  <bundle id="org.dadacoalition.yedit">
+    <category name="CoreTools" />
+  </bundle>
+  <bundle id="org.yaml.snakeyaml"/>
+
+  <!-- JBDS-3898 JSON editor -->
+  <feature id="org.eclipse.wst.json_core.feature" url="features/org.eclipse.wst.json_core.feature_1.1.1.v201707252002.jar" version="1.1.1.v201707252002">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.eclipse.wst.json_ui.feature" url="features/org.eclipse.wst.json_ui.feature_1.1.1.v201707252002.jar" version="1.1.1.v201707252002">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+
+  <!-- JBDS-3510 add Buildship -->
+  <feature id="org.eclipse.buildship" url="features/org.eclipse.buildship_2.1.2.v20170807-1324.jar" version="2.1.2.v20170807-1324">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+
+  <!-- JBIDE-19045 include Tern -->
+  <bundle id="minimal-json"/>
+  <bundle id="minimatch.java" />
+  <feature id="tern-feature" url="features/tern-feature_1.2.1.201611022209.jar" version="1.2.1.201611022209"/>
+  <feature id="tern-jsdt-feature" url="features/tern-jsdt-feature_1.2.1.201611022209.jar" version="1.2.1.201611022209"/>
+  <feature id="tern-server-nodejs-feature" url="features/tern-server-nodejs-feature_1.2.1.201611022209.jar" version="1.2.1.201611022209"/>
+  <feature id="tern.eclipse.ide.server.nodejs.embed" url="features/tern.eclipse.ide.server.nodejs.embed_1.2.1.201611022209.jar" version="1.2.1.201611022209"/>
+  <feature id="tern.eclipse.ide.tools.feature" url="features/tern.eclipse.ide.tools.feature_1.2.1.201611022209.jar" version="1.2.1.201611022209"/>
+
+  <feature id="org.jboss.tools.jst.feature" url="features/org.jboss.tools.jst.feature_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.jst.jsdt.feature" url="features/org.jboss.tools.jst.jsdt.feature_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353">
+    <category name="CoreTools" />
+    <category name="GeneralTools" />
+    <category name="WebTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <!-- JBDS-3899 JSDT and chromium.debug features -->
+  <feature id="org.eclipse.wst.jsdt.chromium.debug.feature" url="features/org.eclipse.wst.jsdt.chromium.debug.feature_0.6.0.v201705091354.jar" version="0.6.0.v201705091354">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.eclipse.wst.jsdt.feature" url="features/org.eclipse.wst.jsdt.feature_2.1.0.v201706011953.jar" version="2.1.0.v201706011953">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.eclipse.wst.jsdt.nodejs.feature" url="features/org.eclipse.wst.jsdt.nodejs.feature_1.1.0.v201705091354.jar" version="1.1.0.v201705091354">
+    <category name="WebTools" />
+    <category name="MobileTools"/>
+  </feature>
+  <feature id="org.jboss.tools.jst.angularjs.feature" url="features/org.jboss.tools.jst.angularjs.feature_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353" >
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.vpe.feature" url="features/org.jboss.tools.vpe.feature_3.8.100.v20170908-0908.jar" version="3.8.100.v20170908-0908">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.jsf.feature" url="features/org.jboss.tools.jsf.feature_3.8.200.v20170908-0911.jar" version="3.8.200.v20170908-0911">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.seam.feature" url="features/org.jboss.tools.seam.feature_3.8.200.v20170822-1712.jar" version="3.8.200.v20170822-1712">
+    <!-- removed from devstudio & JBT CoreTools -->
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.batch.feature" url="features/org.jboss.tools.batch.feature_1.9.100.v20170908-0911.jar" version="1.9.100.v20170908-0911">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.cdi.feature" url="features/org.jboss.tools.cdi.feature_1.8.200.v20170907-1549.jar" version="1.8.200.v20170907-1549">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.cdi.seam.feature" url="features/org.jboss.tools.cdi.seam.feature_1.8.200.v20170908-0911.jar" version="1.8.200.v20170908-0911">
+    <category name="WebTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.cdi.deltaspike.feature" url="features/org.jboss.tools.cdi.deltaspike.feature_1.8.200.v20170908-0911.jar" version="1.8.200.v20170908-0911">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.jmx.feature" url="features/org.jboss.tools.jmx.feature_1.10.2.v20171121-1701.jar" version="1.10.2.v20171121-1701">
+    <category name="CoreTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.ide.eclipse.as.feature" url="features/org.jboss.ide.eclipse.as.feature_3.5.2.v20171205-1745.jar" version="3.5.2.v20171205-1745">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="org.eclipse.wst.server.core.serverAdapter"/>
+  </feature>
+  <feature id="org.jboss.tools.openshift.express.feature" url="features/org.jboss.tools.openshift.express.feature_3.4.2.v20171130-1931.jar" version="3.4.2.v20171130-1931">
+    <category name="CloudContainerTools" />
+  </feature>
+  <feature id="org.jboss.tools.openshift.egit.integration.feature" url="features/org.jboss.tools.openshift.egit.integration.feature_3.4.2.v20171103-1359.jar" version="3.4.2.v20171103-1359">
+    <category name="CoreTools" />
+    <category name="CloudContainerTools" />
+  </feature>
+  <!-- openshift v3 -->
+  <feature id="org.jboss.tools.openshift.feature" url="features/org.jboss.tools.openshift.feature_3.4.2.v20171207-2018.jar" version="3.4.2.v20171207-2018">
+    <category name="CoreTools" />
+    <category name="CloudContainerTools" />
+    <category name="org.eclipse.wst.server.core.serverAdapter"/>
+  </feature>
+  <feature id="org.jboss.tools.openshift.cdk.feature" url="features/org.jboss.tools.openshift.cdk.feature_3.4.2.v20171205-1354.jar" version="3.4.2.v20171205-1354">
+    <category name="CoreTools" />
+    <category name="CloudContainerTools" />
+  </feature>
+  <feature id="org.jboss.tools.openshift.js.feature" url="features/org.jboss.tools.openshift.js.feature_3.4.2.v20171106-1033.jar" version="3.4.2.v20171106-1033">
+    <category name="CoreTools" />
+    <category name="CloudContainerTools" />
+  </feature>
+  <!-- OpenShift.io -->
+  <feature id="org.jboss.tools.openshift.io.feature" url="features/org.jboss.tools.openshift.io.feature_3.4.2.v20171103-1359.jar" version="3.4.2.v20171103-1359">
+    <category name="CoreTools" />
+    <category name="CloudContainerTools" />
+  </feature>
+  <feature id="org.jboss.ide.eclipse.archives.feature" url="features/org.jboss.ide.eclipse.archives.feature_3.6.111.v20170811-1737.jar" version="3.6.111.v20170811-1737">
+    <category name="CoreTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.hibernate.eclipse.feature" url="features/org.hibernate.eclipse.feature_5.2.2.v20171205-1026.jar" version="5.2.2.v20171205-1026">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+    <category name="DataTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.ide.eclipse.freemarker.feature" url="features/org.jboss.ide.eclipse.freemarker.feature_1.5.300.v20161214-1103.jar" version="1.5.300.v20161214-1103">
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.ws.feature" url="features/org.jboss.tools.ws.feature_1.9.102.v20171206-2228.jar" version="1.9.102.v20171206-2228">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.ws.jaxrs.feature" url="features/org.jboss.tools.ws.jaxrs.feature_1.9.102.v20171206-2228.jar" version="1.9.102.v20171206-2228">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.websockets.feature" url="features/org.jboss.tools.websockets.feature_1.9.102.v20171206-2228.jar" version="1.9.102.v20171206-2228">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.portlet.feature" url="features/org.jboss.tools.portlet.feature_1.6.0.Final-v20141209-0339-B20.jar" version="1.6.0.Final-v20141209-0339-B20">
+    <!-- removed from devstudio & JBT CoreTools -->
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.forge.feature" url="features/org.jboss.tools.forge.feature_2.0.201.v20170822-1703.jar" version="2.0.201.v20170822-1703">
+    <category name="CoreTools"/>
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.project.examples.feature" url="features/org.jboss.tools.project.examples.feature_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.project.examples.seam.feature" url="features/org.jboss.tools.project.examples.seam.feature_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125">
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.feature" url="features/org.jboss.tools.maven.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.apt.feature" url="features/org.jboss.tools.maven.apt.feature_1.3.0.201610261805.jar" version="1.3.0.201610261805">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.cdi.feature" url="features/org.jboss.tools.maven.cdi.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.hibernate.feature" url="features/org.jboss.tools.maven.hibernate.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.jdt.feature" url="features/org.jboss.tools.maven.jdt.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.portlet.feature" url="features/org.jboss.tools.maven.portlet.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.project.examples.feature" url="features/org.jboss.tools.maven.project.examples.feature_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.maven.seam.feature" url="features/org.jboss.tools.maven.seam.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="MavenTools"/>
+  </feature>
+  <feature id="org.jboss.tools.maven.sourcelookup.feature" url="features/org.jboss.tools.maven.sourcelookup.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="MavenTools" />
+  </feature>
+  <feature id="org.jboss.tools.common.jdt.feature" url="features/org.jboss.tools.common.jdt.feature_3.9.1.v20170821-1410.jar" version="3.9.1.v20170821-1410">
+    <category name="CoreTools" />
+    <category name="GeneralTools"/>
+  </feature>
+  <feature id="org.jboss.tools.livereload.feature" url="features/org.jboss.tools.livereload.feature_1.5.1.v20170822-1705.jar" version="1.5.1.v20170822-1705">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+
+  <feature id="org.jboss.tools.foundation.feature" url="features/org.jboss.tools.foundation.feature_1.4.2.v20171129-2124.jar" version="1.4.2.v20171129-2124">
+    <category name="CoreTools" />
+    <category name="GeneralTools"/>
+  </feature>
+  <feature id="org.jboss.tools.foundation.security.linux.feature" url="features/org.jboss.tools.foundation.security.linux.feature_1.4.1.v20170908-0905.jar" version="1.4.1.v20170908-0905">
+    <category name="CoreTools" />
+    <category name="GeneralTools"/>
+  </feature>
+
+  <feature id="org.jboss.tools.stacks.core.feature" url="features/org.jboss.tools.stacks.core.feature_1.4.1.v20170908-0905.jar" version="1.4.1.v20170908-0905">
+    <category name="CoreTools" />
+    <category name="GeneralTools"/>
+  </feature>
+
+  <feature id="org.jboss.tools.runtime.core.feature" url="features/org.jboss.tools.runtime.core.feature_3.4.0.v20171129-1948.jar" version="3.4.0.v20171129-1948">
+    <category name="CoreTools" />
+  </feature>
+  <feature id="org.jboss.tools.runtime.seam.detector.feature" url="features/org.jboss.tools.runtime.seam.detector.feature_3.8.200.v20170822-1712.jar" version="3.8.200.v20170822-1712">
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.wtp.runtimes.tomcat.feature" url="features/org.jboss.tools.wtp.runtimes.tomcat.feature_1.3.111.v20170811-1742.jar" version="1.3.111.v20170811-1742">
+    <category name="CoreTools" />
+    <category name="WebTools" />
+  </feature>
+  <feature id="org.jboss.tools.central.easymport.feature" url="features/org.jboss.tools.central.easymport.feature_4.4.102.v20171116-1858.jar" version="4.4.102.v20171116-1858">
+    <category name="CoreTools" />
+  </feature>
+
+  <!-- JBIDE-20216 add wikitext asciidoc editor to Core Tools category -->  
+  <feature id="org.eclipse.mylyn.wikitext_feature" url="features/org.eclipse.mylyn.wikitext_feature_3.0.19.201711172000.jar" version="3.0.19.201711172000"/>
+  <bundle id="org.eclipse.mylyn.wikitext.asciidoc">
+    <category name="CoreTools" />
+  </bundle>
+  <bundle id="org.eclipse.mylyn.wikitext.asciidoc.ui">
+    <category name="CoreTools" />
+  </bundle>
+
+  <!-- JBIDE-22196 add recomenders snippets -->
+  <feature id="org.eclipse.recommenders.snipmatch.rcp.feature" url="features/org.eclipse.recommenders.snipmatch.rcp.feature_2.5.0.v20171013-0823.jar" version="2.5.0.v20171013-0823">
+    <category name="CoreTools" />
+  </feature>
+
+  <feature id="org.fusesource.ide.core.feature" url="features/org.fusesource.ide.core.feature_10.2.0.v20171205-1416.jar" version="10.2.0.v20171205-1416">
+    <category name="CoreTools" />
+    <category name="FuseTools" />
+  </feature>
+
+  <feature id="org.fusesource.ide.camel.editor.feature" url="features/org.fusesource.ide.camel.editor.feature_10.2.0.v20171205-1416.jar" version="10.2.0.v20171205-1416">
+    <category name="CoreTools" />
+    <category name="FuseTools" />
+  </feature>
+
+  <feature id="org.fusesource.ide.jmx.feature" url="features/org.fusesource.ide.jmx.feature_10.2.0.v20171205-1416.jar" version="10.2.0.v20171205-1416">
+    <category name="CoreTools" />
+    <category name="FuseTools" />
+  </feature>
+
+  <feature id="org.fusesource.ide.server.extensions.feature" url="features/org.fusesource.ide.server.extensions.feature_10.2.0.v20171122-0838.jar" version="10.2.0.v20171122-0838">
+    <category name="CoreTools" />
+    <category name="FuseTools" />
+  </feature>
+
+  <feature id="org.jboss.tools.fuse.transformation.feature" url="features/org.jboss.tools.fuse.transformation.feature_10.2.0.v20171114-1159.jar" version="10.2.0.v20171114-1159">
+    <category name="CoreTools" />
+    <category name="FuseTools" />
+  </feature>
+
+	<!-- JBIDE-24897 not ready yet <feature id="com.redhat.fabric8analytics.lsp.eclipse.feature">
+    <category name="WebTools" />
+  </feature> -->
+
+  <!-- include but do not categorize -->
+  <feature id="org.jboss.tools.central.feature" url="features/org.jboss.tools.central.feature_2.1.102.v20171124-1125.jar" version="2.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.common.feature" url="features/org.jboss.tools.common.feature_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.common.core.feature" url="features/org.jboss.tools.common.core.feature_3.9.1.v20171020-1456.jar" version="3.9.1.v20171020-1456"/>
+  <feature id="org.jboss.tools.common.text.ext.feature" url="features/org.jboss.tools.common.text.ext.feature_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.common.ui.feature" url="features/org.jboss.tools.common.ui.feature_3.9.2.v20171116-1909.jar" version="3.9.2.v20171116-1909"/>
+  <feature id="org.jboss.tools.common.verification.feature" url="features/org.jboss.tools.common.verification.feature_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.foundation.license.feature" url="features/org.jboss.tools.foundation.license.feature_1.4.1.v20170821-1410.jar" version="1.4.1.v20170821-1410"/>
+  <feature id="org.jboss.tools.xulrunner.feature" url="features/org.jboss.tools.xulrunner.feature_3.8.100.v20170908-0908.jar" version="3.8.100.v20170908-0908"/>
+  <feature id="org.mozilla.xulrunner.feature" url="features/org.mozilla.xulrunner.feature_1.9.218.Final-v20121126-2356-B155.jar" version="1.9.218.Final-v20121126-2356-B155"/>
+
+  <bundle id="org.jboss.tools.discovery.core"/>
+  <bundle id="org.jboss.tools.foundation.help.ui"/>
+
+  <!-- only in JBT -->
+  <feature id="org.jboss.tools.arquillian.feature" url="features/org.jboss.tools.arquillian.feature_1.2.600.v20170827-2221.jar" version="1.2.600.v20170827-2221">
+    <category name="AdditionalTools" />
+    <category name="WebTools" />
+    <category name="GeneralTools"/>
+  </feature>
+  <feature id="org.jboss.tools.central.themes.feature" url="features/org.jboss.tools.central.themes.feature_2.1.102.v20171124-1125.jar" version="2.1.102.v20171124-1125">
+    <category name="AdditionalTools" />
+  </feature>
+  <feature id="org.jboss.tools.community.central.feature" url="features/org.jboss.tools.community.central.feature_2.1.102.v20171124-1125.jar" version="2.1.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.community.project.examples.feature" url="features/org.jboss.tools.community.project.examples.feature_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125">
+    <category name="CoreTools" />
+    <category name="GeneralTools" />
+  </feature>
+  <feature id="org.jboss.tools.forge.ext.feature" url="features/org.jboss.tools.forge.ext.feature_2.0.201.v20170822-1703.jar" version="2.0.201.v20170822-1703">
+    <category name="CoreTools" />
+    <category name="WebTools"/>
+  </feature>
+  <feature id="org.jboss.tools.forge.m2e.feature" url="features/org.jboss.tools.forge.m2e.feature_2.0.201.v20170822-1703.jar" version="2.0.201.v20170822-1703">
+    <category name="CoreTools" />
+    <category name="MavenTools"/>
+  </feature>
+  <feature id="org.jboss.tools.wtp.server.launchbar.feature" url="features/org.jboss.tools.wtp.server.launchbar.feature_1.3.111.v20170811-1737.jar" version="1.3.111.v20170811-1737">
+    <category name="WebTools" />
+  </feature>
+
+  <feature id="org.eclipse.linuxtools.docker.feature" url="features/org.eclipse.linuxtools.docker.feature_3.2.0.201711221714.jar" version="3.2.0.201711221714">
+    <category name="CoreTools" />
+    <category name="CloudContainerTools"/>
+  </feature>
+  <bundle id="com.spotify.docker.client"/>
+  <bundle id="org.eclipse.linuxtools.docker.core"/>
+  <bundle id="org.eclipse.linuxtools.docker.ui"/>
+  <bundle id="org.eclipse.linuxtools.docker.docs"/>
+  <feature id="org.eclipse.linuxtools.vagrant.feature" url="features/org.eclipse.linuxtools.vagrant.feature_3.2.0.201711221714.jar" version="3.2.0.201711221714">
+    <category name="CloudContainerTools"/>
+  </feature>
+
+  <!-- categorized in JBT; uncategorized in devstudio -->
+  <feature id="org.jboss.tools.maven.jbosspackaging.feature" url="features/org.jboss.tools.maven.jbosspackaging.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"><category name="CoreTools" /><category name="MavenTools" /></feature>
+  <feature id="org.jboss.tools.common.mylyn.feature" url="features/org.jboss.tools.common.mylyn.feature_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"><category name="AdditionalTools" /><category name="GeneralTools"/></feature>
+
+  <feature id="org.jboss.tools.usage.feature" url="features/org.jboss.tools.usage.feature_2.2.101.v20170908-0905.jar" version="2.2.101.v20170908-0905"><category name="CoreTools" /><category name="GeneralTools"/></feature>
+
+  <!-- only in devstudio
+  <feature id="com.jboss.devstudio.core.feature" patch="false">
+    <category name="BringYourOwnEclipse" />
+    <category name="CoreTools" />
+  </feature>
+  <feature id="com.jboss.devstudio.core.capabilities.feature"/>
+  <feature id="com.jboss.devstudio.core.rpm.feature"/>
+  <feature id="com.jboss.devstudio.core.rpmdeps.feature"/>
+  <feature id="com.jboss.devstudio.fuse.feature">
+    <category name="BringYourOwnEclipse" />
+    <category name="CoreTools" />
+    <category name="FuseTools" />
+  </feature>
+  <feature id="org.eclipse.egit"/>
+  <feature id="org.eclipse.jgit"/>
+  <feature id="org.eclipse.m2e.feature"/>
+  <feature id="org.eclipse.m2e.wtp.feature"/>
+  <feature id="org.eclipse.m2e.wtp.jaxrs.feature"/>
+  <feature id="org.eclipse.m2e.wtp.jpa.feature"/>
+  <feature id="org.eclipse.m2e.wtp.jsf.feature"/>
+  <feature id="org.sonatype.m2e.buildhelper.feature"/>
+  <feature id="org.sonatype.m2e.egit.feature"/>
+  <feature id="org.sonatype.m2e.mavenarchiver.feature"/>
+  -->
+
+  <!-- ####### -->
+  <!-- SOURCES : DO NOT CATEGORIZE -->
+  <!-- ####### -->
+
+  <feature id="org.jboss.tools.central.feature.source" url="features/org.jboss.tools.central.feature.source_2.1.102.v20171124-1125.jar" version="2.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.richfaces.feature.source" url="features/org.jboss.tools.richfaces.feature.source_3.8.200.v20170908-0911.jar" version="3.8.200.v20170908-0911"/>
+  <feature id="org.jboss.tools.aerogear.easymport.feature.source" url="features/org.jboss.tools.aerogear.easymport.feature.source_1.4.102.v20171206-1636.jar" version="1.4.102.v20171206-1636"/>
+  <feature id="org.jboss.tools.aerogear.thym.feature.source" url="features/org.jboss.tools.aerogear.thym.feature.source_1.4.5.v20171018-1555.jar" version="1.4.5.v20171018-1555"/>
+  <feature id="org.jboss.tools.feedhenry.source" url="features/org.jboss.tools.feedhenry.source_1.2.100.v20171018-1555.jar" version="1.2.100.v20171018-1555"/> 
+  <feature id="org.jboss.tools.cordovasim.feature.source" url="features/org.jboss.tools.cordovasim.feature.source_3.8.101.v20171206-1636.jar" version="3.8.101.v20171206-1636"/>
+  <feature id="org.jboss.tools.browsersim.feature.source" url="features/org.jboss.tools.browsersim.feature.source_3.8.100.v20171003-1156.jar" version="3.8.100.v20171003-1156"/>
+  <feature id="org.jboss.tools.jst.feature.source" url="features/org.jboss.tools.jst.feature.source_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353"/>
+  <feature id="org.jboss.tools.jst.jsdt.feature.source" url="features/org.jboss.tools.jst.jsdt.feature.source_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353"/>
+  <feature id="org.jboss.tools.jst.angularjs.feature.source" url="features/org.jboss.tools.jst.angularjs.feature.source_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353"/>
+  <feature id="org.jboss.tools.vpe.feature.source" url="features/org.jboss.tools.vpe.feature.source_3.8.100.v20170908-0908.jar" version="3.8.100.v20170908-0908"/>
+  <feature id="org.jboss.tools.jsf.feature.source" url="features/org.jboss.tools.jsf.feature.source_3.8.200.v20170908-0911.jar" version="3.8.200.v20170908-0911"/>
+  <feature id="org.jboss.tools.xulrunner.feature.source" url="features/org.jboss.tools.xulrunner.feature.source_3.8.100.v20170908-0908.jar" version="3.8.100.v20170908-0908"/>
+  <feature id="org.mozilla.xulrunner.feature.source" url="features/org.mozilla.xulrunner.feature.source_1.9.218.Final-v20121126-2356-B155.jar" version="1.9.218.Final-v20121126-2356-B155"/>
+  <feature id="org.jboss.tools.seam.feature.source" url="features/org.jboss.tools.seam.feature.source_3.8.200.v20170822-1712.jar" version="3.8.200.v20170822-1712"/>
+  <feature id="org.jboss.tools.batch.feature.source" url="features/org.jboss.tools.batch.feature.source_1.9.100.v20170908-0911.jar" version="1.9.100.v20170908-0911"/>
+  <feature id="org.jboss.tools.cdi.feature.source" url="features/org.jboss.tools.cdi.feature.source_1.8.200.v20170907-1549.jar" version="1.8.200.v20170907-1549"/>
+  <feature id="org.jboss.tools.cdi.seam.feature.source" url="features/org.jboss.tools.cdi.seam.feature.source_1.8.200.v20170908-0911.jar" version="1.8.200.v20170908-0911"/>
+  <feature id="org.jboss.tools.cdi.deltaspike.feature.source" url="features/org.jboss.tools.cdi.deltaspike.feature.source_1.8.200.v20170908-0911.jar" version="1.8.200.v20170908-0911"/>
+  <feature id="org.jboss.tools.jmx.feature.source" url="features/org.jboss.tools.jmx.feature.source_1.10.2.v20171121-1701.jar" version="1.10.2.v20171121-1701"/>
+  <feature id="org.jboss.ide.eclipse.as.feature.source" url="features/org.jboss.ide.eclipse.as.feature.source_3.5.2.v20171205-1745.jar" version="3.5.2.v20171205-1745"/>
+  <feature id="org.jboss.tools.openshift.feature.source" url="features/org.jboss.tools.openshift.feature.source_3.4.2.v20171207-2018.jar" version="3.4.2.v20171207-2018"/>
+  <feature id="org.jboss.tools.openshift.cdk.feature.source" url="features/org.jboss.tools.openshift.cdk.feature.source_3.4.2.v20171205-1354.jar" version="3.4.2.v20171205-1354"/>
+  <feature id="org.jboss.tools.openshift.js.feature.source" url="features/org.jboss.tools.openshift.js.feature.source_3.4.2.v20171106-1033.jar" version="3.4.2.v20171106-1033"/>
+  <feature id="org.jboss.tools.openshift.express.feature.source" url="features/org.jboss.tools.openshift.express.feature.source_3.4.2.v20171130-1931.jar" version="3.4.2.v20171130-1931"/>
+  <feature id="org.jboss.tools.openshift.egit.integration.feature.source" url="features/org.jboss.tools.openshift.egit.integration.feature.source_3.4.2.v20171103-1359.jar" version="3.4.2.v20171103-1359"/>
+  <feature id="org.jboss.tools.openshift.io.feature.source" url="features/org.jboss.tools.openshift.io.feature.source_3.4.2.v20171103-1359.jar" version="3.4.2.v20171103-1359"/>
+  <feature id="org.jboss.ide.eclipse.archives.feature.source" url="features/org.jboss.ide.eclipse.archives.feature.source_3.6.111.v20170811-1737.jar" version="3.6.111.v20170811-1737"/>
+  <feature id="org.hibernate.eclipse.feature.source" url="features/org.hibernate.eclipse.feature.source_5.2.2.v20171205-1026.jar" version="5.2.2.v20171205-1026"/>
+  <feature id="org.jboss.ide.eclipse.freemarker.feature.source" url="features/org.jboss.ide.eclipse.freemarker.feature.source_1.5.300.v20161214-1103.jar" version="1.5.300.v20161214-1103"/>
+  <feature id="org.jboss.tools.ws.feature.source" url="features/org.jboss.tools.ws.feature.source_1.9.102.v20171206-2228.jar" version="1.9.102.v20171206-2228"/>
+  <feature id="org.jboss.tools.ws.jaxrs.feature.source" url="features/org.jboss.tools.ws.jaxrs.feature.source_1.9.102.v20171206-2228.jar" version="1.9.102.v20171206-2228"/>
+  <feature id="org.jboss.tools.websockets.feature.source" url="features/org.jboss.tools.websockets.feature.source_1.9.102.v20171206-2228.jar" version="1.9.102.v20171206-2228"/>
+  <feature id="org.jboss.tools.portlet.feature.source" url="features/org.jboss.tools.portlet.feature.source_1.6.0.Final-v20141209-0339-B20.jar" version="1.6.0.Final-v20141209-0339-B20"/>
+  <feature id="org.jboss.tools.forge.feature.source" url="features/org.jboss.tools.forge.feature.source_2.0.201.v20170822-1703.jar" version="2.0.201.v20170822-1703"/>
+  <feature id="org.jboss.tools.project.examples.feature.source" url="features/org.jboss.tools.project.examples.feature.source_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.project.examples.seam.feature.source" url="features/org.jboss.tools.project.examples.seam.feature.source_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.feature.source" url="features/org.jboss.tools.maven.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <!-- JBIDE-13926, JBIDE-13928 Do not include source feature <feature id="org.jboss.tools.maven.apt.feature.source"/> -->
+  <feature id="org.jboss.tools.maven.cdi.feature.source" url="features/org.jboss.tools.maven.cdi.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.hibernate.feature.source" url="features/org.jboss.tools.maven.hibernate.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.jdt.feature.source" url="features/org.jboss.tools.maven.jdt.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.portlet.feature.source" url="features/org.jboss.tools.maven.portlet.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.project.examples.feature.source" url="features/org.jboss.tools.maven.project.examples.feature.source_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.seam.feature.source" url="features/org.jboss.tools.maven.seam.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.maven.sourcelookup.feature.source" url="features/org.jboss.tools.maven.sourcelookup.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.runtime.core.feature.source" url="features/org.jboss.tools.runtime.core.feature.source_3.4.0.v20171129-1948.jar" version="3.4.0.v20171129-1948"/>
+  <feature id="org.jboss.tools.runtime.seam.detector.feature.source" url="features/org.jboss.tools.runtime.seam.detector.feature.source_3.8.200.v20170822-1712.jar" version="3.8.200.v20170822-1712"/>
+  <feature id="org.jboss.tools.livereload.feature.source" url="features/org.jboss.tools.livereload.feature.source_1.5.1.v20170822-1705.jar" version="1.5.1.v20170822-1705"/>
+  <feature id="org.jboss.tools.usage.feature.source" url="features/org.jboss.tools.usage.feature.source_2.2.101.v20170908-0905.jar" version="2.2.101.v20170908-0905"/>
+  <feature id="org.jboss.tools.common.jdt.feature.source" url="features/org.jboss.tools.common.jdt.feature.source_3.9.1.v20170821-1410.jar" version="3.9.1.v20170821-1410"/>
+  <feature id="org.jboss.tools.common.mylyn.feature.source" url="features/org.jboss.tools.common.mylyn.feature.source_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.foundation.feature.source" url="features/org.jboss.tools.foundation.feature.source_1.4.2.v20171129-2124.jar" version="1.4.2.v20171129-2124"/>
+  <feature id="org.jboss.tools.foundation.security.linux.feature.source" url="features/org.jboss.tools.foundation.security.linux.feature.source_1.4.1.v20170908-0905.jar" version="1.4.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.stacks.core.feature.source" url="features/org.jboss.tools.stacks.core.feature.source_1.4.1.v20170908-0905.jar" version="1.4.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.common.feature.source" url="features/org.jboss.tools.common.feature.source_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.common.core.feature.source" url="features/org.jboss.tools.common.core.feature.source_3.9.1.v20171020-1456.jar" version="3.9.1.v20171020-1456"/>
+  <feature id="org.jboss.tools.common.text.ext.feature.source" url="features/org.jboss.tools.common.text.ext.feature.source_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.common.ui.feature.source" url="features/org.jboss.tools.common.ui.feature.source_3.9.2.v20171116-1909.jar" version="3.9.2.v20171116-1909"/>
+  <feature id="org.jboss.tools.common.verification.feature.source" url="features/org.jboss.tools.common.verification.feature.source_3.9.1.v20170908-0905.jar" version="3.9.1.v20170908-0905"/>
+  <feature id="org.jboss.tools.maven.jbosspackaging.feature.source" url="features/org.jboss.tools.maven.jbosspackaging.feature.source_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.wtp.runtimes.tomcat.feature.source" url="features/org.jboss.tools.wtp.runtimes.tomcat.feature.source_1.3.111.v20170811-1742.jar" version="1.3.111.v20170811-1742"/>
+  <feature id="org.jboss.tools.wtp.server.launchbar.feature.source" url="features/org.jboss.tools.wtp.server.launchbar.feature.source_1.3.111.v20170811-1737.jar" version="1.3.111.v20170811-1737"/>
+
+  <feature id="org.fusesource.ide.core.feature.source" url="features/org.fusesource.ide.core.feature.source_10.2.0.v20171205-1416.jar" version="10.2.0.v20171205-1416"/>
+  <feature id="org.fusesource.ide.camel.editor.feature.source" url="features/org.fusesource.ide.camel.editor.feature.source_10.2.0.v20171205-1416.jar" version="10.2.0.v20171205-1416"/>
+  <feature id="org.fusesource.ide.jmx.feature.source" url="features/org.fusesource.ide.jmx.feature.source_10.2.0.v20171205-1416.jar" version="10.2.0.v20171205-1416"/>
+  <feature id="org.fusesource.ide.server.extensions.feature.source" url="features/org.fusesource.ide.server.extensions.feature.source_10.2.0.v20171122-0838.jar" version="10.2.0.v20171122-0838"/>
+  <feature id="org.jboss.tools.fuse.transformation.feature.source" url="features/org.jboss.tools.fuse.transformation.feature.source_10.2.0.v20171114-1159.jar" version="10.2.0.v20171114-1159"/>
+
+  <!-- not available yet <feature id="com.redhat.fabric8analytics.lsp.eclipse.feature.source"/> -->
+
+  <bundle id="org.jboss.tools.discovery.core.source"/>
+  <bundle id="org.jboss.tools.foundation.help.ui.source"/>
+
+  <!-- only in JBT -->
+  <feature id="org.jboss.tools.arquillian.feature.source" url="features/org.jboss.tools.arquillian.feature.source_1.2.600.v20170827-2221.jar" version="1.2.600.v20170827-2221"/>
+  <feature id="org.jboss.tools.central.themes.feature.source" url="features/org.jboss.tools.central.themes.feature.source_2.1.102.v20171124-1125.jar" version="2.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.community.central.feature.source" url="features/org.jboss.tools.community.central.feature.source_2.1.102.v20171124-1125.jar" version="2.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.community.project.examples.feature.source" url="features/org.jboss.tools.community.project.examples.feature.source_3.1.102.v20171124-1125.jar" version="3.1.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.forge.ext.feature.source" url="features/org.jboss.tools.forge.ext.feature.source_2.0.201.v20170822-1703.jar" version="2.0.201.v20170822-1703"/>
+  <feature id="org.jboss.tools.forge.m2e.feature.source" url="features/org.jboss.tools.forge.m2e.feature.source_2.0.201.v20170822-1703.jar" version="2.0.201.v20170822-1703"/>
+
+  <!-- only in devstudio
+  <feature id="com.jboss.devstudio.core.feature.source" patch="false"/>
+  <feature id="com.jboss.devstudio.core.capabilities.feature.source" patch="false"/>
+  -->
+
+  <!-- ########## -->
+  <!-- CATEGORIES -->
+  <!-- ########## -->
+
+  <category-def label="JBoss Application Server Adapters" name="org.eclipse.wst.server.core.serverAdapter"/>
+
+ <!-- only in JBT -->
+  <category-def name="CoreTools" label="* Abridged JBoss Tools">
+    <description>Contains most of the JBoss Tools features. Excluded are those related to integration with 3rd party plugins. Selecting this category will give you all tools needed for Web and Seam Development.</description>
+  </category-def>
+  <category-def name="AdditionalTools" label="* Additional JBoss Tools">
+    <description>Contains the rest of the JBoss Tools features, not included in Abridged JBoss Tools category. This category includes miscellaneous, new, experimental and incubating features. See individual feature descriptions for details.</description>
+  </category-def>
+
+  <!-- only in devstudio
+  <category-def name="BringYourOwnEclipse" label="* Red Hat JBoss Developer Studio 11 - Bring Your Own Eclipse">
+    <description>Select this feature if you want to install all of the Red Hat JBoss Developer Studio (Core Features) into your own Eclipse 4.7 (Oxygen).</description>
+  </category-def>
+  <category-def name="CoreTools" label="* Red Hat JBoss Developer Studio 11 - Core">
+    <description>Contains most of the Red Hat JBoss Developer Studio features. Excluded are those related to integration with 3rd party plugins. Selecting this category will give you all tools needed for Web Development.</description>
+  </category-def>
+  <category-def name="AdditionalTools" label="* Red Hat JBoss Developer Studio 11 - Extras">
+    <description>Contains the rest of the Red Hat JBoss Developer Studio features, not included in Core category. This category includes miscellaneous, new, experimental and incubating features. See individual feature descriptions for details.</description>
+  </category-def>
+  -->
+ 
+  <category-def name="WebTools" label="JBoss Web and Java EE Development">
+    <description>Tools to help create web and enterprise applications, using JSF, Facelets, Seam, Hibernate/JPA, CSS, Webservices and more.</description>
+  </category-def>
+
+  <category-def name="MobileTools" label="JBoss Mobile Development">
+    <description>Tools to create applications targeting mobile devices.</description>
+  </category-def>
+
+  <category-def name="GeneralTools" label="JBoss Application Development">
+    <description>Tools for general application development.</description>
+  </category-def>
+
+  <category-def name="DataTools" label="JBoss Data Services Development">
+    <description>Tools related to data services such as persistence and transformation.</description>
+  </category-def>
+
+  <category-def name="MavenTools" label="JBoss Maven Support">
+    <description>Plugins related to Maven and m2eclipse support. Use these to enable use of Maven.</description>
+  </category-def>
+  <category-def name="CloudContainerTools" label="JBoss Cloud And Container Development Tools">
+    <description>Tools for Cloud and Container Development.</description>
+  </category-def>
+
+  <category-def name="FuseTools" label="JBoss Fuse Tools">
+    <description>Tools to allow you to create Apache Camel routes in a graphical editor, launch them locally and deploy them to runtimes like Apache Karaf, Fabric8 and JBoss Fuse.</description>
+  </category-def>
+
+<!--
+  <category-def name="Patches" label="Patches">
+    <description>Patch features for Eclipse or Eclipse projects.</description>
+  </category-def>
+-->
+
+</site>
