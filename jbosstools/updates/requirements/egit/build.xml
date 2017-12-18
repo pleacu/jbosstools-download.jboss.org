@@ -11,7 +11,7 @@
   <!-- <property name="URL1" value="http://download.eclipse.org/egit/updates-4.1" />
   <property name="URL2" value="http://download.eclipse.org/egit/github/updates-4.1" /> -->
   <property name="URL1" value="http://download.eclipse.org/egit/updates-4.9.2"/>
-  <property name="URL2" value="http://download.eclipse.org/egit/github/updates-4.9/${version}"/>
+  <property name="URL2" value="http://download.eclipse.org/egit/github/updates-4.9"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
