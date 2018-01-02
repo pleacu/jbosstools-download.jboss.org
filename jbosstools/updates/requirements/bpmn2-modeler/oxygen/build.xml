@@ -5,8 +5,8 @@
             -consoleLog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 Project Feature"/>
-  <property name="version"  value="1.4.1"/>
-  <property name="version2" value="1.4.1.Final"/>
+  <property name="version"  value="1.4.2"/>
+  <property name="version2" value="1.4.2.Final"/>
   <property name="version3" value="1.4.0"/>
   <property name="version4" value="1.4.0.Final"/>
   <property name="eclver"   value="oxygen"/>
