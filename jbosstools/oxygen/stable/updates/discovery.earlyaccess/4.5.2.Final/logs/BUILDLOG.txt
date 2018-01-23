@@ -1,0 +1,695 @@
+Started by user Nick Boldt
+[EnvInject] - Loading node environment variables.
+Building remotely on rhel7-devstudio-releng-8515 (rhel7-devstudio-releng) in workspace /mnt/hudson_workspace/workspace/jbosstools-discovery_master
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git://github.com/jbosstools/jbosstools-discovery.git # timeout=10
+Fetching upstream changes from git://github.com/jbosstools/jbosstools-discovery.git
+ > git --version # timeout=10
+ > git fetch --tags --progress git://github.com/jbosstools/jbosstools-discovery.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 4b0f2fc432805c5a449862cb9f4bf10352739687 (refs/remotes/origin/master)
+Commit message: "JBIDE-25582 add org.jboss.tools.maven.springboot.feature to JBT and Devstudio Central"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4b0f2fc432805c5a449862cb9f4bf10352739687
+ > git rev-list 4b0f2fc432805c5a449862cb9f4bf10352739687 # timeout=10
+ > git tag -a -f -m Jenkins Build #3194 jenkins-jbosstools-discovery_master-3194 # timeout=10
+[jbosstools-discovery_master] $ /bin/sh -xe /tmp/jenkins7701405584220342152.sh
++ PROPSFILE=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/discovery.properties
++ echo ''
++ eclipseReleaseName=oxygen
++ devstudioReleaseVersion=11
++ echo eclipseReleaseName=oxygen
++ echo devstudioReleaseVersion=11
++ stream_jbt=master
++ echo stream_jbt=master
++ [[ staging == \s\n\a\p\s\h\o\t\s ]]
++ echo versionWithRespin_jbt=4.5.2.Final
++ echo versionWithRespin_ds=11.2.0.GA
+++ date -u +%Y-%m-%d_%H-%M-%S
++ echo BUILD_TIMESTAMP=2018-01-22_23-02-38
++ echo buildType=staging
++ JBT_CN_TP=http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/
++ JBT_EA_TP=http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/
++ DS_CN_TP=https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/
++ DS_EA_TP=https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/
++ echo JBT_UP=http://download.jboss.org/jbosstools/oxygen/staging/updates/core/4.5.2.Final/
++ echo JBT_CN=http://download.jboss.org/jbosstools/oxygen/staging/updates/central/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/
++ echo JBT_EA=http://download.jboss.org/jbosstools/oxygen/staging/updates/earlyaccess/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/
++ echo DS_UP=https://devstudio.redhat.com/11/staging/updates/core/11.2.0.GA/
++ echo DS_CN=https://devstudio.redhat.com/11/staging/updates/central/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/
++ echo DS_EA=https://devstudio.redhat.com/11/staging/updates/earlyaccess/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path '/mnt/hudson_workspace/workspace/jbosstools-discovery_master/discovery.properties'
+[EnvInject] - Variables injected successfully.
+[jbosstools-discovery_master] $ /mnt/hudson_workspace/tools/hudson.tasks.Maven_MavenInstallation/maven-3.5.2/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml -Dearlyaccess_IS= -DversionWithRespin_ds=11.2.0.GA -DbuildType=staging -Dversion_ds_IS=11.1.0.Beta1b -DversionWithRespin_jbt=4.5.2.Final -Dversion_jbt_IS=4.5.1.Beta1b -Dqual_IS=development -DTARGET_PLATFORM_VERSION_MAX=4.72.0.Final -DTARGET_PLATFORM_CENTRAL_MAX=4.72.0.Final-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Ddownload.cache.directory=/home/hudson/static_build_env/devstudio/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=http://download.jboss.org/jbosstools/oxygen/staging/updates/core/4.5.2.Final/ -DEXTRAS_SITE=http://download.jboss.org/jbosstools/oxygen/staging/updates/central/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=3194 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -DTARGET_PLATFORM_VERSION=4.72.0.Final
+OpenJDK 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jboss-releases: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml (612 B at 861 B/s)
+[INFO] Downloading from jboss-ga-repository: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] Computing target platform for MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.71.1.Final/REPO
+[INFO] Resolving dependencies of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] Resolving class path of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building org.jboss.tools.central.discovery 4.5.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ org.jboss.tools.central.discovery ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:build-qualifier (default-build-qualifier) @ org.jboss.tools.central.discovery ---
+[INFO] The project's OSGi version is 4.5.2.v20180117-1644
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-id (default-validate-id) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-version (default-validate-version) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property1) @ org.jboss.tools.central.discovery ---
+[INFO] Setting property 'skipTestsOrITests' to 'true'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property2) @ org.jboss.tools.central.discovery ---
+[INFO] Setting property 'skipTestsWithPrivateRequirements' to 'true'.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (core-has-ui-deps) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ org.jboss.tools.central.discovery ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ org.jboss.tools.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:1.0.0:compile (default-compile) @ org.jboss.tools.central.discovery ---
+[WARNING] Parameter 'useProjectSettings' is set to true, but preferences file '/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/.settings/org.eclipse.jdt.core.prefs' could not be found!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ org.jboss.tools.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:1.0.0:plugin-source (plugin-source) @ org.jboss.tools.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:1.0.0:target-platform (default-target-platform) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:package-plugin (default-package-plugin) @ org.jboss.tools.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata-default (default-p2-metadata-default) @ org.jboss.tools.central.discovery ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] 
+[INFO] --- repository-utils:1.0.0:generate-repository-facade (generate-facade) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata (attached-p2-metadata) @ org.jboss.tools.central.discovery ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:1.0.0:compare-version-with-baselines (default) @ org.jboss.tools.central.discovery ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ org.jboss.tools.central.discovery ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery-4.5.2-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:update-local-index (default-update-local-index) @ org.jboss.tools.central.discovery ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ org.jboss.tools.central.discovery ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build550415824
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build550415824
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 13.685 s
+[INFO] Finished at: 2018-01-22T18:02:53-05:00
+[INFO] Final Memory: 60M/850M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /mnt/hudson_workspace/tools/hudson.tasks.Maven_MavenInstallation/maven-3.5.2/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml -Dearlyaccess_IS= -DversionWithRespin_ds=11.2.0.GA -DbuildType=staging -Dversion_ds_IS=11.1.0.Beta1b -DversionWithRespin_jbt=4.5.2.Final -Dversion_jbt_IS=4.5.1.Beta1b -Dqual_IS=development -DTARGET_PLATFORM_VERSION_MAX=4.72.0.Final -DTARGET_PLATFORM_CENTRAL_MAX=4.72.0.Final-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Ddownload.cache.directory=/home/hudson/static_build_env/devstudio/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=http://download.jboss.org/jbosstools/oxygen/staging/updates/core/4.5.2.Final/ -DEXTRAS_SITE=http://download.jboss.org/jbosstools/oxygen/staging/updates/central/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/,http://download.jboss.org/jbosstools/oxygen/staging/updates/earlyaccess/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=3194 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -DTARGET_PLATFORM_VERSION=4.72.0.Final
+OpenJDK 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading from jboss-releases: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml (612 B at 845 B/s)
+[INFO] Downloading from jboss-ga-repository: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] Computing target platform for MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.71.1.Final/REPO
+[INFO] Resolving dependencies of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] Resolving class path of MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building org.jboss.tools.central.discovery.earlyaccess 4.5.2-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:build-qualifier (default-build-qualifier) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] The project's OSGi version is 4.5.2.v20171215-1919
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-id (default-validate-id) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-version (default-validate-version) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property1) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Setting property 'skipTestsOrITests' to 'true'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property2) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Setting property 'skipTestsWithPrivateRequirements' to 'true'.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (core-has-ui-deps) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:1.0.0:compile (default-compile) @ org.jboss.tools.central.discovery.earlyaccess ---
+[WARNING] Parameter 'useProjectSettings' is set to true, but preferences file '/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/.settings/org.eclipse.jdt.core.prefs' could not be found!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:1.0.0:plugin-source (plugin-source) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:1.0.0:target-platform (default-target-platform) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:package-plugin (default-package-plugin) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata-default (default-p2-metadata-default) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- repository-utils:1.0.0:generate-repository-facade (generate-facade) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata (attached-p2-metadata) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: org.jboss.tools.central.plugins:org.jboss.tools.central.discovery.earlyaccess:4.5.2-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:1.0.0:compare-version-with-baselines (default) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jboss/tools/central/plugins/org.jboss.tools.central.discovery.earlyaccess/4.5.2-SNAPSHOT/org.jboss.tools.central.discovery.earlyaccess-4.5.2-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:update-local-index (default-update-local-index) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ org.jboss.tools.central.discovery.earlyaccess ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build1478061253
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build1478061253
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 13.762 s
+[INFO] Finished at: 2018-01-22T18:03:08-05:00
+[INFO] Final Memory: 60M/826M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /mnt/hudson_workspace/tools/hudson.tasks.Maven_MavenInstallation/maven-3.5.2/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml -Dearlyaccess_IS= -DversionWithRespin_ds=11.2.0.GA -DbuildType=staging -Dversion_ds_IS=11.1.0.Beta1b -DversionWithRespin_jbt=4.5.2.Final -Dversion_jbt_IS=4.5.1.Beta1b -Dqual_IS=development -DTARGET_PLATFORM_VERSION_MAX=4.72.0.Final -DTARGET_PLATFORM_CENTRAL_MAX=4.72.0.Final-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Ddownload.cache.directory=/home/hudson/static_build_env/devstudio/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=https://devstudio.redhat.com/11/staging/updates/core/11.2.0.GA/ -DEXTRAS_SITE=https://devstudio.redhat.com/11/staging/updates/central/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=3194 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -DTARGET_PLATFORM_VERSION=4.72.0.Final
+OpenJDK 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jboss-releases: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml (612 B at 859 B/s)
+[INFO] Downloading from jboss-ga-repository: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] Computing target platform for MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.71.1.Final/REPO
+[INFO] Resolving dependencies of MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml
+[INFO] Resolving class path of MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building com.jboss.devstudio.central.discovery 11.2.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.jboss.devstudio.central.discovery ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:build-qualifier (default-build-qualifier) @ com.jboss.devstudio.central.discovery ---
+[INFO] The project's OSGi version is 11.2.0.v20180117-1644
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-id (default-validate-id) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-version (default-validate-version) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property1) @ com.jboss.devstudio.central.discovery ---
+[INFO] Setting property 'skipTestsOrITests' to 'true'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property2) @ com.jboss.devstudio.central.discovery ---
+[INFO] Setting property 'skipTestsWithPrivateRequirements' to 'true'.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (core-has-ui-deps) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ com.jboss.devstudio.central.discovery ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ com.jboss.devstudio.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:1.0.0:compile (default-compile) @ com.jboss.devstudio.central.discovery ---
+[WARNING] Parameter 'useProjectSettings' is set to true, but preferences file '/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/.settings/org.eclipse.jdt.core.prefs' could not be found!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ com.jboss.devstudio.central.discovery ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:1.0.0:plugin-source (plugin-source) @ com.jboss.devstudio.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:1.0.0:target-platform (default-target-platform) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:package-plugin (default-package-plugin) @ com.jboss.devstudio.central.discovery ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata-default (default-p2-metadata-default) @ com.jboss.devstudio.central.discovery ---
+[INFO] No baseline version MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml
+[INFO] 
+[INFO] --- repository-utils:1.0.0:generate-repository-facade (generate-facade) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata (attached-p2-metadata) @ com.jboss.devstudio.central.discovery ---
+[INFO] No baseline version MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:1.0.0:compare-version-with-baselines (default) @ com.jboss.devstudio.central.discovery ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ com.jboss.devstudio.central.discovery ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery-11.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:update-local-index (default-update-local-index) @ com.jboss.devstudio.central.discovery ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ com.jboss.devstudio.central.discovery ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build641294444
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build641294444
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 13.666 s
+[INFO] Finished at: 2018-01-22T18:03:23-05:00
+[INFO] Final Memory: 60M/840M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /mnt/hudson_workspace/tools/hudson.tasks.Maven_MavenInstallation/maven-3.5.2/bin/mvn -f /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml -Dearlyaccess_IS= -DversionWithRespin_ds=11.2.0.GA -DbuildType=staging -Dversion_ds_IS=11.1.0.Beta1b -DversionWithRespin_jbt=4.5.2.Final -Dversion_jbt_IS=4.5.1.Beta1b -Dqual_IS=development -DTARGET_PLATFORM_VERSION_MAX=4.72.0.Final -DTARGET_PLATFORM_CENTRAL_MAX=4.72.0.Final-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -Ddownload.cache.directory=/home/hudson/static_build_env/devstudio/download-cache -Dmaven.test.failure.ignore=true -DUPDATE_SITE=https://devstudio.redhat.com/11/staging/updates/core/11.2.0.GA/ -DEXTRAS_SITE=https://devstudio.redhat.com/11/staging/updates/central/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/,https://devstudio.redhat.com/11/staging/updates/earlyaccess/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/ -DTARGET_FOLDER=${TARGET_FOLDER} -DJOB_NAME=jbosstools-discovery_master -DBUILD_NUMBER=3194 -Dmaven.repo.local=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository clean install -B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true -DTARGET_PLATFORM_VERSION=4.72.0.Final
+OpenJDK 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] Downloading from jboss-releases: https://repository.jboss.org/nexus/content/repositories/releases/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloading from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded from jboss-snapshots-repository: https://repository.jboss.org/nexus/content/repositories/snapshots/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml (612 B at 831 B/s)
+[INFO] Downloading from jboss-ga-repository: http://maven.repository.redhat.com/ga/org/jboss/tools/parent/4.5.2.Final-SNAPSHOT/maven-metadata.xml
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] Computing target platform for MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery.earlyaccess:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml
+[INFO] Adding repository http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.71.1.Final/REPO
+[INFO] Resolving dependencies of MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery.earlyaccess:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml
+[INFO] Resolving class path of MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery.earlyaccess:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building com.jboss.devstudio.central.discovery.earlyaccess 11.2.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Deleting /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:build-qualifier (default-build-qualifier) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] The project's OSGi version is 11.2.0.v20171215-1919
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-id (default-validate-id) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:validate-version (default-validate-version) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property1) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Setting property 'skipTestsOrITests' to 'true'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:regex-property (regex-property2) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Setting property 'skipTestsWithPrivateRequirements' to 'true'.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (core-has-ui-deps) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (warn-no-snapshots-AMx) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-no-snapshots-Final) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.1.201405082137:prepare-agent (default) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] argLine set to -javaagent:/mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/org/jacoco/org.jacoco.agent/0.7.1.201405082137/org.jacoco.agent-0.7.1.201405082137-runtime.jar=destfile=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/target/jacoco.exec,append=true,includes=org.jboss.tools.*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:resources (default-resources) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/src/main/resources
+[INFO] 
+[INFO] --- tycho-compiler-plugin:1.0.0:compile (default-compile) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[WARNING] Parameter 'useProjectSettings' is set to true, but preferences file '/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/.settings/org.eclipse.jdt.core.prefs' could not be found!
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.1:testResources (default-testResources) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/src/test/resources
+[INFO] 
+[INFO] --- tycho-source-plugin:1.0.0:plugin-source (plugin-source) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- target-platform-configuration:1.0.0:target-platform (default-target-platform) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-packaging-plugin:1.0.0:package-plugin (default-package-plugin) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Building jar: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata-default (default-p2-metadata-default) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery.earlyaccess:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- repository-utils:1.0.0:generate-repository-facade (generate-facade) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:p2-metadata (attached-p2-metadata) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] No baseline version MavenProject: com.jboss.devstudio.core.plugins:com.jboss.devstudio.central.discovery.earlyaccess:11.2.0-SNAPSHOT @ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml
+[INFO] 
+[INFO] --- tycho-p2-extras-plugin:1.0.0:compare-version-with-baselines (default) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Skipped
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/pom.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT.pom
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-sources.jar to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-sources.jar
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/p2content.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-p2metadata.xml
+[INFO] Installing /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/p2artifacts.xml to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/.repository/com/jboss/devstudio/core/plugins/com.jboss.devstudio.central.discovery.earlyaccess/11.2.0-SNAPSHOT/com.jboss.devstudio.central.discovery.earlyaccess-11.2.0-SNAPSHOT-p2artifacts.xml
+[INFO] 
+[INFO] --- tycho-p2-plugin:1.0.0:update-local-index (default-update-local-index) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (install) @ com.jboss.devstudio.central.discovery.earlyaccess ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /tmp/aggregate-site-build48216779
+
+init:
+
+generate.directory.xml:
+    [mkdir] Created dir: /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/discovery-site/plugins
+     [copy] Copying 1 file to /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/devstudio/com.jboss.devstudio.central.discovery.earlyaccess/target/discovery-site/plugins
+
+generate.composite.site:
+
+generate.composite.xml.file:
+
+generate.composite.xml.file:
+
+cleanup:
+   [delete] Deleting directory /tmp/aggregate-site-build48216779
+
+basic.build:
+[INFO] Executed tasks
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 13.870 s
+[INFO] Finished at: 2018-01-22T18:03:39-05:00
+[INFO] Final Memory: 60M/826M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /mnt/hudson_workspace/tools/hudson.tasks.Maven_MavenInstallation/maven-3.5.2/bin/mvn -Dearlyaccess_IS= -DversionWithRespin_ds=11.2.0.GA -DbuildType=staging -Dversion_ds_IS=11.1.0.Beta1b -DversionWithRespin_jbt=4.5.2.Final -Dversion_jbt_IS=4.5.1.Beta1b -Dqual_IS=development -DTARGET_PLATFORM_VERSION_MAX=4.72.0.Final -DTARGET_PLATFORM_CENTRAL_MAX=4.72.0.Final-SNAPSHOT "-DMAVEN_FLAGS=-B -U -fae -e -P hudson,unified.target -DskipBaselineComparison=true" -DtrimVersion=true -Dmdep.stripClassifier=true -Dartifact=org.jboss.tools.releng:jbosstools-releng-publish:4.5.2.Final:tar.gz -DoutputDirectory=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources -Dmdep.stripVersion=true -U org.apache.maven.plugins:maven-dependency-plugin:2.9:unpack
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.9:unpack (default-cli) @ standalone-pom ---
+[INFO] Configured Artifact: org.jboss.tools.releng:jbosstools-releng-publish:4.5.2.Final:tar.gz
+[INFO] jbosstools-releng-publish-4.5.2.Final.tar.gz already unpacked.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.185 s
+[INFO] Finished at: 2018-01-22T18:03:42-05:00
+[INFO] Final Memory: 15M/169M
+[INFO] ------------------------------------------------------------------------
+[jbosstools-discovery_master] $ /bin/sh -xe /tmp/jenkins4937968320909572997.sh
++ source /mnt/hudson_workspace/workspace/jbosstools-discovery_master/discovery.properties
+++ eclipseReleaseName=oxygen
+++ devstudioReleaseVersion=11
+++ stream_jbt=master
+++ versionWithRespin_jbt=4.5.2.Final
+++ versionWithRespin_ds=11.2.0.GA
+++ BUILD_TIMESTAMP=2018-01-22_23-02-38
+++ buildType=staging
+++ JBT_UP=http://download.jboss.org/jbosstools/oxygen/staging/updates/core/4.5.2.Final/
+++ JBT_CN=http://download.jboss.org/jbosstools/oxygen/staging/updates/central/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/
+++ JBT_EA=http://download.jboss.org/jbosstools/oxygen/staging/updates/earlyaccess/4.5.2.Final/,http://download.jboss.org/jbosstools/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/
+++ DS_UP=https://devstudio.redhat.com/11/staging/updates/core/11.2.0.GA/
+++ DS_CN=https://devstudio.redhat.com/11/staging/updates/central/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/
+++ DS_EA=https://devstudio.redhat.com/11/staging/updates/earlyaccess/11.2.0.GA/,https://devstudio.redhat.com/targetplatforms/jbtearlyaccesstarget/4.72.0.Final-SNAPSHOT/REPO/
++ [[ ! -n 4.5.2.Final ]]
++ [[ ! -n 11.2.0.GA ]]
++ JBDS=devstudio@10.5.105.197:/www_htdocs/devstudio
++ TOOLS=tools@10.5.105.197:/downloads_htdocs/tools
++ RSYNC=/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh
++ chmod +x /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh
++ REPO_DIR=2018-01-22_23-02-38-B3194/all/repo
++ [[ staging == \s\t\a\g\i\n\g ]]
++ JBT_DC=jbosstools-4.5.2.Final-build-discovery.central
++ JBT_DE=jbosstools-4.5.2.Final-build-discovery.earlyaccess
++ pushd /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site
+/mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site /mnt/hudson_workspace/workspace/jbosstools-discovery_master
++ rm -fr '*-earlyaccess.properties'
++ wget http://download.jboss.org/jbosstools/oxygen/snapshots/updates/earlyaccess.properties/master/jbosstools-earlyaccess.properties -q --no-check-certificate -N
++ popd
+/mnt/hudson_workspace/workspace/jbosstools-discovery_master
++ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site -t oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/2018-01-22_23-02-38-B3194/all/repo/ -DESTINATION tools@10.5.105.197:/downloads_htdocs/tools --age-to-delete 1
+[DEBUG] BUILD_TIMESTAMP = 2018-01-22_23-02-38
+[DEBUG] RSYNCFLAGS = 
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/2018-01-22_23-02-38-B3194
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/2018-01-22_23-02-38-B3194/all
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/2018-01-22_23-02-38-B3194/all/repo
+[INFO] rsync -arzq --protocol=28  /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/* tools@10.5.105.197:/downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/2018-01-22_23-02-38-B3194/all/repo//
+[DEBUG] Symlink[BT] tools@10.5.105.197:/downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/latest -> 2018-01-22_23-02-38-B3194
+Logfile: /tmp/tmp.njSRvNvTI5/jbosstools-cleanup.sh.log.20180122-1803.txt
+
+Check for oxygen/staging/builds builds more than 1 days old; keep minimum 2 builds per branch (linked in composite: 2)
+Check /downloads_htdocs/tools/oxygen/staging/builds/ for dirs matching /jbosstools-4.5.2.Final-build-discovery.central/ ...
+> Check /downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central...
++ /downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central/2018-01-22_23-02-38-B3194 (0d)
++ Generate metadata for first 2 of 1 subdir(s) in /downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.central
+
+
+real	0m21.197s
+user	0m0.590s
+sys	0m0.291s
++ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site -t oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/2018-01-22_23-02-38-B3194/all/repo/ -DESTINATION tools@10.5.105.197:/downloads_htdocs/tools --age-to-delete 1
+[DEBUG] BUILD_TIMESTAMP = 2018-01-22_23-02-38
+[DEBUG] RSYNCFLAGS = 
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/2018-01-22_23-02-38-B3194
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/2018-01-22_23-02-38-B3194/all
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/2018-01-22_23-02-38-B3194/all/repo
+[INFO] rsync -arzq --protocol=28  /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/* tools@10.5.105.197:/downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/2018-01-22_23-02-38-B3194/all/repo//
+[DEBUG] Symlink[BT] tools@10.5.105.197:/downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/latest -> 2018-01-22_23-02-38-B3194
+Logfile: /tmp/tmp.UPYGIRbWnL/jbosstools-cleanup.sh.log.20180122-1804.txt
+
+Check for oxygen/staging/builds builds more than 1 days old; keep minimum 2 builds per branch (linked in composite: 2)
+Check /downloads_htdocs/tools/oxygen/staging/builds/ for dirs matching /jbosstools-4.5.2.Final-build-discovery.earlyaccess/ ...
+> Check /downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess...
++ /downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess/2018-01-22_23-02-38-B3194 (0d)
++ Generate metadata for first 2 of 1 subdir(s) in /downloads_htdocs/tools/oxygen/staging/builds/jbosstools-4.5.2.Final-build-discovery.earlyaccess
+
+
+real	0m22.407s
+user	0m0.603s
+sys	0m0.310s
++ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh --del -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site -t oxygen/staging/updates/discovery.central/4.5.2.Final/ -DESTINATION tools@10.5.105.197:/downloads_htdocs/tools --age-to-delete 1
+[DEBUG] BUILD_TIMESTAMP = 2018-01-22_23-02-38
+[DEBUG] RSYNCFLAGS =  --del
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/updates
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/updates/discovery.central
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/updates/discovery.central/4.5.2.Final
+[INFO] rsync -arzq --protocol=28  --del /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery/target/discovery-site/* tools@10.5.105.197:/downloads_htdocs/tools/oxygen/staging/updates/discovery.central/4.5.2.Final//
+
+real	0m8.707s
+user	0m0.190s
+sys	0m0.060s
++ /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/publish/rsync.sh --del -s /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site -t oxygen/staging/updates/discovery.earlyaccess/4.5.2.Final/ -DESTINATION tools@10.5.105.197:/downloads_htdocs/tools --age-to-delete 1
+[DEBUG] BUILD_TIMESTAMP = 2018-01-22_23-02-38
+[DEBUG] RSYNCFLAGS =  --del
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/updates
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/updates/discovery.earlyaccess
+Couldn't create directory: Failure
+Connected to 10.5.105.197.
+Changing to: /downloads_htdocs/tools/
+sftp> mkdir oxygen/staging/updates/discovery.earlyaccess/4.5.2.Final
+[INFO] rsync -arzq --protocol=28  --del /mnt/hudson_workspace/workspace/jbosstools-discovery_master/sources/jbosstools/org.jboss.tools.central.discovery.earlyaccess/target/discovery-site/* tools@10.5.105.197:/downloads_htdocs/tools/oxygen/staging/updates/discovery.earlyaccess/4.5.2.Final//

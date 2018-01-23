@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
 <repository name='oxygen/staging/updates/fuse-extras' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
-<properties size='2'><property name='p2.timestamp' value='1513210218000'/><property name='p2.compressed' value='true'/></properties>
+<properties size='2'><property name='p2.timestamp' value='1516740349000'/><property name='p2.compressed' value='true'/></properties>
 <children size='1'>
-<child location='/jbosstools/static/oxygen/development/updates/fuse-extras/4.5.2.AM2/'/>
+<child location='/jbosstools/static/oxygen/development/updates/fuse-extras/4.5.2.Final/'/>
 </children>
 </repository>
 
