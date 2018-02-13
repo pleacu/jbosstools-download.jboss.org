@@ -5,10 +5,11 @@
     <property name='p2.timestamp' value='1516759531000'/>
     <property name='p2.compressed' value='true'/>
   </properties>
-  <children size='4'>
+  <children size='5'>
   	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.72.0.Final/REPO/'/>
   	<child location='http://download.jboss.org/jbosstools/static/oxygen/stable/updates/core/4.5.2.Final/'/>
   	<child location='http://download.jboss.org/jbosstools/static/oxygen/stable/updates/central/4.5.2.Final/'/>
   	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.72.0.Final-SNAPSHOT/REPO/'/>
+	<child location='http://download.jboss.org/jbosstools/oxygen/stable/updates/integration-stack/'/>
   </children>
 </repository>
