@@ -7,8 +7,9 @@
 
   -->
   <property name="LONGNAME" value="Red Deer"/>
-  <property name="version" value="2.0.0.Beta"/>
-  <property name="URL" value="http://download.eclipse.org/reddeer/milestones/${version}" />
+  <property name="version" value="2.1.0.CI-v20180220-1324"/>
+  <property name="URL" value="http://download.eclipse.org/reddeer/snapshots/" />
+  <!-- <property name="URL" value="http://download.eclipse.org/reddeer/milestones/${version}" /> -->
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
