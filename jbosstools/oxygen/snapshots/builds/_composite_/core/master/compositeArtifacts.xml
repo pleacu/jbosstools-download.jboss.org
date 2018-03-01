@@ -8,36 +8,35 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1519743174000'/>
+<property name='p2.timestamp' value='1519913251000'/>
 </properties>
-<children size='15'>
+<children size='16'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
-https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_master/
-https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/jbosstools-buildflow_4.5.oxygen/
+     https://dev-platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/view/Devstudio/view/devstudio_master/job/jbosstools-buildflow_master/
 -->
 
-<!-- ## CHANGED SINCE 4.4.4.Final ## -->
-
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-aerogear_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-base_master/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-browsersim_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-central_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-fabric8analytics_master/'/>
-
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-forge_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-hibernate_master/'/>
+
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-javaee_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-jst_master/'/>
-  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-livereload_master/'/>
-
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-openshift_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-server_master/'/>
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-vpe_master/'/>
+
   <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-webservices_master/'/>
 
-<!-- ## UNCHANGED SINCE previous releases ## -->
+  <!-- deprecated, subject to future removal -->
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-aerogear_master/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-browsersim_master/'/>
+  <child location='http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-livereload_master/'/>
+  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
 
+  <!-- ## UNCHANGED SINCE previous releases ## -->
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
 
 </children>
