@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this site contains the features of JBoss Tools which live in JBDS Central because they're not ready to be in JBDS update site itself -->
+<site>
+  <feature id="org.jboss.tools.maven.jbosspackaging.feature" url="features/org.jboss.tools.maven.jbosspackaging.feature_1.8.102.v20171124-1125.jar" version="1.8.102.v20171124-1125"/>
+  <feature id="org.jboss.tools.common.mylyn.feature" url="features/org.jboss.tools.common.mylyn.feature_3.9.3.v20180215-2018.jar" version="3.9.3.v20180215-2018"/>
+  <feature id="org.jboss.tools.jst.angularjs.feature" url="features/org.jboss.tools.jst.angularjs.feature_3.8.100.v20170908-1353.jar" version="3.8.100.v20170908-1353"/>
+  <feature id="org.jboss.tools.forge.ext.feature" url="features/org.jboss.tools.forge.ext.feature_2.0.202.v20180109-1312.jar" version="2.0.202.v20180109-1312"/>
+
+  <!-- JBIDE-25736 Portlet, Aerogear, Browsersim, Livereload are deprecated -->
+  <feature id="org.jboss.tools.cordovasim.feature" url="features/org.jboss.tools.cordovasim.feature_3.8.102.v20180227-1623.jar" version="3.8.102.v20180227-1623"/>
+</site>
