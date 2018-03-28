@@ -95,8 +95,8 @@ ${install}
       See also: https://github.com/jbosstools/jbosstools-build-ci/blob/master/util/installFromCentral.sh
   -->
   <target name="list.feature.groups" depends="setup">
-    <!-- wrap in a parallel task to set 5 min timeout -->
-    <parallel threadCount="1" timeout="300000">
+    <!-- wrap in a parallel task to set 30 min timeout -->
+    <parallel threadCount="1" timeout="1800000">
       <sequential>
         <antcall target="list.ius">
           <param name="liststring" value="-list Q:group"/>
