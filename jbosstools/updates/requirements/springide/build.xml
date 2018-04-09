@@ -6,10 +6,10 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Spring IDE"/>
-  <!-- org.springframework.ide.eclipse.feature.feature.group  3.9.0.201707061730-RELEASE -->
-  <property name="version" value="3.9.0.201707061730-RELEASE" />
+  <!-- org.springframework.ide.eclipse.feature.feature.group  3.9.3.201803200843-RELEASE -->
+  <property name="version" value="3.9.3.201803200843-RELEASE" />
   
-  <property name="URL1" value="http://dist.springsource.com/release/TOOLS/update/e4.7"/>
+  <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.8/"/>
   <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
   <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/> -->
   <!-- same nightly site, but without dependencies like equinox.weaving and ajdt <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
@@ -30,7 +30,7 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL1}" />
+        <repository location="${URL}" />
         <repository location="${URL2}" />
         <repository location="${URL3}" />
       </source>
@@ -50,8 +50,18 @@
       <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
-      <iu id="org.springsource.ide.eclipse.commons.feature.group" /> <!-- new, depends on mylyn -->
-      <iu id="org.springsource.ide.eclipse.commons.quicksearch.feature.feature.group" /> <!-- new, but not yet included in Central. see JBDS-2686 -->
+      <!-- depends on mylyn (used to be contained in org.springsource.ide.eclipse.commons.feature but feature was removed as of 3.9.3) -->
+      <iu id="io.projectreactor.reactor-core"/>
+      <iu id="org.reactivestreams.reactive-streams"/>
+      <iu id="org.springsource.ide.eclipse.commons.completions"/>
+      <iu id="org.springsource.ide.eclipse.commons.configurator"/>
+      <iu id="org.springsource.ide.eclipse.commons.content.core"/>
+      <iu id="org.springsource.ide.eclipse.commons.core"/>
+      <iu id="org.springsource.ide.eclipse.commons.frameworks.core"/>
+      <iu id="org.springsource.ide.eclipse.commons.frameworks.ui"/>
+      <iu id="org.springsource.ide.eclipse.commons.jdk_tools"/>
+      <iu id="org.springsource.ide.eclipse.commons.livexp"/>
+      <iu id="org.springsource.ide.eclipse.commons.ui"/>
 
       <!-- Plugins to include to avoid console warnings after installation -->
       <iu id="org.springframework.ide.eclipse.config.ui"/>
