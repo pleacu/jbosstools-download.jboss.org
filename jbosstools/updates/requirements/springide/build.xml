@@ -50,6 +50,8 @@
       <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
       <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.beans.ui.live"/>
+      <iu id="org.springframework.ide.eclipse.beans.ui.livegraph"/>
       <!-- depends on mylyn (used to be contained in org.springsource.ide.eclipse.commons.feature but feature was removed as of 3.9.3) -->
       <iu id="io.projectreactor.reactor-core"/>
       <iu id="org.reactivestreams.reactive-streams"/>
