@@ -59,7 +59,7 @@ Source Sites: ${p2.director.input.repo}
 IUs to Install:
 ${install}
 </echo>
-    <exec executable="${exec}" failonerror="true" dir="${p2.director.install.path}" timeout="1800000" taskname="p2.dir">
+    <exec executable="${exec}" failonerror="true" dir="${p2.director.install.path}" timeout="3600000" taskname="p2.dir">
       <!-- deprecated application for Eclipse 3.4: org.eclipse.equinox.p2.director.app.application -->
       <arg line=" -application org.eclipse.equinox.p2.director" />
       <arg line=" -clean -nosplash" />
@@ -95,8 +95,8 @@ ${install}
       See also: https://github.com/jbosstools/jbosstools-build-ci/blob/master/util/installFromCentral.sh
   -->
   <target name="list.feature.groups" depends="setup">
-    <!-- wrap in a parallel task to set 30 min timeout -->
-    <parallel threadCount="1" timeout="1800000">
+    <!-- wrap in a parallel task to set 60 min timeout -->
+    <parallel threadCount="1" timeout="3600000">
       <sequential>
         <antcall target="list.ius">
           <param name="liststring" value="-list Q:group"/>
@@ -119,7 +119,7 @@ ${install}
     <property name="liststring" value="   -list "/>
     <echo>Searching for IUs in ${p2.director.input.repo} with ${liststring} ...</echo>
     <!-- redirect errors, like "Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0" to a property so they won't end up in the IU listfile -->
-    <exec executable="${exec}" failonerror="true" timeout="1800000" taskname="list" output="${output}" errorproperty="director.errors">
+    <exec executable="${exec}" failonerror="true" timeout="3600000" taskname="list" output="${output}" errorproperty="director.errors">
       <arg line=" -application org.eclipse.equinox.p2.director" />
       <arg line=" -clean -nosplash" />
       <arg line=" --launcher.suppressErrors" />
