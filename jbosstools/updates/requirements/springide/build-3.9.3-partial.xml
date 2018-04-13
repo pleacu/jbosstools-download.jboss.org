@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="Spring IDE"/>
+  <!-- org.springframework.ide.eclipse.feature.feature.group  3.9.3.201803200843-RELEASE -->
+  <property name="version" value="3.9.3.201803200843-RELEASE" />
+  
+  <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.8/"/>
+  <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
+  <!-- <property name="URL1" value="http://dist.springsource.com/snapshot/TOOLS/nightly/e4.5/"/> -->
+  <!-- same nightly site, but without dependencies like equinox.weaving and ajdt <property name="URL1" value="http://dist.springframework.org/snapshot/IDE/nightly/"/> -->
+
+  <!-- JBDS-2682 include optional bundle org.datanucleus.ide.eclipse on the site to suppress warnings in console -->
+  <property name="URL2" value="http://www.datanucleus.org/downloads/eclipse-update/"/>
+
+  <!-- see https://github.com/SpringSource/spring-ide for latest URLs -->
+
+  <property name="URL3" value="http://download.eclipse.org/releases/neon/"/>
+  
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="Spring IDE ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
+        <repository location="${URL3}" />
+      </source>
+
+      <!-- Not needed: platformfilter="true"  -->
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true" />
+      <!-- Features to include in Central connector -->
+      <iu id="org.springframework.ide.eclipse.ajdt.feature.feature.group" /> <!-- new for 3.3+ -->
+      <iu id="org.springframework.ide.eclipse.aop.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.autowire.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.batch.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.data.feature.feature.group" /> <!-- new -->
+      <iu id="org.springframework.ide.eclipse.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.integration.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.maven.feature.feature.group"/> <!-- new -->
+      <iu id="org.springframework.ide.eclipse.mylyn.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.osgi.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.security.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.webflow.feature.feature.group" />
+      <iu id="org.springframework.ide.eclipse.beans.ui.live"/>
+      <iu id="org.springframework.ide.eclipse.beans.ui.livegraph"/>
+      <iu id="org.springframework.ide.eclipse.boot"/>
+      <iu id="org.springframework.ide.eclipse.boot.wizard"/>
+      <!-- depends on mylyn (used to be contained in org.springsource.ide.eclipse.commons.feature but feature was removed as of 3.9.3) -->
+      <iu id="io.projectreactor.reactor-core"/>
+      <iu id="org.reactivestreams.reactive-streams"/>
+      <iu id="org.springsource.ide.eclipse.commons.completions"/>
+      <iu id="org.springsource.ide.eclipse.commons.configurator"/>
+      <iu id="org.springsource.ide.eclipse.commons.content.core"/>
+      <iu id="org.springsource.ide.eclipse.commons.core"/>
+      <iu id="org.springsource.ide.eclipse.commons.frameworks.core"/>
+      <iu id="org.springsource.ide.eclipse.commons.frameworks.ui"/>
+      <iu id="org.springsource.ide.eclipse.commons.jdk_tools"/>
+      <iu id="org.springsource.ide.eclipse.commons.livexp"/>
+      <iu id="org.springsource.ide.eclipse.commons.ui"/>
+
+      <!-- Plugins to include to avoid console warnings after installation -->
+      <iu id="org.springframework.ide.eclipse.config.ui"/>
+      <iu id="org.springframework.ide.eclipse.maven"/>
+      <iu id="org.springframework.ide.eclipse.wizard"/>
+
+      <!-- Required 3rd party plugins (on SpringIDE or Orbit site) not properly referenced by features -->
+      <iu id="javax.jms"/>
+      <iu id="javax.validation"/>
+      <iu id="org.aopalliance"/>
+      <iu id="org.apache.commons.codec"/>
+      <iu id="org.apache.httpcomponents.httpclient"/>
+      <iu id="org.apache.httpcomponents.httpcore"/>
+      <iu id="org.aspectj.runtime"/>
+      <iu id="org.aspectj.weaver"/>
+      <iu id="org.codehaus.jackson.core"/>
+      <iu id="org.codehaus.jackson.mapper"/>
+      <iu id="org.eclipse.contribution.visualiser"/>
+      <iu id="org.eclipse.osgi"/>
+      <iu id="org.json"/>
+      <iu id="org.dadacoalition.yedit"/>
+      <iu id="org.yaml.snakeyaml"/>
+      <iu id="com.google.protobuf"/>
+
+      <!-- AJDT dependencies -->
+      <iu id="org.aspectj.feature.group"/>
+      <iu id="org.eclipse.ajdt.feature.group"/>
+      <iu id="org.eclipse.contribution.weaving.feature.group"/>
+      <iu id="org.eclipse.contribution.xref.feature.group"/>
+      <iu id="org.eclipse.equinox.weaving.sdk.feature.group"/>
+
+      <!-- Optional bundles included to avoid console warnings after installation -->
+      <iu id="org.springsource.ide.eclipse.dashboard.ui"/>
+
+      <!-- required from Luna -->
+      <iu id="org.eclipse.mylyn.java.ui"/>
+
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
