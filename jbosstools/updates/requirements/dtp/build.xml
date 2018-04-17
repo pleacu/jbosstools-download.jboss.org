@@ -6,12 +6,12 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="Eclipse DTP"/>
-  <property name="version" value="1.14.1.201712071719"/>
+  <property name="version" value="1.14.100-201803020938"/>
   <!-- <property name="URL" value="http://download.eclipse.org/linuxtools/update-neon-docker-m7/"/>
   <property name="URL2" value="http://download.eclipse.org/linuxtools/updates-docker-nightly-mars/"/>
   <property name="URL" value="http://download.eclipse.org/linuxtools/update-docker-1.2/"/> -->
   <!-- <property name="URL" value="http://download.eclipse.org/linuxtools/update-mars-2-docker-rc4/"/> -->
-  <property name="URL" value="http://download.eclipse.org/datatools/${version}/repository/"/>
+  <property name="URL" value="http://download.eclipse.org/datatools/1.14.100-SNAPSHOT/repository/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
