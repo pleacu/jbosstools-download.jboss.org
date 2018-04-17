@@ -11,7 +11,7 @@
   <property name="URL2" value="http://download.eclipse.org/linuxtools/updates-docker-nightly-mars/"/>
   <property name="URL" value="http://download.eclipse.org/linuxtools/update-docker-1.2/"/> -->
   <!-- <property name="URL" value="http://download.eclipse.org/linuxtools/update-mars-2-docker-rc4/"/> -->
-  <property name="URL" value="http://download.eclipse.org/datatools/1.14.100-SNAPSHOT/repository/"/>
+  <property name="URL" value="http://download.eclipse.org/datatools/updates/1.14.100-SNAPSHOT/repository/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>

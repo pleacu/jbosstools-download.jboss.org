@@ -8,7 +8,7 @@
   -->
   <property name="LONGNAME" value="Red Deer"/>
   <property name="version" value="2.1.0.Final"/>
-  <property name="URL" value="http://download.eclipse.org/reddeer/releases/" />
+  <property name="URL" value="http://download.eclipse.org/reddeer/releases/latest/" />
   <!-- <property name="URL" value="http://download.eclipse.org/reddeer/snapshots/" /> -->
 
   <property name="destination" value="${basedir}"/>
