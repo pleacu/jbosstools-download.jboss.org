@@ -5,9 +5,9 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <!-- http://download.eclipse.org/webtools/downloads/drops/R3.9.0/S-3.9.0RC4-20170613094504/repository/ -->
-  <property name="releaseStream" value="R3.9.0"/>
-  <property name="version" value="S-3.9.0RC4-20170613094504"/>
+  <!-- http://download.eclipse.org/webtools/downloads/drops/R3.10.0/I-3.10.0-20180414044730/repository/ -->
+  <property name="releaseStream" value="R3.10.0"/>
+  <property name="version" value="I-3.10.0-20180414044730/repository/"/>
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
