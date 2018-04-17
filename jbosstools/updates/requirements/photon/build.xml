@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+    <classpath>
+      <pathelement location="../ant-contrib.jar"/>
+    </classpath>
+  </taskdef>
+  <!-- http://download.eclipse.org/releases/photon/201803161000/ -->
+  <property name="versionDate" value="201803161000"/>
+  <property name="versionLabel" value="Photon.0.M6"/>
+  <property name="version" value="${versionDate}-${versionLabel}"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}"/>
+
+  <target name="run" depends="mirror,removeOTDT"/>
+
+  <target name="mirror">
+    <!-- mirror but do NOT pack again -->
+    <ant antfile="../generic/build.xml" target="mirror">
+      <property name="LONGNAME" value="Eclipse ${versionLabel}"/>
+      <!-- <property name="URL" value="http://download.eclipse.org/releases/photon/${versionDate}/"/> -->
+      <property name="URL" value="http://download.eclipse.org/staging/photon/"/>
+      <property name="latestversiononly" value="${latestversiononly}"/>
+    </ant>
+  </target>
+
+  <target name="checkOTDT">
+    <!-- remove OTDT patched version of o.e.jdt.core, and all other o.e.ot.otdt features/plugins -->
+    <path id="patched.jdt.path">
+      <fileset dir="${workDir}/plugins">
+        <include name="org.eclipse.jdt.core_*OTDT*.jar"/>
+      </fileset>    
+    </path>
+    <pathconvert property="patched.jdt.location" refid="patched.jdt.path"/>
+    <propertyregex property="patched.jdt.version"
+              input="${patched.jdt.location}"
+              regexp="org.eclipse.jdt.core_(.*).jar"
+              select="\1"
+              casesensitive="false" />
+    <condition property="containsOTDT">
+      <and>
+        <isset property="patched.jdt.version"/>
+        <not>
+          <equals arg1="${patched.jdt.version}" arg2=""/>
+        </not>
+      </and>
+    </condition>
+  </target>
+
+  <target name="removeOTDT" depends="checkOTDT" if="containsOTDT">
+    <p2.remove.iu>
+      <repository location="${workDir}"/>
+      <iu id="org.eclipse.objectteams.otdt.core.patch.feature.group"/>
+      <iu id="org.eclipse.jdt.core" version="${patched.jdt.version}"/>
+    </p2.remove.iu>
+  </target>
+</project>
