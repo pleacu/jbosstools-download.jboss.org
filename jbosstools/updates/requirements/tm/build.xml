@@ -7,10 +7,12 @@
 
   -->
   <property name="LONGNAME" value="TM + Terminal"/>
-  <property name="version" value="4.1.0.201606052351"/> <!-- look in /staging/ -->
-  <property name="tmURL" value="http://download.eclipse.org/tm/updates/4.0/" />
-  <property name="tmTerminalURL" value="http://download.eclipse.org/tm/terminal/updates/4.1milestones/" />
-
+  <property name="version" value="3.8.0.201803021406_4.4.0.201803141729"/>
+  <!-- built here: https://ci.eclipse.org/tm/job/rse_master/ look for rse.terminals feature 3.8.0.201803021406 -->
+  <property name="URL" value="http://download.eclipse.org/tm/updates/3.7.100-SNAPSHOT/repository/" />
+  <!-- build here: https://ci.eclipse.org/tm/job/terminal-master/ look for tm.terminal feature 4.4.0.201803141729 -->
+  <property name="URL2" value="http://download.eclipse.org/tm/terminal/builds/development/nightly/" />
+  
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
 
@@ -18,8 +20,8 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${tmURL}" />
-        <repository location="${tmTerminalURL}" />
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
