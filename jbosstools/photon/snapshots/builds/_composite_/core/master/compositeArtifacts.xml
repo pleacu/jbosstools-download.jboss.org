@@ -10,7 +10,7 @@
 <property name='p2.atomic.composite.loading' value='false'/>
 <property name='p2.timestamp' value='1524508483000'/>
 </properties>
-<children size='16'>
+<children size='12'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
      https://dev-platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/view/Devstudio/view/devstudio_master/job/jbosstools-buildflow_master/
@@ -29,12 +29,6 @@
   <child location='http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-vpe_master/'/>
 
   <child location='http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-webservices_master/'/>
-
-  <!-- deprecated, subject to future removal -->
-  <child location='http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-aerogear_master/'/>
-  <child location='http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-browsersim_master/'/>
-  <child location='http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-livereload_master/'/>
-  <child location='http://download.jboss.org/jbosstools/updates/stable/luna/core/portlet/'/>
 
   <!-- ## UNCHANGED SINCE previous releases ## -->
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
