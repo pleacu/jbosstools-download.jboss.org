@@ -8,9 +8,9 @@
       date +%s000
 -->
 <property name='p2.atomic.composite.loading' value='false'/>
-<property name='p2.timestamp' value='1524508483000'/>
+<property name='p2.timestamp' value='1524508489000'/>
 </properties>
-<children size='12'>
+<children size='13'>
 
 <!-- TODO: when adding new builds here, remember to add them to these jobs too:
      https://dev-platform-jenkins.rhev-ci-vms.eng.rdu2.redhat.com/view/Devstudio/view/devstudio_master/job/jbosstools-buildflow_master/
@@ -31,6 +31,7 @@
   <child location='http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-webservices_master/'/>
 
   <!-- ## UNCHANGED SINCE previous releases ## -->
+  <child location='http://download.jboss.org/jbosstools/oxygen/stable/updates/core/livereload/'/>
   <child location='http://download.jboss.org/jbosstools/updates/requirements/xulrunner-1.9.2/'/>
 
 </children>
