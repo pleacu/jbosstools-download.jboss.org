@@ -11,8 +11,8 @@
     </classpath>
   </taskdef>
   <!-- http://download.eclipse.org/releases/photon/201803161000/ -->
-  <property name="versionDate" value="201803161000"/>
-  <property name="versionLabel" value="Photon.0.M6"/>
+  <property name="versionDate" value="201805161906"/>
+  <property name="versionLabel" value="Photon.0.M7"/>
   <property name="version" value="${versionDate}-${versionLabel}"/>
 
   <property name="destination" value="${basedir}"/>
