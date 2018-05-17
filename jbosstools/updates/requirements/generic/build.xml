@@ -13,9 +13,11 @@
   <property name="destination" value="${basedir}" />
   <property name="workDir" value="${destination}/${version}/"/>
   <property name="latestversiononly" value="true"/>
+  <property name="ignoreErrors" value="false"/>
 
   <target name="mirror">
-    <p2.mirror>
+    <!-- use ignoreErrors="true" to work around SHA256 checks that fail -->
+    <p2.mirror ignoreErrors="${ignoreErrors}">
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
         <repository location="${URL}" />
