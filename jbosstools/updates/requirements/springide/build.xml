@@ -7,7 +7,7 @@
   -->
   <property name="LONGNAME" value="Spring IDE"/>
   <!-- org.springframework.ide.eclipse.feature.feature.group  3.9.3.201803200843-RELEASE -->
-  <property name="version" value="3.9.3.201803200843-RELEASE" />
+  <property name="version" value="3.9.4.201804120850-RELEASE" />
   
   <property name="URL" value="http://dist.springsource.com/release/TOOLS/update/e4.8/"/>
   <!-- 3.7 nightlies available here, eg., org.springframework.ide.eclipse.feature.feature.group 3.7.1.201507211708-CI-B367 -->
