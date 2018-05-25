@@ -12,6 +12,6 @@
 <children size='2'>
    <!-- IS ONLY -->
    <child location='4.5.3.Final/'/>
-   <child location='../../../../targetplatforms/jbtistarget/4.5.3.Final/jbtis/REPO/'/>
+   <child location='../../../../../targetplatforms/jbtistarget/4.5.3.Final/jbtis/REPO/'/>
 </children>
 </repository>
