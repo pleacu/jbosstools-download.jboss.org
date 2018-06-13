@@ -5,12 +5,12 @@
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
-  <property name="LONGNAME" value="org.tigris.subversion.subclipse 4.2.3.201707071932 + org.tmatesoft.svnkit 1.8.15.r10636"/>
-  <property name="version" value="4.2.3.201707071932__1.8.15.r10636"/>
+  <property name="LONGNAME" value="org.tigris.subversion.subclipse.core 4.2.4.201804261743 and org.tmatesoft.svnkit 1.8.12.r10533_v20160129_0158"/>
+  <property name="version" value="4.2.4.201804261743__1.8.12.r10533_v20160129_0158"/>
   <!-- org.tigris.subversion.subclipse.feature.group  4.2.3.201707071932 -->
-  <property name="URL1" value="https://dl.bintray.com/subclipse/releases/subclipse/4.2.x/" />
+  <property name="URL" value="https://dl.bintray.com/subclipse/releases/subclipse/4.2.x/" />
   <!-- org.tmatesoft.svnkit.feature.group 1.8.15.r10636 -->
-  <property name="URL2" value="http://eclipse.svnkit.com/1.8.x/" />
+  <!-- <property name="URL2" value="http://eclipse.svnkit.com/1.8.x/" /> -->
 
   <property name="destination" value="${basedir}"/>
   <property name="workDir" value="${destination}/${version}"/>
@@ -22,8 +22,8 @@
     <p2.mirror>
       <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
       <source>
-        <repository location="${URL1}" />
-        <repository location="${URL2}" />
+        <repository location="${URL}" />
+        <!-- <repository location="${URL2}" /> -->
       </source>
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
     </p2.mirror>
