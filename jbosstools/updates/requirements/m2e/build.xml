@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="run">
+  <target name="deprecated">
+    <echo>This script is no longer needed as the following features exist in the simrel site itself.
+
+See also http://download.jboss.org/jbosstools/updates/m2e-extensions/
+</echo>
+  </target>
   <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
     java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
       org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
       -application org.eclipse.ant.core.antRunner -f build.xml
   -->
   <property name="LONGNAME" value="m2e"/>
-  <property name="version" value="1.8.3.20180227-2137"/>
-  <property name="URL" value="http://download.eclipse.org/technology/m2e/releases/1.8/${version}/"/>
-  <!--   <property name="URL" value="http://download.eclipse.org/technology/m2e/milestones/1.8/${version}/"/> -->
+  <property name="version" value="1.9.0.20180606-2036"/>
+  <property name="URL" value="http://download.eclipse.org/technology/m2e/milestones/1.9/${version}/"/>
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
