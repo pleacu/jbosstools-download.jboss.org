@@ -9,7 +9,7 @@
   <property name="LONGNAME" value="m2eclipse-egit"/>
   <property name="version" value="0.15.1.201806191431"/>
   <!-- <property name="URL" value="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-egit/0.15.1/N/0.15.1.201806191431/" /> -->
-  <property name="URL" value="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-egit/0.15.0/N/${version}" />
+  <property name="URL" value="https://otto.takari.io/content/sites/m2e.extras/m2eclipse-egit/0.15.1/N/${version}" />
   <property name="latestversiononly" value="false"/>
 
   <property name="destination" value="${basedir}"/>
