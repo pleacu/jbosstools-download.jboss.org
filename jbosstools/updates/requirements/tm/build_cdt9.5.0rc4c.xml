@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+
+  -->
+  <!-- rather than re-mirroring all of Photon, just pull the latest CDT bits we need to update: org.eclipse.cdt.native_9.5.0.201806170908.jar -->
+  <property name="LONGNAME" value="CDT (partial site)"/>
+  <property name="version" value="9.5.0.201806170908"/>
+  <property name="URL" value="http://download.eclipse.org/tools/cdt/builds/9.5/cdt-9.5.0-photon-rc4c/" />
+  <property name="URL2" value="http://download.eclipse.org/staging/photon/" />
+  <property name="destination" value="${basedir}/"/>
+  <property name="workDir" value="${destination}/${version}/"/>
+
+  <target name="run">
+    <p2.mirror verbose="true">
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="true"/>
+      <iu id="org.eclipse.cdt.native.feature.group"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
