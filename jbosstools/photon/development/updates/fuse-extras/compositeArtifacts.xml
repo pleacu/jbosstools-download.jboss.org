@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
 <repository name='photon/staging/updates/fuse-extras' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
-<properties size='2'><property name='p2.timestamp' value='1529462570000'/><property name='p2.compressed' value='true'/></properties>
+<properties size='2'><property name='p2.timestamp' value='1531407702000'/><property name='p2.compressed' value='true'/></properties>
 <children size='1'>
-<child location='/jbosstools/static/photon/development/updates/fuse-extras/4.6.0.AM3/'/>
+<child location='/jbosstools/static/photon/development/updates/fuse-extras/4.6.0.Final/'/>
 </children>
 </repository>
 

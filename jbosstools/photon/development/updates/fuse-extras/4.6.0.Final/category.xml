@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<description>
+      To install these features, point Eclipse at this site.
+   </description>
+	<feature id="org.fusesource.ide.sap.feature" url="features/org.fusesource.ide.sap.feature_11.0.0.v20180614-0303.jar" version="11.0.0.v20180614-0303">
+		<category name="AllFeatures"/>
+	</feature>
+	<feature id="org.fusesource.ide.sap.feature.source" url="features/org.fusesource.ide.sap.feature.source_11.0.0.v20180614-0303.jar" version="11.0.0.v20180614-0303">
+		<category name="AllSources"/>
+	</feature>
+	<bundle id="org.jboss.tools.fuse.sap.reddeer">
+		<category name="AllUITests"/>
+	</bundle>
+	<bundle id="org.jboss.tools.fuse.sap.ui.bot.tests">
+		<category name="AllUITests"/>
+	</bundle>
+	<bundle id="org.jboss.tools.fuse.sap.reddeer.source">
+		<category name="AllUITests"/>
+	</bundle>
+	<bundle id="org.jboss.tools.fuse.sap.ui.bot.tests.source">
+		<category name="AllUITests"/>
+	</bundle>
+	<category-def name="AllFeatures" label="JBoss Fuse SAP Tool Suite Nightly Build Update Site">
+		<description>
+         JBoss Fuse SAP Tool Suite Nightly Build Update Site: contains all features in this build.
+      </description>
+	</category-def>
+	<category-def name="AllSources" label="JBoss Fuse SAP Tool Suite Nightly Build Update Site">
+		<description>
+         JBoss Fuse SAP Tool Suite Nightly Build Update Site: contains all source features in this build.
+      </description>
+	</category-def>
+	<category-def name="AllUITests" label="JBoss Fuse Tooling Nightly Build Update Site - UI Tests">
+		<description>
+         JBoss Fuse SAP Tool Suite Nightly Build Update Site: contains all UI tests in this build.
+      </description>
+	</category-def>
+</site>

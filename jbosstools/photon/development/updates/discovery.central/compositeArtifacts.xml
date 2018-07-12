@@ -2,13 +2,13 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository name='JBoss Tools - Core + Central Update Site' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1529462570000'/>
+    <property name='p2.timestamp' value='1531407702000'/>
     <property name='p2.compressed' value='true'/>
   </properties>
   <children size='4'>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.80.0.AM3-SNAPSHOT/REPO/'/>
-  	<child location='http://download.jboss.org/jbosstools/static/photon/development/updates/core/4.6.0.AM3/'/>
-  	<child location='http://download.jboss.org/jbosstools/static/photon/development/updates/central/4.6.0.AM3/'/>
-  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.80.0.AM3-SNAPSHOT/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbosstoolstarget/4.80.1.Final/REPO/'/>
+  	<child location='http://download.jboss.org/jbosstools/static/photon/development/updates/core/4.6.0.Final/'/>
+  	<child location='http://download.jboss.org/jbosstools/static/photon/development/updates/central/4.6.0.Final/'/>
+  	<child location='http://download.jboss.org/jbosstools/targetplatforms/jbtcentraltarget/4.80.0.Final-SNAPSHOT/REPO/'/>
   </children>
 </repository>
