@@ -11,8 +11,8 @@
   -->
 
   <property name="LONGNAME" value="Mylyn"/>
-  <property name="version" value="3.23.1-v20170623-2012__3.0.18.20170823144938"/>
-  <property name="URL" value="http://download.eclipse.org/mylyn/releases/oxygen/"/>
+  <property name="version" value="3.24.1.v20180619-2131"/>
+  <property name="URL" value="http://download.eclipse.org/mylyn/releases/latest/"/>
   <!-- /releases/oxygen/ includes docs too -->
   <property name="latestversiononly" value="true"/>
 
@@ -28,28 +28,6 @@
       </source>
 
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
-      <iu id="org.eclipse.mylyn.bugzilla_feature.feature.group" />
-      <iu id="org.eclipse.mylyn.builds.feature.group" />
-      <iu id="org.eclipse.mylyn.commons.feature.group" />
-      <iu id="org.eclipse.mylyn.commons.identity.feature.group" />
-      <iu id="org.eclipse.mylyn.commons.net" />
-      <iu id="org.eclipse.mylyn.commons.notifications.feature.group" />
-      <iu id="org.eclipse.mylyn.commons.repositories.feature.group" />
-      <iu id="org.eclipse.mylyn.commons.repositories.http.feature.group" />
-      <iu id="org.eclipse.mylyn.commons.xmlrpc" />
-      <iu id="org.eclipse.mylyn.context_feature.feature.group" />
-      <iu id="org.eclipse.mylyn.discovery.feature.group" />
-      <iu id="org.eclipse.mylyn.git.feature.group" />
-      <iu id="org.eclipse.mylyn.hudson.feature.group" />
-      <iu id="org.eclipse.mylyn.ide_feature.feature.group" />
-      <iu id="org.eclipse.mylyn.java_feature.feature.group" />
-      <iu id="org.eclipse.mylyn.monitor.feature.group" />
-      <iu id="org.eclipse.mylyn.pde_feature.feature.group" />
-      <iu id="org.eclipse.mylyn.tasks.ide.feature.group" />
-      <iu id="org.eclipse.mylyn.team_feature.feature.group" />
-      <iu id="org.eclipse.mylyn.versions.feature.group" />
-      <iu id="org.eclipse.mylyn.wikitext_feature.feature.group" />
-      <iu id="org.eclipse.mylyn_feature.feature.group" />
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
   </target>
