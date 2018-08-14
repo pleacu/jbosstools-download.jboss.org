@@ -26,7 +26,28 @@
       <source>
         <repository location="${URL}" />
       </source>
-
+      <iu id="org.eclipse.mylyn.bugzilla_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.builds.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.identity.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.net"/>
+      <iu id="org.eclipse.mylyn.commons.notifications.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.repositories.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.repositories.http.feature.group"/>
+      <iu id="org.eclipse.mylyn.commons.xmlrpc"/>
+      <iu id="org.eclipse.mylyn.context_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.discovery.feature.group"/>
+      <iu id="org.eclipse.mylyn.git.feature.group"/>
+      <iu id="org.eclipse.mylyn.hudson.feature.group"/>
+      <iu id="org.eclipse.mylyn.ide_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.java_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.monitor.feature.group"/>
+      <iu id="org.eclipse.mylyn.pde_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.tasks.ide.feature.group"/>
+      <iu id="org.eclipse.mylyn.team_feature.feature.group"/>
+      <iu id="org.eclipse.mylyn.versions.feature.group"/>
+      <!-- <iu id="org.eclipse.mylyn.wikitext_feature.feature.group"/> -->
+      <iu id="org.eclipse.mylyn_feature.feature.group"/>
       <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
     </p2.mirror>
     <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
