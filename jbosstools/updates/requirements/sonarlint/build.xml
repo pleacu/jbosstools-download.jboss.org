@@ -6,10 +6,10 @@
       -application org.eclipse.ant.core.antRunner -f build.xml
 	-->
   <property name="LONGNAME" value="SonarLint"/>
-  <!-- org.sonarlint.eclipse.feature.feature.group  3.2.0.201706271328 -->
-  <property name="version" value="3.2.0.201706271328"/>
+  <!-- org.sonarlint.eclipse.feature.feature.group  3.6.0.201806071228 -->
+  <property name="version" value="3.6.0.201806071228"/>
   <!-- or https://sonarsource.bintray.com/SonarLint-for-Eclipse/releases/3.2.0/ -->
-  <property name="URL" value="http://www.sonarlint.org/eclipse/" />
+  <property name="URL" value="https://eclipse-uc.sonarlint.org/" />
 
   <property name="destination" value="${basedir}" />
   <property name="workDir" value="${destination}/${version}/"/>
