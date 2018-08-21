@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this site contains the features of JBoss Tools which live in JBDS Central because they're not ready to be in JBDS update site itself -->
+<site>
+  <feature id="org.jboss.tools.maven.jbosspackaging.feature" url="features/org.jboss.tools.maven.jbosspackaging.feature_1.9.1.v20180802-1520.jar" version="1.9.1.v20180802-1520"/>
+  <feature id="org.jboss.tools.common.mylyn.feature" url="features/org.jboss.tools.common.mylyn.feature_3.10.1.v20180802-1505.jar" version="3.10.1.v20180802-1505"/>
+  <feature id="org.jboss.tools.jst.angularjs.feature" url="features/org.jboss.tools.jst.angularjs.feature_3.9.100.v20180805-2051.jar" version="3.9.100.v20180805-2051"/>
+  <feature id="org.jboss.tools.forge.ext.feature" url="features/org.jboss.tools.forge.ext.feature_2.0.204.v20180807-1919.jar" version="2.0.204.v20180807-1919"/>
+</site>
