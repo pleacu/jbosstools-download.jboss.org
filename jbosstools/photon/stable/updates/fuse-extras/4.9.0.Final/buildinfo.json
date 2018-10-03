@@ -1,0 +1,183 @@
+{
+    "timestamp" : 1536700856736,
+    "revision" : {
+        "HEAD" : "e1ac006a5488034e9d14e0f87f405756bb03d91b",
+        "currentBranch" : "HEAD",
+        "knownReferences" : [{
+            "name" : "origin",
+            "url" : "git://github.com/jbosstools/jbosstools-fuse-extras.git",
+            "ref" : "master"
+        }]
+    },
+    "properties" : {
+        "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+        "java.version" : "1.8.0_171",
+        "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-fuse-extras_master/sources",
+        "os.arch" : "amd64",
+        "RELEASE" : "null",
+        "BUILD_ALIAS" : "CI",
+        "JOB_NAME" : "null",
+        "os.version" : "3.10.0-862.9.1.el7.x86_64",
+        "BUILD_NUMBER" : "null",
+        "TARGET_PLATFORM_VERSION" : "null",
+        "NODE_NAME" : "null",
+        "HOSTNAME" : "rhel7-devstudio-releng-19588",
+        "java.vendor" : "Oracle Corporation",
+        "os.name" : "Linux",
+        "ZIPSUFFIX" : "null",
+        "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-fuse-extras_master/sources"
+    },
+    "upstream" : {
+        "http://fuse-sap.mw.lab.eng.bos.redhat.com/repositories/fuse-sap-data-layer/updatesite/6.3.0-SNAPSHOT/" : {
+            "timestamp" : 1466602996247,
+            "revision" : {
+                "HEAD" : "510d23b170637e6252f58013274b996257d6f416",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git@github.com:jboss-fuse/fuse-components.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION" : "null",
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "user.dir" : "/home/jenkins/workspace/fuse-components-camel-sap-6-3-x-checkin",
+                "WORKSPACE" : "/home/jenkins/workspace/fuse-components-camel-sap-6-3-x-checkin",
+                "ZIPSUFFIX" : "null",
+                "os.name" : "Linux",
+                "BUILD_ALIAS" : "null",
+                "HOSTNAME" : "fuse-jenkins-rhel-72-agent-2.localdomain",
+                "os.version" : "3.10.0-327.18.2.el7.x86_64",
+                "BUILD_ID" : "null",
+                "JOB_NAME" : "null",
+                "os.arch" : "amd64",
+                "java.version" : "1.7.0_80",
+                "java.vendor" : "Oracle Corporation",
+                "NODE_NAME" : "null",
+                "RELEASE" : "null",
+                "BUILD_NUMBER" : "null"
+            }
+        },
+        "http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-fuse_master/latest/all/repo/" : {
+            "timestamp" : 1536629564669,
+            "revision" : {
+                "HEAD" : "26bc0b5b5a0e7f7432ff1c728ae534c31622c4dd",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-fuse.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_112",
+                "user.dir" : "/home/jenkins/workspace/jbosstools-fuse_master",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "CI",
+                "JOB_NAME" : "null",
+                "os.version" : "3.10.0-693.37.4.el7.x86_64",
+                "BUILD_NUMBER" : "747",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "fuse-jenkins-584",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/home/jenkins/workspace/jbosstools-fuse_master"
+            }
+        },
+        "http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-base_master/latest/all/repo" : {
+            "timestamp" : 1536698472716,
+            "revision" : {
+                "HEAD" : "987d2ff84fc833b5f607796532acac74f7e900c5",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-base.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_171",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-base_master/sources",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "jbosstools-base_master",
+                "os.version" : "3.10.0-862.9.1.el7.x86_64",
+                "BUILD_NUMBER" : "2614",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "rhel7-devstudio-releng-19589",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-base_master/sources"
+            }
+        },
+        "http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-server_master/latest/all/repo" : {
+            "timestamp" : 1536700518768,
+            "revision" : {
+                "HEAD" : "d92c518365c87339ab6114faf17600d3c22d224f",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-server.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_171",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-server_master/sources",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "jbosstools-server_master",
+                "os.version" : "3.10.0-862.9.1.el7.x86_64",
+                "BUILD_NUMBER" : "2565",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "rhel7-devstudio-releng-19594",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-server_master/sources"
+            }
+        },
+        "http://download.jboss.org/jbosstools/photon/snapshots/builds/jbosstools-central_master/latest/all/repo" : {
+            "timestamp" : 1536055734882,
+            "revision" : {
+                "HEAD" : "d7ffc259d2c811ed7ddd7468e5b55bff1f01d34e",
+                "currentBranch" : "HEAD",
+                "knownReferences" : [{
+                    "name" : "origin",
+                    "url" : "git://github.com/jbosstools/jbosstools-central.git",
+                    "ref" : "master"
+                }]
+            },
+            "properties" : {
+                "TARGET_PLATFORM_VERSION_MAXIMUM" : "null",
+                "java.version" : "1.8.0_171",
+                "user.dir" : "/mnt/hudson_workspace/workspace/jbosstools-central_master/sources",
+                "os.arch" : "amd64",
+                "RELEASE" : "null",
+                "BUILD_ALIAS" : "null",
+                "JOB_NAME" : "jbosstools-central_master",
+                "os.version" : "3.10.0-862.9.1.el7.x86_64",
+                "BUILD_NUMBER" : "2368",
+                "TARGET_PLATFORM_VERSION" : "null",
+                "NODE_NAME" : "null",
+                "HOSTNAME" : "rhel7-devstudio-releng-474",
+                "java.vendor" : "Oracle Corporation",
+                "os.name" : "Linux",
+                "ZIPSUFFIX" : "null",
+                "WORKSPACE" : "/mnt/hudson_workspace/workspace/jbosstools-central_master/sources"
+            }
+        }
+    }
+}
