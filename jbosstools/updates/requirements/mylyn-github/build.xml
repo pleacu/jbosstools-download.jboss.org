@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+    java -cp /home/nboldt/eclipse/plugins/org.eclipse.equinox.launcher_*.jar \
+      org.eclipse.equinox.launcher.Main -consoleLog -nosplash -data /tmp \
+      -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <!-- re: https://bugs.eclipse.org/bugs/show_bug.cgi?id=430816 
+      Seems we only need one feature here: org.eclipse.mylyn.commons.soap_feature
+      But include htmltext and subclipse features just in case needed later
+  -->
+
+  <property name="LONGNAME" value="Mylyn Github"/>
+  <property name="version" value="5.2.0.201812052222"/>
+  <property name="URL" value="https://download.eclipse.org/egit/github/updates-stable-nightly/"/>
+  <!-- /releases/oxygen/ includes docs too -->
+  <property name="latestversiononly" value="true"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version}/"/>
+
+  <!-- DO NOT regenerate metadata for this site because Pascal says it's bad; mirror only (then remove references). See also https://bugs.eclipse.org/bugs/show_bug.cgi?id=407892 and https://issues.jboss.org/browse/JBIDE-14422 -->
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+      </source>
+      <iu id="org.eclipse.mylyn.github.feature.feature.group"/>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
