@@ -3,9 +3,10 @@
 <repository name="m2e-apt updates" type="org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository" version="1.0.0">
     <properties size="2">
         <property name="p2.compressed" value="true" />
-        <property name="p2.timestamp" value="1328709112215" />
+        <property name="p2.timestamp" value="1328709112216" />
     </properties>
-    <children size="9">
+    <children size="10">
+        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.2-2018-12-24_15-46-05-H18/" />
         <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.1-2018-11-16_19-54-26-H16/" />
         <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.0-2018-08-14_20-24-39-H12/" />
         <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.4.0-2018-01-12_16-25-02-H6/" />
