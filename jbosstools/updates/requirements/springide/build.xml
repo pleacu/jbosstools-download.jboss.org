@@ -58,7 +58,6 @@
       <!-- depends on mylyn (used to be contained in org.springsource.ide.eclipse.commons.feature but feature was removed as of 3.9.3) -->
       <iu id="io.projectreactor.reactor-core"/>
       <iu id="org.reactivestreams.reactive-streams"/>
-      <iu id="org.springsource.ide.eclipse.commons.completions"/>
       <iu id="org.springsource.ide.eclipse.commons.configurator"/>
       <iu id="org.springsource.ide.eclipse.commons.content.core"/>
       <iu id="org.springsource.ide.eclipse.commons.core"/>
