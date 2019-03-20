@@ -3,18 +3,18 @@
 <repository name="m2e-apt updates" type="org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository" version="1.0.0">
     <properties size="2">
         <property name="p2.compressed" value="true" />
-        <property name="p2.timestamp" value="1328709112216" />
+        <property name="p2.timestamp" value="1328709112217" />
     </properties>
     <children size="10">
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.2-2018-12-24_15-46-05-H18/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.1-2018-11-16_19-54-26-H16/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.0-2018-08-14_20-24-39-H12/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.4.0-2018-01-12_16-25-02-H6/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.3.0-2016-10-26_18-05-00-B50/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.2.0-2016-01-25_16-03-44-H45/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.1.1-2014-11-26_15-11-10-H37/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.1.0-2014-05-21_05-04-36-H34/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.0.1-2012-09-20_03-20-41-H23/" />
-        <child location="http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.0.0-2012-06-05_16-15-59-H16/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.2-2018-12-24_15-46-05-H18/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.1-2018-11-16_19-54-26-H16/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.5.0-2018-08-14_20-24-39-H12/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.4.0-2018-01-12_16-25-02-H6/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.3.0-2016-10-26_18-05-00-B50/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.2.0-2016-01-25_16-03-44-H45/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.1.1-2014-11-26_15-11-10-H37/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.1.0-2014-05-21_05-04-36-H34/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.0.1-2012-09-20_03-20-41-H23/" />
+        <child location="https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-apt/1.0.0-2012-06-05_16-15-59-H16/" />
     </children>
 </repository>

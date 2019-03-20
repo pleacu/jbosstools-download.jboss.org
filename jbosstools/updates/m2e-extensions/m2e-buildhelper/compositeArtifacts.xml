@@ -3,10 +3,10 @@
 <repository name='m2e-mavenarchiver updates' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1462953649000'/>
+<property name='p2.timestamp' value='1462953649001'/>
 </properties>
 <children size='1'>
-<child location='http://download.jboss.org/jbosstools/updates/requirements/m2e-buildhelper/0.15.0.201212120353/'/>
+<child location='https://download.jboss.org/jbosstools/updates/requirements/m2e-buildhelper/0.15.0.201212120353/'/>
 </children>
 </repository>
 

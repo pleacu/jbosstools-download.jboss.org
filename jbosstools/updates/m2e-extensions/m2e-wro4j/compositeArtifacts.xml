@@ -3,13 +3,13 @@
 <repository name='m2e-wro4j updates' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
 <properties size='2'>
 <property name='p2.compressed' value='true'/>
-<property name='p2.timestamp' value='1328708112212'/>
+<property name='p2.timestamp' value='1328708112213'/>
 </properties>
 <children size='4'>
-<child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.1.0-2014-06-25_06-16-31-H26/'/>
-<child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.0.2-2013-11-12_19-36-08-H20/'/>
-<child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.0.1-2012-09-20_04-53-27-H4/'/>
-<child location='http://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.0.0/'/>
+<child location='https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.1.0-2014-06-25_06-16-31-H26/'/>
+<child location='https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.0.2-2013-11-12_19-36-08-H20/'/>
+<child location='https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.0.1-2012-09-20_04-53-27-H4/'/>
+<child location='https://download.jboss.org/jbosstools/updates/m2e-extensions/m2e-wro4j/1.0.0/'/>
 </children>
 </repository>
 
