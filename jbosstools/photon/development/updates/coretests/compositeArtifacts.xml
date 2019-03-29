@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?><?compositeArtifactRepository version='1.0.0'?>
 <repository name='photon/staging/updates/coretests' type='org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository' version='1.0.0'>
-<properties size='2'><property name='p2.timestamp' value='1551264319000'/><property name='p2.compressed' value='true'/></properties>
+<properties size='2'><property name='p2.timestamp' value='1553883434000'/><property name='p2.compressed' value='true'/></properties>
 <children size='1'>
 <child location='4.9.0.Final/'/>
 </children>
