@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run">
+  <!-- run locally in Eclipse (to resolve p2 tasks) using these commandline options:
+       java -cp ~/ecl-M6-g/eclipse/plugins/org.eclipse.equinox.launcher_*.jar org.eclipse.equinox.launcher.Main \
+            -consoleLog -nosplash -data /tmp -application org.eclipse.ant.core.antRunner -f build.xml
+  -->
+  <property name="LONGNAME" value="Eclipse BPMN2 Modeler + BPMN2 MDT"/>
+  <property name="version"  value="1.5.1"/>
+  <property name="version2" value="1.5.1.Final"/>
+  <property name="version3" value="1.5.0"/>
+  <property name="version4" value="1.5.1.Final"/>
+  <property name="eclver"   value="2019-06"/>
+
+  <!-- BPMN2 Modeler/Editor -->
+  <property name="URL" value="http://download.eclipse.org/bpmn2-modeler/updates/${eclver}/${version}/" />
+
+  <!-- BPMN2 Project Feature -->
+  <property name="URL2" value="http://download.eclipse.org/modeling/mdt/bpmn2/updates/photon/${version3}/" />
+  <property name="latestversiononly" value="false"/>
+
+  <property name="destination" value="${basedir}"/>
+  <property name="workDir" value="${destination}/${version2}_${version4}_${eclver}"/>
+
+  <target name="run">
+    <p2.mirror>
+      <repository location="file:${workDir}" name="${LONGNAME} ${version2}_${version4}" format="http://download.jboss.org/jbosstools/updates/requirements/_FORMAT_TEMPLATE_"/>
+      <source>
+        <repository location="${URL}" />
+        <repository location="${URL2}" />
+      </source>
+      <slicingOptions includeFeatures="true" followStrict="true" latestversiononly="${latestversiononly}"/>
+    </p2.mirror>
+    <ant antfile="${destination}/../../remove.references.xml" target="remove.references"/>
+  </target>
+</project>
